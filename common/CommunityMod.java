@@ -16,8 +16,8 @@ import cpw.mods.fml.common.network.NetworkMod;
 
 public class CommunityMod {
 
-	@SidedProxy(clientSide = "tutorial.client.ClientProxyTutorial",
-				serverSide = "tutorial.common.CommonProxyTutorial")
+	@SidedProxy(clientSide = "communityMod.client.ClientProxyCommunityMod",
+				serverSide = "communityMod.common.CommonProxyCommunityMod")
 	public static ClientProxyCommunityMod proxy = new ClientProxyCommunityMod();
 	
 	@PreInit
