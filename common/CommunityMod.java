@@ -1,6 +1,7 @@
 package communityMod.common;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -34,6 +35,7 @@ public class CommunityMod {
 	public static Block titaniumBlock;
 	public static Block copperOre;
 	public static Block siliconBlock;
+	public static Block ironGirder;
 	
 	//Items
 	public static Item leadIngot;
@@ -49,6 +51,7 @@ public class CommunityMod {
 	public static int titaniumBlockID;
 	public static int copperOreID;
 	public static int siliconBlockID;
+	public static int ironGirderID;
 	
 	//Item IDs
 	public static int leadIngotID;
@@ -69,6 +72,7 @@ public class CommunityMod {
 		titaniumBlockID = config.get("Block IDs", "Titanium Block ID", 704).getInt();
 		copperOreID = config.get("Block IDs", "Copper Ore ID", 705).getInt();
 		siliconBlockID = config.get("Block IDs", "Silicon Block ID", 706).getInt();
+		ironGirderID = config.get("Block IDs", "Iron Girder ID", 707).getInt();
 		
 		//Item IDs
 		leadIngotID = config.get("Item IDs", "Lead Ingot ID", 1000).getInt();
@@ -91,6 +95,7 @@ public class CommunityMod {
 		titaniumBlock = new BlockMetal(titaniumBlockID, 3).setHardness(12F).setResistance(10F).setBlockName("TitaniumBlock").setCreativeTab(CreativeTabs.tabBlock);
 		copperOre = new BlockOre(copperOreID, 6).setHardness(10F).setResistance(0.2F).setBlockName("CopperOre").setCreativeTab(CreativeTabs.tabBlock);
 		siliconBlock = new BlockMetal(siliconBlockID, 5).setHardness(12F).setResistance(10F).setBlockName("SiliconBlock").setCreativeTab(CreativeTabs.tabBlock);
+		ironGirder = new BlockIronGirder(ironGirderID, 0, Material.iron).setBlockName("Iron Girder").setHardness(2F).setStepSound(Block.soundMetalFootstep);
 		
 		//Item Loading
 		leadIngot = new ItemIngot(leadIngotID, 1).setCreativeTab(CreativeTabs.tabMaterials).setItemName("LeadIngot");
@@ -131,6 +136,9 @@ public class CommunityMod {
 			"SSS",
 			'S', siliconIngot
 		});
+		GameRegistry.addRecipe(new ItemStack(ironGirder, 4), new Object[]{
+			"III", " I ", "III", 'I', Item.ingotIron,
+		});
 	}
 	
 	private static void gameRegisters(){
@@ -142,6 +150,7 @@ public class CommunityMod {
 		GameRegistry.registerBlock(titaniumBlock, "TitaniumBlock");
 		GameRegistry.registerBlock(copperOre, "CopperOre");
 		GameRegistry.registerBlock(siliconBlock, "SiliconBlock");
+		GameRegistry.registerBlock(ironGirder, "IronGirder");
 		
 		//Item Registry
 		GameRegistry.registerItem(leadIngot, "LeadIngot");
@@ -159,6 +168,7 @@ public class CommunityMod {
 		LanguageRegistry.addName(titaniumBlock, "Titanium Block");
 		LanguageRegistry.addName(copperOre, "Copper Ore");
 		LanguageRegistry.addName(siliconBlock, "Silicon Block");
+		LanguageRegistry.addName(ironGirder, "Iron Girder");
 		
 		//Item LanguageRegistry
 		LanguageRegistry.addName(leadIngot, "Lead Ingot");
