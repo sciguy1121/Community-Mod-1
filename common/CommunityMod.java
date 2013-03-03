@@ -36,6 +36,7 @@ public class CommunityMod {
 	public static Block copperOre;
 	public static Block siliconBlock;
 	public static Block ironGirder;
+	public static Block copperBlock;
 	
 	//Items
 	public static Item leadIngot;
@@ -52,6 +53,7 @@ public class CommunityMod {
 	public static int copperOreID;
 	public static int siliconBlockID;
 	public static int ironGirderID;
+	public static int copperBlock;
 	
 	//Item IDs
 	public static int leadIngotID;
@@ -73,6 +75,7 @@ public class CommunityMod {
 		copperOreID = config.get("Block IDs", "Copper Ore ID", 705).getInt();
 		siliconBlockID = config.get("Block IDs", "Silicon Block ID", 706).getInt();
 		ironGirderID = config.get("Block IDs", "Iron Girder ID", 707).getInt();
+		copperBlockID = config.get("Block IDs", "Copper Block ID", 708).getInt();
 		
 		//Item IDs
 		leadIngotID = config.get("Item IDs", "Lead Ingot ID", 1000).getInt();
@@ -96,6 +99,7 @@ public class CommunityMod {
 		copperOre = new BlockOre(copperOreID, 6).setHardness(10F).setResistance(0.2F).setBlockName("CopperOre").setCreativeTab(CreativeTabs.tabBlock);
 		siliconBlock = new BlockMetal(siliconBlockID, 5).setHardness(12F).setResistance(10F).setBlockName("SiliconBlock").setCreativeTab(CreativeTabs.tabBlock);
 		ironGirder = new BlockIronGirder(ironGirderID, 0, Material.iron).setBlockName("Iron Girder").setHardness(2F).setStepSound(Block.soundMetalFootstep);
+		copperBlock = new BlockMetal(copperBlockID, 7).setHardness(12F).setResistance(10F).setBlockName("CopperBlock").setCcreativeTab(CreativeTabs.tabBlock);
 		
 		//Item Loading
 		leadIngot = new ItemIngot(leadIngotID, 1).setCreativeTab(CreativeTabs.tabMaterials).setItemName("LeadIngot");
@@ -137,7 +141,16 @@ public class CommunityMod {
 			'S', siliconIngot
 		});
 		GameRegistry.addRecipe(new ItemStack(ironGirder, 4), new Object[]{
-			"III", " I ", "III", 'I', Item.ingotIron,
+			"III",
+			" I ",
+			"III",
+			'I', Item.ingotIron
+		});
+		GameRegistry.addRecipe(new ItemStack(copperBlock, 1), new Object[]{
+		     	"CCC",
+		     	"CCC",
+		     	"CCC",
+		     	'C', copperIngot
 		});
 	}
 	
@@ -151,6 +164,7 @@ public class CommunityMod {
 		GameRegistry.registerBlock(copperOre, "CopperOre");
 		GameRegistry.registerBlock(siliconBlock, "SiliconBlock");
 		GameRegistry.registerBlock(ironGirder, "IronGirder");
+		GameRegistry.registerBlock(copperBlock, "CopperBlock");
 		
 		//Item Registry
 		GameRegistry.registerItem(leadIngot, "LeadIngot");
@@ -169,6 +183,7 @@ public class CommunityMod {
 		LanguageRegistry.addName(copperOre, "Copper Ore");
 		LanguageRegistry.addName(siliconBlock, "Silicon Block");
 		LanguageRegistry.addName(ironGirder, "Iron Girder");
+		LanguageRegistry.addName(copperBlock, "Copper Block");
 		
 		//Item LanguageRegistry
 		LanguageRegistry.addName(leadIngot, "Lead Ingot");
