@@ -107,7 +107,7 @@ public class CommunityMod {
 		ligniteOreID = config.get("Block IDs", "Lignite Ore ID", 709).getInt();
 		bituminousOreID = config.get("Block IDs", "Bituminous Ore ID", 710).getInt();
 		anthraciteOreID = config.get("Block IDs", "Anthracite Ore ID", 711).getInt();
-		//platinumOreID = config.get("Block IDs", "Platinum Ore ID", 717).getInt();
+		platinumOreID = config.get("Block IDs", "Platinum Ore ID", 717).getInt();
 		tungstonOreID = config.get("Block IDs", "Tungston Ore ID", 713).getInt();
 		arsmiumOreID = config.get("Block IDs", "Arsium Ore ID", 714).getInt();
 		urdiumOreID = config.get("Block IDs", "Urdium Ore ID", 715).getInt();
@@ -120,10 +120,10 @@ public class CommunityMod {
 		ligniteCoalID = config.get("Item IDs", "Lignite ID", 1004).getInt();
 		bituminousCoalID = config.get("Item IDs", "Bituminous Coal ID", 1005).getInt();
 		anthraciteCoalID = config.get("Item IDs", "Anthracite ID", 1006).getInt();
-		platinumIngotID = config.get("Item IDs", "Platinum ID", 1007).getInt();
-		tungstonIngotID = config.get("Item IDs", "Platinum ID", 1008).getInt();
-		arsmiumShardID = config.get("Item IDs", "Platinum ID", 1009).getInt();
-		urdiumIngotID = config.get("Item IDs", "Platinum ID", 1010).getInt();
+		platinumIngotID = config.get("Item IDs", "Platinum Ingot ID", 1007).getInt();
+		tungstonIngotID = config.get("Item IDs", "Tungston Ingot ID", 1008).getInt();
+		arsmiumShardID = config.get("Item IDs", "Arsmium Shard ID", 1009).getInt();
+		urdiumIngotID = config.get("Item IDs", "Platinum Ingot ID", 1010).getInt();
 
 		config.save();
 	}
