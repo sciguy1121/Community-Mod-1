@@ -38,6 +38,7 @@ public class CommunityMod {
 	public static Item leadIngot;
 	public static Item titaniumIngot;
 	public static Item copperIngot;
+	public static Item siliconIngot;
 	
 	//Block IDs
 	public static int siliconOreID;
@@ -51,6 +52,7 @@ public class CommunityMod {
 	public static int leadIngotID;
 	public static int titaniumIngotID;
 	public static int copperIngotID;
+	public static int siliconIngotID;
 	
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event){
@@ -69,6 +71,7 @@ public class CommunityMod {
 		leadIngotID = config.get("Item IDs", "Lead Ingot ID", 1000).getInt();
 		titaniumIngotID = config.get("Item IDs", "Titanium Ingot ID", 1001).getInt();
 		copperIngotID = config.get("Item IDs", "Copper Ingot ID", 1002).getInt();
+		siliconIngotID = config.get("Item IDs", "Silicon Ingot ID", 1003).getInt();
 		
 		config.save();
 	}
@@ -88,7 +91,8 @@ public class CommunityMod {
 		//Item Loading
 		leadIngot = new ItemIngot(leadIngotID, 1).setCreativeTab(CreativeTabs.tabMaterials).setItemName("LeadIngot");
 		titaniumIngot = new ItemIngot(titaniumIngotID, 0).setCreativeTab(CreativeTabs.tabMaterials).setItemName("TitaniumIngot");
-		copperIngot = new ItemIngot(copperIngotID, 2).setCreativeTab(CreativeTab.tabMaterials).setItemName("CopperIngot");
+		copperIngot = new ItemIngot(copperIngotID, 3).setCreativeTab(CreativeTabs.tabMaterials).setItemName("CopperIngot");
+		siliconIngot = new ItemIngot(siliconIngotID, 2).setCreativeTab(CreativeTabs.tabMaterials).setItemName("Silicon Ingot");
 		
 		gameRegisters();
 		languageRegisters();
@@ -131,6 +135,7 @@ public class CommunityMod {
 		GameRegistry.registerItem(leadIngot, "LeadIngot");
 		GameRegistry.registerItem(titaniumIngot, "TitaniumIngot");
 		GameRegistry.registerItem(copperIngot, "CopperIngot");
+		GameRegistry.registerItem(siliconIngot, "SiliconIngot");
 	}
 	
 	private static void languageRegisters(){
@@ -146,5 +151,6 @@ public class CommunityMod {
 		LanguageRegistry.addName(leadIngot, "Lead Ingot");
 		LanguageRegistry.addName(titaniumIngot, "Titanium Ingot");
 		LanguageRegistry.addName(copperIngot, "Copper Ingot");
+		LanguageRegistry.addName(siliconIngot, "Silicon Ingot");
 	}
 }
