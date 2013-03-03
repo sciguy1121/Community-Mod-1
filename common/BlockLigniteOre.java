@@ -1,6 +1,8 @@
-package ZFuelCraftMod.common;
+package communityMod.common;
 
 import java.util.Random;
+
+import communityMod.textures.TextureHandler;
 
 
 import net.minecraft.block.Block;
@@ -12,14 +14,9 @@ public class BlockLigniteOre extends Block{
 	public BlockLigniteOre(int id, int texture, Material mat){
 		super(id, texture, mat);
 		this.setCreativeTab(CreativeTabs.tabBlock);
-		
 	}
 
 	public String getTextureFile(){
-		return ("/zfuelcraft/Block_Textures.png");
-		
+		return TextureHandler.BLOCK_TEXTURE_A;
 	}
-public int idDropped(int par1, Random rand, int par2){
-	return ZFuelCraftMod.lignite.itemID;
-}
 }
