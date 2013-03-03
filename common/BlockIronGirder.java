@@ -2,6 +2,8 @@ package communityMod.common;
 
 import java.util.Random;
 
+import communityMod.textures.TextureHandler;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -10,24 +12,24 @@ public class BlockIronGirder extends Block{
 	
     public BlockIronGirder(int id, int texture, Material mat)
     {
-            super(id, texture, mat);
-            this.setCreativeTab(CreativeTabs.tabBlock);
+    	super(id, texture, mat);
+    	this.setCreativeTab(CreativeTabs.tabBlock);
     }
    
     public String getTextureFile(){
-            return "/communitymod/CommunityMod_Textures.png";
+    	return TextureHandler.BLOCK_TEXTURE_A;
     }
    
     public boolean isOpaqueCube(){
-            return false;
+    	return false;
     }
    
     public boolean renderAsNormalBlock(){
-            return false;
+    	return false;
     }
    
     public int idDropped(int par1, Random rand, int par2){
-            return this.blockID;
+    	return this.blockID;
     }
    
     public int getBlockTextureFromSide(int side){
