@@ -25,6 +25,8 @@ public class CommunityMod {
     public static Block leadOre;
     public static Block titaniumBlock;
     public static Block leadBlock;
+    public static Item titaniumIngot;
+    public static Item leadIngot;
 
 	@SidedProxy(clientSide = "communityMod.client.ClientProxyCommunityMod",
 				serverSide = "communityMod.common.CommonProxyCommunityMod")
@@ -35,6 +37,8 @@ public class CommunityMod {
     public static int leadOreID;
     public static int titaniumBlockID;
     public static int leadBlockID;
+    public static int titaniumIngotID;
+    public static int leadIngotID;
 	
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event){
@@ -47,6 +51,9 @@ public class CommunityMod {
         titaniumBlockID = config.get("BlockIDs", "Titanium BLock ID", 703).getInt();
         leadBlockID = config.get("BlockIDs", "Lead Block ID", 704).getInt();
         
+        titaniumIngotID = config.get("ItemIDs", "Titanium Ingot ID", 705).getInt();
+        leadIngotID = config.get("ItemIDs", "Lead Ingot ID", 706).getInt();
+        
 		config.save();
 	}
 	
@@ -56,11 +63,12 @@ public class CommunityMod {
 		
 		siliconOre = new BlockOre(siliconOreID, 0).setHardness(10F).setResistance(.2F).setBlockName("SiliconOre").setCreativeTab(CreativeTabs.tabBlock);
         titaniumOre = new TitaniumOre(titaniumOreID, 1).setHardness(10F).setResistance(.2F).setBlockName("TitaniumOre").setCreativeTab(CreativeTabs.tabBlock);
-        leadOre = new LeadOre(leadOreID, 2).setHardness(10F).setResistance(.
-            2F).setBlockName("LeadOre").setCreativeTab(CreativeTabs.tabBlock);
-        titaniumBlock = new TitaniumBlock(titaniumBlockID, 1).setHardness(10F).setResistance(.2F).setBlockName("TitaniumBlock").setCreativeTab(CreativeTabs.tabBlock);
-        leadBlock = new LeadBlock(leadBlockID, 2).setHardness(10F).setResistance(.
-            2F).setBlockName("LeadBlock").setCreativeTab(CreativeTabs.tabBlock);
+        leadOre = new LeadOre(leadOreID, 2).setHardness(10F).setResistance(.2F).setBlockName("LeadOre").setCreativeTab(CreativeTabs.tabBlock);
+        titaniumBlock = new TitaniumBlock(titaniumBlockID, 3).setHardness(10F).setResistance(.2F).setBlockName("TitaniumBlock").setCreativeTab(CreativeTabs.tabBlock);
+        leadBlock = new LeadBlock(leadBlockID, 4).setHardness(10F).setResistance(.2F).setBlockName("LeadBlock").setCreativeTab(CreativeTabs.tabBlock);
+        
+        titaniumIngot = new TitaniumIngot(titaniumIngotID).setItemName("TitaniumIngot").setIconIndex(0);
+        leadIngot = new LeadIngot(leadIngotID).setItemName("LeadIngot").setIconIndex(1);
 		
 		gameRegisters();
 		languageRegisters();
@@ -77,6 +85,8 @@ public class CommunityMod {
         GameRegistry.registerBlock(leadOre, "Lead Ore");
         GameRegistry.registerBlock(titaniumOre, "Titanium Block");
         GameRegistry.registerBlock(leadOre, "Lead Block");
+        GameRegistry.registerItem(titaniumIngot, "Titanium Ingot");
+        GameRegistry.registerItem(leadIngot, "Lead Ingot");
 	}
 	
 	private static void languageRegisters(){
@@ -85,5 +95,7 @@ public class CommunityMod {
         LanguageRegistry.addName(leadOre, "Lead Ore");
         LanguageRegistry.addName(titaniumOre, "Titanium Block");
         LanguageRegistry.addName(leadOre, "Lead Block");
+        LanguageRegistry.addName(titaniumIngot, "Titanium Ingot");
+        LanguageRegistry.addName(leadIngot, "Lead Ingot");
 	}
 }
