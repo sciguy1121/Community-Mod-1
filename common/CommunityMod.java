@@ -42,7 +42,7 @@ public class CommunityMod {
 	public void load(FMLInitializationEvent event){
 		proxy.registerRenders();
 		
-		siliconOre = new BlockOre(150, 0).setHardness(10F).setResistance(.2F).setBlockName("SiliconOre").setCreativeTab(CreativeTabs.tabBlock);
+		siliconOre = new BlockOre(siliconOreID, 0).setHardness(10F).setResistance(.2F).setBlockName("SiliconOre").setCreativeTab(CreativeTabs.tabBlock);
 		
 		gameRegisters();
 		languageRegisters();
