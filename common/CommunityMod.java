@@ -15,6 +15,8 @@ import cpw.mods.fml.common.network.NetworkMod;
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 
 public class CommunityMod {
+	
+	public static Block siliconOre;
 
 	@SidedProxy(clientSide = "communityMod.client.ClientProxyCommunityMod",
 				serverSide = "communityMod.common.CommonProxyCommunityMod")
@@ -30,7 +32,8 @@ public class CommunityMod {
 	
 	@Init
 	public void load(FMLInitializationEvent event){
+		siliconOre = new BlockSiliconOre(150, 0).setHardness(10F).setResistance(.2F).setBlockName("SiliconOre").setCreativeTab(CreativeTabs.tabBlock);
 		
-	}
-	
+		proxy.registerRenderThings();
+	}	
 }
