@@ -36,6 +36,13 @@ public class WorldGenOres implements IWorldGenerator{
 			
 			(new WorldGenMinable(CommunityMod.titaniumOre.blockID, 10)).generate(world, random, xCoord, yCoord, zCoord);
 		}
+		for(int i = 0; i < 12; i++){
+			int xCoord = chunkX + random.nextInt(16);
+			int yCoord = random.nextInt(32);
+			int zCoord = chunkZ + random.nextInt(16);
+			
+			(new WorldGenMinable(CommunityMod.copperOre.blockID, 10)).generate(world, random, xCoord, yCoord, zCoord);
+		}
 	}
 
 }
