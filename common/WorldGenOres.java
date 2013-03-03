@@ -50,6 +50,24 @@ public class WorldGenOres implements IWorldGenerator{
 			
 			(new WorldGenMinable(CommunityMod.siliconOre.blockID, 10)).generate(world, random, xCoord, yCoord, zCoord);
 		}
+		for(int i = 0; i < 10; i++){
+			int xCoord = chunkX + random.nextInt(16);
+			int yCoord = random.nextInt(50);
+			int zCoord = chunkZ + random.nextInt(16);
+			(new WorldGenMinable(CommunityMod.ligniteOre.blockID, 5)).generate(world, random, xCoord, yCoord, zCoord);
+		}
+		for(int i = 0; i < 8; i++){
+			int xCoord = chunkX + random.nextInt(16);
+			int yCoord = random.nextInt(40);
+			int zCoord = chunkZ + random.nextInt(16);
+			(new WorldGenMinable(CommunityMod.bituminousOre.blockID, 5)).generate(world, random, xCoord, yCoord, zCoord);
+		}
+		for(int i = 0; i < 6; i++){
+			int xCoord = chunkX + random.nextInt(16);
+			int yCoord = random.nextInt(35);
+			int zCoord = chunkZ + random.nextInt(16);
+			(new WorldGenMinable(CommunityMod.anthraciteOre.blockID, 5)).generate(world, random, xCoord, yCoord, zCoord);
+		}
 	}
 
 }
