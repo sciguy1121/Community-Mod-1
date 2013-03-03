@@ -23,6 +23,8 @@ public class CommunityMod {
 	public static Block siliconOre;
     public static Block titaniumOre;
     public static Block leadOre;
+    public static Block titaniumBlock;
+    public static Block leadBlock;
 
 	@SidedProxy(clientSide = "communityMod.client.ClientProxyCommunityMod",
 				serverSide = "communityMod.common.CommonProxyCommunityMod")
@@ -31,6 +33,8 @@ public class CommunityMod {
 	public static int siliconOreID;
     public static int titaniumOreID;
     public static int leadOreID;
+    public static int titaniumBlockID;
+    public static int leadBlockID;
 	
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event){
@@ -40,7 +44,9 @@ public class CommunityMod {
 		siliconOreID = config.get("BlockIDs", "Silicon Ore ID", 700).getInt();
         titaniumOreID = config.get("BlockIDs", "Titanium Ore ID", 701).getInt();
         leadOreID = config.get("BlockIDs", "Lead Ore ID", 702).getInt();
-		
+        titaniumBlockID = config.get("BlockIDs", "Titanium BLock ID", 703).getInt();
+        leadBlockID = config.get("BlockIDs", "Lead Block ID", 704).getInt();
+        
 		config.save();
 	}
 	
@@ -52,6 +58,9 @@ public class CommunityMod {
         titaniumOre = new TitaniumOre(titaniumOreID, 1).setHardness(10F).setResistance(.2F).setBlockName("TitaniumOre").setCreativeTab(CreativeTabs.tabBlock);
         leadOre = new LeadOre(leadOreID, 2).setHardness(10F).setResistance(.
             2F).setBlockName("LeadOre").setCreativeTab(CreativeTabs.tabBlock);
+        titaniumBlock = new TitaniumBlock(titaniumBlockID, 1).setHardness(10F).setResistance(.2F).setBlockName("TitaniumBlock").setCreativeTab(CreativeTabs.tabBlock);
+        leadBlock = new LeadBlock(leadBlockID, 2).setHardness(10F).setResistance(.
+            2F).setBlockName("LeadBlock").setCreativeTab(CreativeTabs.tabBlock);
 		
 		gameRegisters();
 		languageRegisters();
@@ -66,11 +75,15 @@ public class CommunityMod {
 		GameRegistry.registerBlock(siliconOre, "Silicon Ore");
         GameRegistry.registerBlock(titaniumOre, "Titanium Ore");
         GameRegistry.registerBlock(leadOre, "Lead Ore");
+        GameRegistry.registerBlock(titaniumOre, "Titanium Block");
+        GameRegistry.registerBlock(leadOre, "Lead Block");
 	}
 	
 	private static void languageRegisters(){
 		LanguageRegistry.addName(siliconOre, "Silicon Ore");
         LanguageRegistry.addName(titaniumOre, "Titanium Ore");
         LanguageRegistry.addName(leadOre, "Lead Ore");
+        LanguageRegistry.addName(titaniumOre, "Titanium Block");
+        LanguageRegistry.addName(leadOre, "Lead Block");
 	}
 }
