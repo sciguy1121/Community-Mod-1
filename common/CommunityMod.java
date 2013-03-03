@@ -19,14 +19,18 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 
 public class CommunityMod {
-	
-	public static Block siliconOre;
 
 	@SidedProxy(clientSide = "communityMod.client.ClientProxyCommunityMod",
 				serverSide = "communityMod.common.CommonProxyCommunityMod")
 	public static ClientProxyCommunityMod proxy = new ClientProxyCommunityMod();
 	
+	public static Block siliconOre;
+	public static Block leadOre;
+	public static Block titaniumOre;
+	
 	public static int siliconOreID;
+	public static int leadOreID;
+	public static int titaniumOreID;
 	
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event){
@@ -34,6 +38,8 @@ public class CommunityMod {
 		config.load();
 		
 		siliconOreID = config.get("BlockIDs", "Silicon Ore ID", 700).getInt();
+		leadOreID = config.get("Block IDs", "Lead Ore ID", 701).getInt();
+		titaniumOreID = config.get("BlockIDs", "Titanium Ore ID", 702).getInt();
 		
 		config.save();
 	}
@@ -43,6 +49,8 @@ public class CommunityMod {
 		proxy.registerRenders();
 		
 		siliconOre = new BlockOre(siliconOreID, 0).setHardness(10F).setResistance(.2F).setBlockName("SiliconOre").setCreativeTab(CreativeTabs.tabBlock);
+		leadOre = new BlockOre(leadOreID, 1).setHardness(10F).setResistance(0.2F).setBlockName("LeadOre").setCreativeTab(CreativeTabs.tabBlock);
+		titaniumOre = new BlockOre(titaniumOreID, 1).setHardness(10F).setResistance(0.2F).setBlockName("TitaniumOre").setCreativeTab(CreativeTabs.tabBlock);
 		
 		gameRegisters();
 		languageRegisters();
@@ -55,9 +63,13 @@ public class CommunityMod {
 	
 	private static void gameRegisters(){
 		GameRegistry.registerBlock(siliconOre, "SiliconOre");
+		GameRegistry.registerBlock(leadOre, "LeadOre");
+		GameRegistry.registerBlock(titaniumOre, "TitaniumOre");
 	}
 	
 	private static void languageRegisters(){
 		LanguageRegistry.addName(siliconOre, "Silicon Ore");
+		LanguageRegistry.addName(leadOre, "Lead Ore");
+		LanguageRegistry.addName(titaniumOre, "Titanium Ore");
 	}
 }
