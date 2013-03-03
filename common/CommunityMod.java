@@ -26,10 +26,14 @@ public class CommunityMod {
 				serverSide = "communityMod.common.CommonProxyCommunityMod")
 	public static ClientProxyCommunityMod proxy = new ClientProxyCommunityMod();
 	
+	public static int siliconOreID;
+	
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event){
 		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
 		config.load();
+		
+		siliconOreID = config.get("BlockIDs", "Silicon Ore ID", 700).getInt();
 		
 		config.save();
 	}
