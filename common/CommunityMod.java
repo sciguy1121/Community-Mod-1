@@ -41,7 +41,7 @@ public class CommunityMod {
 	public static Block bituminousOre;
 	public static Block anthraciteOre;
 	public static Block platinumOre;
-	public static Block tungstonOre;
+	public static Block tungstenOre;
 	public static Block arsmiumOre;
 	public static Block urdiumOre;
 
@@ -54,7 +54,7 @@ public class CommunityMod {
 	public static Item bituminousCoal;
 	public static Item anthraciteCoal;
 	public static Item platinumIngot;
-	public static Item tungstonIngot;
+	public static Item tungstenIngot;
 	public static Item arsmiumShard;
 	public static Item urdiumIngot;
 
@@ -72,7 +72,7 @@ public class CommunityMod {
 	public static int bituminousOreID;
 	public static int anthraciteOreID;
 	public static int platinumOreID;
-	public static int tungstonOreID;
+	public static int tungstenOreID;
 	public static int arsmiumOreID;
 	public static int urdiumOreID;
 
@@ -85,7 +85,7 @@ public class CommunityMod {
 	public static int bituminousCoalID;
 	public static int anthraciteCoalID;
 	public static int platinumIngotID;
-	public static int tungstonIngotID;
+	public static int tungstenIngotID;
 	public static int arsmiumShardID;
 	public static int urdiumIngotID;
 
@@ -108,7 +108,7 @@ public class CommunityMod {
 		bituminousOreID = config.get("Block IDs", "Bituminous Ore ID", 710).getInt();
 		anthraciteOreID = config.get("Block IDs", "Anthracite Ore ID", 711).getInt();
 		platinumOreID = config.get("Block IDs", "Platinum Ore ID", 717).getInt();
-		tungstonOreID = config.get("Block IDs", "Tungston Ore ID", 713).getInt();
+		tungstenOreID = config.get("Block IDs", "tungsten Ore ID", 713).getInt();
 		arsmiumOreID = config.get("Block IDs", "Arsium Ore ID", 714).getInt();
 		urdiumOreID = config.get("Block IDs", "Urdium Ore ID", 715).getInt();
 
@@ -121,7 +121,7 @@ public class CommunityMod {
 		bituminousCoalID = config.get("Item IDs", "Bituminous Coal ID", 1005).getInt();
 		anthraciteCoalID = config.get("Item IDs", "Anthracite ID", 1006).getInt();
 		platinumIngotID = config.get("Item IDs", "Platinum Ingot ID", 1007).getInt();
-		tungstonIngotID = config.get("Item IDs", "Tungston Ingot ID", 1008).getInt();
+		tungstenIngotID = config.get("Item IDs", "tungsten Ingot ID", 1008).getInt();
 		arsmiumShardID = config.get("Item IDs", "Arsmium Shard ID", 1009).getInt();
 		urdiumIngotID = config.get("Item IDs", "Platinum Ingot ID", 1010).getInt();
 
@@ -145,10 +145,10 @@ public class CommunityMod {
 		ligniteOre = new BlockOre(ligniteOreID, 11).setBlockName("LigniteOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CreativeTabs.tabBlock);
 		bituminousOre = new BlockOre(bituminousOreID, 12).setBlockName("BituminousOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CreativeTabs.tabBlock);
 		anthraciteOre = new BlockOre(anthraciteOreID, 13).setBlockName("AnthraciteOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CreativeTabs.tabBlock);
-		platinumOre = new BlockOre(platinumOreID, 14).setHardness(18F).setResistance(22F).setBlockName("PlatinumOre").setCreativeTab(CreativeTabs.tabBlock);
-		tungstonOre = new BlockOre(tungstonOreID, 14).setHardness(18F).setResistance(22F).setBlockName("TungstonOre").setCreativeTab(CreativeTabs.tabBlock);
-		arsmiumOre = new BlockOre(arsmiumOreID, 14).setHardness(18F).setResistance(22F).setBlockName("ArsmiumOre").setCreativeTab(CreativeTabs.tabBlock);
-		urdiumOre = new BlockOre(urdiumOreID, 14).setHardness(18F).setResistance(22F).setBlockName("UrdiumOre").setCreativeTab(CreativeTabs.tabBlock);
+		platinumOre = new BlockOre(platinumOreID, 15).setHardness(18F).setResistance(22F).setBlockName("PlatinumOre").setCreativeTab(CreativeTabs.tabBlock);
+		tungstenOre = new BlockOre(tungstenOreID, 16).setHardness(18F).setResistance(22F).setBlockName("tungstenOre").setCreativeTab(CreativeTabs.tabBlock);
+		arsmiumOre = new BlockOre(arsmiumOreID, 17).setHardness(18F).setResistance(22F).setBlockName("ArsmiumOre").setCreativeTab(CreativeTabs.tabBlock);
+		urdiumOre = new BlockOre(urdiumOreID, 18).setHardness(18F).setResistance(22F).setBlockName("UrdiumOre").setCreativeTab(CreativeTabs.tabBlock);
 		
 		//Item Loading
 		leadIngot = new ItemIngot(leadIngotID, 1).setCreativeTab(CreativeTabs.tabMaterials).setItemName("LeadIngot");
@@ -158,10 +158,10 @@ public class CommunityMod {
 		ligniteCoal = new ItemCoal(ligniteCoalID, 4).setCreativeTab(CreativeTabs.tabMaterials).setItemName("Lignite");
 		bituminousCoal = new ItemCoal(bituminousCoalID, 5).setCreativeTab(CreativeTabs.tabMaterials).setItemName("BituminousCoal");
 		anthraciteCoal = new ItemCoal(anthraciteCoalID, 6).setCreativeTab(CreativeTabs.tabMaterials).setItemName("Anthracite");
-		platinumIngot = new ItemIngot(platinumIngotID, 7).setCreativeTab(CreativeTabs.tabMaterials).setItemName("PlatinumIngot");
-		tungstonIngot = new ItemIngot(tungstonIngotID, 8).setCreativeTab(CreativeTabs.tabMaterials).setItemName("TungstonIngot");
-		arsmiumShard = new ItemIngot(arsmiumShardID, 9).setCreativeTab(CreativeTabs.tabMaterials).setItemName("ArsmiumIngot");
-		urdiumIngot = new ItemIngot(urdiumIngotID, 10).setCreativeTab(CreativeTabs.tabMaterials).setItemName("UrdiumIngot");
+		platinumIngot = new ItemIngot(platinumIngotID, 8).setCreativeTab(CreativeTabs.tabMaterials).setItemName("PlatinumIngot");
+		tungstenIngot = new ItemIngot(tungstenIngotID, 9).setCreativeTab(CreativeTabs.tabMaterials).setItemName("tungstenIngot");
+		arsmiumShard = new ItemIngot(arsmiumShardID, 10).setCreativeTab(CreativeTabs.tabMaterials).setItemName("ArsmiumIngot");
+		urdiumIngot = new ItemIngot(urdiumIngotID, 11).setCreativeTab(CreativeTabs.tabMaterials).setItemName("UrdiumIngot");
 		
 		gameRegisters();
 		languageRegisters();
@@ -178,7 +178,7 @@ public class CommunityMod {
 		GameRegistry.addSmelting(siliconOreID, new ItemStack(siliconIngot, 1), 0.5F);
 		GameRegistry.addSmelting(copperOreID, new ItemStack(copperIngot, 1), 0.5F);
 		GameRegistry.addSmelting(platinumOreID, new ItemStack(copperIngot, 1), 0.5F);
-		GameRegistry.addSmelting(tungstonOreID, new ItemStack(tungstonIngot, 1), 0.5F);
+		GameRegistry.addSmelting(tungstenOreID, new ItemStack(tungstenIngot, 1), 0.5F);
 		GameRegistry.addSmelting(arsmiumOreID, new ItemStack(arsmiumShard, 1), 0.5F);
 		GameRegistry.addSmelting(urdiumOreID, new ItemStack(urdiumIngot, 1), 0.5F);
 	}
@@ -222,7 +222,7 @@ public class CommunityMod {
 		GameRegistry.registerBlock(bituminousOre, "Bituminous Ore");
 		GameRegistry.registerBlock(anthraciteOre, "Anthracite Ore");
 		GameRegistry.registerBlock(platinumOre, "PlatinumOre");
-		GameRegistry.registerBlock(tungstonOre, "TungstonOre");
+		GameRegistry.registerBlock(tungstenOre, "tungstenOre");
 		GameRegistry.registerBlock(arsmiumOre, "ArsmiumOre");
 		GameRegistry.registerBlock(urdiumOre, "UrdiumOre");
 
@@ -235,7 +235,7 @@ public class CommunityMod {
 		GameRegistry.registerItem(bituminousCoal, "Bituminous Coal");
 		GameRegistry.registerItem(anthraciteCoal, "Anthracite");
 		GameRegistry.registerItem(platinumIngot, "PlatinumIngot");
-		GameRegistry.registerItem(tungstonIngot, "TungstonIngot");
+		GameRegistry.registerItem(tungstenIngot, "tungstenIngot");
 		GameRegistry.registerItem(arsmiumShard, "ArsmiumShard");
 		GameRegistry.registerItem(urdiumIngot, "UrdiumIngot");
 	}
@@ -255,7 +255,7 @@ public class CommunityMod {
 		LanguageRegistry.addName(bituminousOre, "Bituminous Ore");
 		LanguageRegistry.addName(anthraciteOre, "Anthracite Ore");
 		LanguageRegistry.addName(platinumOre, "Platinum Ore");
-		LanguageRegistry.addName(tungstonOre, "Tungston Ore");
+		LanguageRegistry.addName(tungstenOre, "tungsten Ore");
 		LanguageRegistry.addName(arsmiumOre, "Arsmium Ore");
 		LanguageRegistry.addName(urdiumOre, "Urdium Ore");
 
@@ -268,7 +268,7 @@ public class CommunityMod {
 		LanguageRegistry.addName(bituminousCoal, "Bituminous Coal");
 		LanguageRegistry.addName(anthraciteCoal, "Anthracite");
 		LanguageRegistry.addName(platinumIngot, "Platinum Ingot");
-		LanguageRegistry.addName(tungstonIngot, "Tungstron Ingot");
+		LanguageRegistry.addName(tungstenIngot, "Tungstron Ingot");
 		LanguageRegistry.addName(arsmiumShard, "Arsmium Shard");
 		LanguageRegistry.addName(urdiumIngot, "Urdium Ingot");
 	}
