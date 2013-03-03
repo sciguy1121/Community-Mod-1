@@ -11,8 +11,8 @@ public class FuelHandler implements IFuelHandler{
 			return 3200;
 		}else if(fuel.itemID == CommunityMod.bituminousCoal.itemID){
 			return 6400;
-		//}else if(fuel.itemID == CommunityMod.anthracite.itemID){
-			//return 12800;
+		}else if(fuel.itemID == CommunityMod.anthraciteCoal.itemID){
+			return 12800;
 		}
 		return 0;
 	}

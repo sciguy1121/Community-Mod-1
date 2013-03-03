@@ -2,6 +2,7 @@ package communityMod.common;
 
 import java.util.Random;
 
+import communityMod.client.ClientProxyCommunityMod;
 import communityMod.textures.TextureHandler;
 
 import net.minecraft.block.Block;
@@ -23,6 +24,8 @@ public class BlockOre extends Block{
 			return CommunityMod.ligniteCoalID;
 		}else if(this.blockID == CommunityMod.bituminousOreID){
 			return CommunityMod.bituminousCoalID;
+		}else if(this.blockID == CommunityMod.anthraciteOreID){
+			return CommunityMod.anthraciteCoalID;
 		}else{
 			return this.blockID;
 		}

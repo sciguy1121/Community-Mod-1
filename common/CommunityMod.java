@@ -39,6 +39,7 @@ public class CommunityMod {
 	public static Block concrete;
 	public static Block ligniteOre;
 	public static Block bituminousOre;
+	public static Block anthraciteOre;
 	
 	//Items
 	public static Item leadIngot;
@@ -47,6 +48,7 @@ public class CommunityMod {
 	public static Item siliconIngot;
 	public static Item ligniteCoal;
 	public static Item bituminousCoal;
+	public static Item anthraciteCoal;
 	
 	//Block IDs
 	public static int siliconOreID;
@@ -60,6 +62,7 @@ public class CommunityMod {
 	public static int concreteID;
 	public static int ligniteOreID;
 	public static int bituminousOreID;
+	public static int anthraciteOreID;
 	
 	//Item IDs
 	public static int leadIngotID;
@@ -68,6 +71,7 @@ public class CommunityMod {
 	public static int siliconIngotID;
 	public static int ligniteCoalID;
 	public static int bituminousCoalID;
+	public static int anthraciteCoalID;
 	
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event){
@@ -86,6 +90,7 @@ public class CommunityMod {
 		concreteID = config.get("Block IDs", "Concrete ID", 708).getInt();
 		ligniteOreID = config.get("Block IDs", "Lignite Ore ID", 709).getInt();
 		bituminousOreID = config.get("Block IDs", "Bituminous Ore ID", 710).getInt();
+		anthraciteOreID = config.get("Block IDs", "Anthracite Ore ID", 711).getInt();
 		
 		//Item IDs
 		leadIngotID = config.get("Item IDs", "Lead Ingot ID", 1000).getInt();
@@ -94,6 +99,7 @@ public class CommunityMod {
 		siliconIngotID = config.get("Item IDs", "Silicon Ingot ID", 1003).getInt();
 		ligniteCoalID = config.get("Item IDs", "Lignite ID", 1004).getInt();
 		bituminousCoalID = config.get("Item IDs", "Bituminous Coal ID", 1005).getInt();
+		anthraciteCoalID = config.get("Item IDs", "Anthracite ID", 1006).getInt();
 		
 		config.save();
 	}
@@ -112,8 +118,9 @@ public class CommunityMod {
 		siliconBlock = new BlockMetal(siliconBlockID, 5).setHardness(12F).setResistance(10F).setBlockName("SiliconBlock").setCreativeTab(CreativeTabs.tabBlock);
 		ironGirder = new BlockIronGirder(ironGirderID, 8, Material.iron).setBlockName("Iron Girder").setHardness(2F).setStepSound(Block.soundMetalFootstep);
 		concrete = new BlockConcrete(concreteID, 10, Material.iron).setBlockName("Concrete").setHardness(2F).setStepSound(Block.soundStoneFootstep);
-		ligniteOre = new BlockOre(ligniteOreID, 11).setBlockName("Lignite Ore").setHardness(10F).setResistance(0.2F).setCreativeTab(CreativeTabs.tabBlock);
-		bituminousOre = new BlockOre(bituminousOreID, 12).setBlockName("Bituminous Ore").setHardness(10F).setResistance(0.2F).setCreativeTab(CreativeTabs.tabBlock);
+		ligniteOre = new BlockOre(ligniteOreID, 11).setBlockName("LigniteOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CreativeTabs.tabBlock);
+		bituminousOre = new BlockOre(bituminousOreID, 12).setBlockName("BituminousOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CreativeTabs.tabBlock);
+		anthraciteOre = new BlockOre(anthraciteOreID, 13).setBlockName("AnthraciteOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CreativeTabs.tabBlock);
 		
 		//Item Loading
 		leadIngot = new ItemIngot(leadIngotID, 1).setCreativeTab(CreativeTabs.tabMaterials).setItemName("LeadIngot");
@@ -121,6 +128,8 @@ public class CommunityMod {
 		copperIngot = new ItemIngot(copperIngotID, 3).setCreativeTab(CreativeTabs.tabMaterials).setItemName("CopperIngot");
 		siliconIngot = new ItemIngot(siliconIngotID, 2).setCreativeTab(CreativeTabs.tabMaterials).setItemName("Silicon Ingot");
 		ligniteCoal = new ItemCoal(ligniteCoalID, 4).setCreativeTab(CreativeTabs.tabMaterials).setItemName("Lignite");
+		bituminousCoal = new ItemCoal(bituminousCoalID, 5).setCreativeTab(CreativeTabs.tabMaterials).setItemName("BituminousCoal");
+		anthraciteCoal = new ItemCoal(anthraciteCoalID, 6).setCreativeTab(CreativeTabs.tabMaterials).setItemName("Anthracite");
 		
 		gameRegisters();
 		languageRegisters();
@@ -173,6 +182,7 @@ public class CommunityMod {
 		GameRegistry.registerBlock(concrete, "Concrete");
 		GameRegistry.registerBlock(ligniteOre, "Lignite Ore");
 		GameRegistry.registerBlock(bituminousOre, "Bituminous Ore");
+		GameRegistry.registerBlock(anthraciteOre, "Anthracite Ore");
 		
 		//Item Registry
 		GameRegistry.registerItem(leadIngot, "LeadIngot");
@@ -180,6 +190,8 @@ public class CommunityMod {
 		GameRegistry.registerItem(copperIngot, "CopperIngot");
 		GameRegistry.registerItem(siliconIngot, "SiliconIngot");
 		GameRegistry.registerItem(ligniteCoal, "Lignite");
+		GameRegistry.registerItem(bituminousCoal, "Bituminous Coal");
+		GameRegistry.registerItem(anthraciteCoal, "Anthracite");
 	}
 	
 	private static void languageRegisters(){
@@ -195,6 +207,7 @@ public class CommunityMod {
 		LanguageRegistry.addName(concrete, "Concrete");
 		LanguageRegistry.addName(ligniteOre, "Lignite Ore");
 		LanguageRegistry.addName(bituminousOre, "Bituminous Ore");
+		LanguageRegistry.addName(anthraciteOre, "Anthracite Ore");
 		
 		//Item LanguageRegistry
 		LanguageRegistry.addName(leadIngot, "Lead Ingot");
@@ -202,5 +215,7 @@ public class CommunityMod {
 		LanguageRegistry.addName(copperIngot, "Copper Ingot");
 		LanguageRegistry.addName(siliconIngot, "Silicon Ingot");
 		LanguageRegistry.addName(ligniteCoal, "Lignite");
+		LanguageRegistry.addName(bituminousCoal, "Bituminous Coal");
+		LanguageRegistry.addName(anthraciteCoal, "Anthracite");
 	}
 }
