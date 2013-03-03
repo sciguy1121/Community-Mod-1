@@ -79,7 +79,15 @@ public class CommunityMod {
 	}
 	
 	private static void craftingRecipes(){
-		
+		GameRegistry.addRecipe(new ItemStack(titaniumBlock), new Object[]{
+			"TTT", "TTT", "TTT",
+			'T', titaniumIngot,
+		});
+        
+        GameRegistry.addRecipe(new ItemStack(leadBlock), new Object[]{
+			"LLL", "LLL", "LLL",
+			'L', leadIngot,
+		});
 	}
 	
 	private static void gameRegisters(){
