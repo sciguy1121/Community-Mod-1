@@ -62,10 +62,10 @@ public class CommunityMod {
 		proxy.registerRenders();
 		
 		siliconOre = new BlockOre(siliconOreID, 0).setHardness(10F).setResistance(.2F).setBlockName("SiliconOre").setCreativeTab(CreativeTabs.tabBlock);
-        titaniumOre = new TitaniumOre(titaniumOreID, 1).setHardness(10F).setResistance(.2F).setBlockName("TitaniumOre").setCreativeTab(CreativeTabs.tabBlock);
-        leadOre = new LeadOre(leadOreID, 2).setHardness(10F).setResistance(.2F).setBlockName("LeadOre").setCreativeTab(CreativeTabs.tabBlock);
-        titaniumBlock = new TitaniumBlock(titaniumBlockID, 3).setHardness(10F).setResistance(.2F).setBlockName("TitaniumBlock").setCreativeTab(CreativeTabs.tabBlock);
-        leadBlock = new LeadBlock(leadBlockID, 4).setHardness(10F).setResistance(.2F).setBlockName("LeadBlock").setCreativeTab(CreativeTabs.tabBlock);
+        titaniumOre = new TitaniumOre(titaniumOreID, 2).setHardness(10F).setResistance(.2F).setBlockName("TitaniumOre").setCreativeTab(CreativeTabs.tabBlock);
+        leadOre = new LeadOre(leadOreID, 1).setHardness(10F).setResistance(.2F).setBlockName("LeadOre").setCreativeTab(CreativeTabs.tabBlock);
+        titaniumBlock = new TitaniumBlock(titaniumBlockID, 4).setHardness(10F).setResistance(.2F).setBlockName("TitaniumBlock").setCreativeTab(CreativeTabs.tabBlock);
+        leadBlock = new LeadBlock(leadBlockID, 5).setHardness(10F).setResistance(.2F).setBlockName("LeadBlock").setCreativeTab(CreativeTabs.tabBlock);
         
         titaniumIngot = new TitaniumIngot(titaniumIngotID).setItemName("TitaniumIngot").setIconIndex(0);
         leadIngot = new LeadIngot(leadIngotID).setItemName("LeadIngot").setIconIndex(1);
