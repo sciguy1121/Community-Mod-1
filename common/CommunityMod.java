@@ -125,6 +125,12 @@ public class CommunityMod {
 			"TTT",
 			'T', titaniumIngot
 		});
+		GameRegistry.addRecipe(new ItemStack(siliconBlock, 1), new Object[]{
+			"SSS",
+			"SSS",
+			"SSS",
+			'S', siliconIngot
+		});
 	}
 	
 	private static void gameRegisters(){
