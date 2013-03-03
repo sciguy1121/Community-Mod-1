@@ -73,6 +73,9 @@ public class CommunityMod {
 		gameRegisters();
 		languageRegisters();
 		craftingRecipes();
+        
+        GameRegistry.addSmelting(titaniumOreID, new ItemStack(titaniumIngot, 1), 20F);
+        GameRegistry.addSmelting(leadOreID, new ItemStack(leadIngot, 1), 10F);
 	}
 	
 	private static void craftingRecipes(){
