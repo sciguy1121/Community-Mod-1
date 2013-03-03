@@ -45,6 +45,8 @@ public class CommunityMod {
 	public static Item titaniumIngot;
 	public static Item copperIngot;
 	public static Item siliconIngot;
+	public static Item ligniteCoal;
+	public static Item bituminousCoal;
 	
 	//Block IDs
 	public static int siliconOreID;
@@ -56,14 +58,16 @@ public class CommunityMod {
 	public static int siliconBlockID;
 	public static int ironGirderID;
 	public static int concreteID;
+	public static int ligniteOreID;
+	public static int bituminousOreID;
 	
 	//Item IDs
 	public static int leadIngotID;
 	public static int titaniumIngotID;
 	public static int copperIngotID;
 	public static int siliconIngotID;
-	public static int ligniteOreID;
-	public static int bituminousOreID;
+	public static int ligniteCoalID;
+	public static int bituminousCoalID;
 	
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event){
@@ -88,6 +92,8 @@ public class CommunityMod {
 		titaniumIngotID = config.get("Item IDs", "Titanium Ingot ID", 1001).getInt();
 		copperIngotID = config.get("Item IDs", "Copper Ingot ID", 1002).getInt();
 		siliconIngotID = config.get("Item IDs", "Silicon Ingot ID", 1003).getInt();
+		ligniteCoalID = config.get("Item IDs", "Lignite ID", 1004).getInt();
+		bituminousCoalID = config.get("Item IDs", "Bituminous Coal ID", 1005).getInt();
 		
 		config.save();
 	}
@@ -114,6 +120,7 @@ public class CommunityMod {
 		titaniumIngot = new ItemIngot(titaniumIngotID, 0).setCreativeTab(CreativeTabs.tabMaterials).setItemName("TitaniumIngot");
 		copperIngot = new ItemIngot(copperIngotID, 3).setCreativeTab(CreativeTabs.tabMaterials).setItemName("CopperIngot");
 		siliconIngot = new ItemIngot(siliconIngotID, 2).setCreativeTab(CreativeTabs.tabMaterials).setItemName("Silicon Ingot");
+		ligniteCoal = new ItemCoal(ligniteCoalID, 4).setCreativeTab(CreativeTabs.tabMaterials).setItemName("Lignite");
 		
 		gameRegisters();
 		languageRegisters();
@@ -172,6 +179,7 @@ public class CommunityMod {
 		GameRegistry.registerItem(titaniumIngot, "TitaniumIngot");
 		GameRegistry.registerItem(copperIngot, "CopperIngot");
 		GameRegistry.registerItem(siliconIngot, "SiliconIngot");
+		GameRegistry.registerItem(ligniteCoal, "Lignite");
 	}
 	
 	private static void languageRegisters(){
@@ -193,5 +201,6 @@ public class CommunityMod {
 		LanguageRegistry.addName(titaniumIngot, "Titanium Ingot");
 		LanguageRegistry.addName(copperIngot, "Copper Ingot");
 		LanguageRegistry.addName(siliconIngot, "Silicon Ingot");
+		LanguageRegistry.addName(ligniteCoal, "Lignite");
 	}
 }
