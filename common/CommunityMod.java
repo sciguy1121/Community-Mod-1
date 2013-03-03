@@ -2,6 +2,8 @@ package communityMod.common;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
 import communityMod.client.ClientProxyCommunityMod;
 
@@ -30,22 +32,31 @@ public class CommunityMod {
 	public static Block leadBlock;
 	public static Block titaniumBlock;
 	
+	public static Item leadIngot;
+	public static Item titaniumIngot;
+	
 	public static int siliconOreID;
 	public static int leadOreID;
 	public static int titaniumOreID;
 	public static int leadBlockID;
 	public static int titaniumBlockID;
 	
+	public static int leadIngotID;
+	public static int titaniumIngotID;
+	
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event){
 		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
 		config.load();
 		
-		siliconOreID = config.get("BlockIDs", "Silicon Ore ID", 700).getInt();
+		siliconOreID = config.get("Block IDs", "Silicon Ore ID", 700).getInt();
 		leadOreID = config.get("Block IDs", "Lead Ore ID", 701).getInt();
-		titaniumOreID = config.get("BlockIDs", "Titanium Ore ID", 702).getInt();
-		leadBlockID = config.get("BlockIDs", "Lead Block ID", 703).getInt();
-		titaniumBlockID = config.get("BlockIDs", "Titanium Block ID", 704).getInt();
+		titaniumOreID = config.get("Block IDs", "Titanium Ore ID", 702).getInt();
+		leadBlockID = config.get("Block IDs", "Lead Block ID", 703).getInt();
+		titaniumBlockID = config.get("Block IDs", "Titanium Block ID", 704).getInt();
+		
+		leadIngotID = config.get("Item IDs", "Lead Ingot ID", 1000).getInt();
+		titaniumIngotID = config.get("Item IDs", "Titanium Ingot ID", 1001).getInt();
 		
 		config.save();
 	}
@@ -60,9 +71,18 @@ public class CommunityMod {
 		leadBlock = new BlockMetal(leadBlockID, 4).setHardness(12F).setResistance(10F).setBlockName("LeadBlock").setCreativeTab(CreativeTabs.tabBlock);
 		titaniumBlock = new BlockMetal(titaniumBlockID, 3).setHardness(12F).setResistance(10F).setBlockName("TitaniumBlock").setCreativeTab(CreativeTabs.tabBlock);
 		
+		leadIngot = new ItemIngot(leadIngotID, 1).setCreativeTab(CreativeTabs.tabMaterials).setItemName("LeadIngot");
+		titaniumIngot = new ItemIngot(titaniumIngotID, 0).setCreativeTab(CreativeTabs.tabMaterials).setItemName("TitaniumIngot");
+		
 		gameRegisters();
 		languageRegisters();
 		craftingRecipes();
+		smeltingRecipes();
+	}
+	
+	private static void smeltingRecipes(){
+		GameRegistry.addSmelting(leadOreID, new ItemStack(leadIngot, 1), 0.6F);
+		GameRegistry.addSmelting(titaniumOreID, new ItemStack(titaniumIngot, 1), 0.75F);
 	}
 	
 	private static void craftingRecipes(){
@@ -75,6 +95,9 @@ public class CommunityMod {
 		GameRegistry.registerBlock(titaniumOre, "TitaniumOre");
 		GameRegistry.registerBlock(leadBlock, "LeadBlock");
 		GameRegistry.registerBlock(titaniumBlock, "TitaniumBlock");
+		
+		GameRegistry.registerItem(leadIngot, "Lead Ingot");
+		GameRegistry.registerItem(titaniumIngot, "Titanium Ingot");
 	}
 	
 	private static void languageRegisters(){
@@ -83,5 +106,8 @@ public class CommunityMod {
 		LanguageRegistry.addName(titaniumOre, "Titanium Ore");
 		LanguageRegistry.addName(leadBlock, "Lead Block");
 		LanguageRegistry.addName(titaniumBlock, "Titanium Block");
+		
+		LanguageRegistry.addName(leadIngot, "Lead Ingot");
+		LanguageRegistry.addName(titaniumIngot, "Titanium Ingot");
 	}
 }
