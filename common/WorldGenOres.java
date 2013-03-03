@@ -68,6 +68,11 @@ public class WorldGenOres implements IWorldGenerator{
 			int zCoord = chunkZ + random.nextInt(16);
 			(new WorldGenMinable(CommunityMod.anthraciteOre.blockID, 5)).generate(world, random, xCoord, yCoord, zCoord);
 		}
-	}
+        for(int i = 0; i < 6; i++){
+			int xCoord = chunkX + random.nextInt(16);
+			int yCoord = random.nextInt(20);
+			int zCoord = chunkZ + random.nextInt(16);
+			(new WorldGenMinable(CommunityMod.franciumOre.blockID, 5)).generate(world, random, xCoord, yCoord, zCoord);
+    }
 
 }
