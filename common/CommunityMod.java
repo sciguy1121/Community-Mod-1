@@ -33,6 +33,7 @@ public class CommunityMod {
 	public static Block leadBlock;
 	public static Block titaniumBlock;
 	public static Block copperOre;
+	public static Block siliconBlock;
 	
 	//Items
 	public static Item leadIngot;
@@ -47,6 +48,7 @@ public class CommunityMod {
 	public static int leadBlockID;
 	public static int titaniumBlockID;
 	public static int copperOreID;
+	public static int siliconBlockID;
 	
 	//Item IDs
 	public static int leadIngotID;
@@ -66,6 +68,7 @@ public class CommunityMod {
 		leadBlockID = config.get("Block IDs", "Lead Block ID", 703).getInt();
 		titaniumBlockID = config.get("Block IDs", "Titanium Block ID", 704).getInt();
 		copperOreID = config.get("Block IDs", "Copper Ore ID", 705).getInt();
+		siliconBlockID = config.get("Block IDs", "Silicon Block ID", 706).getInt();
 		
 		//Item IDs
 		leadIngotID = config.get("Item IDs", "Lead Ingot ID", 1000).getInt();
@@ -86,7 +89,8 @@ public class CommunityMod {
 		titaniumOre = new BlockOre(titaniumOreID, 2).setHardness(10F).setResistance(0.2F).setBlockName("TitaniumOre").setCreativeTab(CreativeTabs.tabBlock);
 		leadBlock = new BlockMetal(leadBlockID, 4).setHardness(12F).setResistance(10F).setBlockName("LeadBlock").setCreativeTab(CreativeTabs.tabBlock);
 		titaniumBlock = new BlockMetal(titaniumBlockID, 3).setHardness(12F).setResistance(10F).setBlockName("TitaniumBlock").setCreativeTab(CreativeTabs.tabBlock);
-		copperOre = new BlockOre(copperOreID, 5).setHardness(10F).setResistance(0.2F).setBlockName("CopperOre").setCreativeTab(CreativeTabs.tabBlock);
+		copperOre = new BlockOre(copperOreID, 6).setHardness(10F).setResistance(0.2F).setBlockName("CopperOre").setCreativeTab(CreativeTabs.tabBlock);
+		siliconBlock = new BlockMetal(siliconBlockID, 5).setHardness(12F).setResistance(10F).setBlockName("SiliconBlock").setCreativeTab(CreativeTabs.tabBlock);
 		
 		//Item Loading
 		leadIngot = new ItemIngot(leadIngotID, 1).setCreativeTab(CreativeTabs.tabMaterials).setItemName("LeadIngot");
@@ -105,6 +109,7 @@ public class CommunityMod {
 	private static void smeltingRecipes(){
 		GameRegistry.addSmelting(leadOreID, new ItemStack(leadIngot, 1), 0.6F);
 		GameRegistry.addSmelting(titaniumOreID, new ItemStack(titaniumIngot, 1), 0.75F);
+		GameRegistry.addSmelting(siliconOreID, new ItemStack(siliconIngot, 1), 0.5F);
 	}
 	
 	private static void craftingRecipes(){
@@ -130,6 +135,7 @@ public class CommunityMod {
 		GameRegistry.registerBlock(leadBlock, "LeadBlock");
 		GameRegistry.registerBlock(titaniumBlock, "TitaniumBlock");
 		GameRegistry.registerBlock(copperOre, "CopperOre");
+		GameRegistry.registerBlock(siliconBlock, "SiliconBlock");
 		
 		//Item Registry
 		GameRegistry.registerItem(leadIngot, "LeadIngot");
@@ -146,6 +152,7 @@ public class CommunityMod {
 		LanguageRegistry.addName(leadBlock, "Lead Block");
 		LanguageRegistry.addName(titaniumBlock, "Titanium Block");
 		LanguageRegistry.addName(copperOre, "Copper Ore");
+		LanguageRegistry.addName(siliconBlock, "Silicon Block");
 		
 		//Item LanguageRegistry
 		LanguageRegistry.addName(leadIngot, "Lead Ingot");
