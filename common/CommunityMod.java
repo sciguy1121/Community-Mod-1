@@ -78,6 +78,8 @@ public class CommunityMod {
 		languageRegisters();
 		craftingRecipes();
 		smeltingRecipes();
+		
+		GameRegistry.registerWorldGenerator(new WorldGenOres());
 	}
 	
 	private static void smeltingRecipes(){
