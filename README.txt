@@ -15,7 +15,8 @@ Code:
 
 Textures:
 
-*KingCreeperEli
+*KingCreeperEli (Leader)
+*Shachou
 
 Ideas:
 
