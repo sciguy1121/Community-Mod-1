@@ -107,7 +107,7 @@ public class CommunityMod {
 		ligniteOreID = config.get("Block IDs", "Lignite Ore ID", 709).getInt();
 		bituminousOreID = config.get("Block IDs", "Bituminous Ore ID", 710).getInt();
 		anthraciteOreID = config.get("Block IDs", "Anthracite Ore ID", 711).getInt();
-		platinumOreID = config.get("Block IDs", "Platinum Ore ID", 712).getInt();
+		//platinumOreID = config.get("Block IDs", "Platinum Ore ID", 717).getInt();
 		tungstonOreID = config.get("Block IDs", "Tungston Ore ID", 713).getInt();
 		arsmiumOreID = config.get("Block IDs", "Arsium Ore ID", 714).getInt();
 		urdiumOreID = config.get("Block IDs", "Urdium Ore ID", 715).getInt();
@@ -146,9 +146,9 @@ public class CommunityMod {
 		bituminousOre = new BlockOre(bituminousOreID, 12).setBlockName("BituminousOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CreativeTabs.tabBlock);
 		anthraciteOre = new BlockOre(anthraciteOreID, 13).setBlockName("AnthraciteOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CreativeTabs.tabBlock);
 		platinumOre = new BlockOre(platinumOreID, 14).setHardness(18F).setResistance(22F).setBlockName("PlatinumOre").setCreativeTab(CreativeTabs.tabBlock);
-		tungstonOre = new BlockOre(platinumOreID, 14).setHardness(18F).setResistance(22F).setBlockName("TungstonOre").setCreativeTab(CreativeTabs.tabBlock);
-		arsmiumOre = new BlockOre(platinumOreID, 14).setHardness(18F).setResistance(22F).setBlockName("ArsmiumOre").setCreativeTab(CreativeTabs.tabBlock);
-		urdiumOre = new BlockOre(platinumOreID, 14).setHardness(18F).setResistance(22F).setBlockName("UrdiumOre").setCreativeTab(CreativeTabs.tabBlock);
+		tungstonOre = new BlockOre(tungstonOreID, 14).setHardness(18F).setResistance(22F).setBlockName("TungstonOre").setCreativeTab(CreativeTabs.tabBlock);
+		arsmiumOre = new BlockOre(arsmiumOreID, 14).setHardness(18F).setResistance(22F).setBlockName("ArsmiumOre").setCreativeTab(CreativeTabs.tabBlock);
+		urdiumOre = new BlockOre(urdiumOreID, 14).setHardness(18F).setResistance(22F).setBlockName("UrdiumOre").setCreativeTab(CreativeTabs.tabBlock);
 		
 		//Item Loading
 		leadIngot = new ItemIngot(leadIngotID, 1).setCreativeTab(CreativeTabs.tabMaterials).setItemName("LeadIngot");
@@ -159,9 +159,9 @@ public class CommunityMod {
 		bituminousCoal = new ItemCoal(bituminousCoalID, 5).setCreativeTab(CreativeTabs.tabMaterials).setItemName("BituminousCoal");
 		anthraciteCoal = new ItemCoal(anthraciteCoalID, 6).setCreativeTab(CreativeTabs.tabMaterials).setItemName("Anthracite");
 		platinumIngot = new ItemIngot(platinumIngotID, 7).setCreativeTab(CreativeTabs.tabMaterials).setItemName("PlatinumIngot");
-		tungstonIngot = new ItemIngot(platinumIngotID, 8).setCreativeTab(CreativeTabs.tabMaterials).setItemName("TungstonIngot");
-		arsmiumShard = new ItemIngot(platinumIngotID, 9).setCreativeTab(CreativeTabs.tabMaterials).setItemName("ArsmiumIngot");
-		urdiumIngot = new ItemIngot(platinumIngotID, 10).setCreativeTab(CreativeTabs.tabMaterials).setItemName("UrdiumIngot");
+		tungstonIngot = new ItemIngot(tungstonIngotID, 8).setCreativeTab(CreativeTabs.tabMaterials).setItemName("TungstonIngot");
+		arsmiumShard = new ItemIngot(arsmiumShardID, 9).setCreativeTab(CreativeTabs.tabMaterials).setItemName("ArsmiumIngot");
+		urdiumIngot = new ItemIngot(urdiumIngotID, 10).setCreativeTab(CreativeTabs.tabMaterials).setItemName("UrdiumIngot");
 		
 		gameRegisters();
 		languageRegisters();
@@ -178,9 +178,9 @@ public class CommunityMod {
 		GameRegistry.addSmelting(siliconOreID, new ItemStack(siliconIngot, 1), 0.5F);
 		GameRegistry.addSmelting(copperOreID, new ItemStack(copperIngot, 1), 0.5F);
 		GameRegistry.addSmelting(platinumOreID, new ItemStack(copperIngot, 1), 0.5F);
-		GameRegistry.addSmelting(tungstonOreID, new ItemStack(copperIngot, 1), 0.5F);
-		GameRegistry.addSmelting(arsmiumOreID, new ItemStack(copperIngot, 1), 0.5F);
-		GameRegistry.addSmelting(urdiumOreID, new ItemStack(copperIngot, 1), 0.5F);
+		GameRegistry.addSmelting(tungstonOreID, new ItemStack(tungstonIngot, 1), 0.5F);
+		GameRegistry.addSmelting(arsmiumOreID, new ItemStack(arsmiumShard, 1), 0.5F);
+		GameRegistry.addSmelting(urdiumOreID, new ItemStack(urdiumIngot, 1), 0.5F);
 	}
 
 	private static void craftingRecipes(){
