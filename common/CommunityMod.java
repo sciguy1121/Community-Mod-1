@@ -40,6 +40,8 @@ public class CommunityMod {
 	public static Block ligniteOre;
 	public static Block bituminousOre;
 	public static Block anthraciteOre;
+    public static Block franciumOre;
+    public static Block franciumBlock;
 	
 	//Items
 	public static Item leadIngot;
@@ -49,6 +51,7 @@ public class CommunityMod {
 	public static Item ligniteCoal;
 	public static Item bituminousCoal;
 	public static Item anthraciteCoal;
+    public static Item fraciumIngot;
 	
 	//Block IDs
 	public static int siliconOreID;
@@ -63,6 +66,8 @@ public class CommunityMod {
 	public static int ligniteOreID;
 	public static int bituminousOreID;
 	public static int anthraciteOreID;
+    public static int franciumOreID;
+    public static int franciumBlockID;
 	
 	//Item IDs
 	public static int leadIngotID;
@@ -72,6 +77,7 @@ public class CommunityMod {
 	public static int ligniteCoalID;
 	public static int bituminousCoalID;
 	public static int anthraciteCoalID;
+    public static int franciumIngotID;
 	
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event){
@@ -91,6 +97,8 @@ public class CommunityMod {
 		ligniteOreID = config.get("Block IDs", "Lignite Ore ID", 709).getInt();
 		bituminousOreID = config.get("Block IDs", "Bituminous Ore ID", 710).getInt();
 		anthraciteOreID = config.get("Block IDs", "Anthracite Ore ID", 711).getInt();
+        franciumOreID = config.get("Block IDs", "Francium Ore ID", 712).getInt();
+        franciumBlockID = config.get("Block IDs", "Francium Block ID", 713).getInt();
 		
 		//Item IDs
 		leadIngotID = config.get("Item IDs", "Lead Ingot ID", 1000).getInt();
@@ -100,6 +108,7 @@ public class CommunityMod {
 		ligniteCoalID = config.get("Item IDs", "Lignite ID", 1004).getInt();
 		bituminousCoalID = config.get("Item IDs", "Bituminous Coal ID", 1005).getInt();
 		anthraciteCoalID = config.get("Item IDs", "Anthracite ID", 1006).getInt();
+        franciumIngotID = config.get("Item IDs", "Francium Ingot ID", 1007).getInt();
 		
 		config.save();
 	}
@@ -121,7 +130,9 @@ public class CommunityMod {
 		ligniteOre = new BlockOre(ligniteOreID, 11).setBlockName("LigniteOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CreativeTabs.tabBlock);
 		bituminousOre = new BlockOre(bituminousOreID, 12).setBlockName("BituminousOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CreativeTabs.tabBlock);
 		anthraciteOre = new BlockOre(anthraciteOreID, 13).setBlockName("AnthraciteOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CreativeTabs.tabBlock);
-		
+		franciumOre = new BlockOre(franciumOreID, 14).setHardness(10F).setResistance(0.2F).setBlockName("FranciumOre").setCreativeTab(CreativeTabs.tabBlock);
+        franciumBlock = new BlockMetal(franciumBlockID, 15).setHardness(12F).setResistance(10F).setBlockName("FranciumBlock").setCreativeTab(CreativeTabs.tabBlock);
+        
 		//Item Loading
 		leadIngot = new ItemIngot(leadIngotID, 1).setCreativeTab(CreativeTabs.tabMaterials).setItemName("LeadIngot");
 		titaniumIngot = new ItemIngot(titaniumIngotID, 0).setCreativeTab(CreativeTabs.tabMaterials).setItemName("TitaniumIngot");
@@ -130,7 +141,8 @@ public class CommunityMod {
 		ligniteCoal = new ItemCoal(ligniteCoalID, 4).setCreativeTab(CreativeTabs.tabMaterials).setItemName("Lignite");
 		bituminousCoal = new ItemCoal(bituminousCoalID, 5).setCreativeTab(CreativeTabs.tabMaterials).setItemName("BituminousCoal");
 		anthraciteCoal = new ItemCoal(anthraciteCoalID, 6).setCreativeTab(CreativeTabs.tabMaterials).setItemName("Anthracite");
-		
+		franciumIngot = new ItemIngot(franciumIngotID, 7).setCreativeTab(CreativeTabs.tabMaterials).setItemName("Francium Ingot");
+        
 		gameRegisters();
 		languageRegisters();
 		craftingRecipes();
@@ -145,6 +157,7 @@ public class CommunityMod {
 		GameRegistry.addSmelting(titaniumOreID, new ItemStack(titaniumIngot, 1), 0.75F);
 		GameRegistry.addSmelting(siliconOreID, new ItemStack(siliconIngot, 1), 0.5F);
 		GameRegistry.addSmelting(copperOreID, new ItemStack(copperIngot, 1), 0.5F);
+        GameRegistry.addSmelting(franciumOreID, new ItemStack(franciumIngot, 1), 0.5F)
 	}
 	
 	private static void craftingRecipes(){
@@ -169,6 +182,11 @@ public class CommunityMod {
 		GameRegistry.addRecipe(new ItemStack(ironGirder, 4), new Object[]{
 			"III", " I ", "III", 'I', Item.ingotIron,
 		});
+        GameRegistry.addRecipe(new ItemStack(franciumBlock, 1), new Object[]{
+			"FFF",
+			"FFF",
+			"FFF",
+			'F', franciumIngot
 	}
 	
 	private static void gameRegisters(){
@@ -185,6 +203,8 @@ public class CommunityMod {
 		GameRegistry.registerBlock(ligniteOre, "Lignite Ore");
 		GameRegistry.registerBlock(bituminousOre, "Bituminous Ore");
 		GameRegistry.registerBlock(anthraciteOre, "Anthracite Ore");
+        GameRegistry.registerBlock(franciumOre, "FranciumOre");
+        GameRegistry.registerBlock(franciumBlock, "FranciumBlock");
 		
 		//Item Registry
 		GameRegistry.registerItem(leadIngot, "LeadIngot");
@@ -194,6 +214,7 @@ public class CommunityMod {
 		GameRegistry.registerItem(ligniteCoal, "Lignite");
 		GameRegistry.registerItem(bituminousCoal, "Bituminous Coal");
 		GameRegistry.registerItem(anthraciteCoal, "Anthracite");
+        GameRegistry.registerItem(franciumIngot, "FranciumIngot");
 	}
 	
 	private static void languageRegisters(){
@@ -210,6 +231,8 @@ public class CommunityMod {
 		LanguageRegistry.addName(ligniteOre, "Lignite Ore");
 		LanguageRegistry.addName(bituminousOre, "Bituminous Ore");
 		LanguageRegistry.addName(anthraciteOre, "Anthracite Ore");
+        LanguageRegistry.addName(franciumOre, "Francium Ore");
+        LanguageRegistry.addName(franciumBlock, "Francium Block");
 		
 		//Item LanguageRegistry
 		LanguageRegistry.addName(leadIngot, "Lead Ingot");
@@ -219,5 +242,6 @@ public class CommunityMod {
 		LanguageRegistry.addName(ligniteCoal, "Lignite");
 		LanguageRegistry.addName(bituminousCoal, "Bituminous Coal");
 		LanguageRegistry.addName(anthraciteCoal, "Anthracite");
+        LanguageRegistry.addName(franciumIngot, "Francium Ingot");
 	}
 }
