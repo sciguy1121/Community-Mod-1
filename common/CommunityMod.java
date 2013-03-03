@@ -143,6 +143,7 @@ public class CommunityMod {
 		GameRegistry.addSmelting(leadOreID, new ItemStack(leadIngot, 1), 0.6F);
 		GameRegistry.addSmelting(titaniumOreID, new ItemStack(titaniumIngot, 1), 0.75F);
 		GameRegistry.addSmelting(siliconOreID, new ItemStack(siliconIngot, 1), 0.5F);
+		GameRegistry.addSmelting(copperOreID, new ItemStack(copperIngot, 1), 0.5F);
 	}
 	
 	private static void craftingRecipes(){
