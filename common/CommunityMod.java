@@ -21,12 +21,16 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class CommunityMod {
 	
 	public static Block siliconOre;
+    public static Block titaniumOre;
+    public static Block leadOre;
 
 	@SidedProxy(clientSide = "communityMod.client.ClientProxyCommunityMod",
 				serverSide = "communityMod.common.CommonProxyCommunityMod")
 	public static ClientProxyCommunityMod proxy = new ClientProxyCommunityMod();
 	
 	public static int siliconOreID;
+    public static int titaniumOreID;
+    public static int leadOreID;
 	
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event){
@@ -34,6 +38,8 @@ public class CommunityMod {
 		config.load();
 		
 		siliconOreID = config.get("BlockIDs", "Silicon Ore ID", 700).getInt();
+        titaniumOreID = config.get("BlockIDs", "Titanium Ore ID", 701).getInt();
+        leadOreID = config.get("BlockIDs", "Lead Ore ID", 702).getInt();
 		
 		config.save();
 	}
@@ -43,6 +49,9 @@ public class CommunityMod {
 		proxy.registerRenders();
 		
 		siliconOre = new BlockOre(siliconOreID, 0).setHardness(10F).setResistance(.2F).setBlockName("SiliconOre").setCreativeTab(CreativeTabs.tabBlock);
+        titaniumOre = new TitaniumOre(titaniumOreID, 1).setHardness(10F).setResistance(.2F).setBlockName("TitaniumOre").setCreativeTab(CreativeTabs.tabBlock);
+        leadOre = new LeadOre(leadOreID, 2).setHardness(10F).setResistance(.
+            2F).setBlockName("LeadOre").setCreativeTab(CreativeTabs.tabBlock);
 		
 		gameRegisters();
 		languageRegisters();
@@ -54,10 +63,14 @@ public class CommunityMod {
 	}
 	
 	private static void gameRegisters(){
-		GameRegistry.registerBlock(siliconOre, "SiliconOre");
+		GameRegistry.registerBlock(siliconOre, "Silicon Ore");
+        GameRegistry.registerBlock(titaniumOre, "Titanium Ore");
+        GameRegistry.registerBlock(leadOre, "Lead Ore");
 	}
 	
 	private static void languageRegisters(){
 		LanguageRegistry.addName(siliconOre, "Silicon Ore");
+        LanguageRegistry.addName(titaniumOre, "Titanium Ore");
+        LanguageRegistry.addName(leadOre, "Lead Ore");
 	}
 }
