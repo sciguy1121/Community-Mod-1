@@ -27,6 +27,8 @@ public class CommunityMod {
     public static Block leadBlock;
     public static Item titaniumIngot;
     public static Item leadIngot;
+    public static Block siliconBlock;
+    public static Item siliconIngot;
 
 	@SidedProxy(clientSide = "communityMod.client.ClientProxyCommunityMod",
 				serverSide = "communityMod.common.CommonProxyCommunityMod")
@@ -39,6 +41,8 @@ public class CommunityMod {
     public static int leadBlockID;
     public static int titaniumIngotID;
     public static int leadIngotID;
+    public static int siliconBlockID;
+    public static int siliconIngotID;
 	
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event){
@@ -50,9 +54,11 @@ public class CommunityMod {
         leadOreID = config.get("BlockIDs", "Lead Ore ID", 702).getInt();
         titaniumBlockID = config.get("BlockIDs", "Titanium BLock ID", 703).getInt();
         leadBlockID = config.get("BlockIDs", "Lead Block ID", 704).getInt();
+        siliconBlockID = config.get("BlockIDs", "Silicon Block ID", 707).getInt();
         
         titaniumIngotID = config.get("ItemIDs", "Titanium Ingot ID", 705).getInt();
         leadIngotID = config.get("ItemIDs", "Lead Ingot ID", 706).getInt();
+        siliconIngotID = config.get("BlockIDs", "Silicon Ingot ID", 708).getInt();
         
 		config.save();
 	}
@@ -61,14 +67,16 @@ public class CommunityMod {
 	public void load(FMLInitializationEvent event){
 		proxy.registerRenders();
 		
-		siliconOre = new BlockOre(siliconOreID, 0).setHardness(10F).setResistance(.2F).setBlockName("SiliconOre").setCreativeTab(CreativeTabs.tabBlock);
+		siliconOre = new SiliconOre(siliconOreID, 0).setHardness(10F).setResistance(.2F).setBlockName("SiliconOre").setCreativeTab(CreativeTabs.tabBlock);
         titaniumOre = new TitaniumOre(titaniumOreID, 2).setHardness(10F).setResistance(.2F).setBlockName("TitaniumOre").setCreativeTab(CreativeTabs.tabBlock);
         leadOre = new LeadOre(leadOreID, 1).setHardness(10F).setResistance(.2F).setBlockName("LeadOre").setCreativeTab(CreativeTabs.tabBlock);
         titaniumBlock = new TitaniumBlock(titaniumBlockID, 4).setHardness(10F).setResistance(.2F).setBlockName("TitaniumBlock").setCreativeTab(CreativeTabs.tabBlock);
         leadBlock = new LeadBlock(leadBlockID, 5).setHardness(10F).setResistance(.2F).setBlockName("LeadBlock").setCreativeTab(CreativeTabs.tabBlock);
+        siliconBlock = new SiliconBlock(siliconBlockID, 6).setHardness(10F).setResistance(.2F).setBlockName("SiliconBlock").setCreativeTab(CreativeTabs.tabBlock);
         
         titaniumIngot = new TitaniumIngot(titaniumIngotID).setItemName("TitaniumIngot").setIconIndex(0);
         leadIngot = new LeadIngot(leadIngotID).setItemName("LeadIngot").setIconIndex(1);
+        siliconIngot = new SiliconIngot(siliconIngotID).setItemName("SiliconIngot").setIconIndex(2);
 		
 		gameRegisters();
 		languageRegisters();
@@ -76,6 +84,7 @@ public class CommunityMod {
         
         GameRegistry.addSmelting(titaniumOreID, new ItemStack(titaniumIngot, 1), 20F);
         GameRegistry.addSmelting(leadOreID, new ItemStack(leadIngot, 1), 10F);
+        GameRegistry.addSmelting(siliconOreID, new ItemStack(siliconIngot), 10F);
 	}
 	
 	private static void craftingRecipes(){
@@ -88,6 +97,11 @@ public class CommunityMod {
 			"LLL", "LLL", "LLL",
 			'L', leadIngot,
 		});
+        
+        GameRegistry.addRecipe(new ItemStack(siliconBlock), new Object[]{
+			"SSS", "SSS", "SSS",
+			'S', siliconIngot,
+		});
 	}
 	
 	private static void gameRegisters(){
@@ -96,8 +110,10 @@ public class CommunityMod {
         GameRegistry.registerBlock(leadOre, "Lead Ore");
         GameRegistry.registerBlock(titaniumOre, "Titanium Block");
         GameRegistry.registerBlock(leadOre, "Lead Block");
+        GameRegistry.registerBlock(siliconBlock, "Silicon Block");
         GameRegistry.registerItem(titaniumIngot, "Titanium Ingot");
         GameRegistry.registerItem(leadIngot, "Lead Ingot");
+        GameRegistry.registerItem(SiliconIngot, "Silicon Ingot");
 	}
 	
 	private static void languageRegisters(){
@@ -108,5 +124,7 @@ public class CommunityMod {
         LanguageRegistry.addName(leadOre, "Lead Block");
         LanguageRegistry.addName(titaniumIngot, "Titanium Ingot");
         LanguageRegistry.addName(leadIngot, "Lead Ingot");
+        LanguageRegistry.addName(siliconBlock, "Silicon Block");
+        LanguageRegistry.addName(siliconIngot, "Silicon Ingot");
 	}
 }
