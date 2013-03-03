@@ -1,18 +1,20 @@
-package ZFuelCraftMod.common;
+package communityMod.common;
+
+import communityMod.textures.TextureHandler;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 public class ItemLignite extends Item{
 
-  public ItemLignite(int par1) {
+	public ItemLignite(int par1) {
 		super(par1);
 		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabMaterials);
 	}
 
 	public String getTextureFile(){
-		return ("/zfuelcraft/Block_Textures.png");
-		
+		return TextureHandler.ITEM_TEXTURE_A;
 	}
+	
 }
