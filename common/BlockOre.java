@@ -9,6 +9,7 @@ public class BlockOre extends Block{
 
 	public BlockOre(int id, int texture){
 		super(id, texture, Material.iron);
+		this.setStepSound(Block.soundStoneFootstep);
 	}
 	
 	public String getTextureFile(){

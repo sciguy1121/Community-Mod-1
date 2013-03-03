@@ -18,8 +18,10 @@ Textures:
 
 *KingCreeperEli (Leader)
 *Shachou
+*TheGamingParadise
 
 Ideas:
 
 *KingCreeperEli
+*TheGamingParadise
 
