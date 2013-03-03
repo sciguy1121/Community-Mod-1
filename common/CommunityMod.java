@@ -137,6 +137,7 @@ public class CommunityMod {
 		smeltingRecipes();
 		
 		GameRegistry.registerWorldGenerator(new WorldGenOres());
+		GameRegistry.registerFuelHandler(new FuelHandler());
 	}
 	
 	private static void smeltingRecipes(){
