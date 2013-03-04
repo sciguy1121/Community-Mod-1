@@ -52,8 +52,8 @@ public class CommunityMod {
 	public static int tungstenOreID;
 	public static int arsmiumOreID;
 	public static int urdiumOreID;
-    public static int franciumOreID;
-    public static int franciumBlockID;
+	public static int franciumOreID;
+	public static int franciumBlockID;
 
 	//Item IDs
 	public static int leadIngotID;
@@ -65,9 +65,9 @@ public class CommunityMod {
 	public static int anthraciteCoalID;
 	public static int platinumIngotID;
 	public static int tungstenIngotID;
-	public static int arsmiumIngotID;
+	public static int arsmiumIngotID;	
 	public static int urdiumIngotID;
-    public static int franciumIngotID;
+	public static int franciumIngotID;
     public static int cosileadiumAlloyID;
 
 	@PreInit
