@@ -58,8 +58,8 @@ public class ItemsHelper{
 		GameRegistry.registerItem(tungstenIngot, "tungstenIngot");
 		GameRegistry.registerItem(arsmiumIngot, "ArsmiumShard");
 		GameRegistry.registerItem(urdiumIngot, "UrdiumIngot");
-        GameRegistry.registerItem(franciumIngot, "FranciumIngot");
-        GameRegistry.registerItem(cosileadiumAlloy, "CosileadiumAlloy");
+        	GameRegistry.registerItem(franciumIngot, "FranciumIngot");
+        	GameRegistry.registerItem(cosileadiumAlloy, "CosileadiumAlloy");
 	}
 	
 
@@ -76,8 +76,8 @@ public class ItemsHelper{
 		LanguageRegistry.addName(tungstenIngot, "Tungsten Ingot");
 		LanguageRegistry.addName(arsmiumIngot, "Arsmium Ingot");
 		LanguageRegistry.addName(urdiumIngot, "Urdium Ingot");
-        LanguageRegistry.addName(franciumIngot, "Francium Ingot");
-        LanguageRegistry.addName(cosileadiumAlloy, "Cosileadium Alloy");
+        	LanguageRegistry.addName(franciumIngot, "Francium Ingot");
+        	LanguageRegistry.addName(cosileadiumAlloy, "Cosileadium Alloy");
 	}
 
 }
