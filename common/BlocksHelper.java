@@ -4,6 +4,8 @@ import communityMod.common.blocks.BlockConcrete;
 import communityMod.common.blocks.BlockIronGirder;
 import communityMod.common.blocks.BlockMetal;
 import communityMod.common.blocks.BlockOre;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -56,12 +58,48 @@ public class BlocksHelper {
 		languageRegisters();
 	}
 
-	private static void languageRegisters() {
-		
-	}
-
 	private static void gameRegisters() {
-		
+		//Block Registry
+		GameRegistry.registerBlock(siliconOre, "SiliconOre");
+		GameRegistry.registerBlock(leadOre, "LeadOre");
+		GameRegistry.registerBlock(titaniumOre, "TitaniumOre");
+		GameRegistry.registerBlock(leadBlock, "LeadBlock");
+		GameRegistry.registerBlock(titaniumBlock, "TitaniumBlock");
+		GameRegistry.registerBlock(copperOre, "CopperOre");
+		GameRegistry.registerBlock(siliconBlock, "SiliconBlock");
+		GameRegistry.registerBlock(ironGirder, "IronGirder");
+		GameRegistry.registerBlock(concrete, "Concrete");
+		GameRegistry.registerBlock(ligniteOre, "Lignite Ore");
+		GameRegistry.registerBlock(bituminousOre, "Bituminous Ore");
+		GameRegistry.registerBlock(anthraciteOre, "Anthracite Ore");
+		GameRegistry.registerBlock(platinumOre, "PlatinumOre");
+		GameRegistry.registerBlock(tungstenOre, "tungstenOre");
+		GameRegistry.registerBlock(arsmiumOre, "ArsmiumOre");
+		GameRegistry.registerBlock(urdiumOre, "UrdiumOre");
+		GameRegistry.registerBlock(franciumOre, "FranciumOre");
+		GameRegistry.registerBlock(franciumBlock, "FranciumBlock");
+	}
+	
+	private static void languageRegisters() {
+		//Blocks
+		LanguageRegistry.addName(siliconOre, "Silicon Ore");
+		LanguageRegistry.addName(leadOre, "Lead Ore");
+		LanguageRegistry.addName(titaniumOre, "Titanium Ore");
+		LanguageRegistry.addName(leadBlock, "Lead Block");
+		LanguageRegistry.addName(titaniumBlock, "Titanium Block");
+		LanguageRegistry.addName(copperOre, "Copper Ore");
+		LanguageRegistry.addName(siliconBlock, "Silicon Block");
+		LanguageRegistry.addName(ironGirder, "Iron Girder");
+		LanguageRegistry.addName(concrete, "Concrete");
+		LanguageRegistry.addName(ligniteOre, "Lignite Ore");
+		LanguageRegistry.addName(bituminousOre, "Bituminous Coal Ore");
+		LanguageRegistry.addName(anthraciteOre, "Anthracite Ore");
+		LanguageRegistry.addName(platinumOre, "Platinum Ore");
+		LanguageRegistry.addName(tungstenOre, "Tungsten Ore");
+		LanguageRegistry.addName(arsmiumOre, "Arsmium Ore");
+		LanguageRegistry.addName(urdiumOre, "Urdium Ore");
+		LanguageRegistry.addName(franciumOre, "Francium Ore");
+		LanguageRegistry.addName(franciumBlock, "Francium Block");
 	}
 
 }

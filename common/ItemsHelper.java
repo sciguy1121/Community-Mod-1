@@ -2,6 +2,8 @@ package communityMod.common;
 
 import communityMod.common.items.ItemCoal;
 import communityMod.common.items.ItemIngot;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -38,7 +40,44 @@ public class ItemsHelper{
 		urdiumIngot = new ItemIngot(CommunityMod.urdiumIngotID, 8).setCreativeTab(CommunityMod.modTab).setItemName("UrdiumIngot");
 		franciumIngot = new ItemIngot(CommunityMod.franciumIngotID, 7).setCreativeTab(CommunityMod.modTab).setItemName("FranciumIngot");
 		cosileadiumAlloy = new ItemIngot(CommunityMod.cosileadiumAlloyID, 12).setCreativeTab(CommunityMod.modTab).setItemName("CosileadiumAlloy");
-				
+			
+		gameRegisters();
+		languageRegisters();
+	}
+	
+	private static void gameRegisters(){
+		//Item Registry
+		GameRegistry.registerItem(leadIngot, "LeadIngot");
+		GameRegistry.registerItem(titaniumIngot, "TitaniumIngot");
+		GameRegistry.registerItem(copperIngot, "CopperIngot");
+		GameRegistry.registerItem(siliconIngot, "SiliconIngot");
+		GameRegistry.registerItem(ligniteCoal, "Lignite");
+		GameRegistry.registerItem(bituminousCoal, "Bituminous Coal");
+		GameRegistry.registerItem(anthraciteCoal, "Anthracite");
+		GameRegistry.registerItem(platinumIngot, "PlatinumIngot");
+		GameRegistry.registerItem(tungstenIngot, "tungstenIngot");
+		GameRegistry.registerItem(arsmiumIngot, "ArsmiumShard");
+		GameRegistry.registerItem(urdiumIngot, "UrdiumIngot");
+        GameRegistry.registerItem(franciumIngot, "FranciumIngot");
+        GameRegistry.registerItem(cosileadiumAlloy, "CosileadiumAlloy");
+	}
+	
+
+	private static void languageRegisters(){
+		//Item LanguageRegistry
+		LanguageRegistry.addName(leadIngot, "Lead Ingot");
+		LanguageRegistry.addName(titaniumIngot, "Titanium Ingot");
+		LanguageRegistry.addName(copperIngot, "Copper Ingot");
+		LanguageRegistry.addName(siliconIngot, "Silicon Ingot");
+		LanguageRegistry.addName(ligniteCoal, "Lignite");
+		LanguageRegistry.addName(bituminousCoal, "Bituminous Coal");
+		LanguageRegistry.addName(anthraciteCoal, "Anthracite");
+		LanguageRegistry.addName(platinumIngot, "Platinum Ingot");
+		LanguageRegistry.addName(tungstenIngot, "Tungsten Ingot");
+		LanguageRegistry.addName(arsmiumIngot, "Arsmium Ingot");
+		LanguageRegistry.addName(urdiumIngot, "Urdium Ingot");
+        LanguageRegistry.addName(franciumIngot, "Francium Ingot");
+        LanguageRegistry.addName(cosileadiumAlloy, "Cosileadium Alloy");
 	}
 
 }

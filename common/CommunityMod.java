@@ -120,8 +120,6 @@ public class CommunityMod {
         BlocksHelper.setupBlocks();
         ItemsHelper.setupItems();
         
-		gameRegisters();
-		languageRegisters();
 		craftingRecipes();
 		smeltingRecipes();
 
@@ -169,79 +167,5 @@ public class CommunityMod {
 			"FFF",
 			'F', ItemsHelper.franciumIngot
 		});
-	}
-
-	private static void gameRegisters(){
-		//Block Registry
-		GameRegistry.registerBlock(BlocksHelper.siliconOre, "SiliconOre");
-		GameRegistry.registerBlock(BlocksHelper.leadOre, "LeadOre");
-		GameRegistry.registerBlock(BlocksHelper.titaniumOre, "TitaniumOre");
-		GameRegistry.registerBlock(BlocksHelper.leadBlock, "LeadBlock");
-		GameRegistry.registerBlock(BlocksHelper.titaniumBlock, "TitaniumBlock");
-		GameRegistry.registerBlock(BlocksHelper.copperOre, "CopperOre");
-		GameRegistry.registerBlock(BlocksHelper.siliconBlock, "SiliconBlock");
-		GameRegistry.registerBlock(BlocksHelper.ironGirder, "IronGirder");
-		GameRegistry.registerBlock(BlocksHelper.concrete, "Concrete");
-		GameRegistry.registerBlock(BlocksHelper.ligniteOre, "Lignite Ore");
-		GameRegistry.registerBlock(BlocksHelper.bituminousOre, "Bituminous Ore");
-		GameRegistry.registerBlock(BlocksHelper.anthraciteOre, "Anthracite Ore");
-		GameRegistry.registerBlock(BlocksHelper.platinumOre, "PlatinumOre");
-		GameRegistry.registerBlock(BlocksHelper.tungstenOre, "tungstenOre");
-		GameRegistry.registerBlock(BlocksHelper.arsmiumOre, "ArsmiumOre");
-		GameRegistry.registerBlock(BlocksHelper.urdiumOre, "UrdiumOre");
-        GameRegistry.registerBlock(BlocksHelper.franciumOre, "FranciumOre");
-        GameRegistry.registerBlock(BlocksHelper.franciumBlock, "FranciumBlock");
-
-		//Item Registry
-		GameRegistry.registerItem(ItemsHelper.leadIngot, "LeadIngot");
-		GameRegistry.registerItem(ItemsHelper.titaniumIngot, "TitaniumIngot");
-		GameRegistry.registerItem(ItemsHelper.copperIngot, "CopperIngot");
-		GameRegistry.registerItem(ItemsHelper.siliconIngot, "SiliconIngot");
-		GameRegistry.registerItem(ItemsHelper.ligniteCoal, "Lignite");
-		GameRegistry.registerItem(ItemsHelper.bituminousCoal, "Bituminous Coal");
-		GameRegistry.registerItem(ItemsHelper.anthraciteCoal, "Anthracite");
-		GameRegistry.registerItem(ItemsHelper.platinumIngot, "PlatinumIngot");
-		GameRegistry.registerItem(ItemsHelper.tungstenIngot, "tungstenIngot");
-		GameRegistry.registerItem(ItemsHelper.arsmiumIngot, "ArsmiumShard");
-		GameRegistry.registerItem(ItemsHelper.urdiumIngot, "UrdiumIngot");
-        GameRegistry.registerItem(ItemsHelper.franciumIngot, "FranciumIngot");
-        GameRegistry.registerItem(ItemsHelper.cosileadiumAlloy, "CosileadiumAlloy");
-	}
-
-	private static void languageRegisters(){
-		//Block LanguageRegistry
-		LanguageRegistry.addName(BlocksHelper.siliconOre, "Silicon Ore");
-		LanguageRegistry.addName(BlocksHelper.leadOre, "Lead Ore");
-		LanguageRegistry.addName(BlocksHelper.titaniumOre, "Titanium Ore");
-		LanguageRegistry.addName(BlocksHelper.leadBlock, "Lead Block");
-		LanguageRegistry.addName(BlocksHelper.titaniumBlock, "Titanium Block");
-		LanguageRegistry.addName(BlocksHelper.copperOre, "Copper Ore");
-		LanguageRegistry.addName(BlocksHelper.siliconBlock, "Silicon Block");
-		LanguageRegistry.addName(BlocksHelper.ironGirder, "Iron Girder");
-		LanguageRegistry.addName(BlocksHelper.concrete, "Concrete");
-		LanguageRegistry.addName(BlocksHelper.ligniteOre, "Lignite Ore");
-		LanguageRegistry.addName(BlocksHelper.bituminousOre, "Bituminous Coal Ore");
-		LanguageRegistry.addName(BlocksHelper.anthraciteOre, "Anthracite Ore");
-		LanguageRegistry.addName(BlocksHelper.platinumOre, "Platinum Ore");
-		LanguageRegistry.addName(BlocksHelper.tungstenOre, "Tungsten Ore");
-		LanguageRegistry.addName(BlocksHelper.arsmiumOre, "Arsmium Ore");
-		LanguageRegistry.addName(BlocksHelper.urdiumOre, "Urdium Ore");
-        LanguageRegistry.addName(BlocksHelper.franciumOre, "Francium Ore");
-		LanguageRegistry.addName(BlocksHelper.franciumBlock, "Francium Block");
-
-		//Item LanguageRegistry
-		LanguageRegistry.addName(ItemsHelper.leadIngot, "Lead Ingot");
-		LanguageRegistry.addName(ItemsHelper.titaniumIngot, "Titanium Ingot");
-		LanguageRegistry.addName(ItemsHelper.copperIngot, "Copper Ingot");
-		LanguageRegistry.addName(ItemsHelper.siliconIngot, "Silicon Ingot");
-		LanguageRegistry.addName(ItemsHelper.ligniteCoal, "Lignite");
-		LanguageRegistry.addName(ItemsHelper.bituminousCoal, "Bituminous Coal");
-		LanguageRegistry.addName(ItemsHelper.anthraciteCoal, "Anthracite");
-		LanguageRegistry.addName(ItemsHelper.platinumIngot, "Platinum Ingot");
-		LanguageRegistry.addName(ItemsHelper.tungstenIngot, "Tungsten Ingot");
-		LanguageRegistry.addName(ItemsHelper.arsmiumIngot, "Arsmium Ingot");
-		LanguageRegistry.addName(ItemsHelper.urdiumIngot, "Urdium Ingot");
-        LanguageRegistry.addName(ItemsHelper.franciumIngot, "Francium Ingot");
-        LanguageRegistry.addName(ItemsHelper.cosileadiumAlloy, "Cosileadium Alloy");
 	}
 }
