@@ -16,3 +16,6 @@ Code 	  - Sciguy1121,
 Textures  - KingCreeperEli (leader),
           	Shachou, 
 		TheGamingParadise, 
+
+Ideas	- LionBoyTheGamer,
+		KingCreeperEli,
