@@ -44,6 +44,7 @@ public class CommunityMod {
 	public static Block bituminousOre;
 	public static Block anthraciteOre;
 	
+	
 	//Items
 	public static Item leadIngot;
 	public static Item titaniumIngot;
