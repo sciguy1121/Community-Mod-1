@@ -51,6 +51,17 @@ public class BlocksHelper {
 		urdiumOre = new BlockOre(CommunityMod.urdiumOreID, 16).setHardness(18F).setResistance(22F).setBlockName("UrdiumOre").setCreativeTab(CommunityMod.modTab);
 		franciumOre = new BlockOre(CommunityMod.franciumOreID, 14).setHardness(18F).setResistance(22F).setBlockName("FranciumOre").setCreativeTab(CommunityMod.modTab);
 		franciumBlock = new BlockMetal(CommunityMod.franciumBlockID, 15).setHardness(18F).setResistance(22F).setBlockName("FranciumBlock").setCreativeTab(CommunityMod.modTab);
+		
+		gameRegisters();
+		languageRegisters();
+	}
+
+	private static void languageRegisters() {
+		
+	}
+
+	private static void gameRegisters() {
+		
 	}
 
 }

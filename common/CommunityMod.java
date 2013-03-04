@@ -35,21 +35,6 @@ public class CommunityMod {
 
 	public static CreativeTabs modTab = new CreativeTab(CreativeTabs.getNextID(),"CommunityMod");
 	
-	//Items
-	public static Item leadIngot;
-	public static Item titaniumIngot;
-	public static Item copperIngot;
-	public static Item siliconIngot;
-	public static Item ligniteCoal;
-	public static Item bituminousCoal;
-	public static Item anthraciteCoal;
-	public static Item platinumIngot;
-	public static Item tungstenIngot;
-	public static Item arsmiumIngot;
-	public static Item urdiumIngot;
-    public static Item franciumIngot;
-    public static Item cosileadiumAlloy;
-
 	//Block IDs
 	public static int siliconOreID;
 	public static int leadOreID;
@@ -132,22 +117,8 @@ public class CommunityMod {
 	public void load(FMLInitializationEvent event){
 		proxy.registerRenders();
         
-		//Item Loading
-		leadIngot = new ItemIngot(leadIngotID, 1).setCreativeTab(CreativeTabs.tabMaterials).setItemName("LeadIngot");
-		titaniumIngot = new ItemIngot(titaniumIngotID, 0).setCreativeTab(CreativeTabs.tabMaterials).setItemName("TitaniumIngot");
-		copperIngot = new ItemIngot(copperIngotID, 3).setCreativeTab(CreativeTabs.tabMaterials).setItemName("CopperIngot");
-		siliconIngot = new ItemIngot(siliconIngotID, 2).setCreativeTab(CreativeTabs.tabMaterials).setItemName("SiliconIngot");
-		ligniteCoal = new ItemCoal(ligniteCoalID, 4).setCreativeTab(CreativeTabs.tabMaterials).setItemName("Lignite");
-		bituminousCoal = new ItemCoal(bituminousCoalID, 5).setCreativeTab(CreativeTabs.tabMaterials).setItemName("BituminousCoal");
-		anthraciteCoal = new ItemCoal(anthraciteCoalID, 6).setCreativeTab(CreativeTabs.tabMaterials).setItemName("Anthracite");
-		platinumIngot = new ItemIngot(platinumIngotID, 9).setCreativeTab(CreativeTabs.tabMaterials).setItemName("PlatinumIngot");
-		tungstenIngot = new ItemIngot(tungstenIngotID, 11).setCreativeTab(CreativeTabs.tabMaterials).setItemName("TungstenIngot");
-		arsmiumIngot = new ItemIngot(arsmiumIngotID, 10).setCreativeTab(CreativeTabs.tabMaterials).setItemName("ArsmiumIngot");
-		urdiumIngot = new ItemIngot(urdiumIngotID, 8).setCreativeTab(CreativeTabs.tabMaterials).setItemName("UrdiumIngot");
-        franciumIngot = new ItemIngot(franciumIngotID, 7).setCreativeTab(CreativeTabs.tabMaterials).setItemName("FranciumIngot");
-        cosileadiumAlloy = new ItemIngot(cosileadiumAlloyID, 12).setCreativeTab(CreativeTabs.tabMaterials).setItemName("CosileadiumAlloy");
-		
         BlocksHelper.setupBlocks();
+        ItemsHelper.setupItems();
         
 		gameRegisters();
 		languageRegisters();
@@ -159,15 +130,15 @@ public class CommunityMod {
 	}
 
 	private static void smeltingRecipes(){
-		GameRegistry.addSmelting(leadOreID, new ItemStack(leadIngot, 1), 0.6F);
-		GameRegistry.addSmelting(titaniumOreID, new ItemStack(titaniumIngot, 1), 0.75F);
-		GameRegistry.addSmelting(siliconOreID, new ItemStack(siliconIngot, 1), 0.5F);
-		GameRegistry.addSmelting(copperOreID, new ItemStack(copperIngot, 1), 0.5F);
-		GameRegistry.addSmelting(platinumOreID, new ItemStack(copperIngot, 1), 0.5F);
-		GameRegistry.addSmelting(tungstenOreID, new ItemStack(tungstenIngot, 1), 0.5F);
-		GameRegistry.addSmelting(arsmiumOreID, new ItemStack(arsmiumIngot, 1), 0.5F);
-		GameRegistry.addSmelting(urdiumOreID, new ItemStack(urdiumIngot, 1), 0.5F);
-        GameRegistry.addSmelting(franciumOreID, new ItemStack(franciumIngot, 1), 0.5F);
+		GameRegistry.addSmelting(leadOreID, new ItemStack(ItemsHelper.leadIngot, 1), 0.6F);
+		GameRegistry.addSmelting(titaniumOreID, new ItemStack(ItemsHelper.titaniumIngot, 1), 0.75F);
+		GameRegistry.addSmelting(siliconOreID, new ItemStack(ItemsHelper.siliconIngot, 1), 0.5F);
+		GameRegistry.addSmelting(copperOreID, new ItemStack(ItemsHelper.copperIngot, 1), 0.5F);
+		GameRegistry.addSmelting(platinumOreID, new ItemStack(ItemsHelper.copperIngot, 1), 0.5F);
+		GameRegistry.addSmelting(tungstenOreID, new ItemStack(ItemsHelper.tungstenIngot, 1), 0.5F);
+		GameRegistry.addSmelting(arsmiumOreID, new ItemStack(ItemsHelper.arsmiumIngot, 1), 0.5F);
+		GameRegistry.addSmelting(urdiumOreID, new ItemStack(ItemsHelper.urdiumIngot, 1), 0.5F);
+        GameRegistry.addSmelting(franciumOreID, new ItemStack(ItemsHelper.franciumIngot, 1), 0.5F);
 	}
 
 	private static void craftingRecipes(){
@@ -175,19 +146,19 @@ public class CommunityMod {
 			"LLL",
 			"LLL",
 			"LLL",
-			'L', leadIngot
+			'L', ItemsHelper.leadIngot
 		});
 		GameRegistry.addRecipe(new ItemStack(BlocksHelper.titaniumBlock, 1), new Object[]{
 			"TTT",
 			"TTT",
 			"TTT",
-			'T', titaniumIngot
+			'T', ItemsHelper.titaniumIngot
 		});
 		GameRegistry.addRecipe(new ItemStack(BlocksHelper.siliconBlock, 1), new Object[]{
 			"SSS",
 			"SSS",
 			"SSS",
-			'S', siliconIngot
+			'S', ItemsHelper.siliconIngot
 		});
 		GameRegistry.addRecipe(new ItemStack(BlocksHelper.ironGirder, 4), new Object[]{
 			"III", " I ", "III", 'I', Item.ingotIron,
@@ -196,7 +167,7 @@ public class CommunityMod {
 			"FFF",
 			"FFF",
 			"FFF",
-			'F', franciumIngot
+			'F', ItemsHelper.franciumIngot
 		});
 	}
 
@@ -222,19 +193,19 @@ public class CommunityMod {
         GameRegistry.registerBlock(BlocksHelper.franciumBlock, "FranciumBlock");
 
 		//Item Registry
-		GameRegistry.registerItem(leadIngot, "LeadIngot");
-		GameRegistry.registerItem(titaniumIngot, "TitaniumIngot");
-		GameRegistry.registerItem(copperIngot, "CopperIngot");
-		GameRegistry.registerItem(siliconIngot, "SiliconIngot");
-		GameRegistry.registerItem(ligniteCoal, "Lignite");
-		GameRegistry.registerItem(bituminousCoal, "Bituminous Coal");
-		GameRegistry.registerItem(anthraciteCoal, "Anthracite");
-		GameRegistry.registerItem(platinumIngot, "PlatinumIngot");
-		GameRegistry.registerItem(tungstenIngot, "tungstenIngot");
-		GameRegistry.registerItem(arsmiumIngot, "ArsmiumShard");
-		GameRegistry.registerItem(urdiumIngot, "UrdiumIngot");
-        GameRegistry.registerItem(franciumIngot, "FranciumIngot");
-        GameRegistry.registerItem(cosileadiumAlloy, "CosileadiumAlloy");
+		GameRegistry.registerItem(ItemsHelper.leadIngot, "LeadIngot");
+		GameRegistry.registerItem(ItemsHelper.titaniumIngot, "TitaniumIngot");
+		GameRegistry.registerItem(ItemsHelper.copperIngot, "CopperIngot");
+		GameRegistry.registerItem(ItemsHelper.siliconIngot, "SiliconIngot");
+		GameRegistry.registerItem(ItemsHelper.ligniteCoal, "Lignite");
+		GameRegistry.registerItem(ItemsHelper.bituminousCoal, "Bituminous Coal");
+		GameRegistry.registerItem(ItemsHelper.anthraciteCoal, "Anthracite");
+		GameRegistry.registerItem(ItemsHelper.platinumIngot, "PlatinumIngot");
+		GameRegistry.registerItem(ItemsHelper.tungstenIngot, "tungstenIngot");
+		GameRegistry.registerItem(ItemsHelper.arsmiumIngot, "ArsmiumShard");
+		GameRegistry.registerItem(ItemsHelper.urdiumIngot, "UrdiumIngot");
+        GameRegistry.registerItem(ItemsHelper.franciumIngot, "FranciumIngot");
+        GameRegistry.registerItem(ItemsHelper.cosileadiumAlloy, "CosileadiumAlloy");
 	}
 
 	private static void languageRegisters(){
@@ -259,18 +230,18 @@ public class CommunityMod {
 		LanguageRegistry.addName(BlocksHelper.franciumBlock, "Francium Block");
 
 		//Item LanguageRegistry
-		LanguageRegistry.addName(leadIngot, "Lead Ingot");
-		LanguageRegistry.addName(titaniumIngot, "Titanium Ingot");
-		LanguageRegistry.addName(copperIngot, "Copper Ingot");
-		LanguageRegistry.addName(siliconIngot, "Silicon Ingot");
-		LanguageRegistry.addName(ligniteCoal, "Lignite");
-		LanguageRegistry.addName(bituminousCoal, "Bituminous Coal");
-		LanguageRegistry.addName(anthraciteCoal, "Anthracite");
-		LanguageRegistry.addName(platinumIngot, "Platinum Ingot");
-		LanguageRegistry.addName(tungstenIngot, "Tungsten Ingot");
-		LanguageRegistry.addName(arsmiumIngot, "Arsmium Ingot");
-		LanguageRegistry.addName(urdiumIngot, "Urdium Ingot");
-        LanguageRegistry.addName(franciumIngot, "Francium Ingot");
-        LanguageRegistry.addName(cosileadiumAlloy, "Cosileadium Alloy");
+		LanguageRegistry.addName(ItemsHelper.leadIngot, "Lead Ingot");
+		LanguageRegistry.addName(ItemsHelper.titaniumIngot, "Titanium Ingot");
+		LanguageRegistry.addName(ItemsHelper.copperIngot, "Copper Ingot");
+		LanguageRegistry.addName(ItemsHelper.siliconIngot, "Silicon Ingot");
+		LanguageRegistry.addName(ItemsHelper.ligniteCoal, "Lignite");
+		LanguageRegistry.addName(ItemsHelper.bituminousCoal, "Bituminous Coal");
+		LanguageRegistry.addName(ItemsHelper.anthraciteCoal, "Anthracite");
+		LanguageRegistry.addName(ItemsHelper.platinumIngot, "Platinum Ingot");
+		LanguageRegistry.addName(ItemsHelper.tungstenIngot, "Tungsten Ingot");
+		LanguageRegistry.addName(ItemsHelper.arsmiumIngot, "Arsmium Ingot");
+		LanguageRegistry.addName(ItemsHelper.urdiumIngot, "Urdium Ingot");
+        LanguageRegistry.addName(ItemsHelper.franciumIngot, "Francium Ingot");
+        LanguageRegistry.addName(ItemsHelper.cosileadiumAlloy, "Cosileadium Alloy");
 	}
 }
