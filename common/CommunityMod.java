@@ -27,6 +27,8 @@ public class CommunityMod {
 				serverSide = "communityMod.common.CommonProxyCommunityMod")
 	public static ClientProxyCommunityMod proxy = new ClientProxyCommunityMod();
 
+        public static EnumToolMaterial toolEmerald = EnumHelper.addToolMaterial("EMERALD", 3, 1732, 9.0F, 5, 10);
+
 	//Blocks
 	public static Block siliconOre;
 	public static Block leadOre;
@@ -44,8 +46,8 @@ public class CommunityMod {
 	public static Block tungstenOre;
 	public static Block arsmiumOre;
 	public static Block urdiumOre;
-    public static Block franciumOre;
-    public static Block franciumBlock;
+        public static Block franciumOre;
+        public static Block franciumBlock;
 
 	//Items
 	public static Item leadIngot;
@@ -59,8 +61,15 @@ public class CommunityMod {
 	public static Item tungstenIngot;
 	public static Item arsmiumIngot;
 	public static Item urdiumIngot;
-    public static Item franciumIngot;
-    public static Item cosileadiumAlloy;
+        public static Item franciumIngot;
+        public static Item cosileadiumAlloy;
+        
+        //Tools
+        public static Item emeraldSword;
+        public static Item emeraldPickaxe;
+        public static Item emeraldAxe;
+        public static Item emeraldSpade;
+        public static Item emeraldHoe;
 
 	//Block IDs
 	public static int siliconOreID;
@@ -79,8 +88,8 @@ public class CommunityMod {
 	public static int tungstenOreID;
 	public static int arsmiumOreID;
 	public static int urdiumOreID;
-    public static int franciumOreID;
-    public static int franciumBlockID;
+        public static int franciumOreID;
+        public static int franciumBlockID;
 
 	//Item IDs
 	public static int leadIngotID;
@@ -94,8 +103,15 @@ public class CommunityMod {
 	public static int tungstenIngotID;
 	public static int arsmiumIngotID;
 	public static int urdiumIngotID;
-    public static int franciumIngotID;
-    public static int cosileadiumAlloyID;
+        public static int franciumIngotID;
+        public static int cosileadiumAlloyID;
+        
+        //Tool IDs
+        public static int emeraldSwordID;
+        public static int emeraldPickaxeID;
+        public static int emeraldAxeID;
+        public static int emeraldSpadeID;
+        public static int emeraldHoeID;
 
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event){
@@ -119,8 +135,8 @@ public class CommunityMod {
 		tungstenOreID = config.get("Block IDs", "tungsten Ore ID", 713).getInt();
 		arsmiumOreID = config.get("Block IDs", "Arsium Ore ID", 714).getInt();
 		urdiumOreID = config.get("Block IDs", "Urdium Ore ID", 715).getInt();
-        franciumOreID = config.get("Block IDs", "Francium Ore ID", 716).getInt();
-        franciumBlockID = config.get("Block IDs", "Francium Block ID", 717).getInt();
+                franciumOreID = config.get("Block IDs", "Francium Ore ID", 716).getInt();
+                franciumBlockID = config.get("Block IDs", "Francium Block ID", 717).getInt();
 
 		//Item IDs
 		leadIngotID = config.get("Item IDs", "Lead Ingot ID", 1000).getInt();
@@ -134,8 +150,15 @@ public class CommunityMod {
 		tungstenIngotID = config.get("Item IDs", "Tungsten Ingot ID", 1008).getInt();
 		arsmiumIngotID = config.get("Item IDs", "Arsmium Ingot ID", 1009).getInt();
 		urdiumIngotID = config.get("Item IDs", "Urdium Ingot ID", 1010).getInt();
-        franciumIngotID = config.get("Item IDs", "Francium Ingot ID", 1011).getInt();
-        cosileadiumAlloyID = config.get("Item IDs", "Cosileadium Alloy ID", 1012).getInt();
+                franciumIngotID = config.get("Item IDs", "Francium Ingot ID", 1011).getInt();
+                cosileadiumAlloyID = config.get("Item IDs", "Cosileadium Alloy ID", 1012).getInt();
+                
+                //Tool IDs
+                emeraldSwordID = config.get("Tool IDs", "Emerald Sword ID", 1250).getInt();
+                emeraldPickaxeID = config.get("Tool IDs", "Emerald Pickaxe ID", 1251).getInt();
+                emeraldAxeID = config.get("Tool IDs", "Emerald Axe ID", 1252).getInt();
+                emeraldSpadeID = config.get("Tool IDs", "Emerald Spade ID", 1253).getInt();
+                emeraldHoeID = config.get("Tool IDs", "Emerald Hoe ID", 1254).getInt();
 
 		config.save();
 	}
@@ -162,7 +185,7 @@ public class CommunityMod {
 		arsmiumOre = new BlockOre(arsmiumOreID, 18).setHardness(18F).setResistance(22F).setBlockName("ArsmiumOre").setCreativeTab(CreativeTabs.tabBlock);
 		urdiumOre = new BlockOre(urdiumOreID, 16).setHardness(18F).setResistance(22F).setBlockName("UrdiumOre").setCreativeTab(CreativeTabs.tabBlock);
 		franciumOre = new BlockOre(franciumOreID, 14).setHardness(18F).setResistance(22F).setBlockName("FranciumOre").setCreativeTab(CreativeTabs.tabBlock);
-        franciumBlock = new BlockMetal(franciumBlockID, 15).setHardness(18F).setResistance(22F).setBlockName("FranciumOre").setCreativeTab(CreativeTabs.tabBlock);
+                franciumBlock = new BlockMetal(franciumBlockID, 15).setHardness(18F).setResistance(22F).setBlockName("FranciumOre").setCreativeTab(CreativeTabs.tabBlock);
         
 		//Item Loading
 		leadIngot = new ItemIngot(leadIngotID, 1).setCreativeTab(CreativeTabs.tabMaterials).setItemName("LeadIngot");
@@ -176,8 +199,15 @@ public class CommunityMod {
 		tungstenIngot = new ItemIngot(tungstenIngotID, 11).setCreativeTab(CreativeTabs.tabMaterials).setItemName("TungstenIngot");
 		arsmiumIngot = new ItemIngot(arsmiumIngotID, 10).setCreativeTab(CreativeTabs.tabMaterials).setItemName("ArsmiumIngot");
 		urdiumIngot = new ItemIngot(urdiumIngotID, 8).setCreativeTab(CreativeTabs.tabMaterials).setItemName("UrdiumIngot");
-        franciumIngot = new ItemIngot(franciumIngotID, 7).setCreativeTab(CreativeTabs.tabMaterials).setItemName("FranciumIngot");
-        cosileadiumAlloy = new ItemIngot(cosileadiumAlloyID, 12).setCreativeTab(CreativeTabs.tabMaterials).setItemName("CosileadiumAlloy");
+                franciumIngot = new ItemIngot(franciumIngotID, 7).setCreativeTab(CreativeTabs.tabMaterials).setItemName("FranciumIngot");
+                cosileadiumAlloy = new ItemIngot(cosileadiumAlloyID, 12).setCreativeTab(CreativeTabs.tabMaterials).setItemName("CosileadiumAlloy");
+		
+		//Tool Loading
+		emeraldSword = new ItemEmeraldSword(emeraldSwordID, toolEmerald).setItemName("EmeraldSword").setIconIndex(0);
+		emeraldPickaxe = new ItemEmeraldPickaxe(emeraldPickaxeID, toolEmerald).setItemName("EmeraldPickaxe").setIconIndex(1);
+		emeraldAxe = new ItemEmeraldAxe(emeraldAxeID, toolEmerald).setItemName("EmeraldAxe").setIconIndex(2);
+		emeraldSpade = new ItemEmeraldSpade(emeraldSpadeID, toolEmerald).setItemName("EmeraldSpade").setIconIndex(3);
+		emeraldHoe = new ItemEmeraldHoe(emeraldHoeID, toolEmerald).setItemName("EmeraldHoe").setIconIndex(4);
 		
 		gameRegisters();
 		languageRegisters();
@@ -220,17 +250,56 @@ public class CommunityMod {
 			'S', siliconIngot
 		});
 		GameRegistry.addRecipe(new ItemStack(ironGirder, 4), new Object[]{
-			"III", " I ", "III", 'I', Item.ingotIron,
+			"III",
+			" I ",
+			"III",
+			'I', Item.ingotIron
 		});
-        GameRegistry.addRecipe(new ItemStack(siliconBlock, 1), new Object[]{
+                GameRegistry.addRecipe(new ItemStack(siliconBlock, 1), new Object[]{
 			"FFF",
 			"FFF",
 			"FFF",
 			'F', franciumIngot
 		});
+		GameRegistry.addRecipe(new ItemStack(emeraldSword, 1), new Object[]{
+		        " E ",
+		        " E ",
+		        " S ",
+		        'E', Item.emerald,
+		        'S', Item.stick
+		});
+		GameRegistry.addRecipe(new ItemStack(emeraldPickaxe, 1), new Object[]{
+			"EEE",
+			" S ",
+			" S ",
+			'E', Item.emerald,
+			'S', Item.stick
+		});
+		GameRegistry.addRecipe(new ItemStack(emeraldAxe, 1),new Object[]{
+			"EE ",
+			"ES ",
+			" S ",
+			'E', Item.emerald,
+			'S', Item.stick
+		});
+		GameRegistry.addRecipe(new ItemStack(emeraldSpade, 1),new Object[]{
+			" E ",
+			" S ",
+			" S ",
+			'E', Item.emerald,
+			'S', Item.stick
+		});
+		GameRegistry.addRecipe(new ItemStack(emeraldHoe, 1),new Object[]{
+			"EE ",
+			" S ",
+			" S ",
+			'E', Item.emerald,
+			'S', Item.stick
+		});
 	}
 
 	private static void gameRegisters(){
+		
 		//Block Registry
 		GameRegistry.registerBlock(siliconOre, "SiliconOre");
 		GameRegistry.registerBlock(leadOre, "LeadOre");
@@ -248,8 +317,8 @@ public class CommunityMod {
 		GameRegistry.registerBlock(tungstenOre, "tungstenOre");
 		GameRegistry.registerBlock(arsmiumOre, "ArsmiumOre");
 		GameRegistry.registerBlock(urdiumOre, "UrdiumOre");
-        GameRegistry.registerBlock(franciumOre, "FranciumOre");
-        GameRegistry.registerBlock(franciumBlock, "FranciumBlock");
+                GameRegistry.registerBlock(franciumOre, "FranciumOre");
+                GameRegistry.registerBlock(franciumBlock, "FranciumBlock");
 
 		//Item Registry
 		GameRegistry.registerItem(leadIngot, "LeadIngot");
@@ -263,12 +332,13 @@ public class CommunityMod {
 		GameRegistry.registerItem(tungstenIngot, "tungstenIngot");
 		GameRegistry.registerItem(arsmiumIngot, "ArsmiumShard");
 		GameRegistry.registerItem(urdiumIngot, "UrdiumIngot");
-        GameRegistry.registerItem(franciumIngot, "FranciumIngot");
-        GameRegistry.registerItem(cosileadiumAlloy, "CosileadiumAlloy");
+                GameRegistry.registerItem(franciumIngot, "FranciumIngot");
+                GameRegistry.registerItem(cosileadiumAlloy, "CosileadiumAlloy");
 	}
 
 	private static void languageRegisters(){
-		//Block LanguageRegistry
+	        
+	        //Block LanguageRegistry
 		LanguageRegistry.addName(siliconOre, "Silicon Ore");
 		LanguageRegistry.addName(leadOre, "Lead Ore");
 		LanguageRegistry.addName(titaniumOre, "Titanium Ore");
@@ -285,7 +355,7 @@ public class CommunityMod {
 		LanguageRegistry.addName(tungstenOre, "Tungsten Ore");
 		LanguageRegistry.addName(arsmiumOre, "Arsmium Ore");
 		LanguageRegistry.addName(urdiumOre, "Urdium Ore");
-        LanguageRegistry.addName(franciumOre, "Francium Ore");
+                LanguageRegistry.addName(franciumOre, "Francium Ore");
 		LanguageRegistry.addName(franciumBlock, "Francium Block");
 
 		//Item LanguageRegistry
@@ -300,7 +370,14 @@ public class CommunityMod {
 		LanguageRegistry.addName(tungstenIngot, "Tungsten Ingot");
 		LanguageRegistry.addName(arsmiumIngot, "Arsmium Ingot");
 		LanguageRegistry.addName(urdiumIngot, "Urdium Ingot");
-        LanguageRegistry.addName(franciumIngot, "Francium Ingot");
-        LanguageRegistry.addName(cosileadiumAlloy, "Cosileadium Alloy");
+                LanguageRegistry.addName(franciumIngot, "Francium Ingot");
+                LanguageRegistry.addName(cosileadiumAlloy, "Cosileadium Alloy");
+                
+                //Tool LanguageRegistry
+                LanguageRegistry.addName(emeraldSword, "Emerald Sword");
+                LanguageRegistry.addName(emeraldPickaxe, "Emerald Pickaxe");
+                LanguageRegistry.addName(emeraldAxe, "Emerald Axe");
+           	LanguageRegistry.addName(emeraldSpade, "Emerald Spade");
+                LanguageRegistry.addName(emeraldHoe, "Emerald Hoe");
 	}
 }
