@@ -115,7 +115,7 @@ public class CommunityMod {
 		ligniteOreID = config.get("Block IDs", "Lignite Ore ID", 709).getInt();
 		bituminousOreID = config.get("Block IDs", "Bituminous Ore ID", 710).getInt();
 		anthraciteOreID = config.get("Block IDs", "Anthracite Ore ID", 711).getInt();
-		platinumOreID = config.get("Block IDs", "Platinum Ore ID", 717).getInt();
+		platinumOreID = config.get("Block IDs", "Platinum Ore ID", 712).getInt();
 		tungstenOreID = config.get("Block IDs", "tungsten Ore ID", 713).getInt();
 		arsmiumOreID = config.get("Block IDs", "Arsium Ore ID", 714).getInt();
 		urdiumOreID = config.get("Block IDs", "Urdium Ore ID", 715).getInt();
