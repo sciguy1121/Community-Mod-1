@@ -60,6 +60,7 @@ public class CommunityMod {
 	public static Item arsmiumIngot;
 	public static Item urdiumIngot;
     public static Item franciumIngot;
+    public static Item cosileadiumAlloy;
 
 	//Block IDs
 	public static int siliconOreID;
@@ -94,6 +95,7 @@ public class CommunityMod {
 	public static int arsmiumIngotID;
 	public static int urdiumIngotID;
     public static int franciumIngotID;
+    public static int cosileadiumAlloyID;
 
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event){
@@ -133,6 +135,7 @@ public class CommunityMod {
 		arsmiumIngotID = config.get("Item IDs", "Arsmium Ingot ID", 1009).getInt();
 		urdiumIngotID = config.get("Item IDs", "Urdium Ingot ID", 1010).getInt();
         franciumIngotID = config.get("Item IDs", "Francium Ingot ID", 1011).getInt();
+        cosileadiumAlloyID = config.get("Item IDs", "Cosileadium Alloy ID", 1012).getInt();
 
 		config.save();
 	}
@@ -173,7 +176,8 @@ public class CommunityMod {
 		tungstenIngot = new ItemIngot(tungstenIngotID, 11).setCreativeTab(CreativeTabs.tabMaterials).setItemName("TungstenIngot");
 		arsmiumIngot = new ItemIngot(arsmiumIngotID, 10).setCreativeTab(CreativeTabs.tabMaterials).setItemName("ArsmiumIngot");
 		urdiumIngot = new ItemIngot(urdiumIngotID, 8).setCreativeTab(CreativeTabs.tabMaterials).setItemName("UrdiumIngot");
-        franciumIngot = new ItemIngot(franciumIngotID, 7).setCreativeTab(CreativeTabs.tabMaterials).setItemName("FranciumOre");
+        franciumIngot = new ItemIngot(franciumIngotID, 7).setCreativeTab(CreativeTabs.tabMaterials).setItemName("FranciumIngot");
+        cosileadiumAlloy = new ItemIngot(cosileadiumAlloyID, 12).setCreativeTab(CreativeTabs.tabMaterials).setItemName("CosileadiumAlloy");
 		
 		gameRegisters();
 		languageRegisters();
@@ -260,6 +264,7 @@ public class CommunityMod {
 		GameRegistry.registerItem(arsmiumIngot, "ArsmiumShard");
 		GameRegistry.registerItem(urdiumIngot, "UrdiumIngot");
         GameRegistry.registerItem(franciumIngot, "FranciumIngot");
+        GameRegistry.registerItem(cosileadiumAlloy, "CosileadiumAlloy");
 	}
 
 	private static void languageRegisters(){
@@ -296,5 +301,6 @@ public class CommunityMod {
 		LanguageRegistry.addName(arsmiumIngot, "Arsmium Ingot");
 		LanguageRegistry.addName(urdiumIngot, "Urdium Ingot");
         LanguageRegistry.addName(franciumIngot, "Francium Ingot");
+        LanguageRegistry.addName(cosileadiumAlloy, "Cosileadium Alloy");
 	}
 }
