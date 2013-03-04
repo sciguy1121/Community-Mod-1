@@ -68,6 +68,36 @@ public class WorldGenOres implements IWorldGenerator{
 			int zCoord = chunkZ + random.nextInt(16);
 			(new WorldGenMinable(CommunityMod.anthraciteOre.blockID, 5)).generate(world, random, xCoord, yCoord, zCoord);
 		}
+		for(int i = 0; i < 4; i++){
+			int xCoord = chunkX + random.nextInt(16);
+			int yCoord = random.nextInt(20);
+			int zCoord = chunkZ + random.nextInt(16);
+			(new WorldGenMinable(CommunityMod.platinumOre.blockID, 4)).generate(world, random, xCoord, yCoord, zCoord);
+		}
+		for(int i = 0; i < 4; i++){
+			int xCoord = chunkX + random.nextInt(16);
+			int yCoord = random.nextInt(20);
+			int zCoord = chunkZ + random.nextInt(16);
+			(new WorldGenMinable(CommunityMod.platinumOre.blockID, 4)).generate(world, random, xCoord, yCoord, zCoord);
+		}
+		for(int i = 0; i < 8; i++){
+			int xCoord = chunkX + random.nextInt(16);
+			int yCoord = random.nextInt(30);
+			int zCoord = chunkZ + random.nextInt(16);
+			(new WorldGenMinable(CommunityMod.tungstenOre.blockID, 2)).generate(world, random, xCoord, yCoord, zCoord);
+		}
+		for(int i = 0; i < 10; i++){
+			int xCoord = chunkX + random.nextInt(16);
+			int yCoord = random.nextInt(35);
+			int zCoord = chunkZ + random.nextInt(16);
+			(new WorldGenMinable(CommunityMod.arsmiumOre.blockID, 5)).generate(world, random, xCoord, yCoord, zCoord);
+		}
+		for(int i = 0; i < 10; i++){
+			int xCoord = chunkX + random.nextInt(16);
+			int yCoord = random.nextInt(20);
+			int zCoord = chunkZ + random.nextInt(16);
+			(new WorldGenMinable(CommunityMod.urdiumOre.blockID, 5)).generate(world, random, xCoord, yCoord, zCoord);
+		}
 	}
 
 }
