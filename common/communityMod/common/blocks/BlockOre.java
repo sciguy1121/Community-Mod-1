@@ -2,49 +2,34 @@ package communityMod.common.blocks;
 
 import java.util.Random;
 
-import mods.communityMod.textures.TextureHandler;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
+import communityMod.common.CommunityMod;
 import net.minecraft.client.renderer.texture.IconRegister;
 
-import communityMod.common.IDsHelper;
 import communityMod.common.Reference;
 import communityMod.common.items.ItemsHelper;
 
-public class BlockOre extends Block {
+public class BlockOre extends net.minecraft.block.BlockOre {
 
-    private String textureName;
 
-    public BlockOre(int id, String textureName) {
-        super(id, Material.iron);
-        this.setStepSound(Block.soundStoneFootstep);
-        this.textureName = textureName;
+
+    public BlockOre(int id) {
+        super(id);
+        this.setCreativeTab(CommunityMod.modTab);
     }
 
-    public String getTextureName() {
-        return this.textureName;
-    }
 
-    public String getTextureFile() {
-        return TextureHandler.BLOCK_TEXTURE_A;
-    }
 
     @Override
     public int idDropped(int par1, Random rand, int par3) {
-        if (this.blockID == IDsHelper.ligniteOreID) {
-            return ItemsHelper.ligniteCoal.itemID;
-        } else if (this.blockID == IDsHelper.bituminousOreID) {
-            return ItemsHelper.bituminousCoal.itemID;
-        } else if (this.blockID == IDsHelper.anthraciteOreID) {
-            return ItemsHelper.anthraciteCoal.itemID;
-        } else {
-            return this.blockID;
-        }
+        return this.blockID == BlocksHelper.ligniteOre.blockID ? ItemsHelper.ligniteCoal.itemID
+            : (this.blockID == BlocksHelper.bituminousOre.blockID ? ItemsHelper.bituminousCoal.itemID
+            : (this.blockID ==BlocksHelper.anthraciteOre.blockID ? ItemsHelper.anthraciteCoal.itemID
+            : this.blockID));
     }
 
     @Override
     public void registerIcons(IconRegister reg) {
-        this.blockIcon = reg.registerIcon(Reference.modTextureID + ":" + this.getTextureName());
+        this.blockIcon = reg.registerIcon(Reference.modTextureID + ":" + this.getUnlocalizedName());
     }
 
 }
