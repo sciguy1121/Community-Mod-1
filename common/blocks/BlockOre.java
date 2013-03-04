@@ -1,8 +1,9 @@
-package communityMod.common;
+package communityMod.common.blocks;
 
 import java.util.Random;
 
 import communityMod.client.ClientProxyCommunityMod;
+import communityMod.common.CommunityMod;
 import communityMod.textures.TextureHandler;
 
 import net.minecraft.block.Block;

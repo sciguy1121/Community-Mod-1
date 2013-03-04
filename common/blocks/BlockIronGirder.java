@@ -1,4 +1,4 @@
-package communityMod.common;
+package communityMod.common.blocks;
 
 import java.util.Random;
 
