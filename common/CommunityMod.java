@@ -182,8 +182,8 @@ public class CommunityMod {
 		urdiumOre = new BlockOre(urdiumOreID, 16).setHardness(18F).setResistance(22F).setBlockName("UrdiumOre").setCreativeTab(CreativeTabs.tabBlock);
 		franciumOre = new BlockOre(franciumOreID, 14).setHardness(18F).setResistance(22F).setBlockName("FranciumOre").setCreativeTab(CreativeTabs.tabBlock);
         franciumBlock = new BlockMetal(franciumBlockID, 15).setHardness(18F).setResistance(22F).setBlockName("FranciumOre").setCreativeTab(CreativeTabs.tabBlock);
-		lavafurnace = new BlockLavaFurnace(lavafurnaceID, 16, false).setHardness(2.3F).setResistance(4.0F).setBlockName("lava furnace").setCreativeTab(tab);
-		lavafurnaceactive = new BlockLavaFurnace(lavafurnaceID + 1, 16, true).setHardness(2.3F).setResistance(4.0F).setBlockName("lava furnace");
+		lavafurnace = new BlockLavaFurnace(lavafurnaceID, 17, false).setHardness(2.3F).setResistance(4.0F).setBlockName("lava furnace").setCreativeTab(tab);
+		lavafurnaceactive = new BlockLavaFurnace(lavafurnaceID + 1, 17, true).setHardness(2.3F).setResistance(4.0F).setBlockName("lava furnace");
         
 		//Item Loading
 		leadIngot = new ItemIngot(leadIngotID, 1).setCreativeTab(CreativeTabs.tabMaterials).setItemName("LeadIngot");
