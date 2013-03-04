@@ -137,6 +137,7 @@ public class CommunityMod {
 		GameRegistry.addSmelting(arsmiumOreID, new ItemStack(ItemsHelper.arsmiumIngot, 1), 0.5F);
 		GameRegistry.addSmelting(urdiumOreID, new ItemStack(ItemsHelper.urdiumIngot, 1), 0.5F);
         GameRegistry.addSmelting(franciumOreID, new ItemStack(ItemsHelper.franciumIngot, 1), 0.5F);
+        GameRegistry.addSmelting(franciumIngotID, new ItemStack(ItemsHelper.leadIngot, 1), 1F);
 	}
 
 	private static void craftingRecipes(){
@@ -161,7 +162,7 @@ public class CommunityMod {
 		GameRegistry.addRecipe(new ItemStack(BlocksHelper.ironGirder, 4), new Object[]{
 			"III", " I ", "III", 'I', Item.ingotIron,
 		});
-        GameRegistry.addRecipe(new ItemStack(BlocksHelper.siliconBlock, 1), new Object[]{
+        GameRegistry.addRecipe(new ItemStack(BlocksHelper.franciumBlock, 1), new Object[]{
 			"FFF",
 			"FFF",
 			"FFF",
