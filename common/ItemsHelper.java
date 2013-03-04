@@ -27,19 +27,19 @@ public class ItemsHelper{
 	
 	public static void setupItems() {
 		//Item Loading
-		leadIngot = new ItemIngot(CommunityMod.leadIngotID, 1).setCreativeTab(CommunityMod.modTab).setItemName("LeadIngot");
-		titaniumIngot = new ItemIngot(CommunityMod.titaniumIngotID, 0).setCreativeTab(CommunityMod.modTab).setItemName("TitaniumIngot");
-		copperIngot = new ItemIngot(CommunityMod.copperIngotID, 3).setCreativeTab(CommunityMod.modTab).setItemName("CopperIngot");
-		siliconIngot = new ItemIngot(CommunityMod.siliconIngotID, 2).setCreativeTab(CommunityMod.modTab).setItemName("SiliconIngot");
-		ligniteCoal = new ItemCoal(CommunityMod.ligniteCoalID, 4).setCreativeTab(CommunityMod.modTab).setItemName("Lignite");
-		bituminousCoal = new ItemCoal(CommunityMod.bituminousCoalID, 5).setCreativeTab(CommunityMod.modTab).setItemName("BituminousCoal");
-		anthraciteCoal = new ItemCoal(CommunityMod.anthraciteCoalID, 6).setCreativeTab(CommunityMod.modTab).setItemName("Anthracite");
-		platinumIngot = new ItemIngot(CommunityMod.platinumIngotID, 9).setCreativeTab(CommunityMod.modTab).setItemName("PlatinumIngot");
-		tungstenIngot = new ItemIngot(CommunityMod.tungstenIngotID, 11).setCreativeTab(CommunityMod.modTab).setItemName("TungstenIngot");
-		arsmiumIngot = new ItemIngot(CommunityMod.arsmiumIngotID, 10).setCreativeTab(CommunityMod.modTab).setItemName("ArsmiumIngot");
-		urdiumIngot = new ItemIngot(CommunityMod.urdiumIngotID, 8).setCreativeTab(CommunityMod.modTab).setItemName("UrdiumIngot");
-		franciumIngot = new ItemIngot(CommunityMod.franciumIngotID, 7).setCreativeTab(CommunityMod.modTab).setItemName("FranciumIngot");
-		cosileadiumAlloy = new ItemIngot(CommunityMod.cosileadiumAlloyID, 12).setCreativeTab(CommunityMod.modTab).setItemName("CosileadiumAlloy");
+		leadIngot = new ItemIngot(IDsHelper.leadIngotID, 1).setCreativeTab(CommunityMod.modTab).setItemName("LeadIngot");
+		titaniumIngot = new ItemIngot(IDsHelper.titaniumIngotID, 0).setCreativeTab(CommunityMod.modTab).setItemName("TitaniumIngot");
+		copperIngot = new ItemIngot(IDsHelper.copperIngotID, 3).setCreativeTab(CommunityMod.modTab).setItemName("CopperIngot");
+		siliconIngot = new ItemIngot(IDsHelper.siliconIngotID, 2).setCreativeTab(CommunityMod.modTab).setItemName("SiliconIngot");
+		ligniteCoal = new ItemCoal(IDsHelper.ligniteCoalID, 4).setCreativeTab(CommunityMod.modTab).setItemName("Lignite");
+		bituminousCoal = new ItemCoal(IDsHelper.bituminousCoalID, 5).setCreativeTab(CommunityMod.modTab).setItemName("BituminousCoal");
+		anthraciteCoal = new ItemCoal(IDsHelper.anthraciteCoalID, 6).setCreativeTab(CommunityMod.modTab).setItemName("Anthracite");
+		platinumIngot = new ItemIngot(IDsHelper.platinumIngotID, 9).setCreativeTab(CommunityMod.modTab).setItemName("PlatinumIngot");
+		tungstenIngot = new ItemIngot(IDsHelper.tungstenIngotID, 11).setCreativeTab(CommunityMod.modTab).setItemName("TungstenIngot");
+		arsmiumIngot = new ItemIngot(IDsHelper.arsmiumIngotID, 10).setCreativeTab(CommunityMod.modTab).setItemName("ArsmiumIngot");
+		urdiumIngot = new ItemIngot(IDsHelper.urdiumIngotID, 8).setCreativeTab(CommunityMod.modTab).setItemName("UrdiumIngot");
+		franciumIngot = new ItemIngot(IDsHelper.franciumIngotID, 7).setCreativeTab(CommunityMod.modTab).setItemName("FranciumIngot");
+		cosileadiumAlloy = new ItemIngot(IDsHelper.cosileadiumAlloyID, 12).setCreativeTab(CommunityMod.modTab).setItemName("CosileadiumAlloy");
 			
 		gameRegisters();
 		languageRegisters();
