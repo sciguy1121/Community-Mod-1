@@ -43,7 +43,7 @@ public class BlocksHelper {
 		copperOre = new BlockOre(IDsHelper.copperOreID, 6).setHardness(10F).setResistance(0.2F).setBlockName("CopperOre").setCreativeTab(CommunityMod.modTab);
 		siliconBlock = new BlockMetal(IDsHelper.siliconBlockID, 5).setHardness(12F).setResistance(10F).setBlockName("SiliconBlock").setCreativeTab(CommunityMod.modTab);
 		ironGirder = new BlockIronGirder(IDsHelper.ironGirderID, 8, Material.iron).setBlockName("Iron Girder").setHardness(2F).setStepSound(Block.soundMetalFootstep);
-		concrete = new BlockConcrete(IDsHelper.concreteID, 10, Material.iron).setBlockName("Concrete").setHardness(2F).setStepSound(Block.soundStoneFootstep);
+		concrete = new BlockConcrete(IDsHelper.concreteID, 10, Material.iron).setBlockName("Concrete").setHardness(2F).setResistance(17.5F).setStepSound(Block.soundStoneFootstep);
 		ligniteOre = new BlockOre(IDsHelper.ligniteOreID, 11).setBlockName("LigniteOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CommunityMod.modTab);
 		bituminousOre = new BlockOre(IDsHelper.bituminousOreID, 12).setBlockName("BituminousOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CommunityMod.modTab);
 		anthraciteOre = new BlockOre(IDsHelper.anthraciteOreID, 13).setBlockName("AnthraciteOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CommunityMod.modTab);
