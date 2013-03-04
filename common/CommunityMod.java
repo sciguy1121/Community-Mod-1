@@ -91,5 +91,13 @@ public class CommunityMod {
         GameRegistry.addRecipe(new ItemStack(BlocksHelper.franciumBlock, 1), new Object[]{
 			"FFF", "FFF", "FFF", 'F', ItemsHelper.franciumIngot
 		});
+        
+        GameRegistry.addRecipe(new ItemStack(BlocksHelper.concrete, 4), new Object[]{
+        	"GSG", "SWS", "GSG", 'G', Block.gravel, 'S', Block.sand, 'W', Item.bucketWater
+        });
+        
+        GameRegistry.addRecipe(new ItemStack(BlocksHelper.concrete, 4), new Object[]{
+        	"SGS", "GWG", "SGS", 'G', Block.gravel, 'S', Block.sand, 'W', Item.bucketWater
+        });
 	}
 }
