@@ -2,6 +2,7 @@ package communityMod.common.blocks;
 
 import java.util.Random;
 
+import communityMod.common.CommunityMod;
 import communityMod.textures.TextureHandler;
 
 import net.minecraft.block.Block;
@@ -13,7 +14,7 @@ public class BlockConcrete extends Block{
     public BlockConcrete(int id, int texture, Material mat)
     {
     	super(id, texture, mat);
-    	this.setCreativeTab(CreativeTabs.tabBlock);
+    	this.setCreativeTab(CommunityMod.modTab);
     }
    
     public String getTextureFile(){
