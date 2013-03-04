@@ -73,31 +73,23 @@ public class CommunityMod {
 
 	private static void craftingRecipes(){
 		GameRegistry.addRecipe(new ItemStack(BlocksHelper.leadBlock, 1), new Object[]{
-			"LLL",
-			"LLL",
-			"LLL",
-			'L', ItemsHelper.leadIngot
+			"LLL", "LLL", "LLL", 'L', ItemsHelper.leadIngot
 		});
+		
 		GameRegistry.addRecipe(new ItemStack(BlocksHelper.titaniumBlock, 1), new Object[]{
-			"TTT",
-			"TTT",
-			"TTT",
-			'T', ItemsHelper.titaniumIngot
+			"TTT", "TTT", "TTT", 'T', ItemsHelper.titaniumIngot
 		});
+		
 		GameRegistry.addRecipe(new ItemStack(BlocksHelper.siliconBlock, 1), new Object[]{
-			"SSS",
-			"SSS",
-			"SSS",
-			'S', ItemsHelper.siliconIngot
+			"SSS", "SSS", "SSS", 'S', ItemsHelper.siliconIngot
 		});
+		
 		GameRegistry.addRecipe(new ItemStack(BlocksHelper.ironGirder, 4), new Object[]{
 			"III", " I ", "III", 'I', Item.ingotIron,
 		});
+		
         GameRegistry.addRecipe(new ItemStack(BlocksHelper.franciumBlock, 1), new Object[]{
-			"FFF",
-			"FFF",
-			"FFF",
-			'F', ItemsHelper.franciumIngot
+			"FFF", "FFF", "FFF", 'F', ItemsHelper.franciumIngot
 		});
 	}
 }
