@@ -41,9 +41,9 @@ public class CommunityMod {
 	public static Block bituminousOre;
 	public static Block anthraciteOre;
 	public static Block platinumOre;
-	public static Block tungstonOre;
+	public static Block tungstenOre;
 	public static Block osmiumOre;
-	public static Block uridiumOre;
+	public static Block iridiumOre;
     public static Block franciumOre;
     public static Block franciumBlock;
 
@@ -56,9 +56,9 @@ public class CommunityMod {
 	public static Item bituminousCoal;
 	public static Item anthraciteCoal;
 	public static Item platinumIngot;
-	public static Item tungstonIngot;
+	public static Item tungstenIngot;
 	public static Item osmiumShard;
-	public static Item uridiumIngot;
+	public static Item iridiumIngot;
     public static Item franciumIngot
 
 	//Block IDs
@@ -75,9 +75,9 @@ public class CommunityMod {
 	public static int bituminousOreID;
 	public static int anthraciteOreID;
 	public static int platinumOreID;
-	public static int tungstonOreID;
+	public static int tungstenOreID;
 	public static int osmiumOreID;
-	public static int uridiumOreID;
+	public static int iridiumOreID;
     public static int franciumOreID;
     public static int franciumBlockID;
 
@@ -90,9 +90,9 @@ public class CommunityMod {
 	public static int bituminousCoalID;
 	public static int anthraciteCoalID;
 	public static int platinumIngotID;
-	public static int tungstonIngotID;
+	public static int tungstenIngotID;
 	public static int osmiumShardID;
-	public static int uridiumIngotID;
+	public static int iridiumIngotID;
     public static int franciumIngotID;
 
 	@PreInit
@@ -114,9 +114,9 @@ public class CommunityMod {
 		bituminousOreID = config.get("Block IDs", "Bituminous Ore ID", 710).getInt();
 		anthraciteOreID = config.get("Block IDs", "Anthracite Ore ID", 711).getInt();
 		platinumOreID = config.get("Block IDs", "Platinum Ore ID", 712).getInt();
-		tungstonOreID = config.get("Block IDs", "Tungston Ore ID", 713).getInt();
+		tungstenOreID = config.get("Block IDs", "Tungsten Ore ID", 713).getInt();
 		osmiumOreID = config.get("Block IDs", "Osium Ore ID", 714).getInt();
-		uridiumOreID = config.get("Block IDs", "Uridium Ore ID", 715).getInt();
+		iridiumOreID = config.get("Block IDs", "Iridium Ore ID", 715).getInt();
         franciumOreID = config.get("Block IDs", "Francium Ore ID", 716).getInt();
         franciumBlockID = config.get("Block IDs", "Francium Block ID", 717).getInt();
 
@@ -129,9 +129,9 @@ public class CommunityMod {
 		bituminousCoalID = config.get("Item IDs", "Bituminous Coal ID", 1005).getInt();
 		anthraciteCoalID = config.get("Item IDs", "Anthracite ID", 1006).getInt();
 		platinumIngotID = config.get("Item IDs", "Platinum Ingot ID", 1007).getInt();
-		tungstonIngotID = config.get("Item IDs", "Tungston Ingot ID", 1008).getInt();
+		tungstenIngotID = config.get("Item IDs", "Tungsten Ingot ID", 1008).getInt();
 		OsmiumShardID = config.get("Item IDs", "Osmium Ingot ID", 1009).getInt();
-		uridiumIngotID = config.get("Item IDs", "Uridium Ingot ID", 1010).getInt();
+		iridiumIngotID = config.get("Item IDs", "Iridium Ingot ID", 1010).getInt();
         franciumINgotID = config.get("Item IDs", "Francium Ingot ID", 1011).getInt();
 
 		config.save();
@@ -155,9 +155,9 @@ public class CommunityMod {
 		bituminousOre = new BlockOre(bituminousOreID, 12).setBlockName("BituminousOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CreativeTabs.tabBlock);
 		anthraciteOre = new BlockOre(anthraciteOreID, 13).setBlockName("AnthraciteOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CreativeTabs.tabBlock);
 		platinumOre = new BlockOre(platinumOreID, 14).setHardness(18F).setResistance(22F).setBlockName("PlatinumOre").setCreativeTab(CreativeTabs.tabBlock);
-		tungstonOre = new BlockOre(tungstonOreID, 15).setHardness(18F).setResistance(22F).setBlockName("TungstonOre").setCreativeTab(CreativeTabs.tabBlock);
+		tungstenOre = new BlockOre(tungstenOreID, 15).setHardness(18F).setResistance(22F).setBlockName("TungstenOre").setCreativeTab(CreativeTabs.tabBlock);
 		osmiumOre = new BlockOre(osmiumOreID, 16).setHardness(18F).setResistance(22F).setBlockName("OsmiumOre").setCreativeTab(CreativeTabs.tabBlock);
-		uridiumOre = new BlockOre(uridiumOreID, 17).setHardness(18F).setResistance(22F).setBlockName("UridiumOre").setCreativeTab(CreativeTabs.tabBlock);
+		iridiumOre = new BlockOre(iridiumOreID, 17).setHardness(18F).setResistance(22F).setBlockName("IridiumOre").setCreativeTab(CreativeTabs.tabBlock);
         franciumOre = new BlockOre(franciumOreID, 18).setHardness(18F).setResistance(22F).setBlockName("FranciumOre").setCreativeTab(CreativeTabs.tabBlock);
         franciumOre = new BlockMetal(franciumBlockID, 19).setHardness(18F).setResistance(22F).setBlockName("FranciumBlock").setCreativeTab(CreativeTabs.tabBlock);
 		
@@ -170,9 +170,9 @@ public class CommunityMod {
 		bituminousCoal = new ItemCoal(bituminousCoalID, 5).setCreativeTab(CreativeTabs.tabMaterials).setItemName("BituminousCoal");
 		anthraciteCoal = new ItemCoal(anthraciteCoalID, 6).setCreativeTab(CreativeTabs.tabMaterials).setItemName("Anthracite");
 		platinumIngot = new ItemIngot(platinumIngotID, 7).setCreativeTab(CreativeTabs.tabMaterials).setItemName("PlatinumIngot");
-		tungstonIngot = new ItemIngot(tungstonIngotID, 8).setCreativeTab(CreativeTabs.tabMaterials).setItemName("TungstonIngot");
+		tungstenIngot = new ItemIngot(tungstenIngotID, 8).setCreativeTab(CreativeTabs.tabMaterials).setItemName("TungstenIngot");
 		osmiumShard = new ItemIngot(osmiumIngotID, 9).setCreativeTab(CreativeTabs.tabMaterials).setItemName("OsmiumIngot");
-		uridiumIngot = new ItemIngot(uridiumIngotID, 10).setCreativeTab(CreativeTabs.tabMaterials).setItemName("UridiumIngot");
+		iridiumIngot = new ItemIngot(iridiumIngotID, 10).setCreativeTab(CreativeTabs.tabMaterials).setItemName("IridiumIngot");
         franciumIngot = new ItemIngot(franciumIngotID, 10).setCreativeTab(CreativeTabs.tabMaterials).setItemName("FranciumIngot");
 		
 		gameRegisters();
@@ -190,9 +190,9 @@ public class CommunityMod {
 		GameRegistry.addSmelting(siliconOreID, new ItemStack(siliconIngot, 1), 0.5F);
 		GameRegistry.addSmelting(copperOreID, new ItemStack(copperIngot, 1), 0.5F);
 		GameRegistry.addSmelting(platinumOreID, new ItemStack(platinumIngot, 1), 0.5F);
-		GameRegistry.addSmelting(tungstonOreID, new ItemStack(tungstonIngot, 1), 0.5F);
+		GameRegistry.addSmelting(tungstenOreID, new ItemStack(tungstenIngot, 1), 0.5F);
 		GameRegistry.addSmelting(osmiumOreID, new ItemStack(osmiumIngot, 1), 0.5F);
-		GameRegistry.addSmelting(uridiumOreID, new ItemStack(uridiumIngot, 1), 0.5F);
+		GameRegistry.addSmelting(uridiumOreID, new ItemStack(iridiumIngot, 1), 0.5F);
         GameRegistry.addSmelting(franciumOreID, new ItemStack(franciumIngot, 1), 0.5F);
         
 	}
@@ -241,9 +241,9 @@ public class CommunityMod {
 		GameRegistry.registerBlock(bituminousOre, "Bituminous Ore");
 		GameRegistry.registerBlock(anthraciteOre, "Anthracite Ore");
 		GameRegistry.registerBlock(platinumOre, "PlatinumOre");
-		GameRegistry.registerBlock(tungstonOre, "TungstonOre");
+		GameRegistry.registerBlock(tungstenOre, "TungstenOre");
 		GameRegistry.registerBlock(osmiumOre, "OsmiumOre");
-		GameRegistry.registerBlock(uridiumOre, "UridiumOre");
+		GameRegistry.registerBlock(iridiumOre, "IridiumOre");
         GameRegistry.registerBlock(franciumOre, "FrnaciumOre");
         GameRegistry.registerBlock(franciumBlock, "FranciumBlock");
 
@@ -256,9 +256,9 @@ public class CommunityMod {
 		GameRegistry.registerItem(bituminousCoal, "Bituminous Coal");
 		GameRegistry.registerItem(anthraciteCoal, "Anthracite");
 		GameRegistry.registerItem(platinumIngot, "PlatinumIngot");
-		GameRegistry.registerItem(tungstonIngot, "TungstonIngot");
+		GameRegistry.registerItem(tungstenIngot, "TungstenIngot");
 		GameRegistry.registerItem(osmiumShard, "OsmiumShard");
-		GameRegistry.registerItem(uridiumIngot, "UridiumIngot");
+		GameRegistry.registerItem(iridiumIngot, "IridiumIngot");
             GameRegistry.registerItem(franciumIngot, "FranciumIngot");
 	}
 
