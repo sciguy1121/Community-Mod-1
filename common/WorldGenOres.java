@@ -15,7 +15,7 @@ public class WorldGenOres implements IWorldGenerator{
 
 		//Make sure it's not generating in the end or nether
 		if(world.provider.dimensionId != 1 && world.provider.dimensionId != -1){
-			generateSurface(world, random, chunkX, chunkZ);
+			generateSurface(world, random, chunkX * 16, chunkZ * 16);
 		}
 		
 	}
