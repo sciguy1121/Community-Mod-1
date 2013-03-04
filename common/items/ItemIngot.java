@@ -1,4 +1,4 @@
-package communityMod.common;
+package communityMod.common.items;
 
 import communityMod.textures.TextureHandler;
 

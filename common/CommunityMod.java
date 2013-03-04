@@ -7,14 +7,24 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
 import communityMod.client.ClientProxyCommunityMod;
+import communityMod.common.blocks.BlockConcrete;
+import communityMod.common.blocks.BlockIronGirder;
+import communityMod.common.blocks.BlockLavaFurnace;
+import communityMod.common.blocks.BlockMetal;
+import communityMod.common.blocks.BlockOre;
+import communityMod.common.gui.GuiHandler;
+import communityMod.common.items.ItemCoal;
+import communityMod.common.items.ItemIngot;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.Mod.PreInit;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -26,6 +36,13 @@ public class CommunityMod {
 	@SidedProxy(clientSide = "communityMod.client.ClientProxyCommunityMod",
 				serverSide = "communityMod.common.CommonProxyCommunityMod")
 	public static ClientProxyCommunityMod proxy = new ClientProxyCommunityMod();
+	
+	@Instance
+	public static CommunityMod instance = new CommunityMod();
+	
+	public static CreativeTabs tab = new CommunityModCreativeTab("community");
+	
+	public static GuiHandler guihandler = new GuiHandler();
 
 	//Blocks
 	public static Block siliconOre;
@@ -46,6 +63,8 @@ public class CommunityMod {
 	public static Block urdiumOre;
     public static Block franciumOre;
     public static Block franciumBlock;
+	public static Block lavafurnace;
+	public static Block lavafurnaceactive;
 
 	//Items
 	public static Item leadIngot;
@@ -81,6 +100,7 @@ public class CommunityMod {
 	public static int urdiumOreID;
     public static int franciumOreID;
     public static int franciumBlockID;
+	public static int lavafurnaceID;
 
 	//Item IDs
 	public static int leadIngotID;
@@ -121,6 +141,7 @@ public class CommunityMod {
 		urdiumOreID = config.get("Block IDs", "Urdium Ore ID", 715).getInt();
         franciumOreID = config.get("Block IDs", "Francium Ore ID", 716).getInt();
         franciumBlockID = config.get("Block IDs", "Francium Block ID", 717).getInt();
+		lavafurnaceID = config.get("BlockIDs", "Lava Furnace ID", 864).getInt();
 
 		//Item IDs
 		leadIngotID = config.get("Item IDs", "Lead Ingot ID", 1000).getInt();
@@ -163,6 +184,8 @@ public class CommunityMod {
 		urdiumOre = new BlockOre(urdiumOreID, 16).setHardness(18F).setResistance(22F).setBlockName("UrdiumOre").setCreativeTab(CreativeTabs.tabBlock);
 		franciumOre = new BlockOre(franciumOreID, 14).setHardness(18F).setResistance(22F).setBlockName("FranciumOre").setCreativeTab(CreativeTabs.tabBlock);
         franciumBlock = new BlockMetal(franciumBlockID, 15).setHardness(18F).setResistance(22F).setBlockName("FranciumOre").setCreativeTab(CreativeTabs.tabBlock);
+		lavafurnace = new BlockLavaFurnace(lavafurnaceID, 20, false).setHardness(2.3F).setResistance(4.0F).setBlockName("lava furnace").setCreativeTab(tab);
+		lavafurnaceactive = new BlockLavaFurnace(lavafurnaceID + 1, 20, true).setHardness(2.3F).setResistance(4.0F).setBlockName("lava furnace");
         
 		//Item Loading
 		leadIngot = new ItemIngot(leadIngotID, 1).setCreativeTab(CreativeTabs.tabMaterials).setItemName("LeadIngot");
@@ -186,6 +209,7 @@ public class CommunityMod {
 
 		GameRegistry.registerWorldGenerator(new WorldGenOres());
 		GameRegistry.registerFuelHandler(new FuelHandler());
+		NetworkRegistry.instance().registerGuiHandler(this, guihandler);
 	}
 
 	private static void smeltingRecipes(){
@@ -250,6 +274,8 @@ public class CommunityMod {
 		GameRegistry.registerBlock(urdiumOre, "UrdiumOre");
         GameRegistry.registerBlock(franciumOre, "FranciumOre");
         GameRegistry.registerBlock(franciumBlock, "FranciumBlock");
+		GameRegistry.registerBlock(lavafurnace, "LavaFurnace");
+		GameRegistry.registerBlock(lavafurnaceactive, "LavaFurnace1");
 
 		//Item Registry
 		GameRegistry.registerItem(leadIngot, "LeadIngot");
@@ -287,6 +313,7 @@ public class CommunityMod {
 		LanguageRegistry.addName(urdiumOre, "Urdium Ore");
         LanguageRegistry.addName(franciumOre, "Francium Ore");
 		LanguageRegistry.addName(franciumBlock, "Francium Block");
+		LanguageRegistry.addName(lavafurnace, "Lava Furnace");
 
 		//Item LanguageRegistry
 		LanguageRegistry.addName(leadIngot, "Lead Ingot");
@@ -302,5 +329,8 @@ public class CommunityMod {
 		LanguageRegistry.addName(urdiumIngot, "Urdium Ingot");
         LanguageRegistry.addName(franciumIngot, "Francium Ingot");
         LanguageRegistry.addName(cosileadiumAlloy, "Cosileadium Alloy");
+		
+		//Other LanguageRegistry
+		LanguageRegistry.instance().addStringLocalization("itemGroup.community", "Community Mod");
 	}
 }
