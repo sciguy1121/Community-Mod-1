@@ -198,7 +198,6 @@ public class CommunityMod {
 		GameRegistry.addSmelting(arsmiumOreID, new ItemStack(arsmiumIngot, 1), 0.5F);
 		GameRegistry.addSmelting(urdiumOreID, new ItemStack(urdiumIngot, 1), 0.5F);
         GameRegistry.addSmelting(franciumOreID, new ItemStack(franciumIngot, 1), 0.5F);
-        GameRegistry.addSmelting(leadOreID, new ItemStack(leadIngot, 1), 1F);
 	}
 
 	private static void craftingRecipes(){
