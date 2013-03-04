@@ -33,28 +33,8 @@ public class CommunityMod {
 				serverSide = "communityMod.common.CommonProxyCommunityMod")
 	public static ClientProxyCommunityMod proxy = new ClientProxyCommunityMod();
 
-	public static CreativeTabs CommunityMod = new CreativeTab(CreativeTabs.getNextID(),"CommunityMod");
+	public static CreativeTabs modTab = new CreativeTab(CreativeTabs.getNextID(),"CommunityMod");
 	
-	//Blocks
-	public static Block siliconOre;
-	public static Block leadOre;
-	public static Block titaniumOre;
-	public static Block leadBlock;
-	public static Block titaniumBlock;
-	public static Block copperOre;
-	public static Block siliconBlock;
-	public static Block ironGirder;
-	public static Block concrete;
-	public static Block ligniteOre;
-	public static Block bituminousOre;
-	public static Block anthraciteOre;
-	public static Block platinumOre;
-	public static Block tungstenOre;
-	public static Block arsmiumOre;
-	public static Block urdiumOre;
-    public static Block franciumOre;
-    public static Block franciumBlock;
-
 	//Items
 	public static Item leadIngot;
 	public static Item titaniumIngot;
@@ -151,26 +131,6 @@ public class CommunityMod {
 	@Init
 	public void load(FMLInitializationEvent event){
 		proxy.registerRenders();
-
-		//Block Loading
-		siliconOre = new BlockOre(siliconOreID, 0).setHardness(10F).setResistance(0.2F).setBlockName("SiliconOre").setCreativeTab(CreativeTabs.tabBlock);
-		leadOre = new BlockOre(leadOreID, 1).setHardness(10F).setResistance(0.2F).setBlockName("LeadOre").setCreativeTab(CreativeTabs.tabBlock);
-		titaniumOre = new BlockOre(titaniumOreID, 2).setHardness(10F).setResistance(0.2F).setBlockName("TitaniumOre").setCreativeTab(CreativeTabs.tabBlock);
-		leadBlock = new BlockMetal(leadBlockID, 4).setHardness(12F).setResistance(10F).setBlockName("LeadBlock").setCreativeTab(CreativeTabs.tabBlock);
-		titaniumBlock = new BlockMetal(titaniumBlockID, 3).setHardness(12F).setResistance(10F).setBlockName("TitaniumBlock").setCreativeTab(CreativeTabs.tabBlock);
-		copperOre = new BlockOre(copperOreID, 6).setHardness(10F).setResistance(0.2F).setBlockName("CopperOre").setCreativeTab(CreativeTabs.tabBlock);
-		siliconBlock = new BlockMetal(siliconBlockID, 5).setHardness(12F).setResistance(10F).setBlockName("SiliconBlock").setCreativeTab(CreativeTabs.tabBlock);
-		ironGirder = new BlockIronGirder(ironGirderID, 8, Material.iron).setBlockName("Iron Girder").setHardness(2F).setStepSound(Block.soundMetalFootstep);
-		concrete = new BlockConcrete(concreteID, 10, Material.iron).setBlockName("Concrete").setHardness(2F).setStepSound(Block.soundStoneFootstep);
-		ligniteOre = new BlockOre(ligniteOreID, 11).setBlockName("LigniteOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CreativeTabs.tabBlock);
-		bituminousOre = new BlockOre(bituminousOreID, 12).setBlockName("BituminousOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CreativeTabs.tabBlock);
-		anthraciteOre = new BlockOre(anthraciteOreID, 13).setBlockName("AnthraciteOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CreativeTabs.tabBlock);
-		platinumOre = new BlockOre(platinumOreID, 17).setHardness(18F).setResistance(22F).setBlockName("PlatinumOre").setCreativeTab(CreativeTabs.tabBlock);
-		tungstenOre = new BlockOre(tungstenOreID, 19).setHardness(18F).setResistance(22F).setBlockName("TungstenOre").setCreativeTab(CreativeTabs.tabBlock);
-		arsmiumOre = new BlockOre(arsmiumOreID, 18).setHardness(18F).setResistance(22F).setBlockName("ArsmiumOre").setCreativeTab(CreativeTabs.tabBlock);
-		urdiumOre = new BlockOre(urdiumOreID, 16).setHardness(18F).setResistance(22F).setBlockName("UrdiumOre").setCreativeTab(CreativeTabs.tabBlock);
-		franciumOre = new BlockOre(franciumOreID, 14).setHardness(18F).setResistance(22F).setBlockName("FranciumOre").setCreativeTab(CreativeTabs.tabBlock);
-        franciumBlock = new BlockMetal(franciumBlockID, 15).setHardness(18F).setResistance(22F).setBlockName("FranciumOre").setCreativeTab(CreativeTabs.tabBlock);
         
 		//Item Loading
 		leadIngot = new ItemIngot(leadIngotID, 1).setCreativeTab(CreativeTabs.tabMaterials).setItemName("LeadIngot");
@@ -211,28 +171,28 @@ public class CommunityMod {
 	}
 
 	private static void craftingRecipes(){
-		GameRegistry.addRecipe(new ItemStack(leadBlock, 1), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(BlocksHelper.leadBlock, 1), new Object[]{
 			"LLL",
 			"LLL",
 			"LLL",
 			'L', leadIngot
 		});
-		GameRegistry.addRecipe(new ItemStack(titaniumBlock, 1), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(BlocksHelper.titaniumBlock, 1), new Object[]{
 			"TTT",
 			"TTT",
 			"TTT",
 			'T', titaniumIngot
 		});
-		GameRegistry.addRecipe(new ItemStack(siliconBlock, 1), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(BlocksHelper.siliconBlock, 1), new Object[]{
 			"SSS",
 			"SSS",
 			"SSS",
 			'S', siliconIngot
 		});
-		GameRegistry.addRecipe(new ItemStack(ironGirder, 4), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(BlocksHelper.ironGirder, 4), new Object[]{
 			"III", " I ", "III", 'I', Item.ingotIron,
 		});
-        GameRegistry.addRecipe(new ItemStack(siliconBlock, 1), new Object[]{
+        GameRegistry.addRecipe(new ItemStack(BlocksHelper.siliconBlock, 1), new Object[]{
 			"FFF",
 			"FFF",
 			"FFF",
@@ -242,24 +202,24 @@ public class CommunityMod {
 
 	private static void gameRegisters(){
 		//Block Registry
-		GameRegistry.registerBlock(siliconOre, "SiliconOre");
-		GameRegistry.registerBlock(leadOre, "LeadOre");
-		GameRegistry.registerBlock(titaniumOre, "TitaniumOre");
-		GameRegistry.registerBlock(leadBlock, "LeadBlock");
-		GameRegistry.registerBlock(titaniumBlock, "TitaniumBlock");
-		GameRegistry.registerBlock(copperOre, "CopperOre");
-		GameRegistry.registerBlock(siliconBlock, "SiliconBlock");
-		GameRegistry.registerBlock(ironGirder, "IronGirder");
-		GameRegistry.registerBlock(concrete, "Concrete");
-		GameRegistry.registerBlock(ligniteOre, "Lignite Ore");
-		GameRegistry.registerBlock(bituminousOre, "Bituminous Ore");
-		GameRegistry.registerBlock(anthraciteOre, "Anthracite Ore");
-		GameRegistry.registerBlock(platinumOre, "PlatinumOre");
-		GameRegistry.registerBlock(tungstenOre, "tungstenOre");
-		GameRegistry.registerBlock(arsmiumOre, "ArsmiumOre");
-		GameRegistry.registerBlock(urdiumOre, "UrdiumOre");
-        GameRegistry.registerBlock(franciumOre, "FranciumOre");
-        GameRegistry.registerBlock(franciumBlock, "FranciumBlock");
+		GameRegistry.registerBlock(BlocksHelper.siliconOre, "SiliconOre");
+		GameRegistry.registerBlock(BlocksHelper.leadOre, "LeadOre");
+		GameRegistry.registerBlock(BlocksHelper.titaniumOre, "TitaniumOre");
+		GameRegistry.registerBlock(BlocksHelper.leadBlock, "LeadBlock");
+		GameRegistry.registerBlock(BlocksHelper.titaniumBlock, "TitaniumBlock");
+		GameRegistry.registerBlock(BlocksHelper.copperOre, "CopperOre");
+		GameRegistry.registerBlock(BlocksHelper.siliconBlock, "SiliconBlock");
+		GameRegistry.registerBlock(BlocksHelper.ironGirder, "IronGirder");
+		GameRegistry.registerBlock(BlocksHelper.concrete, "Concrete");
+		GameRegistry.registerBlock(BlocksHelper.ligniteOre, "Lignite Ore");
+		GameRegistry.registerBlock(BlocksHelper.bituminousOre, "Bituminous Ore");
+		GameRegistry.registerBlock(BlocksHelper.anthraciteOre, "Anthracite Ore");
+		GameRegistry.registerBlock(BlocksHelper.platinumOre, "PlatinumOre");
+		GameRegistry.registerBlock(BlocksHelper.tungstenOre, "tungstenOre");
+		GameRegistry.registerBlock(BlocksHelper.arsmiumOre, "ArsmiumOre");
+		GameRegistry.registerBlock(BlocksHelper.urdiumOre, "UrdiumOre");
+        GameRegistry.registerBlock(BlocksHelper.franciumOre, "FranciumOre");
+        GameRegistry.registerBlock(BlocksHelper.franciumBlock, "FranciumBlock");
 
 		//Item Registry
 		GameRegistry.registerItem(leadIngot, "LeadIngot");
@@ -279,24 +239,24 @@ public class CommunityMod {
 
 	private static void languageRegisters(){
 		//Block LanguageRegistry
-		LanguageRegistry.addName(siliconOre, "Silicon Ore");
-		LanguageRegistry.addName(leadOre, "Lead Ore");
-		LanguageRegistry.addName(titaniumOre, "Titanium Ore");
-		LanguageRegistry.addName(leadBlock, "Lead Block");
-		LanguageRegistry.addName(titaniumBlock, "Titanium Block");
-		LanguageRegistry.addName(copperOre, "Copper Ore");
-		LanguageRegistry.addName(siliconBlock, "Silicon Block");
-		LanguageRegistry.addName(ironGirder, "Iron Girder");
-		LanguageRegistry.addName(concrete, "Concrete");
-		LanguageRegistry.addName(ligniteOre, "Lignite Ore");
-		LanguageRegistry.addName(bituminousOre, "Bituminous Coal Ore");
-		LanguageRegistry.addName(anthraciteOre, "Anthracite Ore");
-		LanguageRegistry.addName(platinumOre, "Platinum Ore");
-		LanguageRegistry.addName(tungstenOre, "Tungsten Ore");
-		LanguageRegistry.addName(arsmiumOre, "Arsmium Ore");
-		LanguageRegistry.addName(urdiumOre, "Urdium Ore");
-        LanguageRegistry.addName(franciumOre, "Francium Ore");
-		LanguageRegistry.addName(franciumBlock, "Francium Block");
+		LanguageRegistry.addName(BlocksHelper.siliconOre, "Silicon Ore");
+		LanguageRegistry.addName(BlocksHelper.leadOre, "Lead Ore");
+		LanguageRegistry.addName(BlocksHelper.titaniumOre, "Titanium Ore");
+		LanguageRegistry.addName(BlocksHelper.leadBlock, "Lead Block");
+		LanguageRegistry.addName(BlocksHelper.titaniumBlock, "Titanium Block");
+		LanguageRegistry.addName(BlocksHelper.copperOre, "Copper Ore");
+		LanguageRegistry.addName(BlocksHelper.siliconBlock, "Silicon Block");
+		LanguageRegistry.addName(BlocksHelper.ironGirder, "Iron Girder");
+		LanguageRegistry.addName(BlocksHelper.concrete, "Concrete");
+		LanguageRegistry.addName(BlocksHelper.ligniteOre, "Lignite Ore");
+		LanguageRegistry.addName(BlocksHelper.bituminousOre, "Bituminous Coal Ore");
+		LanguageRegistry.addName(BlocksHelper.anthraciteOre, "Anthracite Ore");
+		LanguageRegistry.addName(BlocksHelper.platinumOre, "Platinum Ore");
+		LanguageRegistry.addName(BlocksHelper.tungstenOre, "Tungsten Ore");
+		LanguageRegistry.addName(BlocksHelper.arsmiumOre, "Arsmium Ore");
+		LanguageRegistry.addName(BlocksHelper.urdiumOre, "Urdium Ore");
+        LanguageRegistry.addName(BlocksHelper.franciumOre, "Francium Ore");
+		LanguageRegistry.addName(BlocksHelper.franciumBlock, "Francium Block");
 
 		//Item LanguageRegistry
 		LanguageRegistry.addName(leadIngot, "Lead Ingot");
