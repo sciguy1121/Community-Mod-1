@@ -7,6 +7,12 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
 import communityMod.client.ClientProxyCommunityMod;
+import communityMod.common.blocks.BlockConcrete;
+import communityMod.common.blocks.BlockIronGirder;
+import communityMod.common.blocks.BlockMetal;
+import communityMod.common.blocks.BlockOre;
+import communityMod.common.items.ItemCoal;
+import communityMod.common.items.ItemIngot;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
@@ -27,6 +33,8 @@ public class CommunityMod {
 				serverSide = "communityMod.common.CommonProxyCommunityMod")
 	public static ClientProxyCommunityMod proxy = new ClientProxyCommunityMod();
 
+	public static CreativeTabs CommunityMod = new CreativeTab(CreativeTabs.getNextID(),"CommunityMod");
+	
 	//Blocks
 	public static Block siliconOre;
 	public static Block leadOre;
@@ -179,6 +187,8 @@ public class CommunityMod {
         franciumIngot = new ItemIngot(franciumIngotID, 7).setCreativeTab(CreativeTabs.tabMaterials).setItemName("FranciumIngot");
         cosileadiumAlloy = new ItemIngot(cosileadiumAlloyID, 12).setCreativeTab(CreativeTabs.tabMaterials).setItemName("CosileadiumAlloy");
 		
+        BlocksHelper.setupBlocks();
+        
 		gameRegisters();
 		languageRegisters();
 		craftingRecipes();

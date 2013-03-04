@@ -14,7 +14,7 @@ public class CreativeTab extends CreativeTabs {
 	//Icon of Tab
 	@SideOnly(Side.CLIENT)
 	public int getTabIconItemIndex(){
-		return CommunityMod.siliconOre.blockID;
+		return CommunityMod.siliconIngot.itemID;
 	}
 	
 	//Name of Tab
