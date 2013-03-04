@@ -9,12 +9,19 @@ Code:
 
 *Sciguy1121
 *TheBluePenguin
+*grimboy14
+*KingCreeperEli
+*Shachou
+*TheGamingParadise
 
 Textures:
 
-*KingCreeperEli
+*KingCreeperEli (Leader)
+*Shachou
+*TheGamingParadise
 
 Ideas:
 
 *KingCreeperEli
+*TheGamingParadise
 
