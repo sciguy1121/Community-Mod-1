@@ -2,12 +2,11 @@ package communityMod.common.blocks;
 
 import java.util.Random;
 
-import communityMod.client.ClientProxyCommunityMod;
-import communityMod.common.CommunityMod;
-import communityMod.textures.TextureHandler;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+
+import communityMod.common.IDsHelper;
+import communityMod.textures.TextureHandler;
 
 public class BlockOre extends Block{
 
@@ -21,12 +20,12 @@ public class BlockOre extends Block{
 	}
 	
 	public int idDropped(int par1, Random rand, int par3){
-		if(this.blockID == CommunityMod.ligniteOreID){
-			return CommunityMod.ligniteCoalID;
-		}else if(this.blockID == CommunityMod.bituminousOreID){
-			return CommunityMod.bituminousCoalID;
-		}else if(this.blockID == CommunityMod.anthraciteOreID){
-			return CommunityMod.anthraciteCoalID;
+		if(this.blockID == IDsHelper.ligniteOreID){
+			return IDsHelper.ligniteCoalID;
+		}else if(this.blockID == IDsHelper.bituminousOreID){
+			return IDsHelper.bituminousCoalID;
+		}else if(this.blockID == IDsHelper.anthraciteOreID){
+			return IDsHelper.anthraciteCoalID;
 		}else{
 			return this.blockID;
 		}

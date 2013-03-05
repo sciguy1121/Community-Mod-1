@@ -3,11 +3,15 @@ package communityMod.common.entities.tile;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityLavaFurnace extends TileEntity implements IInventory
 {
 	private boolean powered;
+	private boolean canwork = false;
 	private ItemStack[] inventory;
 	
 	public int furnaceBurnTime = 0;
@@ -18,9 +22,9 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory
 	
 	public int heat = 0;
 
-	public TileEntityLavaFurnace(boolean powered)
+	public TileEntityLavaFurnace(boolean active)
 	{
-		this.powered = powered;
+		this.powered = active;
 		this.inventory = new ItemStack[2];
 	}
 
@@ -94,7 +98,7 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory
 	@Override
 	public String getInvName() 
 	{
-		return "Lava Furnace";
+		return "Geothermal Oven";
 	}
 
 	@Override
@@ -118,10 +122,78 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory
 	@Override
 	public void updateEntity()
 	{
-		if(heat < 50)
+		if(powered && heat < 50)
 		{
 			heat++;
 		}
 		
+		if(powered && heat == 50)
+		{
+			canwork = true;
+		}
+		
+		if(canwork)
+		{
+			ItemStack stack = getStackInSlot(0);
+			ItemStack output = getStackInSlot(1);
+			ItemStack result = FurnaceRecipes.smelting().getSmeltingResult(stack);
+			if(result != null)
+			{
+				if(output == null)
+				{
+					decrStackSize(0, 1);
+					setInventorySlotContents(1, result);
+				} else
+				{
+					if(output.isItemEqual(stack))
+					{
+						decrStackSize(0, 1);
+						output.stackSize++;
+					}
+				}
+			}
+		}
 	}
+	
+	public void writeToNBT(NBTTagCompound compound)
+	{
+		super.writeToNBT(compound);
+		NBTTagList var2 = new NBTTagList();
+
+		for (int var3 = 0; var3 < this.inventory.length; ++var3)
+	    {
+	        if (this.inventory[var3] != null)
+	        {
+	             NBTTagCompound var4 = new NBTTagCompound();
+	             var4.setByte("Slot", (byte)var3);
+	             this.inventory[var3].writeToNBT(var4);
+	             var2.appendTag(var4);
+	        }
+	     }
+
+		 compound.setTag("Items", var2);
+		 compound.setInteger("Heat", heat);
+	 }
+	
+	 public void readFromNBT(NBTTagCompound compound)
+	 {
+	     super.readFromNBT(compound);
+	     NBTTagList var2 = compound.getTagList("Items");
+	     
+	     this.heat = compound.getInteger("Heat");
+	     
+	     this.inventory = new ItemStack[this.getSizeInventory()];
+	     
+	     for (int var3 = 0; var3 < var2.tagCount(); ++var3)
+	     {
+	         NBTTagCompound var4 = (NBTTagCompound)var2.tagAt(var3);
+	         int var5 = var4.getByte("Slot") & 255;
+
+	         if (var5 >= 0 && var5 < this.inventory.length)
+	         {
+	             this.inventory[var5] = ItemStack.loadItemStackFromNBT(var4);
+	         }
+	     }
+	 }
+	     
 }

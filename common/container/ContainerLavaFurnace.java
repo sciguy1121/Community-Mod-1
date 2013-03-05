@@ -17,7 +17,7 @@ public class ContainerLavaFurnace extends Container
 		this.entity = entity;
 		
 		this.addSlotToContainer(new Slot(entity, 0, 58, 53));
-		this.addSlotToContainer(new Slot(entity, 0, 116, 53));
+		this.addSlotToContainer(new SlotOutput(entity, 1, 116, 53));
 		
 	    int var3;
 

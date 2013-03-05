@@ -25,7 +25,7 @@ public class GuiLavaFurnace extends GuiContainer
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float var1, int var2, int var3) 
 	{
-		int picture = mc.renderEngine.getTexture(TextureHandler.BLOCK_TEXTURE_A);  //No GUI texture
+		int picture = mc.renderEngine.getTexture(TextureHandler.LAVAFURNACE_GUI); 
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		this.mc.renderEngine.bindTexture(picture);
 		int x = (this.width - this.xSize) / 2;
@@ -36,7 +36,8 @@ public class GuiLavaFurnace extends GuiContainer
 	@Override
     protected void drawGuiContainerForegroundLayer(int i, int j)
 	{
-		fontRenderer.drawString(entity.getInvName(), 60, 6, 4210752);;
+		fontRenderer.drawString(entity.getInvName(), 56, 6, 4210752);
+		fontRenderer.drawString("Heat: " + (entity.heat * 2) + "%", 12, 44, 4210752);
         fontRenderer.drawString(StatCollector.translateToLocal("container.inventory"), 8, this.ySize - 96 + 2, 4210752);
 	}
 
