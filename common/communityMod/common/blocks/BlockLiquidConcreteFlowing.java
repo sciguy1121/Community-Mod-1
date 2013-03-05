@@ -36,7 +36,7 @@ public class BlockLiquidConcreteFlowing extends BlockFlowing implements ILiquid 
     public void updateTick(World world, int x, int y, int z, Random random) {
 
         super.updateTick(world, x, y, z, random);
-        
+
         if (random.nextInt(3) == 0) {
             if (freezeProgress < 400) {
                 ++freezeProgress;

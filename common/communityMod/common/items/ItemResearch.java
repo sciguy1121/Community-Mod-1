@@ -40,9 +40,9 @@ public class ItemResearch extends Item {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void updateIcons(IconRegister iconRegister) {
-        super.updateIcons(iconRegister);
-        iconIndex = iconRegister.registerIcon(Reference.modTextureID + ":" + itemName);
+    public void registerIcons(IconRegister iconRegister) {
+        super.registerIcons(iconRegister);
+        this.itemIcon = iconRegister.registerIcon(Reference.modTextureID + ":" + itemName);
     }
 
 }

@@ -2,11 +2,13 @@ package communityMod.common.blocks;
 
 import java.util.Random;
 
+import communityMod.common.Reference;
 import mods.communityMod.textures.TextureHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
 import communityMod.common.CommunityMod;
+import net.minecraft.client.renderer.texture.IconRegister;
 
 public class BlockIronGirder extends Block {
 
@@ -44,5 +46,11 @@ public class BlockIronGirder extends Block {
 	public String getTextureName() {
 		return this.textureName;
 	}
+
+    @Override
+    public void registerIcons(IconRegister reg) {
+        this.blockIcon = reg.registerIcon(Reference.modTextureID + ":" + this.getTextureName());
+    }
+
 
 }

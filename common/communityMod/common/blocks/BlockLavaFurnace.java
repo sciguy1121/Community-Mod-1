@@ -59,8 +59,8 @@ public class BlockLavaFurnace extends BlockContainer {
 		return true;
 	}
 
-	@Override
-	public Icon getBlockTextureFromSideAndMetadata(int side, int metadata) {
+    @Override
+	public Icon getIcon(int side, int metadata) {
 		if (side == metadata) {
 			return this.blockIcon;
 		}
