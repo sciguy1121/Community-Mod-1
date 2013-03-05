@@ -7,11 +7,11 @@ public class FuelHandler implements IFuelHandler{
 
 	@Override
 	public int getBurnTime(ItemStack fuel) {
-		if(fuel.itemID == ItemsHelper.ligniteCoal.itemID){
+		if(fuel.itemID == ItemsHelper.ligniteCoal.shiftedIndex){
 			return 3200;
-		}else if(fuel.itemID == ItemsHelper.bituminousCoal.itemID){
+		}else if(fuel.itemID == ItemsHelper.bituminousCoal.shiftedIndex){
 			return 6400;
-		}else if(fuel.itemID == ItemsHelper.anthraciteCoal.itemID){
+		}else if(fuel.itemID == ItemsHelper.anthraciteCoal.shiftedIndex){
 			return 12800;
 		}
 		return 0;

@@ -2,6 +2,8 @@ package communityMod.common;
 
 import communityMod.common.items.ItemCoal;
 import communityMod.common.items.ItemIngot;
+import communityMod.common.items.ItemRasberry;
+import communityMod.common.items.ItemRasberryPie;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -25,6 +27,9 @@ public class ItemsHelper{
 	public static Item franciumIngot;
 	public static Item cosileadiumAlloy;
 	
+	public static Item rasberry;
+	public static Item rasberryPie;
+	
 	public static void setupItems() {
 		//Item Loading
 		leadIngot = new ItemIngot(IDsHelper.leadIngotID, 1).setCreativeTab(CommunityMod.modTab).setItemName("LeadIngot");
@@ -40,7 +45,10 @@ public class ItemsHelper{
 		urdiumIngot = new ItemIngot(IDsHelper.urdiumIngotID, 8).setCreativeTab(CommunityMod.modTab).setItemName("UrdiumIngot");
 		franciumIngot = new ItemIngot(IDsHelper.franciumIngotID, 7).setCreativeTab(CommunityMod.modTab).setItemName("FranciumIngot");
 		cosileadiumAlloy = new ItemIngot(IDsHelper.cosileadiumAlloyID, 12).setCreativeTab(CommunityMod.modTab).setItemName("CosileadiumAlloy");
-			
+		
+		rasberry = new ItemRasberry(IDsHelper.rasberryID, 4, 2.0F, false).setItemName("Rasberry").setIconIndex(48).setCreativeTab(CommunityMod.modTab);
+		rasberryPie = new ItemRasberryPie(IDsHelper.rasberryPieID, 8, 6.0F, false).setItemName("RasberryPie").setIconIndex(49).setCreativeTab(CommunityMod.modTab);
+		
 		gameRegisters();
 		languageRegisters();
 	}
@@ -58,8 +66,11 @@ public class ItemsHelper{
 		GameRegistry.registerItem(tungstenIngot, "tungstenIngot");
 		GameRegistry.registerItem(arsmiumIngot, "ArsmiumShard");
 		GameRegistry.registerItem(urdiumIngot, "UrdiumIngot");
-        	GameRegistry.registerItem(franciumIngot, "FranciumIngot");
-        	GameRegistry.registerItem(cosileadiumAlloy, "CosileadiumAlloy");
+        GameRegistry.registerItem(franciumIngot, "FranciumIngot");
+        GameRegistry.registerItem(cosileadiumAlloy, "CosileadiumAlloy");
+        
+        GameRegistry.registerItem(rasberry, "Rasberry");
+        GameRegistry.registerItem(rasberryPie, "Rasberry Pie");
 	}
 	
 
@@ -76,8 +87,11 @@ public class ItemsHelper{
 		LanguageRegistry.addName(tungstenIngot, "Tungsten Ingot");
 		LanguageRegistry.addName(arsmiumIngot, "Arsmium Ingot");
 		LanguageRegistry.addName(urdiumIngot, "Urdium Ingot");
-        	LanguageRegistry.addName(franciumIngot, "Francium Ingot");
-        	LanguageRegistry.addName(cosileadiumAlloy, "Cosileadium Alloy");
+        LanguageRegistry.addName(franciumIngot, "Francium Ingot");
+        LanguageRegistry.addName(cosileadiumAlloy, "Cosileadium Alloy");
+        
+        LanguageRegistry.addName(rasberry, "Rasberry");
+        LanguageRegistry.addName(rasberryPie, "Rasberry Pie");
 	}
 
 }
