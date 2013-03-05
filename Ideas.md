@@ -11,6 +11,11 @@ Titanium Armor/Tools - Stronger than iron, weaker than diamond, same mining as i
 Concrete Alloy Furnace - Used to smelt advanced ores/alloys (like Cosileadium Alloy(Made from Copper, Silicon, Lead, and Titanium))
 
 Tech. Discovery System - Some kind of system so that the player must discover technologies
+
+Silicon Chips - Using silicon to make computer parts and computers that you can code in
+
+Robots - Mobs like iron golems or goloms, or wither that you build with different parts
+
 <<<<<<< HEAD
 =======
 
