@@ -16,8 +16,21 @@ Silicon Chips - Using silicon to make computer parts and computers that you can 
 
 Robots - Mobs like iron golems or goloms, or wither that you build with different parts
 
-Basic Machines - Low tier machines that don't change the gameplay too much.
-
 Lava Furnace - Allows players to smelt/cook with no fuel source. Lava block must be placed under LavaFurnace block (Idea being worked on by smigolpol)
 
 Concrete Liquid - Flows like lava, eventually freezes into concrete
+
+
+## Ideas to be discussed
+
+Block/Item Transport - Would Technicraft use a pipe based system or a mob/entity system like TC3.
+
+Tech Levels:
+        Tier 1 - Uses things like stone/iron/titanium/lead to craft machines.
+        
+        Tier 2 - Uses other metals francium/urdium/tungsten.
+        
+        Tier 3 - Uses items from other dimension(NYI) to craft stages of key components.
+
+API's - Are there any API's that would be good to use? eg. Forestry
+
