@@ -5,22 +5,28 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.src.ModLoader;
 import net.minecraftforge.common.Configuration;
 import communityMod.client.ClientProxyCommunityMod;
 import communityMod.common.blocks.BlockConcrete;
 import communityMod.common.blocks.BlockIronGirder;
 import communityMod.common.blocks.BlockMetal;
 import communityMod.common.blocks.BlockOre;
+import communityMod.common.entities.tile.TileEntityLavaFurnace;
+import communityMod.common.gui.GuiHandler;
 import communityMod.common.items.ItemCoal;
 import communityMod.common.items.ItemIngot;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.Mod.PreInit;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -32,6 +38,11 @@ public class CommunityMod {
 	@SidedProxy(clientSide = "communityMod.client.ClientProxyCommunityMod",
 				serverSide = "communityMod.common.CommonProxyCommunityMod")
 	public static ClientProxyCommunityMod proxy = new ClientProxyCommunityMod();
+	
+	@Instance
+	public static CommunityMod instance = new CommunityMod();
+	
+	public static GuiHandler guihandler = new GuiHandler();
 
 	public static CreativeTabs modTab = new CreativeTab(CreativeTabs.getNextID(),"CommunityMod");
 	
@@ -57,6 +68,9 @@ public class CommunityMod {
 
 		GameRegistry.registerWorldGenerator(new WorldGenOres());
 		GameRegistry.registerFuelHandler(new FuelHandler());
+		NetworkRegistry.instance().registerGuiHandler(instance, guihandler);
+		GameRegistry.registerTileEntity(TileEntityLavaFurnace.class, "Lava Furnace");
+		
 	}
 
 	private static void smeltingRecipes(){
@@ -68,7 +82,7 @@ public class CommunityMod {
 		GameRegistry.addSmelting(IDsHelper.tungstenOreID, new ItemStack(ItemsHelper.tungstenIngot, 1), 0.5F);
 		GameRegistry.addSmelting(IDsHelper.arsmiumOreID, new ItemStack(ItemsHelper.arsmiumIngot, 1), 0.5F);
 		GameRegistry.addSmelting(IDsHelper.urdiumOreID, new ItemStack(ItemsHelper.urdiumIngot, 1), 0.5F);
-        	GameRegistry.addSmelting(IDsHelper.franciumOreID, new ItemStack(ItemsHelper.franciumIngot, 1), 0.5F);
+        GameRegistry.addSmelting(IDsHelper.franciumOreID, new ItemStack(ItemsHelper.franciumIngot, 1), 0.5F);
 	}
 
 	private static void craftingRecipes(){
