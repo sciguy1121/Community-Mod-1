@@ -16,10 +16,6 @@ Silicon Chips - Using silicon to make computer parts and computers that you can 
 
 Robots - Mobs like iron golems or goloms, or wither that you build with different parts
 
-<<<<<<< HEAD
-=======
-
 Basic Machines - Low tier machines that don't change the gameplay too much.
 
 Lava Furnace - Allows players to smelt/cook with no fuel source. Lava block must be placed under LavaFurnace block (Idea being worked on by smigolpol)
->>>>>>> Changed Block Texture Organisation & Ideas
