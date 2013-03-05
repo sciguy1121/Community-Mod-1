@@ -35,6 +35,7 @@ public class BlocksHelper {
 
 	public static void setupBlocks() {
 		//Block Loading
+
 		siliconOre = new BlockOre(IDsHelper.siliconOreID, 0).setHardness(10F).setResistance(0.2F).setBlockName("SiliconOre").setCreativeTab(CommunityMod.modTab);
 		leadOre = new BlockOre(IDsHelper.leadOreID, 1).setHardness(10F).setResistance(0.2F).setBlockName("LeadOre").setCreativeTab(CommunityMod.modTab);
 		titaniumOre = new BlockOre(IDsHelper.titaniumOreID, 2).setHardness(10F).setResistance(0.2F).setBlockName("TitaniumOre").setCreativeTab(CommunityMod.modTab);				
@@ -53,6 +54,25 @@ public class BlocksHelper {
 		urdiumOre = new BlockOre(IDsHelper.urdiumOreID, 16).setHardness(18F).setResistance(22F).setBlockName("UrdiumOre").setCreativeTab(CommunityMod.modTab);
 		franciumOre = new BlockOre(IDsHelper.franciumOreID, 14).setHardness(18F).setResistance(22F).setBlockName("FranciumOre").setCreativeTab(CommunityMod.modTab);
 		franciumBlock = new BlockMetal(IDsHelper.franciumBlockID, 15).setHardness(18F).setResistance(22F).setBlockName("FranciumBlock").setCreativeTab(CommunityMod.modTab);
+
+		siliconOre = new BlockOre(CommunityMod.siliconOreID, 0).setHardness(10F).setResistance(0.2F).setBlockName("SiliconOre").setCreativeTab(CreativeTabs.tabBlock);
+		leadOre = new BlockOre(CommunityMod.leadOreID, 1).setHardness(10F).setResistance(0.2F).setBlockName("LeadOre").setCreativeTab(CreativeTabs.tabBlock);
+		titaniumOre = new BlockOre(CommunityMod.titaniumOreID, 2).setHardness(10F).setResistance(0.2F).setBlockName("TitaniumOre").setCreativeTab(CreativeTabs.tabBlock);
+		leadBlock = new BlockMetal(CommunityMod.leadBlockID, 17).setHardness(12F).setResistance(10F).setBlockName("LeadBlock").setCreativeTab(CreativeTabs.tabBlock);
+		titaniumBlock = new BlockMetal(CommunityMod.titaniumBlockID, 18).setHardness(12F).setResistance(10F).setBlockName("TitaniumBlock").setCreativeTab(CreativeTabs.tabBlock);
+		copperOre = new BlockOre(CommunityMod.copperOreID, 3).setHardness(10F).setResistance(0.2F).setBlockName("CopperOre").setCreativeTab(CreativeTabs.tabBlock);
+		siliconBlock = new BlockMetal(CommunityMod.siliconBlockID, 16).setHardness(12F).setResistance(10F).setBlockName("SiliconBlock").setCreativeTab(CreativeTabs.tabBlock);
+		ironGirder = new BlockIronGirder(CommunityMod.ironGirderID, 32, Material.iron).setBlockName("Iron Girder").setHardness(2F).setStepSound(Block.soundMetalFootstep);
+		concrete = new BlockConcrete(CommunityMod.concreteID, 33, Material.iron).setBlockName("Concrete").setHardness(2F).setStepSound(Block.soundStoneFootstep);
+		ligniteOre = new BlockOre(CommunityMod.ligniteOreID, 4).setBlockName("LigniteOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CreativeTabs.tabBlock);
+		bituminousOre = new BlockOre(CommunityMod.bituminousOreID, 5).setBlockName("BituminousOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CreativeTabs.tabBlock);
+		anthraciteOre = new BlockOre(CommunityMod.anthraciteOreID, 6).setBlockName("AnthraciteOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CreativeTabs.tabBlock);
+		platinumOre = new BlockOre(CommunityMod.platinumOreID, 9).setHardness(18F).setResistance(22F).setBlockName("PlatinumOre").setCreativeTab(CreativeTabs.tabBlock);
+		tungstenOre = new BlockOre(CommunityMod.tungstenOreID, 11).setHardness(18F).setResistance(22F).setBlockName("TungstenOre").setCreativeTab(CreativeTabs.tabBlock);
+		arsmiumOre = new BlockOre(CommunityMod.arsmiumOreID, 10).setHardness(18F).setResistance(22F).setBlockName("ArsmiumOre").setCreativeTab(CreativeTabs.tabBlock);
+		urdiumOre = new BlockOre(CommunityMod.urdiumOreID, 8).setHardness(18F).setResistance(22F).setBlockName("UrdiumOre").setCreativeTab(CreativeTabs.tabBlock);
+		franciumOre = new BlockOre(CommunityMod.franciumOreID, 7).setHardness(18F).setResistance(22F).setBlockName("FranciumOre").setCreativeTab(CommunityMod.modTab);
+		franciumBlock = new BlockMetal(CommunityMod.franciumBlockID, 23).setHardness(18F).setResistance(22F).setBlockName("FranciumBlock").setCreativeTab(CommunityMod.modTab);
 		
 		gameRegisters();
 		languageRegisters();
