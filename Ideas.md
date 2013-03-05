@@ -19,3 +19,5 @@ Robots - Mobs like iron golems or goloms, or wither that you build with differen
 Basic Machines - Low tier machines that don't change the gameplay too much.
 
 Lava Furnace - Allows players to smelt/cook with no fuel source. Lava block must be placed under LavaFurnace block (Idea being worked on by smigolpol)
+
+Concrete Liquid - Flows like lava, eventually freezes into concrete
