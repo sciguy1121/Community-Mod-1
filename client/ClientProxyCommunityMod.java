@@ -10,6 +10,7 @@ public class ClientProxyCommunityMod extends CommonProxyCommunityMod{
 	public void registerRenders(){
 		MinecraftForgeClient.preloadTexture(TextureHandler.BLOCK_TEXTURE_A);
 		MinecraftForgeClient.preloadTexture(TextureHandler.ITEM_TEXTURE_A);
+		MinecraftForgeClient.preloadTexture(TextureHandler.MACHINE_TEXTURE_A);
 	}
 	
 }
