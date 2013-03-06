@@ -12,8 +12,7 @@ Code 	  - Sciguy1121,
 	        TheGamingParadise, 
 	        SuitedSlime,
 		TheNewmanator15,
-		cman8396,
-		Callum Howells
+		cman8396
 	   
 Textures  - KingCreeperEli (leader),
           	Shachou, 
@@ -22,9 +21,8 @@ Textures  - KingCreeperEli (leader),
 
 Ideas	- LionBoyTheGamer,
 		KingCreeperEli,
-		cman8396,
-		Callum Howells 
+		cman8396
 
 Ideas	- LionBoyTheGamer,
 		KingCreeperEli,
-		Callum Howells
+		cman8396
