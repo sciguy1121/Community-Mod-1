@@ -78,7 +78,7 @@ public class CommunityMod {
 		GameRegistry.addSmelting(IDsHelper.titaniumOreID, new ItemStack(ItemsHelper.titaniumIngot, 1), 0.75F);
 		GameRegistry.addSmelting(IDsHelper.siliconOreID, new ItemStack(ItemsHelper.siliconIngot, 1), 0.5F);
 		GameRegistry.addSmelting(IDsHelper.copperOreID, new ItemStack(ItemsHelper.copperIngot, 1), 0.5F);
-		GameRegistry.addSmelting(IDsHelper.platinumOreID, new ItemStack(ItemsHelper.copperIngot, 1), 0.5F);
+		GameRegistry.addSmelting(IDsHelper.platinumOreID, new ItemStack(ItemsHelper.platinumIngot, 1), 0.5F);
 		GameRegistry.addSmelting(IDsHelper.tungstenOreID, new ItemStack(ItemsHelper.tungstenIngot, 1), 0.5F);
 		GameRegistry.addSmelting(IDsHelper.arsmiumOreID, new ItemStack(ItemsHelper.arsmiumIngot, 1), 0.5F);
 		GameRegistry.addSmelting(IDsHelper.urdiumOreID, new ItemStack(ItemsHelper.urdiumIngot, 1), 0.5F);
