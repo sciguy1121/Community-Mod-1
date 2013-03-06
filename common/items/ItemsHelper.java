@@ -1,9 +1,7 @@
-package communityMod.common;
+package communityMod.common.items;
 
-import communityMod.common.items.ItemCoal;
-import communityMod.common.items.ItemIngot;
-import communityMod.common.items.ItemRasberry;
-import communityMod.common.items.ItemRasberryPie;
+import communityMod.common.CommunityMod;
+import communityMod.common.IDsHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 

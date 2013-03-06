@@ -1,5 +1,7 @@
 package communityMod.common;
 
+import communityMod.common.items.ItemsHelper;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.creativetab.CreativeTabs;

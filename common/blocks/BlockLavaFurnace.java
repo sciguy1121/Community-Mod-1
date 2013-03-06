@@ -2,7 +2,6 @@ package communityMod.common.blocks;
 
 import java.util.Random;
 
-import communityMod.common.BlocksHelper;
 import communityMod.common.CommunityMod;
 import communityMod.common.entities.tile.TileEntityLavaFurnace;
 import communityMod.textures.TextureHandler;

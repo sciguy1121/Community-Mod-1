@@ -1,6 +1,6 @@
 package communityMod.common.entities.tile;
 
-import communityMod.common.BlocksHelper;
+import communityMod.common.blocks.BlocksHelper;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;

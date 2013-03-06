@@ -4,13 +4,13 @@ import java.util.Random;
 
 import communityMod.client.ClientProxyCommunityMod;
 import communityMod.common.IDsHelper;
-import communityMod.common.ItemsHelper;
 import communityMod.textures.TextureHandler;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
 import communityMod.common.IDsHelper;
+import communityMod.common.items.ItemsHelper;
 import communityMod.textures.TextureHandler;
 
 public class BlockOre extends Block{

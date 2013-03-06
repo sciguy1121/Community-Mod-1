@@ -1,13 +1,10 @@
-package communityMod.common;
+package communityMod.common.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-import communityMod.common.blocks.BlockConcrete;
-import communityMod.common.blocks.BlockIronGirder;
-import communityMod.common.blocks.BlockLavaFurnace;
-import communityMod.common.blocks.BlockMetal;
-import communityMod.common.blocks.BlockOre;
+import communityMod.common.CommunityMod;
+import communityMod.common.IDsHelper;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;

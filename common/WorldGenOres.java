@@ -2,6 +2,8 @@ package communityMod.common;
 
 import java.util.Random;
 
+import communityMod.common.blocks.BlocksHelper;
+
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;

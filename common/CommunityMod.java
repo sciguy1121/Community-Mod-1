@@ -12,10 +12,12 @@ import communityMod.common.blocks.BlockConcrete;
 import communityMod.common.blocks.BlockIronGirder;
 import communityMod.common.blocks.BlockMetal;
 import communityMod.common.blocks.BlockOre;
+import communityMod.common.blocks.BlocksHelper;
 import communityMod.common.entities.tile.TileEntityLavaFurnace;
 import communityMod.common.gui.GuiHandler;
 import communityMod.common.items.ItemCoal;
 import communityMod.common.items.ItemIngot;
+import communityMod.common.items.ItemsHelper;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
