@@ -14,6 +14,7 @@ import communityMod.common.blocks.BlockMetal;
 import communityMod.common.blocks.BlockOre;
 import communityMod.common.blocks.BlocksHelper;
 import communityMod.common.entities.tile.TileEntityLavaFurnace;
+import communityMod.common.entities.tile.TileEntityResearcher;
 import communityMod.common.gui.GuiHandler;
 import communityMod.common.items.ItemCoal;
 import communityMod.common.items.ItemIngot;
@@ -70,9 +71,11 @@ public class CommunityMod {
 
 		GameRegistry.registerWorldGenerator(new WorldGenOres());
 		GameRegistry.registerFuelHandler(new FuelHandler());
-		NetworkRegistry.instance().registerGuiHandler(instance, guihandler);
-		GameRegistry.registerTileEntity(TileEntityLavaFurnace.class, "Lava Furnace");
 		
+		NetworkRegistry.instance().registerGuiHandler(instance, guihandler);
+		
+		GameRegistry.registerTileEntity(TileEntityLavaFurnace.class, "Geothermal Oven");
+		GameRegistry.registerTileEntity(TileEntityResearcher.class, "Researcher");
 	}
 
 	private static void smeltingRecipes(){
