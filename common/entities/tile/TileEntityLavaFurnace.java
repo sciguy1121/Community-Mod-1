@@ -10,8 +10,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 
-public class TileEntityLavaFurnace extends TileEntity implements IInventory
-{
+public class TileEntityLavaFurnace extends TileEntity implements IInventory{
 	private boolean powered;
 	
 	private ItemStack[] inventory;
