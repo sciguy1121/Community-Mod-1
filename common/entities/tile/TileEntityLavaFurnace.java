@@ -72,7 +72,7 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory
 	       
         if(stack != null)
         {
-                setInventorySlotContents(slot, null);
+        	setInventorySlotContents(slot, null);
         }
         
         return stack;
