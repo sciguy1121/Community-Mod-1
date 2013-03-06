@@ -24,17 +24,17 @@ public class BlockLavaFurnace extends BlockContainer
 {
 	private boolean active;
 
-	public BlockLavaFurnace(int par1, int par2, boolean powered) 
+	public BlockLavaFurnace(int id, int texture, boolean powered) 
 	{
-		super(par1, par2, Material.rock);
-		this.active = powered;
+		super(id, texture, Material.rock);
+		active = powered;
 		setTickRandomly(true);
 	}
 
 	@Override
 	public TileEntity createNewTileEntity(World var1) 
 	{
-		return new TileEntityLavaFurnace(active);
+		return new TileEntityLavaFurnace(!active);
 	}
 	
 	  @Override
@@ -107,17 +107,18 @@ public class BlockLavaFurnace extends BlockContainer
 	    }
 
 		@Override
-		public void randomDisplayTick(World world, int x, int y, int z, Random rand) 
+		public void onNeighborBlockChange(World world, int x, int y, int z, int id) 
 		{
-			super.randomDisplayTick(world, x, y, z, rand);
+			super.onNeighborBlockChange(world, x, y, z, id);
 			int metadata = world.getBlockMetadata(x, y, z);
 			if(isHeatProvided(world, x, y, z))
 			{
-				if(!active)
-				world.setBlockAndMetadataWithNotify(x, y, z, BlocksHelper.lavafurnaceactive.blockID, metadata);
-			} else
+				if(this.blockID == BlocksHelper.lavafurnace.blockID)
+				{
+					world.setBlockAndMetadataWithNotify(x, y, z, BlocksHelper.lavafurnaceactive.blockID, metadata);
+				}
+			} else if(this.blockID == BlocksHelper.lavafurnaceactive.blockID)
 			{
-				if(active)
 				world.setBlockAndMetadataWithNotify(x, y, z, BlocksHelper.lavafurnace.blockID, metadata);
 			}
 		}

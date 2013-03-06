@@ -57,8 +57,8 @@ public class BlocksHelper {
 		urdiumOre = new BlockOre(IDsHelper.urdiumOreID, 8).setHardness(18F).setResistance(22F).setBlockName("UrdiumOre").setCreativeTab(CommunityMod.modTab);
 		franciumOre = new BlockOre(IDsHelper.franciumOreID, 7).setHardness(18F).setResistance(22F).setBlockName("FranciumOre").setCreativeTab(CommunityMod.modTab);
 		franciumBlock = new BlockMetal(IDsHelper.franciumBlockID, 23).setHardness(18F).setResistance(22F).setBlockName("FranciumBlock").setCreativeTab(CommunityMod.modTab);
-		lavafurnace = new BlockLavaFurnace(IDsHelper.lavafurnaceID, 0, false).setHardness(2.5F).setResistance(22F).setBlockName("lavafurnace").setStepSound(Block.soundStoneFootstep).setCreativeTab(CommunityMod.modTab);
-		lavafurnaceactive = new BlockLavaFurnace(IDsHelper.lavafurnaceID + 1, 1, true).setHardness(2.5F).setResistance(22F).setBlockName("lavafurnace1").setStepSound(Block.soundStoneFootstep);
+		lavafurnace = new BlockLavaFurnace(IDsHelper.lavafurnaceID, 0, true).setHardness(2.5F).setResistance(22F).setBlockName("lavafurnace").setStepSound(Block.soundStoneFootstep).setCreativeTab(CommunityMod.modTab);
+		lavafurnaceactive = new BlockLavaFurnace(IDsHelper.lavafurnaceID + 1, 1, false).setHardness(2.5F).setResistance(22F).setBlockName("lavafurnace1").setStepSound(Block.soundStoneFootstep).setLightValue(0.3F);
 		
 		gameRegisters();
 		languageRegisters();
