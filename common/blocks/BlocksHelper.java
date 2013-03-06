@@ -32,10 +32,10 @@ public class BlocksHelper {
 	public static Block franciumBlock;
 	public static Block lavafurnace;
 	public static Block lavafurnaceactive;
+	public static Block researcher;
 
 	public static void setupBlocks() {
-		//Block Loading
-
+		//Normal Blocks
 		siliconOre = new BlockOre(IDsHelper.siliconOreID, 0).setHardness(10F).setResistance(0.2F).setBlockName("SiliconOre").setCreativeTab(CommunityMod.modTab);
 		leadOre = new BlockOre(IDsHelper.leadOreID, 1).setHardness(10F).setResistance(0.2F).setBlockName("LeadOre").setCreativeTab(CommunityMod.modTab);
 		titaniumOre = new BlockOre(IDsHelper.titaniumOreID, 2).setHardness(10F).setResistance(0.2F).setBlockName("TitaniumOre").setCreativeTab(CommunityMod.modTab);				
@@ -54,8 +54,11 @@ public class BlocksHelper {
 		urdiumOre = new BlockOre(IDsHelper.urdiumOreID, 8).setHardness(18F).setResistance(22F).setBlockName("UrdiumOre").setCreativeTab(CommunityMod.modTab);
 		franciumOre = new BlockOre(IDsHelper.franciumOreID, 7).setHardness(18F).setResistance(22F).setBlockName("FranciumOre").setCreativeTab(CommunityMod.modTab);
 		franciumBlock = new BlockMetal(IDsHelper.franciumBlockID, 23).setHardness(18F).setResistance(22F).setBlockName("FranciumBlock").setCreativeTab(CommunityMod.modTab);
+		
+		//Machines
 		lavafurnace = new BlockLavaFurnace(IDsHelper.lavafurnaceID, 0, true).setHardness(2.5F).setResistance(22F).setBlockName("lavafurnace").setStepSound(Block.soundStoneFootstep).setCreativeTab(CommunityMod.modTab);
 		lavafurnaceactive = new BlockLavaFurnace(IDsHelper.lavafurnaceID + 1, 1, false).setHardness(2.5F).setResistance(22F).setBlockName("lavafurnace1").setStepSound(Block.soundStoneFootstep).setLightValue(0.3F);
+		researcher = new BlockResearcher(IDsHelper.researcherID, 7).setBlockName("researcher").setHardness(2.5F).setResistance(10F).setCreativeTab(CommunityMod.modTab).setStepSound(Block.soundMetalFootstep);
 		
 		gameRegisters();
 		languageRegisters();
@@ -83,6 +86,7 @@ public class BlocksHelper {
 		GameRegistry.registerBlock(franciumBlock, "FranciumBlock");
 		GameRegistry.registerBlock(lavafurnace, "LavaFurnace");
 		GameRegistry.registerBlock(lavafurnaceactive, "LavaFurnace1");
+		GameRegistry.registerBlock(researcher, "Researcher");
 	}
 	
 	private static void languageRegisters() {
@@ -106,6 +110,7 @@ public class BlocksHelper {
 		LanguageRegistry.addName(franciumOre, "Francium Ore");
 		LanguageRegistry.addName(franciumBlock, "Francium Block");
 		LanguageRegistry.addName(lavafurnace, "Lava Furnace");
+		LanguageRegistry.addName(researcher, "Researcher");
 	}
 
 }

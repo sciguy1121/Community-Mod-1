@@ -24,6 +24,7 @@ public class IDsHelper {
 	public static int franciumOreID;
 	public static int franciumBlockID;
 	public static int lavafurnaceID;
+	public static int researcherID;
 
 	//Item IDs
 	public static int leadIngotID;
@@ -64,6 +65,7 @@ public class IDsHelper {
 		franciumOreID = config.get("Block IDs", "Francium Ore ID", 716).getInt();
 		franciumBlockID = config.get("Block IDs", "Francium Block ID", 717).getInt();
 		lavafurnaceID = config.get("Block IDs", "Lava Furnace ID", 801).getInt();
+		researcherID = config.get("Block IDs", "Researcher ID", 803).getInt();
 
 		//Item IDs
 		leadIngotID = config.get("Item IDs", "Lead Ingot ID", 1000).getInt();
