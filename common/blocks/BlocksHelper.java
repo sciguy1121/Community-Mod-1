@@ -58,7 +58,7 @@ public class BlocksHelper {
 		//Machines
 		lavafurnace = new BlockLavaFurnace(IDsHelper.lavafurnaceID, 0, true).setHardness(2.5F).setResistance(22F).setBlockName("lavafurnace").setStepSound(Block.soundStoneFootstep).setCreativeTab(CommunityMod.modTab);
 		lavafurnaceactive = new BlockLavaFurnace(IDsHelper.lavafurnaceID + 1, 1, false).setHardness(2.5F).setResistance(22F).setBlockName("lavafurnace1").setStepSound(Block.soundStoneFootstep).setLightValue(0.3F);
-		researcher = new BlockResearcher(IDsHelper.researcherID, 7).setBlockName("researcher").setHardness(2.5F).setResistance(10F).setCreativeTab(CommunityMod.modTab).setStepSound(Block.soundMetalFootstep);
+		researcher = new BlockResearcher(IDsHelper.researcherID, 8).setBlockName("researcher").setHardness(2.5F).setResistance(10F).setCreativeTab(CommunityMod.modTab).setStepSound(Block.soundMetalFootstep);
 		
 		gameRegisters();
 		languageRegisters();

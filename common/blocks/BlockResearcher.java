@@ -5,6 +5,7 @@ import java.util.Random;
 import communityMod.common.CommunityMod;
 import communityMod.common.entities.tile.TileEntityLavaFurnace;
 import communityMod.common.entities.tile.TileEntityResearcher;
+import communityMod.textures.TextureHandler;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
@@ -23,6 +24,10 @@ public class BlockResearcher extends BlockContainer{
 		super(id, texture, Material.iron);
 	}
 
+	public String getTextureFile(){
+		return TextureHandler.MACHINE_TEXTURE_A;
+	}
+	
 	@Override
 	public TileEntity createNewTileEntity(World var1){
 		return new TileEntityResearcher();
