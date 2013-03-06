@@ -1,5 +1,7 @@
 package communityMod.common.entities.tile;
 
+import communityMod.common.BlocksHelper;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -11,17 +13,17 @@ import net.minecraft.tileentity.TileEntity;
 public class TileEntityLavaFurnace extends TileEntity implements IInventory
 {
 	private boolean powered;
-	private boolean canwork = false;
+	
 	private ItemStack[] inventory;
 	
 	public int furnaceBurnTime = 0;
+	
+	public int currentItemBurnTime = furnaceBurnTime;
 	  
-	public int currentItemBurnTime = 0;
-
-	public int furnaceCookTime = 0;
+	public int furnaceCookTime = 50;
 	
 	public int heat = 0;
-
+	
 	public TileEntityLavaFurnace(boolean active)
 	{
 		this.powered = active;
@@ -47,19 +49,16 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory
 		
 		if(stack != null)
 		{
-			if(stack.stackSize <= amount)
+			if (stack.stackSize <= amount)
 			{
-				stack = null;
-			}
-			else
+				setInventorySlotContents(slot, null);
+			} else
 			{
 				stack = stack.splitStack(amount);
-				
-				if(stack.stackSize == 0)
+				if (stack.stackSize == 0)
 				{
-					stack = null;
+					setInventorySlotContents(slot, null);
 				}
-				
 			}
 		}
 		
@@ -69,29 +68,24 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory
 	@Override
 	public ItemStack getStackInSlotOnClosing(int slot) 
 	{
-		 if (this.inventory[slot] != null)
-	        {
-	            ItemStack stack = this.inventory[slot];
-	            this.inventory[slot] = null;
-	            return stack;
-	        }
-	        else
-	        {
-	            return null;
-	        }
+		ItemStack stack = getStackInSlot(slot);
+	       
+        if(stack != null)
+        {
+                setInventorySlotContents(slot, null);
+        }
+        
+        return stack;
 	}
 
 	@Override
 	public void setInventorySlotContents(int slot, ItemStack stack) 
 	{
-		if(getStackInSlot(slot) == null)
-		{
-			inventory[slot] = stack;
+		inventory[slot] = stack;
 		
-			if (stack != null && stack.stackSize > this.getInventoryStackLimit())
-			{
-				stack.stackSize = this.getInventoryStackLimit();
-			}
+		if (stack != null && stack.stackSize > this.getInventoryStackLimit())
+		{
+			stack.stackSize = this.getInventoryStackLimit();
 		}
 	}
 
@@ -122,14 +116,16 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory
 	@Override
 	public void updateEntity()
 	{
+		if(this.worldObj.getBlockId(xCoord, yCoord, zCoord) == BlocksHelper.lavafurnaceactive.blockID)
+		{
+			powered = true;
+		}
+		
+		boolean canwork = powered && heat == 50;
+		
 		if(powered && heat < 50)
 		{
 			heat++;
-		}
-		
-		if(powered && heat == 50)
-		{
-			canwork = true;
 		}
 		
 		if(canwork)
@@ -139,21 +135,47 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory
 			ItemStack result = FurnaceRecipes.smelting().getSmeltingResult(stack);
 			if(result != null)
 			{
-				if(output == null)
+				if(furnaceBurnTime == furnaceCookTime)
 				{
-					decrStackSize(0, 1);
-					setInventorySlotContents(1, result);
-				} else
-				{
-					if(output.isItemEqual(stack))
+					furnaceBurnTime = 0;
+					if(output == null)
 					{
 						decrStackSize(0, 1);
-						output.stackSize++;
+						setInventorySlotContents(1, result);
+					} else
+					{
+						if(output.isItemEqual(result))
+						{
+							decrStackSize(0, 1);
+							output.stackSize++;
+						}
 					}
+				} else
+				{
+					furnaceBurnTime++;
 				}
+			}
+			if(output != null && output.stackSize == 0)
+			{
+				output.stackSize = 1;
 			}
 		}
 	}
+	
+	public boolean isSmelting()
+	{
+		return furnaceBurnTime > 0;
+	}
+	
+	 public int getBurnTimeRemainingScaled(int par1)
+	    {
+	        if (this.currentItemBurnTime == 0)
+	        {
+	            this.currentItemBurnTime = 200;
+	        }
+
+	        return this.furnaceBurnTime * par1 / this.currentItemBurnTime;
+	    }
 	
 	public void writeToNBT(NBTTagCompound compound)
 	{

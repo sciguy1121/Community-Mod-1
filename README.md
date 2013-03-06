@@ -5,24 +5,21 @@
 Project Leader - sciguy1121
 
 Code 	  - Sciguy1121,
-		TheBluePenguin, 
-	        grimboy14, 
-	        KingCreeperEli, 
-	        Shachou, 
-	        TheGamingParadise, 
-	        SuitedSlime,
-		TheNewmanator15,
-		cman8396
+			TheBluePenguin, 
+			grimboy14, 
+			KingCreeperEli, 
+			Shachou, 
+			TheGamingParadise, 
+			SuitedSlime,
+			TheNewmanator15,
+			cman8396,
+			smigolpol
 	   
 Textures  - KingCreeperEli (leader),
           	Shachou, 
-		TheGamingParadise,
-		cman8396
+			TheGamingParadise,
+			cman8396
 
 Ideas	- LionBoyTheGamer,
-		KingCreeperEli,
-		cman8396
-
-Ideas	- LionBoyTheGamer,
-		KingCreeperEli,
-		cman8396
+			KingCreeperEli,
+			cman8396
