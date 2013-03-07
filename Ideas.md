@@ -35,5 +35,8 @@ API's - Are there any API's that would be good to use? eg. Forestry
 
 Elemental Tools and Elemental Drills - made with the different new mod ingots
 
-Power System - like megajewls, EU, etc.
+Power/Energy System - like megajewls, EU, etc.
 
+Dimensional Ores - Make some ores only avalible in some dimensions
+
+Custom Dungeuns - like pyramids and temples (only avalible in other dimensions)
