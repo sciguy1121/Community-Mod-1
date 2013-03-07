@@ -2,7 +2,21 @@
 
 
 ### Credits
-Project Leader - sciguy1121
+####Project Leaders -
+
+
+Leader - sciguy1121
+
+Code - 
+
+Textures - KingCreeperEli
+
+Other - 
+
+
+
+####Contributors -
+
 
 Code 	  - Sciguy1121,
 			TheBluePenguin, 
@@ -15,8 +29,8 @@ Code 	  - Sciguy1121,
 			cman8396,
 			smigolpol
 	   
-Textures  - KingCreeperEli (leader),
-          	Shachou, 
+Textures  - KingCreeperEli,
+			Shachou,
 			TheGamingParadise,
 			cman8396
 
