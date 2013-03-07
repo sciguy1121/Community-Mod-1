@@ -18,10 +18,10 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory{
 	public int furnaceBurnTime = 0;
 	
 	public int currentItemBurnTime = furnaceBurnTime;
-	  
-	public int furnaceCookTime = 50;
 	
 	public int heat = 0;
+	
+	public int furnaceCookTime = 5000;
 	
 	public TileEntityLavaFurnace(boolean active)
 	{
@@ -120,7 +120,7 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory{
 			powered = true;
 		}
 		
-		boolean canwork = powered && heat == 50;
+		boolean canwork = powered && heat > 0;
 		
 		if(powered && heat < 50)
 		{
@@ -129,6 +129,8 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory{
 		
 		if(canwork)
 		{
+			furnaceCookTime = 5000 / heat;
+			
 			ItemStack stack = getStackInSlot(0);
 			ItemStack output = getStackInSlot(1);
 			ItemStack result = FurnaceRecipes.smelting().getSmeltingResult(stack);
@@ -158,6 +160,11 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory{
 			{
 				output.stackSize = 1;
 			}
+		}
+		
+		if(getStackInSlot(0) == null)
+		{
+			furnaceBurnTime = 0;
 		}
 	}
 	
