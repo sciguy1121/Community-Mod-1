@@ -1,7 +1,9 @@
 package communityMod.common.gui;
 
 import communityMod.common.container.ContainerLavaFurnace;
+import communityMod.common.container.ContainerResearcher;
 import communityMod.common.entities.tile.TileEntityLavaFurnace;
+import communityMod.common.entities.tile.TileEntityResearcher;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
@@ -15,9 +17,15 @@ public class GuiHandler implements IGuiHandler
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) 
 	{
 		TileEntity entity = world.getBlockTileEntity(x, y, z);
+		
 		if (entity instanceof TileEntityLavaFurnace)
 		{
 			return new ContainerLavaFurnace((TileEntityLavaFurnace)entity, player.inventory);
+		}
+		
+		if (entity instanceof TileEntityResearcher)
+		{
+			return new ContainerResearcher((TileEntityResearcher)entity, player.inventory);
 		}
 		
 		return null;
@@ -30,6 +38,9 @@ public class GuiHandler implements IGuiHandler
 		if (entity instanceof TileEntityLavaFurnace)
 		{
 			return new GuiLavaFurnace((TileEntityLavaFurnace)entity, player.inventory);
+		}
+		if(entity instanceof TileEntityResearcher){
+			return new GuiResearcher((TileEntityResearcher)entity, player.inventory);
 		}
 		return null;
 	}

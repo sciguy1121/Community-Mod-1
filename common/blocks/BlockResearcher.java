@@ -35,7 +35,7 @@ public class BlockResearcher extends BlockContainer{
 	
 	@Override
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int i, float f, float g, float t){
-		TileEntityLavaFurnace tileEntity = (TileEntityLavaFurnace)world.getBlockTileEntity(x, y, z);
+		TileEntityResearcher tileEntity = (TileEntityResearcher)world.getBlockTileEntity(x, y, z);
 	   
 		if(tileEntity == null || player.isSneaking())
 		{

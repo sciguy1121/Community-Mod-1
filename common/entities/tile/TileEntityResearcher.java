@@ -11,6 +11,8 @@ public class TileEntityResearcher extends TileEntity implements IInventory{
 
 	private ItemStack[] inventory;
 	
+	public int progress = 0;
+	
 	public TileEntityResearcher(){
 		inventory = new ItemStack[2];
 	}
@@ -110,6 +112,7 @@ public class TileEntityResearcher extends TileEntity implements IInventory{
 	    }
 
 		compound.setTag("Items", var2);
+		compound.setInteger("Progress", progress);
 	 }
 	
 	public void readFromNBT(NBTTagCompound compound)
@@ -117,6 +120,7 @@ public class TileEntityResearcher extends TileEntity implements IInventory{
 		super.readFromNBT(compound);
 		NBTTagList var2 = compound.getTagList("Items");
 	     
+		this.progress = compound.getInteger("Progress");
 		this.inventory = new ItemStack[this.getSizeInventory()];
 	     
 		for (int var3 = 0; var3 < var2.tagCount(); ++var3)

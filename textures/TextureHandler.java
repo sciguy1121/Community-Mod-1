@@ -9,5 +9,6 @@ public class TextureHandler {
 	public static final String ENCHANTER_GUI = "/communityMod/textures/gui/Enchanter.png";
 	public static final String INFUSER_GUI = "/communityMod/textures/gui/Infuser.png";
 	public static final String CONCRETEALLOY_GUI = "/communityMod/textures/gui/ConcreteAlloy.png";
+	public static final String RESEARCHER_GUI = "/communityMod/textures/gui/Researcher.png";
 	
 }
