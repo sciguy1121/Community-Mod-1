@@ -4,6 +4,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import communityMod.common.entities.tile.TileEntityLavaFurnace;
 import communityMod.common.entities.tile.TileEntityResearcher;
 
@@ -15,9 +17,9 @@ public class ContainerResearcher extends Container{
 	{
 		this.entity = entity;
 		
-		this.addSlotToContainer(new Slot(entity, 0, 56, 53));
-		this.addSlotToContainer(new Slot(entity, 0, 56, 17));
-		this.addSlotToContainer(new SlotOutput(entity, 1, 116, 35));
+		this.addSlotToContainer(new SlotFuel(entity, 0, 56, 53));
+		this.addSlotToContainer(new SlotSpecific(entity, 1, 56, 17, new ItemStack(Item.book)));
+		this.addSlotToContainer(new SlotOutput(entity, 2, 116, 35));
 		
 	    int var3;
 

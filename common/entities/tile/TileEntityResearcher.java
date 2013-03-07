@@ -14,7 +14,7 @@ public class TileEntityResearcher extends TileEntity implements IInventory{
 	public int progress = 0;
 	
 	public TileEntityResearcher(){
-		inventory = new ItemStack[2];
+		inventory = new ItemStack[3];
 	}
 	
 	@Override
