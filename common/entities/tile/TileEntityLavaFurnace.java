@@ -9,8 +9,11 @@ import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.common.ForgeDirection;
+import net.minecraftforge.common.ISidedInventory;
 
-public class TileEntityLavaFurnace extends TileEntity implements IInventory{
+public class TileEntityLavaFurnace extends TileEntity implements IInventory, ISidedInventory
+{
 	private boolean powered;
 	
 	private ItemStack[] inventory;
@@ -18,10 +21,10 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory{
 	public int furnaceBurnTime = 0;
 	
 	public int currentItemBurnTime = furnaceBurnTime;
-	  
-	public int furnaceCookTime = 50;
 	
 	public int heat = 0;
+	
+	public int furnaceCookTime = 5000;
 	
 	public TileEntityLavaFurnace(boolean active)
 	{
@@ -120,7 +123,7 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory{
 			powered = true;
 		}
 		
-		boolean canwork = powered && heat == 50;
+		boolean canwork = powered && heat > 0;
 		
 		if(powered && heat < 50)
 		{
@@ -129,9 +132,12 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory{
 		
 		if(canwork)
 		{
+			furnaceCookTime = 5000 / heat;
+			
 			ItemStack stack = getStackInSlot(0);
 			ItemStack output = getStackInSlot(1);
 			ItemStack result = FurnaceRecipes.smelting().getSmeltingResult(stack);
+			
 			if(result != null)
 			{
 				if(furnaceBurnTime == furnaceCookTime)
@@ -152,12 +158,21 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory{
 				} else
 				{
 					furnaceBurnTime++;
+					if(output != null && !output.isItemEqual(result))
+					{
+						furnaceBurnTime = 0;
+					}
 				}
 			}
 			if(output != null && output.stackSize == 0)
 			{
 				output.stackSize = 1;
 			}
+		}
+		
+		if(getStackInSlot(0) == null)
+		{
+			furnaceBurnTime = 0;
 		}
 	}
 	
@@ -217,4 +232,16 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory{
 	     }
 	 }
 	     
+	 @Override
+	    public int getStartInventorySide(ForgeDirection side)
+	    {
+	        if (side == ForgeDirection.UP) return 0;
+	        return 1;
+	    }
+
+	    @Override
+	    public int getSizeInventorySide(ForgeDirection side)
+	    {
+	        return 1;
+	    }
 }
