@@ -20,6 +20,8 @@ Lava Furnace - Allows players to smelt/cook with no fuel source. Lava block must
 
 Concrete Liquid - Flows like lava, eventually freezes into concrete
 
+Jackhammer - The quickest, yet most expensive way to break hardened concrete
+
 
 ## Ideas to be discussed
 
