@@ -26,11 +26,11 @@ public class BlockOre extends Block{
 	
 	public int idDropped(int par1, Random rand, int par3){
 		if(this.blockID == IDsHelper.ligniteOreID){
-			return ItemsHelper.ligniteCoal.itemID;
+			return ItemsHelper.ligniteCoal.shiftedIndex;
 		}else if(this.blockID == IDsHelper.bituminousOreID){
-			return ItemsHelper.bituminousCoal.itemID;
+			return ItemsHelper.bituminousCoal.shiftedIndex;
 		}else if(this.blockID == IDsHelper.anthraciteOreID){
-			return ItemsHelper.anthraciteCoal.itemID;
+			return ItemsHelper.anthraciteCoal.shiftedIndex;
 		}else{
 			return this.blockID;
 		}
