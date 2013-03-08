@@ -1,23 +1,17 @@
-## Welcome to CommunityMod!
+## Welcome to Technicraft!
 
 
 ### Credits
 ####Project Leaders -
-
-
 Leader - sciguy1121
 
-Code - 
+Code - N/A
 
 Textures - KingCreeperEli
-
-Other - 
 
 
 
 ####Contributors -
-
-
 Code 	  - Sciguy1121,
 			TheBluePenguin, 
 			grimboy14, 
@@ -37,3 +31,30 @@ Textures  - KingCreeperEli,
 Ideas	- LionBoyTheGamer,
 			KingCreeperEli,
 			cman8396
+
+
+
+### Details
+####About
+Technicraft is a community mod for Minecraft v1.4.7 that incorporates advanced machinery with a brand new dimension to bring you a fantastic gameplay experience.
+
+Technicraft was originally started by sciguy1121. It's aim is to bring the modding community together to make one big mod with dozens of contributors.
+
+
+####License
+Technicraft uses these licenses:
+General Public License 
+[Click Here](http://github.com/sciguy1121/Community-Mod-1/blob/master/COPYING)
+
+Lesser General Public License 
+[Click Here](https://github.com/sciguy1121/Community-Mod-1/blob/master/COPYING.LESSER)
+
+
+
+####Useful links
+The Technicraft Wiki gives you information on Technicraft like crafting recipes and how to use it. 
+[Click Here](http://technicraft.wikispaces.com)
+
+Sciguy1121 is the person responsible for setting up Technicraft. 
+[Click Here](http://youtube.com/user/sciguy1121)
+
