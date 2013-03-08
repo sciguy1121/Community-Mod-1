@@ -44,3 +44,5 @@ Custom Dungeuns - like pyramids and temples (only avalible in other dimensions)
 Transport/Teleport System - For items and people
 
 Particle Breaker - Used from breaking down francium to lead and other metals to other metals
+
+Portal to tech dimension made of Titanium, Lead, Francium, and Silicon Blocks (2 of each) and 2 Diamond Blocks
