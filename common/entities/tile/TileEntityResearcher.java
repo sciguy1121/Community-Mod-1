@@ -1,7 +1,9 @@
 package communityMod.common.entities.tile;
 
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -12,6 +14,8 @@ public class TileEntityResearcher extends TileEntity implements IInventory{
 	private ItemStack[] inventory;
 	
 	public int progress = 0;
+	public int researchPower = 0;
+	public ItemStack currentResearch = new ItemStack(Block.bedrock, 1);
 	
 	public TileEntityResearcher(){
 		inventory = new ItemStack[3];
@@ -99,6 +103,7 @@ public class TileEntityResearcher extends TileEntity implements IInventory{
 	{
 		super.writeToNBT(compound);
 		NBTTagList var2 = new NBTTagList();
+		NBTTagList research = new NBTTagList();
 
 		for (int var3 = 0; var3 < this.inventory.length; ++var3)
 	    {
@@ -111,16 +116,26 @@ public class TileEntityResearcher extends TileEntity implements IInventory{
 	        }
 	    }
 
+		NBTTagCompound tag = new NBTTagCompound();
+		tag.setByte("Research", (byte)0);
+		this.currentResearch.writeToNBT(tag);
+		research.appendTag(tag);
+		
 		compound.setTag("Items", var2);
+		compound.setTag("Research", research);
 		compound.setInteger("Progress", progress);
+		compound.setInteger("Research Power", researchPower);
 	 }
 	
 	public void readFromNBT(NBTTagCompound compound)
 	{
 		super.readFromNBT(compound);
 		NBTTagList var2 = compound.getTagList("Items");
+		NBTTagList research = compound.getTagList("Research");
 	     
 		this.progress = compound.getInteger("Progress");
+		this.currentResearch = ItemStack.loadItemStackFromNBT((NBTTagCompound)research.tagAt(1));
+		this.researchPower = compound.getInteger("Research Power");
 		this.inventory = new ItemStack[this.getSizeInventory()];
 	     
 		for (int var3 = 0; var3 < var2.tagCount(); ++var3)
@@ -135,4 +150,27 @@ public class TileEntityResearcher extends TileEntity implements IInventory{
 		}
 	}
 
+	public void updateEntity(){
+		ItemStack fuel = getStackInSlot(0);
+		ItemStack research = getStackInSlot(1);
+		ItemStack output = getStackInSlot(2);
+		
+		if(research.stackSize != 0){
+			if(this.currentResearch.itemID == new ItemStack(Block.bedrock, 1).itemID){
+				this.currentResearch = research;
+			}
+			if(this.currentResearch.itemID == research.itemID){
+				progress++;
+			}
+		}
+		
+		if(progress == 25){
+			this.currentResearch = new ItemStack(Block.bedrock, 1);
+		}
+	}
+	
+	public boolean isResearching(){
+		return progress > 0;
+	}
+	
 }

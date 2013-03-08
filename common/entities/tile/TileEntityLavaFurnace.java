@@ -233,15 +233,15 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory, ISi
 	 }
 	     
 	 @Override
-	    public int getStartInventorySide(ForgeDirection side)
-	    {
-	        if (side == ForgeDirection.UP) return 0;
-	        return 1;
-	    }
+	 public int getStartInventorySide(ForgeDirection side)
+	 {
+		 if (side == ForgeDirection.UP) return 0;
+		 return 1;
+	 }
 
-	    @Override
-	    public int getSizeInventorySide(ForgeDirection side)
-	    {
-	        return 1;
-	    }
+	 @Override
+	 public int getSizeInventorySide(ForgeDirection side)
+	 {
+		 return 1;
+	 }
 }

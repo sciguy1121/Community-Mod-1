@@ -29,6 +29,10 @@ public class GuiResearcher extends GuiContainer{
 		int x = (this.width - this.xSize) / 2;
 		int y = (this.height - this.ySize) / 2;
 		this.drawTexturedModalRect(x, y, 0, 0, this.xSize, this.ySize);
+		
+		int progress = entity.progress;
+		
+		this.drawTexturedModalRect(x + 79, y + 35, 176, 14, progress - 1, 16);
 	}
 	
 	@Override
