@@ -30,8 +30,8 @@ public class BlocksHelper {
 	public static Block urdiumOre;
 	public static Block franciumOre;
 	public static Block franciumBlock;
-	public static Block lavafurnace;
-	public static Block lavafurnaceactive;
+	public static Block geothermalOven;
+	public static Block geothermalOvenActive;
 	public static Block researcher;
 
 	public static void setupBlocks() {
@@ -56,8 +56,8 @@ public class BlocksHelper {
 		franciumBlock = new BlockMetal(IDsHelper.franciumBlockID, 23).setHardness(18F).setResistance(22F).setBlockName("FranciumBlock").setCreativeTab(CommunityMod.modTab);
 		
 		//Machines
-		lavafurnace = new BlockLavaFurnace(IDsHelper.lavafurnaceID, 0, true).setHardness(2.5F).setResistance(22F).setBlockName("lavafurnace").setStepSound(Block.soundStoneFootstep).setCreativeTab(CommunityMod.modTab);
-		lavafurnaceactive = new BlockLavaFurnace(IDsHelper.lavafurnaceID + 1, 1, false).setHardness(2.5F).setResistance(22F).setBlockName("lavafurnace1").setStepSound(Block.soundStoneFootstep).setLightValue(0.3F);
+		geothermalOven = new BlockLavaFurnace(IDsHelper.lavafurnaceID, 0, true).setHardness(2.5F).setResistance(22F).setBlockName("geothermaloven").setStepSound(Block.soundStoneFootstep).setCreativeTab(CommunityMod.modTab);
+		geothermalOvenActive = new BlockLavaFurnace(IDsHelper.lavafurnaceID + 1, 1, false).setHardness(2.5F).setResistance(22F).setBlockName("geothermaloven1").setStepSound(Block.soundStoneFootstep).setLightValue(0.3F);
 		researcher = new BlockResearcher(IDsHelper.researcherID, 8).setBlockName("researcher").setHardness(2.5F).setResistance(10F).setCreativeTab(CommunityMod.modTab).setStepSound(Block.soundMetalFootstep);
 		
 		gameRegisters();
@@ -84,8 +84,8 @@ public class BlocksHelper {
 		GameRegistry.registerBlock(urdiumOre, "UrdiumOre");
 		GameRegistry.registerBlock(franciumOre, "FranciumOre");
 		GameRegistry.registerBlock(franciumBlock, "FranciumBlock");
-		GameRegistry.registerBlock(lavafurnace, "LavaFurnace");
-		GameRegistry.registerBlock(lavafurnaceactive, "LavaFurnace1");
+		GameRegistry.registerBlock(geothermalOven, "GeothermalOven");
+		GameRegistry.registerBlock(geothermalOvenActive, "GeothermalOven1");
 		GameRegistry.registerBlock(researcher, "Researcher");
 	}
 	
@@ -109,7 +109,7 @@ public class BlocksHelper {
 		LanguageRegistry.addName(urdiumOre, "Urdium Ore");
 		LanguageRegistry.addName(franciumOre, "Francium Ore");
 		LanguageRegistry.addName(franciumBlock, "Francium Block");
-		LanguageRegistry.addName(lavafurnace, "Lava Furnace");
+		LanguageRegistry.addName(geothermalOven, "GeothermalOven");
 		LanguageRegistry.addName(researcher, "Researcher");
 	}
 

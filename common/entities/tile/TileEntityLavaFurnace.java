@@ -118,7 +118,7 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory, ISi
 	@Override
 	public void updateEntity()
 	{
-		if(this.worldObj.getBlockId(xCoord, yCoord, zCoord) == BlocksHelper.lavafurnaceactive.blockID)
+		if(this.worldObj.getBlockId(xCoord, yCoord, zCoord) == BlocksHelper.geothermalOvenActive.blockID)
 		{
 			powered = true;
 		}

@@ -111,12 +111,12 @@ public class BlockLavaFurnace extends BlockContainer
 		  super.onNeighborBlockChange(world, x, y, z, id);
 		  int metadata = world.getBlockMetadata(x, y, z);
 		  if(isHeatProvided(world, x, y, z)){
-			  if(this.blockID == BlocksHelper.lavafurnace.blockID){
-				  world.setBlockAndMetadataWithNotify(x, y, z, BlocksHelper.lavafurnaceactive.blockID, metadata);
+			  if(this.blockID == BlocksHelper.geothermalOven.blockID){
+				  world.setBlockAndMetadataWithNotify(x, y, z, BlocksHelper.geothermalOvenActive.blockID, metadata);
 			  }
-		  } else if(this.blockID == BlocksHelper.lavafurnaceactive.blockID)
+		  } else if(this.blockID == BlocksHelper.geothermalOvenActive.blockID)
 		  {
-			  world.setBlockAndMetadataWithNotify(x, y, z, BlocksHelper.lavafurnace.blockID, metadata);
+			  world.setBlockAndMetadataWithNotify(x, y, z, BlocksHelper.geothermalOven.blockID, metadata);
 		  }
 	  }
 		

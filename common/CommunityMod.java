@@ -119,7 +119,7 @@ public class CommunityMod {
         "SGS", "GWG", "SGS", 'G', Block.gravel, 'S', Block.sand, 'W', Item.bucketWater
         });
         
-        GameRegistry.addRecipe(new ItemStack(BlocksHelper.lavafurnace, 1), new Object[]
+        GameRegistry.addRecipe(new ItemStack(BlocksHelper.geothermalOven, 1), new Object[]
         		{
         			"SSS", "S S", "XXX", 'S', Block.cobblestone, 'X', Item.ingotIron
         		});
