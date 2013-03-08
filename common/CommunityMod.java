@@ -87,7 +87,7 @@ public class CommunityMod {
 		GameRegistry.addSmelting(IDsHelper.tungstenOreID, new ItemStack(ItemsHelper.tungstenIngot, 1), 0.5F);
 		GameRegistry.addSmelting(IDsHelper.arsmiumOreID, new ItemStack(ItemsHelper.arsmiumIngot, 1), 0.5F);
 		GameRegistry.addSmelting(IDsHelper.urdiumOreID, new ItemStack(ItemsHelper.urdiumIngot, 1), 0.5F);
-        GameRegistry.addSmelting(IDsHelper.franciumOreID, new ItemStack(ItemsHelper.franciumIngot, 1), 0.5F);
+        	GameRegistry.addSmelting(IDsHelper.franciumOreID, new ItemStack(ItemsHelper.franciumIngot, 1), 0.5F);
 	}
 
 	private static void craftingRecipes(){
