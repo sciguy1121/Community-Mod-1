@@ -111,20 +111,19 @@ public class CommunityMod {
 			"FFF", "FFF", "FFF", 'F', ItemsHelper.franciumIngot
 		});
         
-        GameRegistry.addRecipe(new ItemStack(BlocksHelper.concrete, 4), new Object[]{
-        "GSG", "SWS", "GSG", 'G', Block.gravel, 'S', Block.sand, 'W', Item.bucketWater
-       	});
+        	GameRegistry.addRecipe(new ItemStack(BlocksHelper.concrete, 4), new Object[]{
+        	"GSG", "SWS", "GSG", 'G', Block.gravel, 'S', Block.sand, 'W', Item.bucketWater
+       		});
         
-        GameRegistry.addRecipe(new ItemStack(BlocksHelper.concrete, 4), new Object[]{
-        "SGS", "GWG", "SGS", 'G', Block.gravel, 'S', Block.sand, 'W', Item.bucketWater
-        });
+        	GameRegistry.addRecipe(new ItemStack(BlocksHelper.concrete, 4), new Object[]{
+        	"SGS", "GWG", "SGS", 'G', Block.gravel, 'S', Block.sand, 'W', Item.bucketWater
+        	});
         
-        GameRegistry.addRecipe(new ItemStack(BlocksHelper.lavafurnace, 1), new Object[]
-        		{
+       		GameRegistry.addRecipe(new ItemStack(BlocksHelper.lavafurnace, 1), new Object[]{
         			"SSS", "S S", "XXX", 'S', Block.cobblestone, 'X', Item.ingotIron
         		});
         	
-        GameRegistry.addShapelessRecipe(new ItemStack(ItemsHelper.rasberryPie, 1),
-        new ItemStack(Item.sugar), new ItemStack(Item.egg), new ItemStack(ItemsHelper.rasberry));
+        	GameRegistry.addShapelessRecipe(new ItemStack(ItemsHelper.rasberryPie, 1),
+        	new ItemStack(Item.sugar), new ItemStack(Item.egg), new ItemStack(ItemsHelper.rasberry));
 	}
 }
