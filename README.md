@@ -41,13 +41,13 @@ Technicraft is a community mod for Minecraft v1.4.7 that incorporates advanced m
 Technicraft was originally started by sciguy1121. It's aim is to bring the modding community together to make one big mod with dozens of contributors.
 
 
-####Licence
-Technicraft uses these licences:
-General Public Licence 
-[Click Here](http://github.com/pahimar/Equivalent-Exchange-3/blob/master/COPYING)
+####License
+Technicraft uses these licenses:
+General Public License 
+[Click Here](http://github.com/sciguy1121/Community-Mod-1/blob/master/COPYING)
 
-Lesser General Public Licence 
-[Click Here](https://github.com/pahimar/Equivalent-Exchange-3/blob/master/COPYING.LESSER)
+Lesser General Public License 
+[Click Here](https://github.com/sciguy1121/Community-Mod-1/blob/master/COPYING.LESSER)
 
 
 
