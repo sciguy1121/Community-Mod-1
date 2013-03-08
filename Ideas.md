@@ -48,3 +48,7 @@ Particle Breaker/Particle Accelerator/Cyclotron - Used from breaking down franci
 Solar Panel System - to get energy fromthings other thasn coal
 
 Portal to tech dimension made of Titanium, Lead, Francium, and Silicon Blocks (2 of each) and 2 Diamond Blocks
+
+Logger - gives 6 planks instead of 4
+
+Discovery Book - Store your discoveries in it
