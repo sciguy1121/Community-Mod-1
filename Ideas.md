@@ -56,8 +56,8 @@ Discovery Book - Store your discoveries in it
 
 Energy Sticks and Powder - Used as fuel
 
+iPod - made from silicon chips and plays your music disks (made from silicon chips)
+
 ##Realized Ideas
 
 Lava Furnace(alias: Geothermal Oven) - implemented by smigolpol
-
-iPod - made from silicon chips and plays your music disks (made from silicon chips)
