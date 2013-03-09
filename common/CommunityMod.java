@@ -119,12 +119,17 @@ public class CommunityMod {
         "SGS", "GWG", "SGS", 'G', Block.gravel, 'S', Block.sand, 'W', Item.bucketWater
         });
         
-        GameRegistry.addRecipe(new ItemStack(BlocksHelper.geothermalOven, 1), new Object[]
-        		{
-        			"SSS", "S S", "XXX", 'S', Block.cobblestone, 'X', Item.ingotIron
-        		});
+        GameRegistry.addRecipe(new ItemStack(BlocksHelper.geothermalOven, 1), new Object[]{
+        "SSS", "S S", "XXX", 'S', Block.cobblestone, 'X', Item.ingotIron
+       	});
         	
         GameRegistry.addShapelessRecipe(new ItemStack(ItemsHelper.rasberryPie, 1),
         new ItemStack(Item.sugar), new ItemStack(Item.egg), new ItemStack(ItemsHelper.rasberry));
 	}
+	GameRegistry.addRecipe(new ItemStack(ItemsHelper.siliconWafer, 8), new Object[]{
+       	"SSS", "SNS", "SSS", 'S', ItemsHelper.siliconIngot
+       	});
+       	GameRegistry.addRecipe(new ItemStack(BlocksHelper.siliconChip, 4), new Object[]{
+       	"SIS", "IWI", "SIS", 'S', ItemsHelper.siliconIngot, 'I', ItemsHelper.siliconWafer, 'W', Item.bucketWater
+       	});
 }
