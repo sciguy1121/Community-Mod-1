@@ -6,6 +6,7 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntityFurnace;
 import communityMod.common.entities.tile.TileEntityLavaFurnace;
 import communityMod.common.entities.tile.TileEntityResearcher;
 
@@ -42,5 +43,62 @@ public class ContainerResearcher extends Container{
 	{
 		return entity.isUseableByPlayer(player);
 	}
+	
+	@Override
+	public ItemStack transferStackInSlot(EntityPlayer player, int index)
+    {
+		ItemStack stack = null;
+		Slot slot = (Slot)inventorySlots.get(index);
+		
+		if(slot != null && slot.getHasStack())
+		{
+			ItemStack stackInSlot = slot.getStack();
+			stack = stackInSlot.copy();
+			
+			if(index <= 1)
+			{
+				if(!mergeItemStack(stackInSlot, 1, inventorySlots.size(), true))
+				{
+					return null;
+				}
+				
+				slot.onSlotChange(stackInSlot, stack);
+			}
+			else if(TileEntityFurnace.isItemFuel(stackInSlot))
+			{
+				if(index != 2 && !getSlot(0).getHasStack())
+				{
+					ItemStack copy = slot.decrStackSize(slot.getStack().stackSize);
+					getSlot(0).putStack(copy);
+				}
+				
+				return null;
+			}
+			else if(index != 1 && !getSlot(1).getHasStack())
+			{
+				ItemStack copy = slot.decrStackSize(slot.getStack().stackSize);
+				getSlot(1).putStack(copy);
+				
+				return null;
+			}
+			else
+			{
+				return null;
+			}
+			
+			if(stackInSlot.stackSize == 0)
+			{
+				slot.putStack(null);
+			}
+			else
+			{
+				slot.onSlotChanged();
+			}
+			
+			return stack;
+		}
+		
+       return stack;
+    }
 	
 }

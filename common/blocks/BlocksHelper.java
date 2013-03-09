@@ -109,7 +109,7 @@ public class BlocksHelper {
 		LanguageRegistry.addName(urdiumOre, "Urdium Ore");
 		LanguageRegistry.addName(franciumOre, "Francium Ore");
 		LanguageRegistry.addName(franciumBlock, "Francium Block");
-		LanguageRegistry.addName(geothermalOven, "GeothermalOven");
+		LanguageRegistry.addName(geothermalOven, "Geothermal Oven");
 		LanguageRegistry.addName(researcher, "Researcher");
 	}
 

@@ -155,7 +155,7 @@ public class TileEntityResearcher extends TileEntity implements IInventory{
 		ItemStack research = getStackInSlot(1);
 		ItemStack output = getStackInSlot(2);
 		
-		if(research.stackSize != 0){
+		if(research != null && research.stackSize != 0){
 			if(this.currentResearch.itemID == new ItemStack(Block.bedrock, 1).itemID){
 				this.currentResearch = research;
 			}

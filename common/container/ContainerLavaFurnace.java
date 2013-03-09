@@ -7,6 +7,9 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotFurnace;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.tileentity.TileEntityFurnace;
 
 public class ContainerLavaFurnace extends Container
 {
@@ -40,5 +43,52 @@ public class ContainerLavaFurnace extends Container
 	{
 		return entity.isUseableByPlayer(player);
 	}
+	
+	@Override
+	public ItemStack transferStackInSlot(EntityPlayer player, int index)
+    {
+		ItemStack stack = null;
+		Slot slot = (Slot)inventorySlots.get(index);
+		
+		if(slot != null && slot.getHasStack())
+		{
+			ItemStack stackInSlot = slot.getStack();
+			stack = stackInSlot.copy();
+			
+			if(index <= 1)
+			{
+				if(!mergeItemStack(stackInSlot, 1, inventorySlots.size(), true))
+				{
+					return null;
+				}
+				
+				slot.onSlotChange(stackInSlot, stack);
+			}
+			else if(index != 1 && !getSlot(0).getHasStack())
+			{
+				ItemStack copy = slot.decrStackSize(slot.getStack().stackSize);
+				getSlot(0).putStack(copy);
+				
+				return null;
+			}
+			else
+			{
+				return null;
+			}
+			
+			if(stackInSlot.stackSize == 0)
+			{
+				slot.putStack(null);
+			}
+			else
+			{
+				slot.onSlotChanged();
+			}
+			
+			return stack;
+		}
+		
+       return stack;
+    }
 
 }

@@ -16,7 +16,7 @@ Silicon Chips - Using silicon to make computer parts and computers that you can 
 
 Robots - Mobs like iron golems or goloms, or wither that you build with different parts
 
-Lava Furnace - Allows players to smelt/cook with no fuel source. Lava block must be placed under LavaFurnace block (Idea being worked on by smigolpol)
+Lava Furnace - Allows players to smelt/cook with no fuel source. Lava block must be placed under LavaFurnace block (Idea implemented by smigolpol)
 
 Concrete Liquid - Flows like lava, eventually freezes into concrete
 
@@ -54,3 +54,7 @@ Logger - gives 6 planks instead of 4
 Discovery Book - Store your discoveries in it
 
 Energy Sticks and Powder - Used as fuel
+
+##Realized Ideas
+
+Lava Furnace(alias: Geothermal Oven) - implemented by smigolpol
