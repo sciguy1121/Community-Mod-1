@@ -1,5 +1,7 @@
 package communityMod.common.entities.tile;
 
+import communityMod.common.recipes.ResearcherRecipes;
+
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -16,6 +18,8 @@ public class TileEntityResearcher extends TileEntity implements IInventory{
 	public int progress = 0;
 	public int researchPower = 0;
 	public ItemStack currentResearch = new ItemStack(Block.bedrock, 1);
+	
+	private int delay = 0;
 	
 	public TileEntityResearcher(){
 		inventory = new ItemStack[3];
@@ -154,18 +158,32 @@ public class TileEntityResearcher extends TileEntity implements IInventory{
 		ItemStack fuel = getStackInSlot(0);
 		ItemStack research = getStackInSlot(1);
 		ItemStack output = getStackInSlot(2);
+		ItemStack result = ResearcherRecipes.instance().getResearchResult(research);
 		
 		if(research != null && research.stackSize != 0){
-			if(this.currentResearch.itemID == new ItemStack(Block.bedrock, 1).itemID){
-				this.currentResearch = research;
-			}
-			if(this.currentResearch.itemID == research.itemID){
-				progress++;
+			if(result != null){
+				if(delay == 3){
+					if(this.currentResearch.itemID == new ItemStack(Block.bedrock, 1).itemID){
+						this.currentResearch = research;
+					}
+					if(this.currentResearch.itemID == research.itemID && progress <= 25){
+						progress += 25 / ResearcherRecipes.instance().getProgressRequired(research);
+						decrStackSize(1, 1);
+						delay = 0;
+					}
+				}
+				delay++;
 			}
 		}
 		
-		if(progress == 25){
+		if(progress >= 25){
 			this.currentResearch = new ItemStack(Block.bedrock, 1);
+			if(this.inventory[2] == null){
+				this.inventory[2] = ResearcherRecipes.instance().getResearchResult(research);
+			}else{
+				this.inventory[2].stackSize++;
+			}
+			progress = 0;
 		}
 	}
 	
