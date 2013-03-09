@@ -125,11 +125,13 @@ public class CommunityMod {
         	
         GameRegistry.addShapelessRecipe(new ItemStack(ItemsHelper.rasberryPie, 1),
         new ItemStack(Item.sugar), new ItemStack(Item.egg), new ItemStack(ItemsHelper.rasberry));
+        
+        GameRegistry.addRecipe(new ItemStack(ItemsHelper.siliconWafer, 8), new Object[]{
+           	"SSS", "SNS", "SSS", 'S', ItemsHelper.siliconIngot
+           	});
+        
+        GameRegistry.addRecipe(new ItemStack(ItemsHelper.siliconChip, 4), new Object[]{
+           	"SIS", "IWI", "SIS", 'S', ItemsHelper.siliconIngot, 'I', ItemsHelper.siliconWafer, 'W', Item.bucketWater
+           	});
 	}
-	GameRegistry.addRecipe(new ItemStack(ItemsHelper.siliconWafer, 8), new Object[]{
-       	"SSS", "SNS", "SSS", 'S', ItemsHelper.siliconIngot
-       	});
-       	GameRegistry.addRecipe(new ItemStack(BlocksHelper.siliconChip, 4), new Object[]{
-       	"SIS", "IWI", "SIS", 'S', ItemsHelper.siliconIngot, 'I', ItemsHelper.siliconWafer, 'W', Item.bucketWater
-       	});
 }
