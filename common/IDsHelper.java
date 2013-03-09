@@ -40,6 +40,8 @@ public class IDsHelper {
 	public static int urdiumIngotID;
 	public static int franciumIngotID;
 	public static int cosileadiumAlloyID;
+	public static int siliconWaferID;
+	public static int siliconChipID;
 	
 	public static int rasberryID;
 	public static int rasberryPieID;
@@ -81,6 +83,8 @@ public class IDsHelper {
 		urdiumIngotID = config.get("Item IDs", "Urdium Ingot ID", 1010).getInt();
 		franciumIngotID = config.get("Item IDs", "Francium Ingot ID", 1011).getInt();
 		cosileadiumAlloyID = config.get("Item IDs", "Cosileadium Alloy ID", 1012).getInt();
+		siliconWaferID = config.get("Item IDs", "Silicon Wafer ID", 1015).getInt();
+		siliconChipID = config.get("Item IDs", "Silicon Chip ID", 1016).getInt();
 		
 		rasberryID = config.get("Item IDs", "Resberry ID", 1013).getInt();
 		rasberryPieID = config.get("Item IDs", "Resberry Pie ID", 1014).getInt();
