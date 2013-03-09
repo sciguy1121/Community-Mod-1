@@ -12,9 +12,9 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.ISidedInventory;
 
-public class TileEntityLavaFurnace extends TileEntity implements IInventory, ISidedInventory
+public class TileEntityLavaFurnace extends TileEntity implements IInventory
 {
-	private boolean powered;
+	private boolean powered = false;
 	
 	private ItemStack[] inventory;
 	
@@ -26,10 +26,14 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory, ISi
 	
 	public int furnaceCookTime = 5000;
 	
-	public TileEntityLavaFurnace(boolean active)
+	public TileEntityLavaFurnace()
+	{
+		this.inventory = new ItemStack[2];
+	}
+	
+	public void setActive(boolean active)
 	{
 		this.powered = active;
-		this.inventory = new ItemStack[2];
 	}
 
 	@Override
@@ -147,6 +151,7 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory, ISi
 					{
 						decrStackSize(0, 1);
 						setInventorySlotContents(1, result);
+						onInventoryChanged();
 					} else
 					{
 						if(output.isItemEqual(result))
@@ -207,8 +212,9 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory, ISi
 	        }
 	     }
 
-		 compound.setTag("Items", var2);
 		 compound.setInteger("Heat", heat);
+		 compound.setInteger("Progress", furnaceBurnTime);
+		 compound.setTag("Items", var2);
 	 }
 	
 	 public void readFromNBT(NBTTagCompound compound)
@@ -230,18 +236,5 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory, ISi
 	             this.inventory[var5] = ItemStack.loadItemStackFromNBT(var4);
 	         }
 	     }
-	 }
-	     
-	 @Override
-	 public int getStartInventorySide(ForgeDirection side)
-	 {
-		 if (side == ForgeDirection.UP) return 0;
-		 return 1;
-	 }
-
-	 @Override
-	 public int getSizeInventorySide(ForgeDirection side)
-	 {
-		 return 1;
 	 }
 }

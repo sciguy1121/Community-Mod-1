@@ -138,7 +138,7 @@ public class TileEntityResearcher extends TileEntity implements IInventory{
 		NBTTagList research = compound.getTagList("Research");
 	     
 		this.progress = compound.getInteger("Progress");
-		this.currentResearch = ItemStack.loadItemStackFromNBT((NBTTagCompound)research.tagAt(1));
+		this.currentResearch = ItemStack.loadItemStackFromNBT((NBTTagCompound)research.tagAt(0));
 		this.researchPower = compound.getInteger("Research Power");
 		this.inventory = new ItemStack[this.getSizeInventory()];
 	     
