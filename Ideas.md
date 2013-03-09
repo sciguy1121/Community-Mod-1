@@ -52,3 +52,5 @@ Portal to tech dimension made of Titanium, Lead, Francium, and Silicon Blocks (2
 Logger - gives 6 planks instead of 4
 
 Discovery Book - Store your discoveries in it
+
+Energy Sticks and Powder - Used as fuel
