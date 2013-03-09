@@ -21,19 +21,20 @@ import communityMod.textures.TextureHandler;
 
 public class BlockLavaFurnace extends BlockContainer
 {
-	private boolean active;
+	private boolean keepInventory = false;
 
-	public BlockLavaFurnace(int id, int texture, boolean powered) 
+	public BlockLavaFurnace(int id, int texture) 
 	{
 		super(id, texture, Material.rock);
-		active = powered;
 		setTickRandomly(true);
 	}
 
 	@Override
 	public TileEntity createNewTileEntity(World var1) 
 	{
-		return new TileEntityLavaFurnace(!active);
+		TileEntityLavaFurnace entity = new TileEntityLavaFurnace();
+		entity.setActive(false);
+		return entity;
 	}
 	
 	@Override
@@ -50,8 +51,12 @@ public class BlockLavaFurnace extends BlockContainer
 	}
 	   
 	@Override
-	public void breakBlock(World world, int x, int y, int z, int i, int j){
-		dropItems(world, x, y, z);
+	public void breakBlock(World world, int x, int y, int z, int i, int j)
+	{
+		if(!keepInventory)
+		{
+			dropItems(world, x, y, z);
+		}
 		super.breakBlock(world, x, y, z, i, j);
 	}
 	   
@@ -109,15 +114,25 @@ public class BlockLavaFurnace extends BlockContainer
 	  public void onNeighborBlockChange(World world, int x, int y, int z, int id) 
 	  {
 		  super.onNeighborBlockChange(world, x, y, z, id);
+		  keepInventory = true;
+		  TileEntityLavaFurnace copy = (TileEntityLavaFurnace)world.getBlockTileEntity(x, y, z);
 		  int metadata = world.getBlockMetadata(x, y, z);
-		  if(isHeatProvided(world, x, y, z)){
+		  if(isHeatProvided(world, x, y, z))
+		  {
 			  if(this.blockID == BlocksHelper.geothermalOven.blockID){
-				  world.setBlockAndMetadataWithNotify(x, y, z, BlocksHelper.geothermalOvenActive.blockID, metadata);
+				  world.setBlockAndMetadata(x, y, z, BlocksHelper.geothermalOvenActive.blockID, metadata);
+				  copy.setActive(true);
+				  copy.validate();
+				  world.setBlockTileEntity(x, y, z, copy);
 			  }
 		  } else if(this.blockID == BlocksHelper.geothermalOvenActive.blockID)
 		  {
-			  world.setBlockAndMetadataWithNotify(x, y, z, BlocksHelper.geothermalOven.blockID, metadata);
+			  world.setBlockAndMetadata(x, y, z, BlocksHelper.geothermalOven.blockID, metadata);
+			  copy.setActive(false);
+			  copy.validate();
+			  world.setBlockTileEntity(x, y, z, copy);
 		  }
+		  keepInventory = false;
 	  }
 		
 	  public int getBlockTextureFromSideAndMetadata(int side, int metadata)

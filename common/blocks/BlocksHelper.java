@@ -56,8 +56,8 @@ public class BlocksHelper {
 		franciumBlock = new BlockMetal(IDsHelper.franciumBlockID, 23).setHardness(18F).setResistance(22F).setBlockName("FranciumBlock").setCreativeTab(CommunityMod.modTab);
 		
 		//Machines
-		geothermalOven = new BlockLavaFurnace(IDsHelper.lavafurnaceID, 0, true).setHardness(2.5F).setResistance(22F).setBlockName("geothermaloven").setStepSound(Block.soundStoneFootstep).setCreativeTab(CommunityMod.modTab);
-		geothermalOvenActive = new BlockLavaFurnace(IDsHelper.lavafurnaceID + 1, 1, false).setHardness(2.5F).setResistance(22F).setBlockName("geothermaloven1").setStepSound(Block.soundStoneFootstep).setLightValue(0.3F);
+		geothermalOven = new BlockLavaFurnace(IDsHelper.lavafurnaceID, 0).setHardness(2.5F).setResistance(22F).setBlockName("geothermaloven").setStepSound(Block.soundStoneFootstep).setCreativeTab(CommunityMod.modTab);
+		geothermalOvenActive = new BlockLavaFurnace(IDsHelper.lavafurnaceID + 1, 1).setHardness(2.5F).setResistance(22F).setBlockName("geothermaloven1").setStepSound(Block.soundStoneFootstep).setLightValue(0.3F);
 		researcher = new BlockResearcher(IDsHelper.researcherID, 8).setBlockName("researcher").setHardness(2.5F).setResistance(10F).setCreativeTab(CommunityMod.modTab).setStepSound(Block.soundMetalFootstep);
 		
 		gameRegisters();
