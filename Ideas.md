@@ -58,6 +58,8 @@ Energy Sticks and Powder - Used as fuel
 
 iPod - made from silicon chips and plays your music disks (made from silicon chips)
 
+Computer Minecarts - make the computer then make programs to make the minecart move
+
 ##Realized Ideas
 
 Lava Furnace(alias: Geothermal Oven) - implemented by smigolpol
