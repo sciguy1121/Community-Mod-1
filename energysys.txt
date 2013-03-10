@@ -1,0 +1,48 @@
+Feel Free To Add Your Ideas!
+
+Energy System Ideas:
+
+Put Ideas for Machines Here:
+    Energy Creation:
+        Tier 1:
+            ATP to PE Machine(needs name)
+            You can put in any type of living materials and it will "extract" ATP and convert it into PE or Physical Energy. 
+            Takes 5 Ticks to do each conversion.
+            
+            Seeds-7
+            Pumpkin Seeds-15
+            Pumpkin-20
+            Melon Seeds-13
+            Melon-35
+            Apple-8
+            Leaves-3
+            Grass-3
+            Vines-3
+            Lilly Pads-5
+            Logs-5
+            Feel Free To Change
+    
+        Tier 2:
+            Photosynthesiser
+            A solar panel that replicates photosynthesis.
+            5 PE/tick
+    
+        Tier 3:
+            Energy Super Collector
+            Collects ATP from surrounding living entities and blocks like Cows, Sheep, Pigs, Plants, Trees, etc... Not Hostile Mobs, or the player
+            1 PE/Tick/#LivingEntites/Blocks
+    
+    Energy Storage:
+        Make PE Levels For Each of The Tiers
+        Tier 1:
+            Energy Pool
+           
+        Tier 2:
+            Energy Reservoir
+            
+        Tier 3: 
+            Synchronized Energy Storage Unit
+            
+    
+    
+Put Ideas for Energy Transportation Here:
