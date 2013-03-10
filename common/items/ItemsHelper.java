@@ -46,8 +46,8 @@ public class ItemsHelper{
 		urdiumIngot = new ItemIngot(IDsHelper.urdiumIngotID, 8).setCreativeTab(CommunityMod.modTab).setItemName("UrdiumIngot");
 		franciumIngot = new ItemIngot(IDsHelper.franciumIngotID, 7).setCreativeTab(CommunityMod.modTab).setItemName("FranciumIngot");
 		cosileadiumAlloy = new ItemIngot(IDsHelper.cosileadiumAlloyID, 12).setCreativeTab(CommunityMod.modTab).setItemName("CosileadiumAlloy");
-		siliconWafer = new ItemOther(IDsHelper.siliconWaferID, 13).setCreativeTab(CommunityMod.modTab).setItemName("SiliconWafer");
-		siliconChip = new ItemOther(IDsHelper.siliconChipID, 14).setCreativeTab(CommunityMod.modTab).setItemName("SiliconChip");
+		siliconWafer = new ItemOther(IDsHelper.siliconWaferID, 19).setCreativeTab(CommunityMod.modTab).setItemName("SiliconWafer");
+		siliconChip = new ItemOther(IDsHelper.siliconChipID, 20).setCreativeTab(CommunityMod.modTab).setItemName("SiliconChip");
 		research = new ItemResearch(IDsHelper.researchID, 31).setCreativeTab(CommunityMod.modTab).setItemName("Research");
 		
 		rasberry = new ItemRasberry(IDsHelper.rasberryID, 4, 2.0F, false).setItemName("Rasberry").setIconIndex(48).setCreativeTab(CommunityMod.modTab);
