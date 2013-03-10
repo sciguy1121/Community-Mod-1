@@ -39,7 +39,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(modid = "Community_Mod", name = "Community_Mod", version = "1.0")
-@NetworkMod(clientSideRequired = true, serverSideRequired = false, packetHandler = CommonPacketHandler.class)
+@NetworkMod(clientSideRequired = true, serverSideRequired = false, packetHandler = CommonPacketHandler.class, channels = {"CommunityMod"})
 
 public class CommunityMod {
 

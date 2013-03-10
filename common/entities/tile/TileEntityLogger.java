@@ -1,5 +1,7 @@
 package communityMod.common.entities.tile;
 
+import communityMod.common.blocks.BlockLogger;
+
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -12,9 +14,9 @@ import net.minecraft.tileentity.TileEntityFurnace;
 public class TileEntityLogger extends TileEntity implements IInventory
 {
 	private ItemStack[] inventory;
-	private int progress = 0;
+	public int progress = 0;
 	private int loggingTime = 60;
-	private int burning = 0;
+	public int burning = 0;
 	
 	public TileEntityLogger()
 	{
@@ -153,6 +155,12 @@ public class TileEntityLogger extends TileEntity implements IInventory
 					burning = TileEntityFurnace.getItemBurnTime(fuel);
 				}
 			}
+		}
+		
+		if(powered != burning > 0)
+		{
+			this.onInventoryChanged();
+			BlockLogger.updateState(burning > 0, worldObj, xCoord, yCoord, zCoord);
 		}
 	}
 	
