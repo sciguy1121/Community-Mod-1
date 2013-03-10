@@ -21,6 +21,7 @@ import communityMod.common.gui.GuiHandler;
 import communityMod.common.items.ItemCoal;
 import communityMod.common.items.ItemIngot;
 import communityMod.common.items.ItemsHelper;
+import communityMod.common.research.ResearchHandler;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
@@ -81,6 +82,9 @@ public class CommunityMod {
 		GameRegistry.registerTileEntity(TileEntityLavaFurnace.class, "GeothermalOven");
 		GameRegistry.registerTileEntity(TileEntityResearcher.class, "Researcher");
 		GameRegistry.registerTileEntity(TileEntityLogger.class, "Logger");
+		
+		ResearchHandler.instance().setResearchValue(ItemsHelper.siliconIngot.itemID, true);
+		ResearchHandler.instance().initResearchHandler();
 	}
 
 	private static void smeltingRecipes(){
@@ -102,10 +106,6 @@ public class CommunityMod {
 		
 		GameRegistry.addRecipe(new ItemStack(BlocksHelper.titaniumBlock, 1), new Object[]{
 			"TTT", "TTT", "TTT", 'T', ItemsHelper.titaniumIngot
-		});
-		
-		GameRegistry.addRecipe(new ItemStack(BlocksHelper.siliconBlock, 1), new Object[]{
-			"SSS", "SSS", "SSS", 'S', ItemsHelper.siliconIngot
 		});
 		
 		GameRegistry.addRecipe(new ItemStack(BlocksHelper.ironGirder, 4), new Object[]{
@@ -131,12 +131,5 @@ public class CommunityMod {
         GameRegistry.addShapelessRecipe(new ItemStack(ItemsHelper.rasberryPie, 1),
         new ItemStack(Item.sugar), new ItemStack(Item.egg), new ItemStack(ItemsHelper.rasberry));
         
-        GameRegistry.addRecipe(new ItemStack(ItemsHelper.siliconWafer, 8), new Object[]{
-           	"SSS", "SNS", "SSS", 'S', ItemsHelper.siliconIngot
-           	});
-        
-        GameRegistry.addRecipe(new ItemStack(ItemsHelper.siliconChip, 4), new Object[]{
-           	"SIS", "IWI", "SIS", 'S', ItemsHelper.siliconIngot, 'I', ItemsHelper.siliconWafer, 'W', Item.bucketWater
-           	});
 	}
 }
