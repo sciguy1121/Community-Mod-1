@@ -5,6 +5,7 @@ import java.util.List;
 import communityMod.common.research.Research;
 import communityMod.textures.TextureHandler;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -17,7 +18,7 @@ public class ItemResearch extends Item{
 		super(par1);
 		this.iconIndex = texture;
 		this.setHasSubtypes(true);
-		this.setMaxDamage(1);
+		this.setMaxDamage(0);
 	}
 	
 	public String getTextureFile(){
@@ -27,5 +28,29 @@ public class ItemResearch extends Item{
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4){
 		par3List.add(research.name);
     }
+	
+	public void getSubItems(int itemID, CreativeTabs tab, List itemList)
+	{
+		for(int i = 0; i < 3; i++){
+			itemList.add(new ItemStack(itemID, 1, i));
+		}
+	}
+	
+	public int getIconFromDamage(int i){
+		switch(i){
+		case 0:
+			this.research = Research.siliconIngot;
+			return 31;
+		case 1:
+			this.research = Research.titaniumIngot;
+			return 31;
+		case 2:
+			this.research = Research.copperIngot;
+			return 31;
+		}
+		
+		this.research = Research.siliconIngot;
+		return 31;
+	}
 	
 }

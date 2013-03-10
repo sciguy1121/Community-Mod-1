@@ -11,5 +11,7 @@ public class Research {
 	}
 	
 	public static final Research siliconIngot = new Research("Silicon Discoveries", 0);
+	public static final Research titaniumIngot = new Research("Titanium Discoveries", 1);
+	public static final Research copperIngot = new Research("Copper Discoveries", 2);
 	
 }
