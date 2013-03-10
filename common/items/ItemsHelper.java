@@ -26,6 +26,7 @@ public class ItemsHelper{
 	public static Item cosileadiumAlloy;
 	public static Item siliconWafer;
 	public static Item siliconChip;
+	public static Item research;
 	
 	public static Item rasberry;
 	public static Item rasberryPie;
@@ -47,6 +48,7 @@ public class ItemsHelper{
 		cosileadiumAlloy = new ItemIngot(IDsHelper.cosileadiumAlloyID, 12).setCreativeTab(CommunityMod.modTab).setItemName("CosileadiumAlloy");
 		siliconWafer = new ItemOther(IDsHelper.siliconWaferID, 13).setCreativeTab(CommunityMod.modTab).setItemName("SiliconWafer");
 		siliconChip = new ItemOther(IDsHelper.siliconChipID, 14).setCreativeTab(CommunityMod.modTab).setItemName("SiliconChip");
+		research = new ItemResearch(IDsHelper.researchID, 31).setCreativeTab(CommunityMod.modTab).setItemName("Research");
 		
 		rasberry = new ItemRasberry(IDsHelper.rasberryID, 4, 2.0F, false).setItemName("Rasberry").setIconIndex(48).setCreativeTab(CommunityMod.modTab);
 		rasberryPie = new ItemRasberryPie(IDsHelper.rasberryPieID, 8, 6.0F, false).setItemName("RasberryPie").setIconIndex(49).setCreativeTab(CommunityMod.modTab);
@@ -68,13 +70,14 @@ public class ItemsHelper{
 		GameRegistry.registerItem(tungstenIngot, "tungstenIngot");
 		GameRegistry.registerItem(arsmiumIngot, "ArsmiumShard");
 		GameRegistry.registerItem(urdiumIngot, "UrdiumIngot");
-        	GameRegistry.registerItem(franciumIngot, "FranciumIngot");
-        	GameRegistry.registerItem(cosileadiumAlloy, "CosileadiumAlloy");
-        	GameRegistry.registerItem(siliconWafer, "SiliconWafer");
-        	GameRegistry.registerItem(siliconChip, "SiliconChip");
+		GameRegistry.registerItem(franciumIngot, "FranciumIngot");
+		GameRegistry.registerItem(cosileadiumAlloy, "CosileadiumAlloy");
+		GameRegistry.registerItem(siliconWafer, "SiliconWafer");
+		GameRegistry.registerItem(siliconChip, "SiliconChip");
+		GameRegistry.registerItem(research, "Research");
         
-        	GameRegistry.registerItem(rasberry, "Rasberry");
-        	GameRegistry.registerItem(rasberryPie, "Rasberry Pie");
+		GameRegistry.registerItem(rasberry, "Rasberry");
+		GameRegistry.registerItem(rasberryPie, "Rasberry Pie");
 	}
 	
 
@@ -91,13 +94,14 @@ public class ItemsHelper{
 		LanguageRegistry.addName(tungstenIngot, "Tungsten Ingot");
 		LanguageRegistry.addName(arsmiumIngot, "Arsmium Ingot");
 		LanguageRegistry.addName(urdiumIngot, "Urdium Ingot");
-        	LanguageRegistry.addName(franciumIngot, "Francium Ingot");
-        	LanguageRegistry.addName(cosileadiumAlloy, "Cosileadium Alloy");
-        	LanguageRegistry.addName(siliconWafer, "Silicon Wafer");
-        	LanguageRegistry.addName(siliconChip, "Silicon Chip");
-        
-        	LanguageRegistry.addName(rasberry, "Rasberry");
-        	LanguageRegistry.addName(rasberryPie, "Rasberry Pie");
+		LanguageRegistry.addName(franciumIngot, "Francium Ingot");
+		LanguageRegistry.addName(cosileadiumAlloy, "Cosileadium Alloy");
+		LanguageRegistry.addName(siliconWafer, "Silicon Wafer");
+		LanguageRegistry.addName(siliconChip, "Silicon Chip");
+        LanguageRegistry.addName(research, "Research");
+		
+		LanguageRegistry.addName(rasberry, "Rasberry");
+		LanguageRegistry.addName(rasberryPie, "Rasberry Pie");
 	}
 
 }
