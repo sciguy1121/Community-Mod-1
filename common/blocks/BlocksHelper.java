@@ -34,6 +34,7 @@ public class BlocksHelper {
 	public static Block geothermalOvenActive;
 	public static Block researcher;
 	public static Block logger;
+	public static Block loggeractive;
 
 	public static void setupBlocks() {
 		//Normal Blocks
@@ -60,7 +61,8 @@ public class BlocksHelper {
 		geothermalOven = new BlockLavaFurnace(IDsHelper.lavafurnaceID, 0).setHardness(2.5F).setResistance(22F).setBlockName("geothermaloven").setStepSound(Block.soundStoneFootstep).setCreativeTab(CommunityMod.modTab);
 		geothermalOvenActive = new BlockLavaFurnace(IDsHelper.lavafurnaceID + 1, 1).setHardness(2.5F).setResistance(22F).setBlockName("geothermaloven1").setStepSound(Block.soundStoneFootstep).setLightValue(0.3F);
 		researcher = new BlockResearcher(IDsHelper.researcherID, 8).setBlockName("researcher").setHardness(2.5F).setResistance(10F).setCreativeTab(CommunityMod.modTab).setStepSound(Block.soundMetalFootstep);
-		logger = new BlockLogger(IDsHelper.loggerID, 25).setBlockName("logger").setHardness(1.2F).setStepSound(Block.soundWoodFootstep).setCreativeTab(CommunityMod.modTab);
+		logger = new BlockLogger(IDsHelper.loggerID, 9).setBlockName("logger").setHardness(1.2F).setStepSound(Block.soundWoodFootstep).setCreativeTab(CommunityMod.modTab);
+		loggeractive = new BlockLogger(IDsHelper.loggerID + 1, 10).setBlockName("logger").setHardness(1.2F).setStepSound(Block.soundWoodFootstep);
 		
 		gameRegisters();
 		languageRegisters();

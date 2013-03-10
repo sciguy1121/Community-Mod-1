@@ -42,7 +42,10 @@ public class GuiLavaFurnace extends GuiContainer
 		if(heat != 0)
 		{
 			heat = heat / 12;
-			this.drawTexturedModalRect(x + 83, y + 47 + 12 - heat, 176, 4 - heat, 28, heat + 10);
+			if(entity.active)
+			{
+				this.drawTexturedModalRect(x + 83, y + 47 + 12 - heat, 176, 4 - heat, 28, heat + 10);
+			}
 		}
 		
 		this.drawTexturedModalRect(x + 82, y + 23, 176, 14, progress - 1, 16);

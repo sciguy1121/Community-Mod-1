@@ -1,7 +1,6 @@
 package communityMod.common.entities.tile;
 
-import communityMod.common.blocks.BlocksHelper;
-
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -9,13 +8,12 @@ import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraftforge.common.ForgeDirection;
-import net.minecraftforge.common.ISidedInventory;
+
+import communityMod.common.blocks.BlockLavaFurnace;
+import communityMod.common.blocks.BlocksHelper;
 
 public class TileEntityLavaFurnace extends TileEntity implements IInventory
 {
-	private boolean powered = false;
-	
 	private ItemStack[] inventory;
 	
 	public int furnaceBurnTime = 0;
@@ -26,14 +24,11 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory
 	
 	public int furnaceCookTime = 5000;
 	
+	public static boolean active = false;
+	
 	public TileEntityLavaFurnace()
 	{
 		this.inventory = new ItemStack[2];
-	}
-	
-	public void setActive(boolean active)
-	{
-		this.powered = active;
 	}
 
 	@Override
@@ -122,10 +117,10 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory
 	@Override
 	public void updateEntity()
 	{
-		if(this.worldObj.getBlockId(xCoord, yCoord, zCoord) == BlocksHelper.geothermalOvenActive.blockID)
-		{
-			powered = true;
-		}
+		boolean powered = worldObj.getBlockId(xCoord, yCoord - 1, zCoord) == Block.lavaStill.blockID
+				|| worldObj.getBlockId(xCoord, yCoord - 1, zCoord) == Block.lavaMoving.blockID;
+		
+		active = powered;
 		
 		boolean canwork = powered && heat > 0;
 		
@@ -179,6 +174,9 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory
 		{
 			furnaceBurnTime = 0;
 		}
+		
+		BlockLavaFurnace.updateState(worldObj.getBlockId(xCoord, yCoord - 1, zCoord) == Block.lavaStill.blockID
+		|| worldObj.getBlockId(xCoord, yCoord - 1, zCoord) == Block.lavaMoving.blockID, worldObj, xCoord, yCoord, zCoord);
 	}
 	
 	public boolean isSmelting()
