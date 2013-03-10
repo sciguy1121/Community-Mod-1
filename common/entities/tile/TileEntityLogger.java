@@ -7,16 +7,18 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityFurnace;
 
 public class TileEntityLogger extends TileEntity implements IInventory
 {
 	private ItemStack[] inventory;
 	private int progress = 0;
 	private int loggingTime = 60;
+	private int burning = 0;
 	
 	public TileEntityLogger()
 	{
-		this.inventory = new ItemStack[2];
+		this.inventory = new ItemStack[3];
 	}
 	
 	@Override
@@ -98,7 +100,9 @@ public class TileEntityLogger extends TileEntity implements IInventory
 		ItemStack log = getStackInSlot(0);
 		ItemStack output = getStackInSlot(1);
 		
-		if(log != null)
+		boolean powered = burning > 0;
+		
+		if(log != null && powered)
 		{
 			if(progress != loggingTime)
 			{
@@ -130,6 +134,25 @@ public class TileEntityLogger extends TileEntity implements IInventory
 		else
 		{
 			progress = 0;
+		}
+		
+		if(powered)
+		{
+			burning--;
+		}
+		
+		ItemStack fuel = getStackInSlot(2);
+		
+		if(fuel != null)
+		{
+			if(TileEntityFurnace.getItemBurnTime(fuel) > 0)
+			{
+				if(!powered)
+				{
+					decrStackSize(2, 1);
+					burning = TileEntityFurnace.getItemBurnTime(fuel);
+				}
+			}
 		}
 	}
 	
