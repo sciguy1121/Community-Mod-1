@@ -60,6 +60,8 @@ iPod - made from silicon chips and plays your music disks (made from silicon chi
 
 Computer Minecarts - make the computer then make programs to make the minecart move
 
+DNA Usage and Cloning - DNA Extracter that takes dna from animal meat and lets you clone animals
+
 ##Realized Ideas
 
 Lava Furnace(alias: Geothermal Oven) - implemented by smigolpol
