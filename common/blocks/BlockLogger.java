@@ -99,6 +99,7 @@ public class BlockLogger extends BlockContainer
 		 {
 			 return 26;
 		 }
+		 
 		 if(metadata == side)
 		 {
 			 return this.blockIndexInTexture;
@@ -108,14 +109,11 @@ public class BlockLogger extends BlockContainer
 		 {
 			 if(metadata == 0)
 			 {
-				 return 32;
-			 } else
-			 {
-				 return 34;
+				 return this.blockIndexInTexture;
 			 }
 		 }
 			
-		 return 25;
+		 return 26;
 	  }
 		
 	 public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLiving par5EntityLiving)

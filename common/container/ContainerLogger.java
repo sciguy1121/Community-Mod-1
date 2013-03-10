@@ -17,8 +17,9 @@ public class ContainerLogger extends Container
 	{
 		this.entity = entity;
 		
-		this.addSlotToContainer(new SlotSpecific(entity, 0, 58, 38, new ItemStack(Block.wood)));
-		this.addSlotToContainer(new SlotOutput(entity, 1, 116, 38));
+		this.addSlotToContainer(new SlotSpecific(entity, 0, 56, 17, new ItemStack(Block.wood)));
+		this.addSlotToContainer(new SlotFuel(entity, 2, 56, 53));
+		this.addSlotToContainer(new SlotOutput(entity, 1, 116, 35));
 		
 	    int var3;
 
@@ -69,7 +70,13 @@ public class ContainerLogger extends Container
 				
 				return null;
 			}
-			else
+			else if(index != 2 && !getSlot(1).getHasStack() && SlotFuel.getItemBurnTime(stackInSlot) > 0)
+			{
+				ItemStack copy = slot.decrStackSize(slot.getStack().stackSize);
+				getSlot(1).putStack(copy);
+				
+				return null;
+			} else
 			{
 				return null;
 			}
