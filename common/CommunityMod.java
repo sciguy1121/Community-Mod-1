@@ -15,6 +15,7 @@ import communityMod.common.blocks.BlockMetal;
 import communityMod.common.blocks.BlockOre;
 import communityMod.common.blocks.BlocksHelper;
 import communityMod.common.entities.tile.TileEntityLavaFurnace;
+import communityMod.common.entities.tile.TileEntityLogger;
 import communityMod.common.entities.tile.TileEntityResearcher;
 import communityMod.common.gui.GuiHandler;
 import communityMod.common.items.ItemCoal;
@@ -79,6 +80,7 @@ public class CommunityMod {
 		
 		GameRegistry.registerTileEntity(TileEntityLavaFurnace.class, "GeothermalOven");
 		GameRegistry.registerTileEntity(TileEntityResearcher.class, "Researcher");
+		GameRegistry.registerTileEntity(TileEntityLogger.class, "Logger");
 	}
 
 	private static void smeltingRecipes(){

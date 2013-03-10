@@ -212,8 +212,8 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory
 	        }
 	     }
 
-		 compound.setInteger("Heat", heat);
-		 compound.setInteger("Progress", furnaceBurnTime);
+		 compound.setShort("Heat", (short) heat);
+		 compound.setShort("Progress", (short) furnaceBurnTime);
 		 compound.setTag("Items", var2);
 	 }
 	
@@ -222,7 +222,8 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory
 	     super.readFromNBT(compound);
 	     NBTTagList var2 = compound.getTagList("Items");
 	     
-	     this.heat = compound.getInteger("Heat");
+	     this.heat = (int)compound.getShort("Heat");
+	     this.furnaceBurnTime = (int)compound.getShort("Progress");
 	     
 	     this.inventory = new ItemStack[this.getSizeInventory()];
 	     
