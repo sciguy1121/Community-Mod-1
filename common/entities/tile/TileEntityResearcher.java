@@ -168,7 +168,7 @@ public class TileEntityResearcher extends TileEntity implements IInventory{
 					}
 					if(this.currentResearch.itemID == research.itemID && progress <= 25){
 						progress += 25 / ResearcherRecipes.instance().getProgressRequired(research);
-						decrStackSize(1, 1);
+						this.inventory[1].stackSize--;
 						delay = 0;
 					}
 				}
