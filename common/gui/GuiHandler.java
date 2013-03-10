@@ -1,8 +1,10 @@
 package communityMod.common.gui;
 
 import communityMod.common.container.ContainerLavaFurnace;
+import communityMod.common.container.ContainerLogger;
 import communityMod.common.container.ContainerResearcher;
 import communityMod.common.entities.tile.TileEntityLavaFurnace;
+import communityMod.common.entities.tile.TileEntityLogger;
 import communityMod.common.entities.tile.TileEntityResearcher;
 
 import net.minecraft.entity.player.EntityPlayer;
@@ -28,6 +30,11 @@ public class GuiHandler implements IGuiHandler
 			return new ContainerResearcher((TileEntityResearcher)entity, player.inventory);
 		}
 		
+		if (entity instanceof TileEntityLogger)
+		{
+			return new ContainerLogger((TileEntityLogger)entity, player.inventory);
+		}
+		
 		return null;
 	}
 
@@ -39,9 +46,17 @@ public class GuiHandler implements IGuiHandler
 		{
 			return new GuiLavaFurnace((TileEntityLavaFurnace)entity, player.inventory);
 		}
-		if(entity instanceof TileEntityResearcher){
+		
+		if(entity instanceof TileEntityResearcher)
+		{
 			return new GuiResearcher((TileEntityResearcher)entity, player.inventory);
 		}
+		
+		if(entity instanceof TileEntityLogger)
+		{
+			return new GuiLogger((TileEntityLogger)entity, player.inventory);
+		}
+		
 		return null;
 	}
 
