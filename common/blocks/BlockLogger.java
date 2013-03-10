@@ -18,9 +18,13 @@ import communityMod.common.CommunityMod;
 import communityMod.common.entities.tile.TileEntityLogger;
 import communityMod.common.entities.tile.TileEntityLogger;
 import communityMod.textures.TextureHandler;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockLogger extends BlockContainer
 {
+	private static boolean keepInventory = false;
+	
 	public BlockLogger(int par1, int par2) 
 	{
 		super(par1, par2, Material.wood);
@@ -48,7 +52,10 @@ public class BlockLogger extends BlockContainer
 	@Override
 	public void breakBlock(World world, int x, int y, int z, int i, int j)
 	{
-		dropItems(world, x, y, z);
+		if(!keepInventory)
+		{
+			dropItems(world, x, y, z);
+		}
 		super.breakBlock(world, x, y, z, i, j);
 	}
 	   
@@ -100,9 +107,56 @@ public class BlockLogger extends BlockContainer
 			 return 26;
 		 }
 		 
-		 if(metadata == side)
+		 switch(metadata)
 		 {
-			 return this.blockIndexInTexture;
+		 case 2:
+			 if(side == 2)
+			 {
+				 return this.blockIndexInTexture;
+			 } else if(side == 3)
+			 {
+				 return 26;
+			 }
+			 else
+			 {
+				 return 25;
+			 }
+		 case 3:
+			 if(side == 3)
+			 {
+				 return this.blockIndexInTexture;
+			 } else if(side == 2)
+			 {
+				 return 26;
+			 }
+			 else
+			 {
+				 return 25;
+			 }
+		 case 4:
+			 if(side == 4)
+			 {
+				 return this.blockIndexInTexture;
+			 } else if(side == 5)
+			 {
+				 return 26;
+			 }
+			 else
+			 {
+				 return 25;
+			 }
+		 case 5:
+			 if(side == 5)
+			 {
+				 return this.blockIndexInTexture;
+			 } else if(side == 4)
+			 {
+				 return 26;
+			 }
+			 else
+			 {
+				 return 25;
+			 }
 		 }
 			
 		 if(side == 3)   //For display as item
@@ -113,7 +167,7 @@ public class BlockLogger extends BlockContainer
 			 }
 		 }
 			
-		 return 26;
+		 return 25;
 	  }
 		
 	 public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLiving par5EntityLiving)
@@ -141,4 +195,29 @@ public class BlockLogger extends BlockContainer
 		 }
 	 }
 
+	 public static void updateState(boolean active, World world, int x, int y, int z)
+	 {
+		 int metadata = world.getBlockMetadata(x, y, z);
+		 TileEntityLogger tile = (TileEntityLogger)world.getBlockTileEntity(x, y, z);
+		 keepInventory = true;
+		 
+		 if(active)
+		 {
+			 world.setBlockWithNotify(x, y, z, BlocksHelper.loggeractive.blockID);
+		 }
+		 else
+		 {
+			 world.setBlockWithNotify(x, y, z, BlocksHelper.logger.blockID);
+		 }
+		 
+		 keepInventory = false;
+		 world.setBlockMetadata(x, y, z, metadata);
+		 
+		 if(tile != null)
+		 {
+			 tile.validate();
+			 world.setBlockTileEntity(x, y, z, tile);
+		 }
+	 }
+	 
 }

@@ -33,6 +33,21 @@ public class GuiLogger extends GuiContainer
 		int x = (this.width - this.xSize) / 2;
 		int y = (this.height - this.ySize) / 2;
 		this.drawTexturedModalRect(x, y, 0, 0, this.xSize, this.ySize);
+		
+		int progress = entity.progress;
+		int burn = entity.burning;
+		
+		if(progress != 0)
+		{
+			progress = progress / 2;
+		}
+		if (burn > 0)
+	    {
+	        burn = entity.burning / 12 * 200;
+	        this.drawTexturedModalRect(x + 56, y + 36 + 12 - burn, 176, 12 - burn, 15, burn + 2);
+	    }
+		
+		this.drawTexturedModalRect(x + 79, y + 35, 176, 14, progress - 5, 16);
 	}
 	
 	@Override
