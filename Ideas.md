@@ -22,7 +22,7 @@ Concrete Liquid - Flows like lava, eventually freezes into concrete
 
 Jackhammer - The quickest, yet most expensive way to break hardened concrete
 
-Block/Item Transport - Would Technicraft use a pipe based system or a mob/entity system like TC3.
+Block/Item Transport - Would Technicraft use a pipe based system or a mob/entity system like TC3.--Why not a new Idea?
 
 Tech Levels:
         
@@ -37,6 +37,7 @@ API's - Are there any API's that would be good to use? eg. Forestry
 Elemental Tools and Elemental Drills - made with the different new mod ingots
 
 Power/Energy System - like megajewls, EU, etc.
+    See energysys.txt by Pieman103021 for an extended idea
 
 Dimensional Ores - Make some ores only avalible in some dimensions
 
