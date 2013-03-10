@@ -97,7 +97,7 @@ public class BlockLogger extends BlockContainer
 	 {
 		 if(side == 0 || side == 1)
 		 {
-			 return 35;
+			 return 26;
 		 }
 		 if(metadata == side)
 		 {
@@ -115,32 +115,32 @@ public class BlockLogger extends BlockContainer
 			 }
 		 }
 			
-		 return 34;
+		 return 25;
 	  }
 		
-	  public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLiving par5EntityLiving)
-	  {
-		  int var6 = MathHelper.floor_double((double)(par5EntityLiving.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
+	 public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLiving par5EntityLiving)
+	 {
+		 int var6 = MathHelper.floor_double((double)(par5EntityLiving.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
 
-		  if (var6 == 0)
-		  {
-			  par1World.setBlockMetadataWithNotify(par2, par3, par4, 2);
-		  }
+		 if (var6 == 0)
+		 {
+			 par1World.setBlockMetadataWithNotify(par2, par3, par4, 2);
+		 }
 
-		  if (var6 == 1)
-		  {
-			  par1World.setBlockMetadataWithNotify(par2, par3, par4, 5);
-		  }
+		 if (var6 == 1)
+		 {
+			 par1World.setBlockMetadataWithNotify(par2, par3, par4, 5);
+		 }
 
-		  if (var6 == 2)
-		  {
-			  par1World.setBlockMetadataWithNotify(par2, par3, par4, 3);
-		  }
+		 if (var6 == 2)
+		 {
+			 par1World.setBlockMetadataWithNotify(par2, par3, par4, 3);
+		 }
 
-		  if (var6 == 3)
-		  {
-			  par1World.setBlockMetadataWithNotify(par2, par3, par4, 4);
-		  }
-	  }
+		 if (var6 == 3)
+		 {
+			 par1World.setBlockMetadataWithNotify(par2, par3, par4, 4);
+		 }
+	 }
 
 }
