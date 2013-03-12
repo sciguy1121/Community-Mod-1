@@ -63,7 +63,7 @@ Computer Minecarts - make the computer then make programs to make the minecart m
 
 DNA Usage and Cloning - DNA Extracter that takes dna from animal meat and lets you clone animals and change their characteristics
 
-GCEUs - Greater Community Energy Unit
+GCEUs - Greater Community Energy Units
 
 Goloms or Gnomes - Do stuff for you (like in TC3) just you can make them do whatever (maybe program with silicon chips)?
 
