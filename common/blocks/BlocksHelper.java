@@ -35,6 +35,8 @@ public class BlocksHelper {
 	public static Block researcher;
 	public static Block logger;
 	public static Block loggeractive;
+    public static Block arsmiumBlock;
+    public static Block urdiumBlock;
 
 	public static void setupBlocks() {
 		//Normal Blocks
@@ -56,7 +58,9 @@ public class BlocksHelper {
 		urdiumOre = new BlockOre(IDsHelper.urdiumOreID, 8).setHardness(18F).setResistance(22F).setBlockName("UrdiumOre").setCreativeTab(CommunityMod.modTab);
 		franciumOre = new BlockOre(IDsHelper.franciumOreID, 7).setHardness(18F).setResistance(22F).setBlockName("FranciumOre").setCreativeTab(CommunityMod.modTab);
 		franciumBlock = new BlockMetal(IDsHelper.franciumBlockID, 23).setHardness(18F).setResistance(22F).setBlockName("FranciumBlock").setCreativeTab(CommunityMod.modTab);
-		
+		arsmiumBlock = new BlockMetal(IDsHelper.arsmiumBlockID, 20).setHardness(18F).setResistance(22F).setBlockName("ArsmiumBlock").setCreativeTab(CommunityMod.modTab);
+        urdiumBlock = new BlockMetal(IDsHelper.urdiumBlockID, 21).setHardness(18F).setResistance(22F).setBlockName("UrdiumBlock").setCreativeTab(CommunityMod.modTab);
+        
 		//Machines
 		geothermalOven = new BlockLavaFurnace(IDsHelper.lavafurnaceID, 0).setHardness(2.5F).setResistance(22F).setBlockName("geothermaloven").setStepSound(Block.soundStoneFootstep).setCreativeTab(CommunityMod.modTab);
 		geothermalOvenActive = new BlockLavaFurnace(IDsHelper.lavafurnaceID + 1, 1).setHardness(2.5F).setResistance(22F).setBlockName("geothermaloven1").setStepSound(Block.soundStoneFootstep).setLightValue(0.3F);
@@ -92,6 +96,8 @@ public class BlocksHelper {
 		GameRegistry.registerBlock(geothermalOvenActive, "GeothermalOven1");
 		GameRegistry.registerBlock(researcher, "Researcher");
 		GameRegistry.registerBlock(logger, "Logger");
+        GameRegistry.registerBlock(arsmiumBlock, "ArsmiumBlock");
+        GameRegistry.registerBlock(urdiumBlock, "UrdiumBlock");
 	}
 	
 	private static void languageRegisters() {
@@ -117,6 +123,8 @@ public class BlocksHelper {
 		LanguageRegistry.addName(geothermalOven, "Geothermal Oven");
 		LanguageRegistry.addName(researcher, "Researcher");
 		LanguageRegistry.addName(logger, "Logger");
+        LanguageRegistry.addName(arsmiumBlock, "Arsmium Block");
+        LanguageRegistry.addName(urdiumBlock, "Urdium Block");
 	}
 
 }
