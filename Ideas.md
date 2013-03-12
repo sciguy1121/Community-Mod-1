@@ -61,7 +61,11 @@ iPod - made from silicon chips and plays your music disks (made from silicon chi
 
 Computer Minecarts - make the computer then make programs to make the minecart move
 
-DNA Usage and Cloning - DNA Extracter that takes dna from animal meat and lets you clone animals
+DNA Usage and Cloning - DNA Extracter that takes dna from animal meat and lets you clone animals and change their characteristics
+
+GCEUs - Greater Community Energy Unit
+
+Goloms or Gnomes - Do stuff for you (like in TC3) just you can make them do whatever (maybe program with silicon chips)?
 
 ##Realized Ideas
 
