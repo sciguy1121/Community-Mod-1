@@ -62,4 +62,4 @@ Sciguy1121 is the person responsible for setting up Technicraft.
 
 ####Technicraft IRC
 There is an IRC chat for discussing the community mod on this site: http://webchat.esper.net/ 
-Enter a nickname, along with #Technicraft in the channel box. Current status: Online
+Enter a nickname, along with #Technicraft in the channel box. Check in to see if the channel is up.
