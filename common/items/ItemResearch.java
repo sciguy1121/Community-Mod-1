@@ -14,9 +14,8 @@ public class ItemResearch extends Item{
 
 	Research research;
 	
-	public ItemResearch(int par1, int texture) {
+	public ItemResearch(int par1) {
 		super(par1);
-		this.iconIndex = texture;
 		this.setHasSubtypes(true);
 		this.setMaxDamage(0);
 	}
