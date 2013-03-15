@@ -11,9 +11,9 @@ import net.minecraft.creativetab.CreativeTabs;
 
 public class BlockConcrete extends Block{
 	
-    public BlockConcrete(int id, int texture, Material mat)
+    public BlockConcrete(int id, Material mat)
     {
-    	super(id, texture, mat);
+    	super(id, mat);
     	this.setCreativeTab(CommunityMod.modTab);
     }
    

@@ -6,10 +6,8 @@ import net.minecraft.item.Item;
 
 public class ItemOther extends Item{
 
-  public ItemOther(int id, int texture) {
+  public ItemOther(int id) {
 		super(id);
-		this.setTextureFile(TextureHandler.ITEM_TEXTURE_A);
-		this.iconIndex = texture;
-	}
+		this.setTextureFile(TextureHandler.ITEM_TEXTURE_A);	}
 
 }

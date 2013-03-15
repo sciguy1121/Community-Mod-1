@@ -24,9 +24,9 @@ public class BlockLavaFurnace extends BlockContainer
 {
 	private static boolean keepInventory = false;
 
-	public BlockLavaFurnace(int id, int texture) 
+	public BlockLavaFurnace(int id) 
 	{
-		super(id, texture, Material.rock);
+		super(id, Material.rock);
 		setTickRandomly(true);
 	}
 
