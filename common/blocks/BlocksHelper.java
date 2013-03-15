@@ -40,33 +40,33 @@ public class BlocksHelper {
 
 	public static void setupBlocks() {
 		//Normal Blocks
-		siliconOre = new BlockOre(IDsHelper.siliconOreID, 0).setHardness(10F).setResistance(0.2F).setBlockName("SiliconOre").setCreativeTab(CommunityMod.modTab);
-		leadOre = new BlockOre(IDsHelper.leadOreID, 1).setHardness(10F).setResistance(0.2F).setBlockName("LeadOre").setCreativeTab(CommunityMod.modTab);
-		titaniumOre = new BlockOre(IDsHelper.titaniumOreID, 2).setHardness(10F).setResistance(0.2F).setBlockName("TitaniumOre").setCreativeTab(CommunityMod.modTab);				
-		leadBlock = new BlockMetal(IDsHelper.leadBlockID, 17).setHardness(12F).setResistance(10F).setBlockName("LeadBlock").setCreativeTab(CommunityMod.modTab);
-		titaniumBlock = new BlockMetal(IDsHelper.titaniumBlockID, 18).setHardness(12F).setResistance(10F).setBlockName("TitaniumBlock").setCreativeTab(CommunityMod.modTab);
-		copperOre = new BlockOre(IDsHelper.copperOreID, 3).setHardness(10F).setResistance(0.2F).setBlockName("CopperOre").setCreativeTab(CommunityMod.modTab);
-		siliconBlock = new BlockMetal(IDsHelper.siliconBlockID, 16).setHardness(12F).setResistance(10F).setBlockName("SiliconBlock").setCreativeTab(CommunityMod.modTab);
-		ironGirder = new BlockIronGirder(IDsHelper.ironGirderID, 32, Material.iron).setBlockName("Iron Girder").setHardness(2F).setStepSound(Block.soundMetalFootstep);
-		concrete = new BlockConcrete(IDsHelper.concreteID, 33, Material.iron).setBlockName("Concrete").setHardness(2F).setResistance(17.5F).setStepSound(Block.soundStoneFootstep);
-		ligniteOre = new BlockOre(IDsHelper.ligniteOreID, 4).setBlockName("LigniteOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CommunityMod.modTab);
-		bituminousOre = new BlockOre(IDsHelper.bituminousOreID, 5).setBlockName("BituminousOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CommunityMod.modTab);
-		anthraciteOre = new BlockOre(IDsHelper.anthraciteOreID, 6).setBlockName("AnthraciteOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CommunityMod.modTab);
-		platinumOre = new BlockOre(IDsHelper.platinumOreID, 9).setHardness(18F).setResistance(22F).setBlockName("PlatinumOre").setCreativeTab(CommunityMod.modTab);
-		tungstenOre = new BlockOre(IDsHelper.tungstenOreID, 11).setHardness(18F).setResistance(22F).setBlockName("TungstenOre").setCreativeTab(CommunityMod.modTab);
-		arsmiumOre = new BlockOre(IDsHelper.arsmiumOreID, 10).setHardness(18F).setResistance(22F).setBlockName("ArsmiumOre").setCreativeTab(CommunityMod.modTab);
-		urdiumOre = new BlockOre(IDsHelper.urdiumOreID, 8).setHardness(18F).setResistance(22F).setBlockName("UrdiumOre").setCreativeTab(CommunityMod.modTab);
-		franciumOre = new BlockOre(IDsHelper.franciumOreID, 7).setHardness(18F).setResistance(22F).setBlockName("FranciumOre").setCreativeTab(CommunityMod.modTab);
-		franciumBlock = new BlockMetal(IDsHelper.franciumBlockID, 23).setHardness(18F).setResistance(22F).setBlockName("FranciumBlock").setCreativeTab(CommunityMod.modTab);
-		arsmiumBlock = new BlockMetal(IDsHelper.arsmiumBlockID, 20).setHardness(18F).setResistance(22F).setBlockName("ArsmiumBlock").setCreativeTab(CommunityMod.modTab);
-        urdiumBlock = new BlockMetal(IDsHelper.urdiumBlockID, 21).setHardness(18F).setResistance(22F).setBlockName("UrdiumBlock").setCreativeTab(CommunityMod.modTab);
+		siliconOre = new BlockOre(IDsHelper.siliconOreID).setHardness(10F).setResistance(0.2F).setUnlocalizedName("SiliconOre").setCreativeTab(CommunityMod.modTab);
+		leadOre = new BlockOre(IDsHelper.leadOreID).setHardness(10F).setResistance(0.2F).setUnlocalizedName("LeadOre").setCreativeTab(CommunityMod.modTab);
+		titaniumOre = new BlockOre(IDsHelper.titaniumOreID).setHardness(10F).setResistance(0.2F).setUnlocalizedName("TitaniumOre").setCreativeTab(CommunityMod.modTab);				
+		leadBlock = new BlockMetal(IDsHelper.leadBlockID).setHardness(12F).setResistance(10F).setUnlocalizedName("LeadBlock").setCreativeTab(CommunityMod.modTab);
+		titaniumBlock = new BlockMetal(IDsHelper.titaniumBlockID).setHardness(12F).setResistance(10F).setUnlocalizedName("TitaniumBlock").setCreativeTab(CommunityMod.modTab);
+		copperOre = new BlockOre(IDsHelper.copperOreID).setHardness(10F).setResistance(0.2F).setUnlocalizedName("CopperOre").setCreativeTab(CommunityMod.modTab);
+		siliconBlock = new BlockMetal(IDsHelper.siliconBlockID).setHardness(12F).setResistance(10F).setBlockName("SiliconBlock").setCreativeTab(CommunityMod.modTab);
+		ironGirder = new BlockIronGirder(IDsHelper.ironGirderID, Material.iron).setUnlocalizedName("Iron Girder").setHardness(2F).setStepSound(Block.soundMetalFootstep);
+		concrete = new BlockConcrete(IDsHelper.concreteID, Material.iron).setUnlocalizedName("Concrete").setHardness(2F).setResistance(17.5F).setStepSound(Block.soundStoneFootstep);
+		ligniteOre = new BlockOre(IDsHelper.ligniteOreID).setUnlocalizedName("LigniteOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CommunityMod.modTab);
+		bituminousOre = new BlockOre(IDsHelper.bituminousOreID).setUnlocalizedName("BituminousOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CommunityMod.modTab);
+		anthraciteOre = new BlockOre(IDsHelper.anthraciteOreID).setUnlocalizedName("AnthraciteOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CommunityMod.modTab);
+		platinumOre = new BlockOre(IDsHelper.platinumOreID).setHardness(18F).setResistance(22F).setUnlocalizedName("PlatinumOre").setCreativeTab(CommunityMod.modTab);
+		tungstenOre = new BlockOre(IDsHelper.tungstenOreID).setHardness(18F).setResistance(22F).setUnlocalizedName("TungstenOre").setCreativeTab(CommunityMod.modTab);
+		arsmiumOre = new BlockOre(IDsHelper.arsmiumOreID).setHardness(18F).setResistance(22F).setUnlocalizedName("ArsmiumOre").setCreativeTab(CommunityMod.modTab);
+		urdiumOre = new BlockOre(IDsHelper.urdiumOreID).setHardness(18F).setResistance(22F).setUnlocalizedName("UrdiumOre").setCreativeTab(CommunityMod.modTab);
+		franciumOre = new BlockOre(IDsHelper.franciumOreID).setHardness(18F).setResistance(22F).setUnlocalizedName("FranciumOre").setCreativeTab(CommunityMod.modTab);
+		franciumBlock = new BlockMetal(IDsHelper.franciumBlockID).setHardness(18F).setResistance(22F).setUnlocalizedName("FranciumBlock").setCreativeTab(CommunityMod.modTab);
+		arsmiumBlock = new BlockMetal(IDsHelper.arsmiumBlockID).setHardness(18F).setResistance(22F).setUnlocalizedName("ArsmiumBlock").setCreativeTab(CommunityMod.modTab);
+        urdiumBlock = new BlockMetal(IDsHelper.urdiumBlockID).setHardness(18F).setResistance(22F).setUnlocalizedName("UrdiumBlock").setCreativeTab(CommunityMod.modTab);
         
 		//Machines
-		geothermalOven = new BlockLavaFurnace(IDsHelper.lavafurnaceID, 0).setHardness(2.5F).setResistance(22F).setBlockName("geothermaloven").setStepSound(Block.soundStoneFootstep).setCreativeTab(CommunityMod.modTab);
-		geothermalOvenActive = new BlockLavaFurnace(IDsHelper.lavafurnaceID + 1, 1).setHardness(2.5F).setResistance(22F).setBlockName("geothermaloven1").setStepSound(Block.soundStoneFootstep).setLightValue(0.3F);
-		researcher = new BlockResearcher(IDsHelper.researcherID, 8).setBlockName("researcher").setHardness(2.5F).setResistance(10F).setCreativeTab(CommunityMod.modTab).setStepSound(Block.soundMetalFootstep);
-		logger = new BlockLogger(IDsHelper.loggerID, 9).setBlockName("logger").setHardness(1.2F).setStepSound(Block.soundWoodFootstep).setCreativeTab(CommunityMod.modTab);
-		loggeractive = new BlockLogger(IDsHelper.loggerID + 1, 10).setBlockName("logger").setHardness(1.2F).setStepSound(Block.soundWoodFootstep);
+		geothermalOven = new BlockLavaFurnace(IDsHelper.lavafurnaceID).setHardness(2.5F).setResistance(22F).setUnlocalizedName("geothermaloven").setStepSound(Block.soundStoneFootstep).setCreativeTab(CommunityMod.modTab);
+		geothermalOvenActive = new BlockLavaFurnace(IDsHelper.lavafurnaceID).setHardness(2.5F).setResistance(22F).setUnlocalizedName("geothermaloven1").setStepSound(Block.soundStoneFootstep).setLightValue(0.3F);
+		researcher = new BlockResearcher(IDsHelper.researcherID).setUnlocalizedName("researcher").setHardness(2.5F).setResistance(10F).setCreativeTab(CommunityMod.modTab).setStepSound(Block.soundMetalFootstep);
+		logger = new BlockLogger(IDsHelper.loggerID).setUnlocalizedName("logger").setHardness(1.2F).setStepSound(Block.soundWoodFootstep).setCreativeTab(CommunityMod.modTab);
+		loggeractive = new BlockLogger(IDsHelper.loggerID).setUnlocalizedName("logger").setHardness(1.2F).setStepSound(Block.soundWoodFootstep);
 		
 		gameRegisters();
 		languageRegisters();
@@ -96,8 +96,8 @@ public class BlocksHelper {
 		GameRegistry.registerBlock(geothermalOvenActive, "GeothermalOven1");
 		GameRegistry.registerBlock(researcher, "Researcher");
 		GameRegistry.registerBlock(logger, "Logger");
-        GameRegistry.registerBlock(arsmiumBlock, "ArsmiumBlock");
-        GameRegistry.registerBlock(urdiumBlock, "UrdiumBlock");
+        	GameRegistry.registerBlock(arsmiumBlock, "ArsmiumBlock");
+        	GameRegistry.registerBlock(urdiumBlock, "UrdiumBlock");
 	}
 	
 	private static void languageRegisters() {
@@ -123,8 +123,8 @@ public class BlocksHelper {
 		LanguageRegistry.addName(geothermalOven, "Geothermal Oven");
 		LanguageRegistry.addName(researcher, "Researcher");
 		LanguageRegistry.addName(logger, "Logger");
-        LanguageRegistry.addName(arsmiumBlock, "Arsmium Block");
-        LanguageRegistry.addName(urdiumBlock, "Urdium Block");
+        	LanguageRegistry.addName(arsmiumBlock, "Arsmium Block");
+        	LanguageRegistry.addName(urdiumBlock, "Urdium Block");
 	}
 
 }
