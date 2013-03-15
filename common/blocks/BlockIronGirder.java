@@ -11,9 +11,9 @@ import net.minecraft.creativetab.CreativeTabs;
 
 public class BlockIronGirder extends Block{
 	
-    public BlockIronGirder(int id, int texture, Material mat)
+    public BlockIronGirder(int id, Material mat)
     {
-    	super(id, texture, mat);
+    	super(id, mat);
     	this.setCreativeTab(CommunityMod.modTab);
     }
    

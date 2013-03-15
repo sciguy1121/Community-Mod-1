@@ -15,8 +15,8 @@ import communityMod.textures.TextureHandler;
 
 public class BlockOre extends Block{
 
-	public BlockOre(int id, int texture){
-		super(id, texture, Material.iron);
+	public BlockOre(int id){
+		super(id, Material.iron);
 		this.setStepSound(Block.soundStoneFootstep);
 	}
 	
