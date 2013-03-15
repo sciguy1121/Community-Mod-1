@@ -33,25 +33,25 @@ public class ItemsHelper{
 	
 	public static void setupItems() {
 		//Item Loading
-		leadIngot = new ItemIngot(IDsHelper.leadIngotID, 1).setCreativeTab(CommunityMod.modTab).setItemName("LeadIngot");
-		titaniumIngot = new ItemIngot(IDsHelper.titaniumIngotID, 0).setCreativeTab(CommunityMod.modTab).setItemName("TitaniumIngot");
-		copperIngot = new ItemIngot(IDsHelper.copperIngotID, 3).setCreativeTab(CommunityMod.modTab).setItemName("CopperIngot");
-		siliconIngot = new ItemIngot(IDsHelper.siliconIngotID, 2).setCreativeTab(CommunityMod.modTab).setItemName("SiliconIngot");
-		ligniteCoal = new ItemCoal(IDsHelper.ligniteCoalID, 4).setCreativeTab(CommunityMod.modTab).setItemName("Lignite");
-		bituminousCoal = new ItemCoal(IDsHelper.bituminousCoalID, 5).setCreativeTab(CommunityMod.modTab).setItemName("BituminousCoal");
-		anthraciteCoal = new ItemCoal(IDsHelper.anthraciteCoalID, 6).setCreativeTab(CommunityMod.modTab).setItemName("Anthracite");
-		platinumIngot = new ItemIngot(IDsHelper.platinumIngotID, 9).setCreativeTab(CommunityMod.modTab).setItemName("PlatinumIngot");
-		tungstenIngot = new ItemIngot(IDsHelper.tungstenIngotID, 11).setCreativeTab(CommunityMod.modTab).setItemName("TungstenIngot");
-		arsmiumIngot = new ItemIngot(IDsHelper.arsmiumIngotID, 10).setCreativeTab(CommunityMod.modTab).setItemName("ArsmiumIngot");
-		urdiumIngot = new ItemIngot(IDsHelper.urdiumIngotID, 8).setCreativeTab(CommunityMod.modTab).setItemName("UrdiumIngot");
-		franciumIngot = new ItemIngot(IDsHelper.franciumIngotID, 7).setCreativeTab(CommunityMod.modTab).setItemName("FranciumIngot");
-		cosileadiumAlloy = new ItemIngot(IDsHelper.cosileadiumAlloyID, 12).setCreativeTab(CommunityMod.modTab).setItemName("CosileadiumAlloy");
-		siliconWafer = new ItemOther(IDsHelper.siliconWaferID, 19).setCreativeTab(CommunityMod.modTab).setItemName("SiliconWafer");
-		siliconChip = new ItemOther(IDsHelper.siliconChipID, 20).setCreativeTab(CommunityMod.modTab).setItemName("SiliconChip");
-		research = new ItemResearch(IDsHelper.researchID, 31).setCreativeTab(CommunityMod.modTab).setItemName("Research");
+		leadIngot = new ItemIngot(IDsHelper.leadIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("LeadIngot");
+		titaniumIngot = new ItemIngot(IDsHelper.titaniumIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("TitaniumIngot");
+		copperIngot = new ItemIngot(IDsHelper.copperIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("CopperIngot");
+		siliconIngot = new ItemIngot(IDsHelper.siliconIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("SiliconIngot");
+		ligniteCoal = new ItemCoal(IDsHelper.ligniteCoalID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("Lignite");
+		bituminousCoal = new ItemCoal(IDsHelper.bituminousCoalID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("BituminousCoal");
+		anthraciteCoal = new ItemCoal(IDsHelper.anthraciteCoalID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("Anthracite");
+		platinumIngot = new ItemIngot(IDsHelper.platinumIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("PlatinumIngot");
+		tungstenIngot = new ItemIngot(IDsHelper.tungstenIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("TungstenIngot");
+		arsmiumIngot = new ItemIngot(IDsHelper.arsmiumIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("ArsmiumIngot");
+		urdiumIngot = new ItemIngot(IDsHelper.urdiumIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("UrdiumIngot");
+		franciumIngot = new ItemIngot(IDsHelper.franciumIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("FranciumIngot");
+		cosileadiumAlloy = new ItemIngot(IDsHelper.cosileadiumAlloyID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("CosileadiumAlloy");
+		siliconWafer = new ItemOther(IDsHelper.siliconWaferID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("SiliconWafer");
+		siliconChip = new ItemOther(IDsHelper.siliconChipID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("SiliconChip");
+		research = new ItemResearch(IDsHelper.researchID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("Research");
 		
-		rasberry = new ItemRasberry(IDsHelper.rasberryID, 4, 2.0F, false).setItemName("Rasberry").setIconIndex(48).setCreativeTab(CommunityMod.modTab);
-		rasberryPie = new ItemRasberryPie(IDsHelper.rasberryPieID, 8, 6.0F, false).setItemName("RasberryPie").setIconIndex(49).setCreativeTab(CommunityMod.modTab);
+		rasberry = new ItemRasberry(IDsHelper.rasberryID, 4, 2.0F, false).setUnlocalizedName("Rasberry").setCreativeTab(CommunityMod.modTab);
+		rasberryPie = new ItemRasberryPie(IDsHelper.rasberryPieID, 8, 6.0F, false).setUnlocalizedName("RasberryPie").setCreativeTab(CommunityMod.modTab);
 		
 		gameRegisters();
 		languageRegisters();
