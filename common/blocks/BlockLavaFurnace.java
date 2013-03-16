@@ -109,6 +109,7 @@ public class BlockLavaFurnace extends BlockContainer
 		  return false;
 	  }
 
+	  
 	  public static void updateState(boolean active, World world, int x, int y, int z)
 	  {
 		  int metadata = world.getBlockMetadata(x, y, z);

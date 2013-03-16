@@ -34,22 +34,5 @@ public class ItemResearch extends Item{
 			itemList.add(new ItemStack(itemID, 1, i));
 		}
 	}
-	
-	public int getIconFromDamage(int i){
-		switch(i){
-		case 0:
-			this.research = Research.siliconIngot;
-			return 31;
-		case 1:
-			this.research = Research.titaniumIngot;
-			return 31;
-		case 2:
-			this.research = Research.copperIngot;
-			return 31;
-		}
-		
-		this.research = Research.siliconIngot;
-		return 31;
-	}
-	
+
 }
