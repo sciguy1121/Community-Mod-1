@@ -38,9 +38,9 @@ Ideas	- LionBoyTheGamer,
 
 ### Details
 ####About
-Technicraft is a community mod for Minecraft v1.4.7 that incorporates advanced machinery with a brand new dimension to bring you a fantastic gameplay experience.
+Technicraft is a community mod for Minecraft v1.5 that incorporates advanced machinery with a brand new dimension to bring you a fantastic gameplay experience.
 
-Technicraft was originally started by sciguy1121. It's aim is to bring the modding community together to make one big mod with dozens of contributors.
+Technicraft was originally started by Sciguy1121. It's aim is to bring the modding community together to make one big mod with dozens of contributors.
 
 
 ####License
