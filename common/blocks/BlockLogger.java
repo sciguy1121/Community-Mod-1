@@ -99,6 +99,7 @@ public class BlockLogger extends BlockContainer
 		return TextureHandler.MACHINE_TEXTURE_A;
 	}
 	
+	/*
 	 public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLiving par5EntityLiving)
 	 {
 		 int var6 = MathHelper.floor_double((double)(par5EntityLiving.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
@@ -148,5 +149,5 @@ public class BlockLogger extends BlockContainer
 			 world.setBlockTileEntity(x, y, z, tile);
 		 }
 	 }
-	 
+	 */
 }

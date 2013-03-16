@@ -42,10 +42,6 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @NetworkMod(clientSideRequired = true, serverSideRequired = false, packetHandler = CommonPacketHandler.class, channels = {"CommunityMod"})
 
 public class CommunityMod {
-
-	@SidedProxy(clientSide = "communityMod.client.ClientProxyCommunityMod",
-				serverSide = "communityMod.common.CommonProxyCommunityMod")
-	public static ClientProxyCommunityMod proxy = new ClientProxyCommunityMod();
 	
 	@Instance
 	public static CommunityMod instance = new CommunityMod();
@@ -66,8 +62,6 @@ public class CommunityMod {
 
 	@Init
 	public void load(FMLInitializationEvent event){
-		proxy.registerRenders();
-        
         BlocksHelper.setupBlocks();
         ItemsHelper.setupItems();
         
