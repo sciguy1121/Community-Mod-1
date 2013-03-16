@@ -46,7 +46,7 @@ public class BlocksHelper {
 		leadBlock = new BlockMetal(IDsHelper.leadBlockID).setHardness(12F).setResistance(10F).setUnlocalizedName("LeadBlock").setCreativeTab(CommunityMod.modTab);
 		titaniumBlock = new BlockMetal(IDsHelper.titaniumBlockID).setHardness(12F).setResistance(10F).setUnlocalizedName("TitaniumBlock").setCreativeTab(CommunityMod.modTab);
 		copperOre = new BlockOre(IDsHelper.copperOreID).setHardness(10F).setResistance(0.2F).setUnlocalizedName("CopperOre").setCreativeTab(CommunityMod.modTab);
-		siliconBlock = new BlockMetal(IDsHelper.siliconBlockID).setHardness(12F).setResistance(10F).setBlockName("SiliconBlock").setCreativeTab(CommunityMod.modTab);
+		siliconBlock = new BlockMetal(IDsHelper.siliconBlockID).setHardness(12F).setResistance(10F).setUnlocalizedName("SiliconBlock").setCreativeTab(CommunityMod.modTab);
 		ironGirder = new BlockIronGirder(IDsHelper.ironGirderID, Material.iron).setUnlocalizedName("Iron Girder").setHardness(2F).setStepSound(Block.soundMetalFootstep);
 		concrete = new BlockConcrete(IDsHelper.concreteID, Material.iron).setUnlocalizedName("Concrete").setHardness(2F).setResistance(17.5F).setStepSound(Block.soundStoneFootstep);
 		ligniteOre = new BlockOre(IDsHelper.ligniteOreID).setUnlocalizedName("LigniteOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CommunityMod.modTab);
@@ -63,10 +63,10 @@ public class BlocksHelper {
         
 		//Machines
 		geothermalOven = new BlockLavaFurnace(IDsHelper.lavafurnaceID).setHardness(2.5F).setResistance(22F).setUnlocalizedName("geothermaloven").setStepSound(Block.soundStoneFootstep).setCreativeTab(CommunityMod.modTab);
-		geothermalOvenActive = new BlockLavaFurnace(IDsHelper.lavafurnaceID).setHardness(2.5F).setResistance(22F).setUnlocalizedName("geothermaloven1").setStepSound(Block.soundStoneFootstep).setLightValue(0.3F);
+		geothermalOvenActive = new BlockLavaFurnace(IDsHelper.lavafurnaceID + 1).setHardness(2.5F).setResistance(22F).setUnlocalizedName("geothermaloven1").setStepSound(Block.soundStoneFootstep).setLightValue(0.3F);
 		researcher = new BlockResearcher(IDsHelper.researcherID).setUnlocalizedName("researcher").setHardness(2.5F).setResistance(10F).setCreativeTab(CommunityMod.modTab).setStepSound(Block.soundMetalFootstep);
 		logger = new BlockLogger(IDsHelper.loggerID).setUnlocalizedName("logger").setHardness(1.2F).setStepSound(Block.soundWoodFootstep).setCreativeTab(CommunityMod.modTab);
-		loggeractive = new BlockLogger(IDsHelper.loggerID).setUnlocalizedName("logger").setHardness(1.2F).setStepSound(Block.soundWoodFootstep);
+		loggeractive = new BlockLogger(IDsHelper.loggerID + 10).setUnlocalizedName("logger").setHardness(1.2F).setStepSound(Block.soundWoodFootstep);
 		
 		gameRegisters();
 		languageRegisters();
