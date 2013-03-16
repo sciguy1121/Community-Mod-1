@@ -28,11 +28,6 @@ public class BlockResearcher extends BlockContainer{
 		return TextureHandler.MACHINE_TEXTURE_A;
 	}
 	
-	public int getBlockTextureFromSide(int side){
-		
-		return side == 1 ? this.blockIndexInTexture : (side == 0 ? this.blockIndexInTexture + 15 : (side != 2 && side != 4 ? this.blockIndexInTexture + 16: this.blockIndexInTexture + 16));
-    }
-	
 	@Override
 	public TileEntity createNewTileEntity(World var1){
 		return new TileEntityResearcher();
