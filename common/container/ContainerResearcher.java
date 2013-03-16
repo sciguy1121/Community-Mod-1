@@ -1,5 +1,7 @@
-package communityMod.common.container;
+package mods.communityMod.common.container;
 
+import mods.communityMod.common.entities.tile.TileEntityLavaFurnace;
+import mods.communityMod.common.entities.tile.TileEntityResearcher;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -7,8 +9,6 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntityFurnace;
-import communityMod.common.entities.tile.TileEntityLavaFurnace;
-import communityMod.common.entities.tile.TileEntityResearcher;
 
 public class ContainerResearcher extends Container{
 

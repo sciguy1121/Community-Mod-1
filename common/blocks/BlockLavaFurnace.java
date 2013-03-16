@@ -1,7 +1,11 @@
-package communityMod.common.blocks;
+package mods.communityMod.common.blocks;
 
 import java.util.Random;
 
+import mods.communityMod.common.CommunityMod;
+import mods.communityMod.common.entities.tile.TileEntityLavaFurnace;
+import mods.communityMod.common.entities.tile.TileEntityLogger;
+import mods.communityMod.textures.TextureHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -15,10 +19,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-import communityMod.common.CommunityMod;
-import communityMod.common.entities.tile.TileEntityLavaFurnace;
-import communityMod.common.entities.tile.TileEntityLogger;
-import communityMod.textures.TextureHandler;
 
 public class BlockLavaFurnace extends BlockContainer
 {

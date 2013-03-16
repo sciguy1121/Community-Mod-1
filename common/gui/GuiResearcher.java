@@ -1,14 +1,14 @@
-package communityMod.common.gui;
+package mods.communityMod.common.gui;
 
 import org.lwjgl.opengl.GL11;
 
+import mods.communityMod.common.container.ContainerResearcher;
+import mods.communityMod.common.entities.tile.TileEntityResearcher;
+import mods.communityMod.textures.TextureHandler;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.util.StatCollector;
-import communityMod.common.container.ContainerResearcher;
-import communityMod.common.entities.tile.TileEntityResearcher;
-import communityMod.textures.TextureHandler;
 
 public class GuiResearcher extends GuiContainer{
 

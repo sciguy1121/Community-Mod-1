@@ -1,17 +1,15 @@
-package communityMod.common.blocks;
+package mods.communityMod.common.blocks;
 
 import java.util.Random;
 
-import communityMod.client.ClientProxyCommunityMod;
-import communityMod.common.IDsHelper;
-import communityMod.textures.TextureHandler;
 
+import mods.communityMod.client.ClientProxyCommunityMod;
+import mods.communityMod.common.IDsHelper;
+import mods.communityMod.common.items.ItemsHelper;
+import mods.communityMod.textures.TextureHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-import communityMod.common.IDsHelper;
-import communityMod.common.items.ItemsHelper;
-import communityMod.textures.TextureHandler;
 
 public class BlockOre extends Block{
 

@@ -1,12 +1,12 @@
-package communityMod.common.blocks;
+package mods.communityMod.common.blocks;
 
 import java.util.Random;
 
-import communityMod.common.CommunityMod;
-import communityMod.common.entities.tile.TileEntityLavaFurnace;
-import communityMod.common.entities.tile.TileEntityResearcher;
-import communityMod.textures.TextureHandler;
 
+import mods.communityMod.common.CommunityMod;
+import mods.communityMod.common.entities.tile.TileEntityLavaFurnace;
+import mods.communityMod.common.entities.tile.TileEntityResearcher;
+import mods.communityMod.textures.TextureHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;

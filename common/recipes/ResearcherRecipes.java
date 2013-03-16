@@ -1,10 +1,10 @@
-package communityMod.common.recipes;
+package mods.communityMod.common.recipes;
 
 import java.util.Arrays;
 import java.util.HashMap;
 
-import communityMod.common.items.ItemsHelper;
 
+import mods.communityMod.common.items.ItemsHelper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 

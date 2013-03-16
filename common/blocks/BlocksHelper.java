@@ -1,10 +1,10 @@
-package communityMod.common.blocks;
+package mods.communityMod.common.blocks;
 
+import mods.communityMod.common.CommunityMod;
+import mods.communityMod.common.IDsHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-import communityMod.common.CommunityMod;
-import communityMod.common.IDsHelper;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;

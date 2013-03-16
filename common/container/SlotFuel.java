@@ -1,4 +1,4 @@
-package communityMod.common.container;
+package mods.communityMod.common.container;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;

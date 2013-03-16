@@ -1,7 +1,7 @@
-package communityMod.common.blocks;
+package mods.communityMod.common.blocks;
 
-import communityMod.textures.TextureHandler;
 
+import mods.communityMod.textures.TextureHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 

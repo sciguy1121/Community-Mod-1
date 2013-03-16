@@ -1,10 +1,10 @@
-package communityMod.common.blocks;
+package mods.communityMod.common.blocks;
 
 import java.util.Random;
 
-import communityMod.common.CommunityMod;
-import communityMod.textures.TextureHandler;
 
+import mods.communityMod.common.CommunityMod;
+import mods.communityMod.textures.TextureHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -33,12 +33,4 @@ public class BlockIronGirder extends Block{
     	return this.blockID;
     }
    
-    public int getBlockTextureFromSide(int side){
-    	if(side == 0 || side == 1){
-    		return this.blockIndexInTexture + 1;              
-    	}              
-    	else{
-    		return this.blockIndexInTexture;
-    	}
-    }
 }

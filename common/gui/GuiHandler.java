@@ -1,12 +1,12 @@
-package communityMod.common.gui;
+package mods.communityMod.common.gui;
 
-import communityMod.common.container.ContainerLavaFurnace;
-import communityMod.common.container.ContainerLogger;
-import communityMod.common.container.ContainerResearcher;
-import communityMod.common.entities.tile.TileEntityLavaFurnace;
-import communityMod.common.entities.tile.TileEntityLogger;
-import communityMod.common.entities.tile.TileEntityResearcher;
 
+import mods.communityMod.common.container.ContainerLavaFurnace;
+import mods.communityMod.common.container.ContainerLogger;
+import mods.communityMod.common.container.ContainerResearcher;
+import mods.communityMod.common.entities.tile.TileEntityLavaFurnace;
+import mods.communityMod.common.entities.tile.TileEntityLogger;
+import mods.communityMod.common.entities.tile.TileEntityResearcher;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
