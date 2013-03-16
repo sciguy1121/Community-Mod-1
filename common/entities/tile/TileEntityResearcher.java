@@ -1,7 +1,7 @@
-package communityMod.common.entities.tile;
+package mods.communityMod.common.entities.tile;
 
-import communityMod.common.recipes.ResearcherRecipes;
 
+import mods.communityMod.common.recipes.ResearcherRecipes;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;

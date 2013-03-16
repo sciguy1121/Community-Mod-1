@@ -1,9 +1,9 @@
-package communityMod.common;
+package mods.communityMod.common;
 
-import communityMod.common.items.ItemsHelper;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import mods.communityMod.common.items.ItemsHelper;
 import net.minecraft.creativetab.CreativeTabs;
 
 public class CreativeTab extends CreativeTabs {

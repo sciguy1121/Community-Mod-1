@@ -1,10 +1,10 @@
-package communityMod.common.items;
+package mods.communityMod.common.items;
 
 import java.util.List;
 
-import communityMod.common.research.Research;
-import communityMod.textures.TextureHandler;
 
+import mods.communityMod.common.research.Research;
+import mods.communityMod.textures.TextureHandler;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;

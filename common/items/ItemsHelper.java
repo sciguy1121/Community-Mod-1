@@ -1,10 +1,10 @@
-package communityMod.common.items;
+package mods.communityMod.common.items;
 
-import communityMod.common.CommunityMod;
-import communityMod.common.IDsHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
+import mods.communityMod.common.CommunityMod;
+import mods.communityMod.common.IDsHelper;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 

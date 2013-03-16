@@ -1,7 +1,7 @@
-package communityMod.common.container;
+package mods.communityMod.common.container;
 
-import communityMod.common.entities.tile.TileEntityLogger;
 
+import mods.communityMod.common.entities.tile.TileEntityLogger;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;

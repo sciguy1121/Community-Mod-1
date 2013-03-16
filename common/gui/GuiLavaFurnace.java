@@ -1,11 +1,11 @@
-package communityMod.common.gui;
+package mods.communityMod.common.gui;
 
 import org.lwjgl.opengl.GL11;
 
-import communityMod.common.container.ContainerLavaFurnace;
-import communityMod.common.entities.tile.TileEntityLavaFurnace;
-import communityMod.textures.TextureHandler;
 
+import mods.communityMod.common.container.ContainerLavaFurnace;
+import mods.communityMod.common.entities.tile.TileEntityLavaFurnace;
+import mods.communityMod.textures.TextureHandler;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;

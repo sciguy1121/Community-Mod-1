@@ -1,13 +1,13 @@
-package communityMod.common.research;
+package mods.communityMod.common.research;
 
 import java.util.HashMap;
 
+import mods.communityMod.common.IDsHelper;
+import mods.communityMod.common.blocks.BlocksHelper;
+import mods.communityMod.common.items.ItemsHelper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-import communityMod.common.IDsHelper;
-import communityMod.common.blocks.BlocksHelper;
-import communityMod.common.items.ItemsHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ResearchHandler {

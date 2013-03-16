@@ -1,7 +1,7 @@
-package communityMod.common;
+package mods.communityMod.common;
 
-import communityMod.common.items.ItemsHelper;
 
+import mods.communityMod.common.items.ItemsHelper;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.IFuelHandler;
 

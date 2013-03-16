@@ -1,7 +1,7 @@
-package communityMod.common.items;
+package mods.communityMod.common.items;
 
-import communityMod.textures.TextureHandler;
 
+import mods.communityMod.textures.TextureHandler;
 import net.minecraft.item.Item;
 
 public class ItemOther extends Item{

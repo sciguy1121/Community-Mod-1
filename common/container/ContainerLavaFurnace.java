@@ -1,7 +1,7 @@
-package communityMod.common.container;
+package mods.communityMod.common.container;
 
-import communityMod.common.entities.tile.TileEntityLavaFurnace;
 
+import mods.communityMod.common.entities.tile.TileEntityLavaFurnace;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;

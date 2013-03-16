@@ -1,4 +1,4 @@
-package communityMod.common.container;
+package mods.communityMod.common.container;
 
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;

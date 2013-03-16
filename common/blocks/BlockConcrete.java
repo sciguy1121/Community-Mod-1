@@ -1,10 +1,10 @@
-package communityMod.common.blocks;
+package mods.communityMod.common.blocks;
 
 import java.util.Random;
 
-import communityMod.common.CommunityMod;
-import communityMod.textures.TextureHandler;
 
+import mods.communityMod.common.CommunityMod;
+import mods.communityMod.textures.TextureHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;

@@ -1,4 +1,4 @@
-package communityMod.common;
+package mods.communityMod.common;
 
 import net.minecraftforge.common.Configuration;
 

@@ -1,5 +1,7 @@
-package communityMod.common.entities.tile;
+package mods.communityMod.common.entities.tile;
 
+import mods.communityMod.common.blocks.BlockLavaFurnace;
+import mods.communityMod.common.blocks.BlocksHelper;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -9,8 +11,6 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 
-import communityMod.common.blocks.BlockLavaFurnace;
-import communityMod.common.blocks.BlocksHelper;
 
 public class TileEntityLavaFurnace extends TileEntity implements IInventory {
 	private ItemStack[] inventory;

@@ -1,8 +1,8 @@
-package communityMod.client;
+package mods.communityMod.client;
 
+import mods.communityMod.common.CommonProxyCommunityMod;
+import mods.communityMod.textures.TextureHandler;
 import net.minecraftforge.client.MinecraftForgeClient;
-import communityMod.common.CommonProxyCommunityMod;
-import communityMod.textures.TextureHandler;
 
 public class ClientProxyCommunityMod extends CommonProxyCommunityMod{
 	

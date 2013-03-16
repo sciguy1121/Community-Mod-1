@@ -1,4 +1,4 @@
-package communityMod.common.research;
+package mods.communityMod.common.research;
 
 public class Research {
 
