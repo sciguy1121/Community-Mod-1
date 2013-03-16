@@ -43,10 +43,10 @@ public class BlocksHelper {
 		siliconOre = new BlockOre(IDsHelper.siliconOreID, "SiliconOre").setHardness(10F).setResistance(0.2F).setUnlocalizedName("SiliconOre").setCreativeTab(CommunityMod.modTab);
 		leadOre = new BlockOre(IDsHelper.leadOreID, "LeadOre").setHardness(10F).setResistance(0.2F).setUnlocalizedName("LeadOre").setCreativeTab(CommunityMod.modTab);
 		titaniumOre = new BlockOre(IDsHelper.titaniumOreID, "TitaniumOre").setHardness(10F).setResistance(0.2F).setUnlocalizedName("TitaniumOre").setCreativeTab(CommunityMod.modTab);				
-		leadBlock = new BlockMetal(IDsHelper.leadBlockID).setHardness(12F).setResistance(10F).setUnlocalizedName("LeadBlock").setCreativeTab(CommunityMod.modTab);
-		titaniumBlock = new BlockMetal(IDsHelper.titaniumBlockID).setHardness(12F).setResistance(10F).setUnlocalizedName("TitaniumBlock").setCreativeTab(CommunityMod.modTab);
+		leadBlock = new BlockMetal(IDsHelper.leadBlockID, "LeadBlock").setHardness(12F).setResistance(10F).setUnlocalizedName("LeadBlock").setCreativeTab(CommunityMod.modTab);
+		titaniumBlock = new BlockMetal(IDsHelper.titaniumBlockID, "TitaniumBlock").setHardness(12F).setResistance(10F).setUnlocalizedName("TitaniumBlock").setCreativeTab(CommunityMod.modTab);
 		copperOre = new BlockOre(IDsHelper.copperOreID, "CopperOre").setHardness(10F).setResistance(0.2F).setUnlocalizedName("CopperOre").setCreativeTab(CommunityMod.modTab);
-		siliconBlock = new BlockMetal(IDsHelper.siliconBlockID).setHardness(12F).setResistance(10F).setUnlocalizedName("SiliconBlock").setCreativeTab(CommunityMod.modTab);
+		siliconBlock = new BlockMetal(IDsHelper.siliconBlockID, "SiliconBlock").setHardness(12F).setResistance(10F).setUnlocalizedName("SiliconBlock").setCreativeTab(CommunityMod.modTab);
 		ironGirder = new BlockIronGirder(IDsHelper.ironGirderID, Material.iron).setUnlocalizedName("Iron Girder").setHardness(2F).setStepSound(Block.soundMetalFootstep);
 		concrete = new BlockConcrete(IDsHelper.concreteID, Material.iron).setUnlocalizedName("Concrete").setHardness(2F).setResistance(17.5F).setStepSound(Block.soundStoneFootstep);
 		ligniteOre = new BlockOre(IDsHelper.ligniteOreID, "LigniteOre").setUnlocalizedName("LigniteOre").setHardness(10F).setResistance(0.2F).setCreativeTab(CommunityMod.modTab);
@@ -57,9 +57,9 @@ public class BlocksHelper {
 		arsmiumOre = new BlockOre(IDsHelper.arsmiumOreID, "ArsmiumOre").setHardness(18F).setResistance(22F).setUnlocalizedName("ArsmiumOre").setCreativeTab(CommunityMod.modTab);
 		urdiumOre = new BlockOre(IDsHelper.urdiumOreID, "UrdiumOre").setHardness(18F).setResistance(22F).setUnlocalizedName("UrdiumOre").setCreativeTab(CommunityMod.modTab);
 		franciumOre = new BlockOre(IDsHelper.franciumOreID, "FranciumOre").setHardness(18F).setResistance(22F).setUnlocalizedName("FranciumOre").setCreativeTab(CommunityMod.modTab);
-		franciumBlock = new BlockMetal(IDsHelper.franciumBlockID).setHardness(18F).setResistance(22F).setUnlocalizedName("FranciumBlock").setCreativeTab(CommunityMod.modTab);
-		arsmiumBlock = new BlockMetal(IDsHelper.arsmiumBlockID).setHardness(18F).setResistance(22F).setUnlocalizedName("ArsmiumBlock").setCreativeTab(CommunityMod.modTab);
-        urdiumBlock = new BlockMetal(IDsHelper.urdiumBlockID).setHardness(18F).setResistance(22F).setUnlocalizedName("UrdiumBlock").setCreativeTab(CommunityMod.modTab);
+		franciumBlock = new BlockMetal(IDsHelper.franciumBlockID, "FranciumBlock").setHardness(18F).setResistance(22F).setUnlocalizedName("FranciumBlock").setCreativeTab(CommunityMod.modTab);
+		arsmiumBlock = new BlockMetal(IDsHelper.arsmiumBlockID, "ArsmiumBlock").setHardness(18F).setResistance(22F).setUnlocalizedName("ArsmiumBlock").setCreativeTab(CommunityMod.modTab);
+        urdiumBlock = new BlockMetal(IDsHelper.urdiumBlockID, "UrdiumBlock").setHardness(18F).setResistance(22F).setUnlocalizedName("UrdiumBlock").setCreativeTab(CommunityMod.modTab);
         
 		//Machines
 		geothermalOven = new BlockLavaFurnace(IDsHelper.lavafurnaceID).setHardness(2.5F).setResistance(22F).setUnlocalizedName("geothermaloven").setStepSound(Block.soundStoneFootstep).setCreativeTab(CommunityMod.modTab);
