@@ -160,7 +160,7 @@ public class TileEntityLogger extends TileEntity implements IInventory
 		if(powered != burning > 0)
 		{
 			this.onInventoryChanged();
-			BlockLogger.updateState(burning > 0, worldObj, xCoord, yCoord, zCoord);
+			//BlockLogger.updateState(burning > 0, worldObj, xCoord, yCoord, zCoord);
 		}
 	}
 	

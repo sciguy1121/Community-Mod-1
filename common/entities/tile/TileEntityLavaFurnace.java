@@ -153,12 +153,14 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory {
 			furnaceBurnTime = 0;
 		}
 
+		/*
 		BlockLavaFurnace
 				.updateState(
 						worldObj.getBlockId(xCoord, yCoord - 1, zCoord) == Block.lavaStill.blockID
 								|| worldObj.getBlockId(xCoord, yCoord - 1,
 										zCoord) == Block.lavaMoving.blockID,
 						worldObj, xCoord, yCoord, zCoord);
+		*/
 	}
 
 	public boolean isSmelting() {

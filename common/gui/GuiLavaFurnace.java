@@ -27,7 +27,7 @@ public class GuiLavaFurnace extends GuiContainer
 	{
 		int picture = mc.renderEngine.getTexture(TextureHandler.LAVAFURNACE_GUI); 
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-		this.mc.renderEngine.bindTexture(picture);
+		//this.mc.renderEngine.bindTexture(picture);
 		int x = (this.width - this.xSize) / 2;
 		int y = (this.height - this.ySize) / 2;
 		this.drawTexturedModalRect(x, y, 0, 0, this.xSize, this.ySize);
