@@ -35,8 +35,8 @@ public class BlocksHelper {
 	public static Block researcher;
 	public static Block logger;
 	public static Block loggeractive;
-    public static Block arsmiumBlock;
-    public static Block urdiumBlock;
+	public static Block arsmiumBlock;
+	public static Block urdiumBlock;
 
 	public static void setupBlocks() {
 		//Normal Blocks
