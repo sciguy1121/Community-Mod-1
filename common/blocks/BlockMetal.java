@@ -7,8 +7,8 @@ import net.minecraft.block.material.Material;
 
 public class BlockMetal extends Block{
 
-	public BlockMetal(int par1, int texture) {
-		super(par1, texture, Material.iron);
+	public BlockMetal(int par1) {
+		super(par1, Material.iron);
 	}
 	
 	public String getTextureFile(){

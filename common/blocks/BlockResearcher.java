@@ -20,8 +20,8 @@ import net.minecraft.world.World;
 
 public class BlockResearcher extends BlockContainer{
 
-	public BlockResearcher(int id, int texture) {
-		super(id, texture, Material.iron);
+	public BlockResearcher(int id) {
+		super(id, Material.iron);
 	}
 
 	public String getTextureFile(){

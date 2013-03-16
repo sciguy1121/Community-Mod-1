@@ -30,6 +30,8 @@ public class IDsHelper {
 	public static int lavafurnaceID;
 	public static int researcherID;
 	public static int loggerID;
+    public static int arsmiumBlockID;
+    public static int urdiumBlockID;
 
 	//Item IDs
 	public static int leadIngotID;
@@ -75,7 +77,9 @@ public class IDsHelper {
 		lavafurnaceID = config.get(blockids, "Lava Furnace ID", 801).getInt();
 		researcherID = config.get(blockids, "Researcher ID", 803).getInt();
 		loggerID = config.get(blockids, "Logger ID", 804).getInt();
-
+        arsmiumBlockID = config.get(blockids, "Arsmium Block ID", 805).getInt();
+		urdiumBlockID = config.get(blockids, "Urdium Block ID", 806).getInt();
+        
 		//Item IDs
 		leadIngotID = config.get(itemids, "Lead Ingot ID", 1000).getInt();
 		titaniumIngotID = config.get(itemids, "Titanium Ingot ID", 1001).getInt();
