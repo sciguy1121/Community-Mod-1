@@ -33,21 +33,21 @@ public class ItemsHelper{
 	
 	public static void setupItems() {
 		//Item Loading
-		leadIngot = new ItemIngot(IDsHelper.leadIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("LeadIngot");
-		titaniumIngot = new ItemIngot(IDsHelper.titaniumIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("TitaniumIngot");
-		copperIngot = new ItemIngot(IDsHelper.copperIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("CopperIngot");
-		siliconIngot = new ItemIngot(IDsHelper.siliconIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("SiliconIngot");
+		leadIngot = new ItemIngot(IDsHelper.leadIngotID,"LeadIngot").setCreativeTab(CommunityMod.modTab).setUnlocalizedName("LeadIngot");
+		titaniumIngot = new ItemIngot(IDsHelper.titaniumIngotID,"TitaniumIngot").setCreativeTab(CommunityMod.modTab).setUnlocalizedName("TitaniumIngot");
+		copperIngot = new ItemIngot(IDsHelper.copperIngotID,"CopperIngot").setCreativeTab(CommunityMod.modTab).setUnlocalizedName("CopperIngot");
+		siliconIngot = new ItemIngot(IDsHelper.siliconIngotID,"SiliconIngot").setCreativeTab(CommunityMod.modTab).setUnlocalizedName("SiliconIngot");
 		ligniteCoal = new ItemCoal(IDsHelper.ligniteCoalID, "LigniteCoal").setCreativeTab(CommunityMod.modTab).setUnlocalizedName("Lignite");
 		bituminousCoal = new ItemCoal(IDsHelper.bituminousCoalID, "BituminousCoal").setCreativeTab(CommunityMod.modTab).setUnlocalizedName("BituminousCoal");
 		anthraciteCoal = new ItemCoal(IDsHelper.anthraciteCoalID, "AnthriciteCoal").setCreativeTab(CommunityMod.modTab).setUnlocalizedName("Anthracite");
-		platinumIngot = new ItemIngot(IDsHelper.platinumIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("PlatinumIngot");
-		tungstenIngot = new ItemIngot(IDsHelper.tungstenIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("TungstenIngot");
-		arsmiumIngot = new ItemIngot(IDsHelper.arsmiumIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("ArsmiumIngot");
-		urdiumIngot = new ItemIngot(IDsHelper.urdiumIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("UrdiumIngot");
-		franciumIngot = new ItemIngot(IDsHelper.franciumIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("FranciumIngot");
-		cosileadiumAlloy = new ItemIngot(IDsHelper.cosileadiumAlloyID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("CosileadiumAlloy");
-		siliconWafer = new ItemOther(IDsHelper.siliconWaferID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("SiliconWafer");
-		siliconChip = new ItemOther(IDsHelper.siliconChipID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("SiliconChip");
+		platinumIngot = new ItemIngot(IDsHelper.platinumIngotID,"Platinum").setCreativeTab(CommunityMod.modTab).setUnlocalizedName("PlatinumIngot");
+		tungstenIngot = new ItemIngot(IDsHelper.tungstenIngotID,"Tungsten").setCreativeTab(CommunityMod.modTab).setUnlocalizedName("TungstenIngot");
+		arsmiumIngot = new ItemIngot(IDsHelper.arsmiumIngotID,"Arsmium").setCreativeTab(CommunityMod.modTab).setUnlocalizedName("ArsmiumIngot");
+		urdiumIngot = new ItemIngot(IDsHelper.urdiumIngotID,"Urdium").setCreativeTab(CommunityMod.modTab).setUnlocalizedName("UrdiumIngot");
+		franciumIngot = new ItemIngot(IDsHelper.franciumIngotID,"FranciumIngot").setCreativeTab(CommunityMod.modTab).setUnlocalizedName("FranciumIngot");
+		cosileadiumAlloy = new ItemIngot(IDsHelper.cosileadiumAlloyID,"CosileadiumAlloy").setCreativeTab(CommunityMod.modTab).setUnlocalizedName("CosileadiumAlloy");
+		siliconWafer = new ItemOther(IDsHelper.siliconWaferID,"SiliconWafer").setCreativeTab(CommunityMod.modTab).setUnlocalizedName("SiliconWafer");
+		siliconChip = new ItemOther(IDsHelper.siliconChipID,"SiliconChip").setCreativeTab(CommunityMod.modTab).setUnlocalizedName("SiliconChip");
 		//research = new ItemResearch(IDsHelper.researchID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("Research");
 		
 		rasberry = new ItemRasberry(IDsHelper.rasberryID, 4, 2.0F, false).setUnlocalizedName("Rasberry").setCreativeTab(CommunityMod.modTab);
