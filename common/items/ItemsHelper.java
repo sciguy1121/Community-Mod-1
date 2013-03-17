@@ -37,9 +37,9 @@ public class ItemsHelper{
 		titaniumIngot = new ItemIngot(IDsHelper.titaniumIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("TitaniumIngot");
 		copperIngot = new ItemIngot(IDsHelper.copperIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("CopperIngot");
 		siliconIngot = new ItemIngot(IDsHelper.siliconIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("SiliconIngot");
-		ligniteCoal = new ItemCoal(IDsHelper.ligniteCoalID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("Lignite");
-		bituminousCoal = new ItemCoal(IDsHelper.bituminousCoalID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("BituminousCoal");
-		anthraciteCoal = new ItemCoal(IDsHelper.anthraciteCoalID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("Anthracite");
+		ligniteCoal = new ItemCoal(IDsHelper.ligniteCoalID, "LigniteCoal").setCreativeTab(CommunityMod.modTab).setUnlocalizedName("Lignite");
+		bituminousCoal = new ItemCoal(IDsHelper.bituminousCoalID, "BituminousCoal").setCreativeTab(CommunityMod.modTab).setUnlocalizedName("BituminousCoal");
+		anthraciteCoal = new ItemCoal(IDsHelper.anthraciteCoalID, "AnthriciteCoal").setCreativeTab(CommunityMod.modTab).setUnlocalizedName("Anthracite");
 		platinumIngot = new ItemIngot(IDsHelper.platinumIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("PlatinumIngot");
 		tungstenIngot = new ItemIngot(IDsHelper.tungstenIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("TungstenIngot");
 		arsmiumIngot = new ItemIngot(IDsHelper.arsmiumIngotID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("ArsmiumIngot");
