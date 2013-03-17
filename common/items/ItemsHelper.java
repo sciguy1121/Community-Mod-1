@@ -48,7 +48,7 @@ public class ItemsHelper{
 		cosileadiumAlloy = new ItemIngot(IDsHelper.cosileadiumAlloyID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("CosileadiumAlloy");
 		siliconWafer = new ItemOther(IDsHelper.siliconWaferID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("SiliconWafer");
 		siliconChip = new ItemOther(IDsHelper.siliconChipID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("SiliconChip");
-		research = new ItemResearch(IDsHelper.researchID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("Research");
+		//research = new ItemResearch(IDsHelper.researchID).setCreativeTab(CommunityMod.modTab).setUnlocalizedName("Research");
 		
 		rasberry = new ItemRasberry(IDsHelper.rasberryID, 4, 2.0F, false).setUnlocalizedName("Rasberry").setCreativeTab(CommunityMod.modTab);
 		rasberryPie = new ItemRasberryPie(IDsHelper.rasberryPieID, 8, 6.0F, false).setUnlocalizedName("RasberryPie").setCreativeTab(CommunityMod.modTab);
@@ -74,7 +74,7 @@ public class ItemsHelper{
 		GameRegistry.registerItem(cosileadiumAlloy, "CosileadiumAlloy");
 		GameRegistry.registerItem(siliconWafer, "SiliconWafer");
 		GameRegistry.registerItem(siliconChip, "SiliconChip");
-		GameRegistry.registerItem(research, "Research");
+		//GameRegistry.registerItem(research, "Research");
         
 		GameRegistry.registerItem(rasberry, "Rasberry");
 		GameRegistry.registerItem(rasberryPie, "Rasberry Pie");
@@ -98,7 +98,7 @@ public class ItemsHelper{
 		LanguageRegistry.addName(cosileadiumAlloy, "Cosileadium Alloy");
 		LanguageRegistry.addName(siliconWafer, "Silicon Wafer");
 		LanguageRegistry.addName(siliconChip, "Silicon Chip");
-        LanguageRegistry.addName(research, "Research");
+        //LanguageRegistry.addName(research, "Research");
 		
 		LanguageRegistry.addName(rasberry, "Rasberry");
 		LanguageRegistry.addName(rasberryPie, "Rasberry Pie");
