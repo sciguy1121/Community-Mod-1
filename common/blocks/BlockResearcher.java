@@ -2,6 +2,9 @@ package mods.communityMod.common.blocks;
 
 import java.util.Random;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
 
 import mods.communityMod.common.CommunityMod;
 import mods.communityMod.common.entities.tile.TileEntityLavaFurnace;
@@ -10,23 +13,51 @@ import mods.communityMod.textures.TextureHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.Icon;
 import net.minecraft.world.World;
 
 public class BlockResearcher extends BlockContainer{
 
-	public BlockResearcher(int id) {
+	private String TextureName;
+	private String SideTextureName;
+	private Icon side;
+	private Icon bottom;
+
+	public BlockResearcher(int id, String textureName, String sideTextureName) {
 		super(id, Material.iron);
+		TextureName = textureName;
+		SideTextureName = sideTextureName;
 	}
 
-	public String getTextureFile(){
-		return TextureHandler.MACHINE_TEXTURE_A;
+	public String getTextureName(){
+		return this.TextureName;
 	}
+	
+	private String getSideTextureName() {
+		return this.SideTextureName;
+	}
+	
+	public Icon getBlockTextureFromSideAndMetadata(int side, int metadata)
+    {
+        if(side == 1) return field_94336_cN;
+        else if(side == 0) return bottom;
+        else return this.side;
+    }
+	
+	@SideOnly(Side.CLIENT)
+    public void func_94332_a(IconRegister reg)
+    {
+		this.field_94336_cN = reg.func_94245_a("communityMod:" + this.getTextureName());
+		this.side = reg.func_94245_a("communityMod:" + this.getSideTextureName());
+		this.bottom = reg.func_94245_a("furnace_top");
+    }
 	
 	@Override
 	public TileEntity createNewTileEntity(World var1){

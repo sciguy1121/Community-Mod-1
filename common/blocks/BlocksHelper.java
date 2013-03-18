@@ -4,6 +4,7 @@ import mods.communityMod.common.CommunityMod;
 import mods.communityMod.common.IDsHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -62,11 +63,11 @@ public class BlocksHelper {
         urdiumBlock = new BlockMetal(IDsHelper.urdiumBlockID, "UrdiumBlock").setHardness(18F).setResistance(22F).setUnlocalizedName("UrdiumBlock").setCreativeTab(CommunityMod.modTab);
         
 		//Machines
-		geothermalOven = new BlockLavaFurnace(IDsHelper.lavafurnaceID).setHardness(2.5F).setResistance(22F).setUnlocalizedName("geothermaloven").setStepSound(Block.soundStoneFootstep).setCreativeTab(CommunityMod.modTab);
-		geothermalOvenActive = new BlockLavaFurnace(IDsHelper.lavafurnaceID + 1).setHardness(2.5F).setResistance(22F).setUnlocalizedName("geothermaloven1").setStepSound(Block.soundStoneFootstep).setLightValue(0.3F);
-		researcher = new BlockResearcher(IDsHelper.researcherID).setUnlocalizedName("researcher").setHardness(2.5F).setResistance(10F).setCreativeTab(CommunityMod.modTab).setStepSound(Block.soundMetalFootstep);
-		logger = new BlockLogger(IDsHelper.loggerID).setUnlocalizedName("logger").setHardness(1.2F).setStepSound(Block.soundWoodFootstep).setCreativeTab(CommunityMod.modTab);
-		loggeractive = new BlockLogger(IDsHelper.loggerID + 10).setUnlocalizedName("logger").setHardness(1.2F).setStepSound(Block.soundWoodFootstep);
+		geothermalOven = new BlockLavaFurnace(IDsHelper.lavafurnaceID, "LavaFurnaceFront").setHardness(2.5F).setResistance(22F).setUnlocalizedName("geothermaloven").setStepSound(Block.soundStoneFootstep).setCreativeTab(CommunityMod.modTab);
+		geothermalOvenActive = new BlockLavaFurnace(IDsHelper.lavafurnaceID + 1, "LavaFurnaceFrontRunning").setHardness(2.5F).setResistance(22F).setUnlocalizedName("geothermaloven1").setStepSound(Block.soundStoneFootstep).setLightValue(0.3F);
+		researcher = new BlockResearcher(IDsHelper.researcherID, "ResearcherTop", "ResearcherSide").setUnlocalizedName("researcher").setHardness(2.5F).setResistance(10F).setCreativeTab(CreativeTabs.tabBlock).setStepSound(Block.soundMetalFootstep);
+		logger = new BlockLogger(IDsHelper.loggerID, "LoggerFront", "LoggerSide").setUnlocalizedName("logger").setHardness(1.2F).setStepSound(Block.soundWoodFootstep).setCreativeTab(CommunityMod.modTab);
+		loggeractive = new BlockLogger(IDsHelper.loggerID + 10, "LoggerFrontRunning", "LoggerSide").setUnlocalizedName("logger").setHardness(1.2F).setStepSound(Block.soundWoodFootstep);
 		
 		gameRegisters();
 		languageRegisters();

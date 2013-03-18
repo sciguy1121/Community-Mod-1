@@ -7,7 +7,6 @@ import mods.communityMod.common.CommunityMod;
 import mods.communityMod.textures.TextureHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 
 public class BlockConcrete extends Block{
@@ -18,9 +17,8 @@ public class BlockConcrete extends Block{
     	this.setCreativeTab(CommunityMod.modTab);
     }
    
-    public void func_94332_a(IconRegister par1IconRegister)
-    {
-             this.field_94336_cN = par1IconRegister.func_94245_a("communityMod:Concrete");
+    public String getTextureFile(){
+    	return TextureHandler.BLOCK_TEXTURE_A;
     }
            
     public int idDropped(int par1, Random rand, int par2){

@@ -2,7 +2,6 @@ package mods.communityMod.common.items;
 
 
 import mods.communityMod.textures.TextureHandler;
-import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 
@@ -12,9 +11,8 @@ public class ItemRasberry extends ItemFood{
 		super(par1, par2, par3, par4);
 	}
 	
-	public void func_94581_a(IconRegister iconRegister)
-	{
-	         iconIndex = iconRegister.func_94245_a("communityMod:Rasberry");
-	}
+	public String getTextureFile(){
+    	return TextureHandler.ITEM_TEXTURE_A;
+    }
 	
 }
