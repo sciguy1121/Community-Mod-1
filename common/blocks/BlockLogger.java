@@ -121,7 +121,7 @@ public class BlockLogger extends BlockContainer {
     {
 		this.field_94336_cN = reg.func_94245_a("communityMod:" + this.getTextureName());
 		this.side = reg.func_94245_a("communityMod:" + this.getSideTextureName());
-		this.topBack = reg.func_94245_a("blockIron");
+		this.topBack = reg.func_94245_a("communityMod:TitaniumBlock");
     }
 
 	

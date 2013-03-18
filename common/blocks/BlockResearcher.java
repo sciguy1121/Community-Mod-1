@@ -28,6 +28,7 @@ public class BlockResearcher extends BlockContainer{
 	private String TextureName;
 	private String SideTextureName;
 	private Icon side;
+	private Icon bottom;
 
 	public BlockResearcher(int id, String textureName, String sideTextureName) {
 		super(id, Material.iron);
@@ -46,6 +47,7 @@ public class BlockResearcher extends BlockContainer{
 	public Icon getBlockTextureFromSideAndMetadata(int side, int metadata)
     {
         if(side == 1) return field_94336_cN;
+        else if(side == 0) return bottom;
         else return this.side;
     }
 	
@@ -54,6 +56,7 @@ public class BlockResearcher extends BlockContainer{
     {
 		this.field_94336_cN = reg.func_94245_a("communityMod:" + this.getTextureName());
 		this.side = reg.func_94245_a("communityMod:" + this.getSideTextureName());
+		this.bottom = reg.func_94245_a("furnace_top");
     }
 	
 	@Override
