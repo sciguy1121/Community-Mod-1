@@ -4,6 +4,7 @@ import java.util.Random;
 
 import mods.communityMod.common.CommunityMod;
 import mods.communityMod.common.entities.tile.TileEntityLogger;
+import mods.communityMod.common.entities.tile.TileEntityLogger;
 import mods.communityMod.textures.TextureHandler;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -26,7 +27,7 @@ public class BlockLogger extends BlockContainer {
 	private static boolean keepInventory = false;
 	private String TextureName;
 	private String SideTextureName;
-	private Icon side;
+	private Icon sides;
 	private Icon topBack;
 
 	public BlockLogger(int par1, String textureName, String sideTextureName) {
@@ -111,51 +112,81 @@ public class BlockLogger extends BlockContainer {
 	
 	public Icon getBlockTextureFromSideAndMetadata(int side, int metadata)
     {
-        if(side == 3) return field_94336_cN;
-        else if(side ==1 || side == 2) return topBack; 
-        else return this.side;
+		if(side == metadata)
+		{
+			return this.field_94336_cN;
+		}
+		
+		if(side == 1 || side == 0)
+		{
+			return topBack;
+		}
+		
+		if(metadata == 0)  //For display as item
+		{
+			if(side == 3)
+				return this.field_94336_cN;
+		}
+		
+		return sides;
     }
 	
 	@SideOnly(Side.CLIENT)
     public void func_94332_a(IconRegister reg)
     {
 		this.field_94336_cN = reg.func_94245_a("communityMod:" + this.getTextureName());
-		this.side = reg.func_94245_a("communityMod:" + this.getSideTextureName());
+		this.sides = reg.func_94245_a("communityMod:" + this.getSideTextureName());
 		this.topBack = reg.func_94245_a("communityMod:TitaniumBlock");
     }
-
 	
+	public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLiving par5EntityLiving, ItemStack par6ItemStack)
+	{
+	        int l = MathHelper.floor_double((double)(par5EntityLiving.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
+	
+	        if (l == 0)
+		    {
+	            par1World.setBlockMetadataWithNotify(par2, par3, par4, 2, 2);
+	        }
+	        
+		    if (l == 1)
+	        {
+	            par1World.setBlockMetadataWithNotify(par2, par3, par4, 5, 2);
+	        }
+	
+		    if (l == 2)
+	        {
+	            par1World.setBlockMetadataWithNotify(par2, par3, par4, 3, 2);
+	        }
+	
+		    if (l == 3)
+		    {
+	           par1World.setBlockMetadataWithNotify(par2, par3, par4, 4, 2);
+		    }
+	 }
+	 
+	public static void updateState(boolean active, World world, int x, int y, int z)
+	{
+		 int metadata = world.getBlockMetadata(x, y, z);
+		 TileEntityLogger tile = (TileEntityLogger)world.getBlockTileEntity(x, y, z);
+		 
+		 keepInventory = true;
+		 if(active)
+		 {
+			 world.func_94575_c(x, y, z, BlocksHelper.loggeractive.blockID);
+		 }
+		 else
+		 {
+			 world.func_94575_c(x, y, z, BlocksHelper.logger.blockID);
+		 }
+		 
+		 keepInventory = false;
+		 world.setBlockMetadataWithNotify(x, y, z, metadata, 2);
+		 
+		 if(tile != null)
+		 {
+			 tile.validate();
+			 world.setBlockTileEntity(x, y, z, tile);
+		 }
+	}
 
-	/*
-	 * public void onBlockPlacedBy(World par1World, int par2, int par3, int
-	 * par4, EntityLiving par5EntityLiving) { int var6 =
-	 * MathHelper.floor_double((double)(par5EntityLiving.rotationYaw * 4.0F /
-	 * 360.0F) + 0.5D) & 3;
-	 * 
-	 * if (var6 == 0) { par1World.setBlockMetadataWithNotify(par2, par3, par4,
-	 * 2); }
-	 * 
-	 * if (var6 == 1) { par1World.setBlockMetadataWithNotify(par2, par3, par4,
-	 * 5); }
-	 * 
-	 * if (var6 == 2) { par1World.setBlockMetadataWithNotify(par2, par3, par4,
-	 * 3); }
-	 * 
-	 * if (var6 == 3) { par1World.setBlockMetadataWithNotify(par2, par3, par4,
-	 * 4); } }
-	 * 
-	 * public static void updateState(boolean active, World world, int x, int y,
-	 * int z) { int metadata = world.getBlockMetadata(x, y, z); TileEntityLogger
-	 * tile = (TileEntityLogger)world.getBlockTileEntity(x, y, z); keepInventory
-	 * = true;
-	 * 
-	 * if(active) { world.setBlockWithNotify(x, y, z,
-	 * BlocksHelper.loggeractive.blockID); } else { world.setBlockWithNotify(x,
-	 * y, z, BlocksHelper.logger.blockID); }
-	 * 
-	 * keepInventory = false; world.setBlockMetadata(x, y, z, metadata);
-	 * 
-	 * if(tile != null) { tile.validate(); world.setBlockTileEntity(x, y, z,
-	 * tile); } }
-	 */
 }
