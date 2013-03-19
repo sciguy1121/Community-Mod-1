@@ -103,7 +103,7 @@ public class ItemsHelper {
 
     private static void languageRegisters() {
         // Item LanguageRegistry
-        LanguageRegistry.addName(leadIngot, "Lead Ingot");
+        /*LanguageRegistry.addName(leadIngot, "Lead Ingot");
         LanguageRegistry.addName(titaniumIngot, "Titanium Ingot");
         LanguageRegistry.addName(copperIngot, "Copper Ingot");
         LanguageRegistry.addName(siliconIngot, "Silicon Ingot");
@@ -125,7 +125,7 @@ public class ItemsHelper {
         LanguageRegistry.addName(raspberry, "Raspberry");
         LanguageRegistry.addName(raspberryPie, "Raspberry Pie");
 
-        LanguageRegistry.addName(bucketConcrete, "Bucket of Concrete");
+        LanguageRegistry.addName(bucketConcrete, "Bucket of Concrete");*/
     }
 
 }
