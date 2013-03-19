@@ -27,9 +27,8 @@ public class GuiLogger extends GuiContainer
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float var1, int var2, int var3) 
 	{
-		int picture = mc.renderEngine.getTexture(TextureHandler.LOGGER_GUI); 
+		this.mc.renderEngine.func_98187_b(TextureHandler.LOGGER_GUI); 
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-		//this.mc.renderEngine.bindTexture(picture);
 		int x = (this.width - this.xSize) / 2;
 		int y = (this.height - this.ySize) / 2;
 		this.drawTexturedModalRect(x, y, 0, 0, this.xSize, this.ySize);

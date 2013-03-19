@@ -1,7 +1,6 @@
 package mods.communityMod.common.entities.tile;
 
 import mods.communityMod.common.blocks.BlockLavaFurnace;
-import mods.communityMod.common.blocks.BlocksHelper;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -153,14 +152,9 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory {
 			furnaceBurnTime = 0;
 		}
 
-		/*
-		BlockLavaFurnace
-				.updateState(
-						worldObj.getBlockId(xCoord, yCoord - 1, zCoord) == Block.lavaStill.blockID
-								|| worldObj.getBlockId(xCoord, yCoord - 1,
-										zCoord) == Block.lavaMoving.blockID,
+		BlockLavaFurnace.updateState(worldObj.getBlockId(xCoord, yCoord - 1, zCoord) == Block.lavaStill.blockID || worldObj.getBlockId(xCoord, yCoord - 1,
+						zCoord) == Block.lavaMoving.blockID,
 						worldObj, xCoord, yCoord, zCoord);
-		*/
 	}
 
 	public boolean isSmelting() {
