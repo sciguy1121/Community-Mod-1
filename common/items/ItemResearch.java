@@ -25,7 +25,7 @@ public class ItemResearch extends Item{
 	}
 	
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4){
-		par3List.add(research.name);
+		//par3List.add(research.name);
     }
 	
 	public void getSubItems(int itemID, CreativeTabs tab, List itemList)

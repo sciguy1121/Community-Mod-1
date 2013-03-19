@@ -22,6 +22,7 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.Icon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
@@ -62,13 +63,25 @@ public class BlockLavaFurnace extends BlockContainer {
 	}
 	
 
-	public Icon getBlockTextureFromSideAndMetadata(int side, int metadata) {
-		if (side == 3)
-			return field_94336_cN;
-		else if (side == 1 || side == 0)
+	public Icon getBlockTextureFromSideAndMetadata(int side, int metadata) 
+	{
+		if(side == metadata)
+		{
+			return this.field_94336_cN;
+		}
+		
+		if(side == 1 || side == 0)
+		{
 			return top;
-		else
-			return sides;
+		}
+		
+		if(metadata == 0)  //For display as item
+		{
+			if(side == 3)
+				return this.field_94336_cN;
+		}
+		
+		return sides;
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -136,47 +149,54 @@ public class BlockLavaFurnace extends BlockContainer {
 		}
 		return false;
 	}
-
-	/*
-	 * public static void updateState(boolean active, World world, int x, int y,
-	 * int z) { int metadata = world.getBlockMetadata(x, y, z);
-	 * TileEntityLavaFurnace tile =
-	 * (TileEntityLavaFurnace)world.getBlockTileEntity(x, y, z); keepInventory =
-	 * true;
-	 * 
-	 * if(active) { world.setBlockWithNotify(x, y, z,
-	 * BlocksHelper.geothermalOvenActive.blockID); } else {
-	 * world.setBlockWithNotify(x, y, z, BlocksHelper.geothermalOven.blockID); }
-	 * 
-	 * keepInventory = false; world.setBlockMetadata(x, y, z, metadata);
-	 * 
-	 * if(tile != null) { tile.validate(); world.setBlockTileEntity(x, y, z,
-	 * tile); } }
-	 * 
-	 * public int getBlockTextureFromSideAndMetadata(int side, int metadata) {
-	 * if(side == 0 || side == 1) { return 3; } if(metadata == side) { return
-	 * this.blockIndexInTexture; }
-	 * 
-	 * if(side == 3) //For display as item { if(metadata == 0) { return 0; }
-	 * else { return 2; } }
-	 * 
-	 * return 2; }
-	 * 
-	 * public void onBlockPlacedBy(World par1World, int par2, int par3, int
-	 * par4, EntityLiving par5EntityLiving) { int var6 =
-	 * MathHelper.floor_double((double)(par5EntityLiving.rotationYaw * 4.0F /
-	 * 360.0F) + 0.5D) & 3;
-	 * 
-	 * if (var6 == 0) { par1World.setBlockMetadataWithNotify(par2, par3, par4,
-	 * 2); }
-	 * 
-	 * if (var6 == 1) { par1World.setBlockMetadataWithNotify(par2, par3, par4,
-	 * 5); }
-	 * 
-	 * if (var6 == 2) { par1World.setBlockMetadataWithNotify(par2, par3, par4,
-	 * 3); }
-	 * 
-	 * if (var6 == 3) { par1World.setBlockMetadataWithNotify(par2, par3, par4,
-	 * 4); } }
-	 */
+	
+	public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLiving par5EntityLiving, ItemStack par6ItemStack)
+	{
+	        int l = MathHelper.floor_double((double)(par5EntityLiving.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
+	
+	        if (l == 0)
+		    {
+	            par1World.setBlockMetadataWithNotify(par2, par3, par4, 2, 2);
+	        }
+	        
+		    if (l == 1)
+	        {
+	            par1World.setBlockMetadataWithNotify(par2, par3, par4, 5, 2);
+	        }
+	
+		    if (l == 2)
+	        {
+	            par1World.setBlockMetadataWithNotify(par2, par3, par4, 3, 2);
+	        }
+	
+		    if (l == 3)
+		    {
+	           par1World.setBlockMetadataWithNotify(par2, par3, par4, 4, 2);
+		    }
+	 }
+	 
+	public static void updateState(boolean active, World world, int x, int y, int z)
+	{
+		 int metadata = world.getBlockMetadata(x, y, z);
+		 TileEntityLavaFurnace tile = (TileEntityLavaFurnace)world.getBlockTileEntity(x, y, z);
+		 
+		 keepInventory = true;
+		 if(active)
+		 {
+			 world.func_94575_c(x, y, z, BlocksHelper.geothermalOvenActive.blockID);
+		 }
+		 else
+		 {
+			 world.func_94575_c(x, y, z, BlocksHelper.geothermalOven.blockID);
+		 }
+		 
+		 keepInventory = false;
+		 world.setBlockMetadataWithNotify(x, y, z, metadata, 2);
+		 
+		 if(tile != null)
+		 {
+			 tile.validate();
+			 world.setBlockTileEntity(x, y, z, tile);
+		 }
+	}
 }
