@@ -64,7 +64,7 @@ public class BlockLavaFurnace extends BlockContainer {
 
 	public Icon getBlockTextureFromSideAndMetadata(int side, int metadata) {
 		if (side == 3)
-			return field_94336_cN;
+			return blockIcon;
 		else if (side == 1 || side == 0)
 			return top;
 		else
@@ -72,10 +72,10 @@ public class BlockLavaFurnace extends BlockContainer {
 	}
 
 	@SideOnly(Side.CLIENT)
-	public void func_94332_a(IconRegister reg) {
-		this.field_94336_cN = reg.func_94245_a("communityMod:" + this.getTextureName());
-		this.top = reg.func_94245_a("furnace_top");
-		this.sides = reg.func_94245_a("furnace_side");
+	public void registerIcons(IconRegister reg) {
+		this.blockIcon = reg.registerIcon("communityMod:" + this.getTextureName());
+		this.top = reg.registerIcon("furnace_top");
+		this.sides = reg.registerIcon("furnace_side");
 	}
 
 	@Override

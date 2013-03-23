@@ -22,8 +22,8 @@ public class BlockMetal extends Block{
 		return TextureHandler.BLOCK_TEXTURE_A;
 	}
 	
-	public void func_94332_a(IconRegister reg){
-		this.field_94336_cN = reg.func_94245_a("communityMod:" + this.getTextureName());
+	public void RegisterIcons(IconRegister reg){
+		this.blockIcon = reg.registerIcon("communityMod:" + this.getTextureName());
 	}
 
 }

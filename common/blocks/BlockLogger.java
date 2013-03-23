@@ -111,17 +111,17 @@ public class BlockLogger extends BlockContainer {
 	
 	public Icon getBlockTextureFromSideAndMetadata(int side, int metadata)
     {
-        if(side == 3) return field_94336_cN;
+        if(side == 3) return blockIcon;
         else if(side ==1 || side == 2) return topBack; 
         else return this.side;
     }
 	
 	@SideOnly(Side.CLIENT)
-    public void func_94332_a(IconRegister reg)
+    public void registerIcons(IconRegister reg)
     {
-		this.field_94336_cN = reg.func_94245_a("communityMod:" + this.getTextureName());
-		this.side = reg.func_94245_a("communityMod:" + this.getSideTextureName());
-		this.topBack = reg.func_94245_a("communityMod:TitaniumBlock");
+		this.blockIcon = reg.registerIcon("communityMod:" + this.getTextureName());
+		this.side = reg.registerIcon("communityMod:" + this.getSideTextureName());
+		this.topBack = reg.registerIcon("communityMod:TitaniumBlock");
     }
 
 	
