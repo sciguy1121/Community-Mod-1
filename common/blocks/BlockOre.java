@@ -41,8 +41,8 @@ public class BlockOre extends Block{
 		}
 	}
 	
-	public void func_94332_a(IconRegister reg){
-		this.field_94336_cN = reg.func_94245_a("communityMod:" + this.getTextureName());
+	public void registerIcons(IconRegister reg){
+		this.blockIcon = reg.registerIcon("communityMod:" + this.getTextureName());
 	}
 	
 }

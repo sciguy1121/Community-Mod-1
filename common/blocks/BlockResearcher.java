@@ -46,17 +46,17 @@ public class BlockResearcher extends BlockContainer{
 	
 	public Icon getBlockTextureFromSideAndMetadata(int side, int metadata)
     {
-        if(side == 1) return field_94336_cN;
+        if(side == 1) return blockIcon;
         else if(side == 0) return bottom;
         else return this.side;
     }
 	
 	@SideOnly(Side.CLIENT)
-    public void func_94332_a(IconRegister reg)
+    public void registerIcons(IconRegister reg)
     {
-		this.field_94336_cN = reg.func_94245_a("communityMod:" + this.getTextureName());
-		this.side = reg.func_94245_a("communityMod:" + this.getSideTextureName());
-		this.bottom = reg.func_94245_a("furnace_top");
+		this.blockIcon = reg.registerIcon("communityMod:" + this.getTextureName());
+		this.side = reg.registerIcon("communityMod:" + this.getSideTextureName());
+		this.bottom = reg.registerIcon("furnace_top");
     }
 	
 	@Override

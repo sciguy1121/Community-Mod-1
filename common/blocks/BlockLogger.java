@@ -114,7 +114,7 @@ public class BlockLogger extends BlockContainer {
     {
 		if(side == metadata)
 		{
-			return this.field_94336_cN;
+			return this.blockIcon;
 		}
 		
 		if(side == 1 || side == 0)
@@ -125,18 +125,18 @@ public class BlockLogger extends BlockContainer {
 		if(metadata == 0)  //For display as item
 		{
 			if(side == 3)
-				return this.field_94336_cN;
+				return this.blockIcon;
 		}
 		
 		return sides;
     }
 	
 	@SideOnly(Side.CLIENT)
-    public void func_94332_a(IconRegister reg)
+    public void RegisterIcons(IconRegister reg)
     {
-		this.field_94336_cN = reg.func_94245_a("communityMod:" + this.getTextureName());
-		this.sides = reg.func_94245_a("communityMod:" + this.getSideTextureName());
-		this.topBack = reg.func_94245_a("communityMod:TitaniumBlock");
+		this.blockIcon = reg.registerIcon("communityMod:" + this.getTextureName());
+		this.sides = reg.registerIcon("communityMod:" + this.getSideTextureName());
+		this.topBack = reg.registerIcon("communityMod:TitaniumBlock");
     }
 	
 	public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLiving par5EntityLiving, ItemStack par6ItemStack)
