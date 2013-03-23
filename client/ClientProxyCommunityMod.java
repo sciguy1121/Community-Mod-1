@@ -1,10 +1,16 @@
-package communityMod.client;
+package mods.communityMod.client;
 
+import cpw.mods.fml.client.registry.RenderingRegistry;
+import mods.communityMod.common.CommonProxyCommunityMod;
+import mods.communityMod.common.EntityRobot;
+import mods.communityMod.textures.TextureHandler;
 import net.minecraftforge.client.MinecraftForgeClient;
-import communityMod.common.CommonProxyCommunityMod;
-import communityMod.textures.TextureHandler;
 
 public class ClientProxyCommunityMod extends CommonProxyCommunityMod{
+	
+	public void registerRenderInformation(){
+		RenderingRegistry.registerEntityRenderingHandler(EntityRobot.class, new RenderRobot(new ModelRobot(), 1.0F));
+	}
 	
 	@Override
 	public void registerRenders(){
