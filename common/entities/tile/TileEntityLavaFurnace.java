@@ -206,13 +206,15 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory {
 		}
 	}
 
-	// Required function
-	public boolean func_94042_c() {
+	@Override
+	public boolean isInvNameLocalized() 
+	{
 		return false;
 	}
 
-	// Required function
-	public boolean func_94041_b(int i, ItemStack itemstack) {
-		return false;
+	@Override
+	public boolean isStackValidForSlot(int i, ItemStack itemstack) 
+	{
+		return true;
 	}
 }

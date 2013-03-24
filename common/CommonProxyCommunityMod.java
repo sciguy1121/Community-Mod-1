@@ -1,5 +1,6 @@
 package mods.communityMod.common;
 
+import mods.communityMod.common.entities.EntityRobot;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.network.IGuiHandler;

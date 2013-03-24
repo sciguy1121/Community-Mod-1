@@ -1,5 +1,6 @@
-package mods.communityMod.common;
+package mods.communityMod.common.entities;
 
+import mods.communityMod.common.items.ItemsHelper;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.world.World;
 
@@ -10,7 +11,7 @@ public class EntityRobot extends EntityLiving{
 		this.texture = "/textures/mob/Robot.png";
 		this.getNavigator().setAvoidsWater(true);
 	}
-	
+
 	public int getMaxHealth(){
 		return 15;
 	}
@@ -19,8 +20,9 @@ public class EntityRobot extends EntityLiving{
 		return true;
 	}
 	
-	protected int getDroppedItemID(){
-		return 1016;
+	public int getDropItemId()
+	{
+		return ItemsHelper.siliconChip.itemID;
 	}
 	
 }

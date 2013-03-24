@@ -183,11 +183,11 @@ public class BlockLavaFurnace extends BlockContainer {
 		 keepInventory = true;
 		 if(active)
 		 {
-			 world.func_94575_c(x, y, z, BlocksHelper.geothermalOvenActive.blockID);
+			 world.setBlock(x, y, z, BlocksHelper.geothermalOvenActive.blockID);
 		 }
 		 else
 		 {
-			 world.func_94575_c(x, y, z, BlocksHelper.geothermalOven.blockID);
+			 world.setBlock(x, y, z, BlocksHelper.geothermalOven.blockID);
 		 }
 		 
 		 keepInventory = false;
