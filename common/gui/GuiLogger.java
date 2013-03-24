@@ -27,7 +27,7 @@ public class GuiLogger extends GuiContainer
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float var1, int var2, int var3) 
 	{
-		this.mc.renderEngine.func_98187_b(TextureHandler.LOGGER_GUI); 
+		this.mc.renderEngine.bindTexture(TextureHandler.LOGGER_GUI); 
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		int x = (this.width - this.xSize) / 2;
 		int y = (this.height - this.ySize) / 2;

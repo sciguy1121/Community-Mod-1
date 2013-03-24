@@ -2,7 +2,7 @@ package mods.communityMod.client;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import mods.communityMod.common.CommonProxyCommunityMod;
-import mods.communityMod.common.EntityRobot;
+import mods.communityMod.common.entities.EntityRobot;
 import mods.communityMod.textures.TextureHandler;
 import net.minecraftforge.client.MinecraftForgeClient;
 
