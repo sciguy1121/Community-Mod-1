@@ -132,7 +132,7 @@ public class BlockLogger extends BlockContainer {
     }
 	
 	@SideOnly(Side.CLIENT)
-    public void RegisterIcons(IconRegister reg)
+    public void registerIcons(IconRegister reg)
     {
 		this.blockIcon = reg.registerIcon("communityMod:" + this.getTextureName());
 		this.sides = reg.registerIcon("communityMod:" + this.getSideTextureName());
@@ -172,11 +172,11 @@ public class BlockLogger extends BlockContainer {
 		 keepInventory = true;
 		 if(active)
 		 {
-			 world.func_94575_c(x, y, z, BlocksHelper.loggeractive.blockID);
+			 world.setBlock(x, y, z, BlocksHelper.loggeractive.blockID);
 		 }
 		 else
 		 {
-			 world.func_94575_c(x, y, z, BlocksHelper.logger.blockID);
+			 world.setBlock(x, y, z, BlocksHelper.logger.blockID);
 		 }
 		 
 		 keepInventory = false;
