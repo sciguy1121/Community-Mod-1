@@ -52,7 +52,7 @@ public class EntityRobot extends EntityLiving{
 	}
 
 	public int getMaxHealth(){
-		return 15;
+		return 50;
 	}
 	
 	public boolean isAIEnabled(){
