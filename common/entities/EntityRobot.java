@@ -1,10 +1,7 @@
 package mods.communityMod.common.entities;
 
-<<<<<<< HEAD:common/entities/EntityRobot.java
 import mods.communityMod.common.items.ItemsHelper;
-=======
 import net.minecraft.entity.Entity;
->>>>>>> Added more attributes to Robot:common/EntityRobot.java
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
@@ -50,7 +47,7 @@ public class EntityRobot extends EntityLiving{
 	protected void fall(float par1){
 		
 	}
-
+    
 	public int getMaxHealth(){
 		return 50;
 	}
