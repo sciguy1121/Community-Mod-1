@@ -77,6 +77,7 @@ public class CommunityMod {
 		craftingRecipes();
 		smeltingRecipes();
         
+		GameRegistry.registerWorldGenerator(new WorldGenStructures());
 		GameRegistry.registerWorldGenerator(new WorldGenOres());
 		GameRegistry.registerFuelHandler(new FuelHandler());
 		
