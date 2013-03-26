@@ -57,16 +57,16 @@ public class ModelRobot extends ModelBase
         setRotation(RightArm, 0F, 0F, 0F);
     }
     
-    public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+    public void render(Entity par1Entity, float par2, float par3, float par4, float par5, float par6, float par7)
     {
-        super.render(entity, f, f1, f2, f3, f4, f5);
-        setRotationAngles(f, f1, f2, f3, f4, f5, entity);
-        LeftLeg.render(f5);
-        RightLeg.render(f5);
-        Body.render(f5);
-        Head.render(f5);
-        LeftArm.render(f5);
-        RightArm.render(f5);
+        super.render(par1Entity, par2, par3, par4, par5, par6, par7);
+        setRotationAngles(par2, par3, par4, par5, par6, par7, par1Entity);
+        LeftLeg.render(par7);
+        RightLeg.render(par7);
+        Body.render(par7);
+        Head.render(par7);
+        LeftArm.render(par7);
+        RightArm.render(par7);
     }
     
     private void setRotation(ModelRenderer model, float x, float y, float z)
@@ -76,9 +76,9 @@ public class ModelRobot extends ModelBase
         model.rotateAngleZ = z;
     }
     
-    public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity entity)
+    public void setRotationAngles(float par1, float par2, float par3, float par4, float par5, float par6, Entity par7Entity)
     {
-        super.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
+        super.setRotationAngles(par1, par2, par3, par4, par5, par7Entity);
     }
     
 }
