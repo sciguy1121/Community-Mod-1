@@ -1,6 +1,6 @@
 package mods.communityMod.common.entities;
 
-import mods.communityMod.common.IDsHelper;
+import mods.communityMod.common.blocks.BlocksHelper;
 import mods.communityMod.common.items.ItemsHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
@@ -10,24 +10,18 @@ import net.minecraft.entity.ai.EntityAIBreakDoor;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
 import net.minecraft.entity.ai.EntityAIMoveTowardsTarget;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
-import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
-import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.monster.EntityMob;
-import net.minecraft.entity.monster.EntitySkeleton;
-import net.minecraft.entity.monster.EntitySpider;
-import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class EntityRobot extends EntityMob{
     
 	public EntityRobot(World par1World){
 		super(par1World);
-		this.texture = "textures/mob/Robot.png";
+		this.texture = "/mods/communityMod/textures/mob/Robot.png";
 		this.moveSpeed = 0.35F;
 		this.getNavigator().setAvoidsWater(true);
 		this.tasks.addTask(0, new EntityAIBreakDoor(this));
@@ -76,15 +70,15 @@ public class EntityRobot extends EntityMob{
 	}
 	
 	protected int getDropItemId(){
-		return IDsHelper.siliconChipID;
+		return ItemsHelper.siliconChip.itemID;
 	}
 	
 	protected void dropRareDrop(int par1){
 		switch(this.rand.nextInt(2)){
             case 0:
-                this.dropItem(IDsHelper.siliconBlockID, 2);
+                this.dropItem(BlocksHelper.siliconBlock.blockID, 2);
             case 1:
-                this.dropItem(IDsHelper.siliconIngotID, 10);
+                this.dropItem(ItemsHelper.siliconIngot.itemID, 10);
 		}
 	}
 	
