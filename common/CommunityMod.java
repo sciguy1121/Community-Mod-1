@@ -6,6 +6,7 @@ import mods.communityMod.common.blocks.BlockIronGirder;
 import mods.communityMod.common.blocks.BlockMetal;
 import mods.communityMod.common.blocks.BlockOre;
 import mods.communityMod.common.blocks.BlocksHelper;
+import mods.communityMod.common.entities.EntityRobot;
 import mods.communityMod.common.entities.tile.TileEntityLavaFurnace;
 import mods.communityMod.common.entities.tile.TileEntityLogger;
 import mods.communityMod.common.entities.tile.TileEntityResearcher;
@@ -17,6 +18,9 @@ import mods.communityMod.common.research.ResearchHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityEggInfo;
+import net.minecraft.entity.EntityList;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.src.ModLoader;
@@ -44,6 +48,8 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class CommunityMod {
 	@SidedProxy(clientSide = "mods.communityMod.client.ClientProxyCommunityMod", serverSide = "mods.communityMod.common.CommonProxyCommunityMod")
 	public static CommonProxyCommunityMod proxy;
+	
+	static int startEntityId = 300;
 	
 	@Instance
 	public static CommunityMod instance = new CommunityMod();
@@ -82,8 +88,31 @@ public class CommunityMod {
 		
 		ResearchHandler.instance().setResearchValue(ItemsHelper.siliconIngot.itemID, true);
 		ResearchHandler.instance().initResearchHandler();
+		
+		EntityRegistry.registerModEntity(EntityRobot.class, "Robot", 1, this, 80, 3, true);
+        
+		LanguageRegistry.instance().addStringLocalization("entity.Community_Mod.Robot.name", "Robot");
+        
+		registerEntityEgg(EntityRobot.class, 0x000000, 0x4A4849);
 	}
     
+	public static int getUniqueEntityId()
+	{
+		do
+		{
+			startEntityId++;
+		}
+		while(EntityList.getStringFromID(startEntityId) != null);
+        
+		return startEntityId;
+	}
+	
+	public static void registerEntityEgg(Class <? extends Entity> entity, int primaryColor, int secondaryColor){
+		int id = getUniqueEntityId();
+		EntityList.IDtoClassMapping.put(id, entity);
+		EntityList.entityEggs.put(id, new EntityEggInfo(id, primaryColor, secondaryColor));
+	}
+	
 	private static void smeltingRecipes(){
 		GameRegistry.addSmelting(IDsHelper.leadOreID, new ItemStack(ItemsHelper.leadIngot, 1), 0.6F);
 		GameRegistry.addSmelting(IDsHelper.titaniumOreID, new ItemStack(ItemsHelper.titaniumIngot, 1), 0.75F);
