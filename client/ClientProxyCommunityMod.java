@@ -9,7 +9,7 @@ import net.minecraftforge.client.MinecraftForgeClient;
 public class ClientProxyCommunityMod extends CommonProxyCommunityMod{
 	
 	public void registerRenderInformation(){
-		RenderingRegistry.registerEntityRenderingHandler(EntityRobot.class, new RenderRobot(new ModelRobot(), 1.0F));
+		RenderingRegistry.registerEntityRenderingHandler(EntityRobot.class, new RenderRobot(new ModelRobot(), 2F));
 	}
 	
 	@Override
