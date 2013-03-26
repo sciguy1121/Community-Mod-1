@@ -51,8 +51,8 @@ public class IDsHelper {
 	public static int siliconChipID;
 	public static int researchID;
 	
-	public static int rasberryID;
-	public static int rasberryPieID;
+	public static int RaspberryID;
+	public static int RaspberryPieID;
 	
 	public static void runConfiguration(Configuration config){
 		//Block IDs
@@ -98,8 +98,8 @@ public class IDsHelper {
 		siliconChipID = config.get(itemids, "Silicon Chip ID", 1016).getInt();
 		researchID = config.get(itemids, "Research ID", 1017).getInt();
 		
-		rasberryID = config.get(itemids, "Resberry ID", 1013).getInt();
-		rasberryPieID = config.get(itemids, "Resberry Pie ID", 1014).getInt();
+		RaspberryID = config.get(itemids, "Resberry ID", 1013).getInt();
+		RaspberryPieID = config.get(itemids, "Resberry Pie ID", 1014).getInt();
 	}
 	
 }

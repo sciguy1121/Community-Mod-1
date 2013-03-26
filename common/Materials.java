@@ -1,4 +1,4 @@
-package mods;
+package mods.communityMod.common;
 
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraftforge.common.EnumHelper;
