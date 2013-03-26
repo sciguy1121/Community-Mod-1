@@ -7,7 +7,7 @@ public class IDsHelper {
 	//Configuration categories
 	public static String blockids = "Block IDs";
 	public static String itemids = "Item IDs";
-
+    
 	//Block IDs
 	public static int siliconOreID;
 	public static int leadOreID;
@@ -32,7 +32,7 @@ public class IDsHelper {
 	public static int loggerID;
     public static int arsmiumBlockID;
     public static int urdiumBlockID;
-
+    
 	//Item IDs
 	public static int leadIngotID;
 	public static int titaniumIngotID;
@@ -50,6 +50,7 @@ public class IDsHelper {
 	public static int siliconWaferID;
 	public static int siliconChipID;
 	public static int researchID;
+	public static int robotModelID;
 	
 	public static int RaspberryID;
 	public static int RaspberryPieID;
@@ -97,6 +98,7 @@ public class IDsHelper {
 		siliconWaferID = config.get(itemids, "Silicon Wafer ID", 1015).getInt();
 		siliconChipID = config.get(itemids, "Silicon Chip ID", 1016).getInt();
 		researchID = config.get(itemids, "Research ID", 1017).getInt();
+		robotModelID = config.get(itemids, "Robot Model ID", 1018).getInt();
 		
 		RaspberryID = config.get(itemids, "Resberry ID", 1013).getInt();
 		RaspberryPieID = config.get(itemids, "Resberry Pie ID", 1014).getInt();
