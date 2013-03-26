@@ -94,7 +94,7 @@ public class CommunityMod {
         
 		LanguageRegistry.instance().addStringLocalization("entity.Community_Mod.Robot.name", "Robot");
         
-		registerEntityEgg(EntityRobot.class, 0x000000, 0x4A4849);
+		registerEntityEgg(EntityRobot.class, 0x4A4849, 0x000000);
 	}
     
 	public static int getUniqueEntityId()
@@ -158,5 +158,8 @@ public class CommunityMod {
         GameRegistry.addShapelessRecipe(new ItemStack(ItemsHelper.raspberryPie, 1),
                                         new ItemStack(Item.sugar), new ItemStack(Item.egg), new ItemStack(ItemsHelper.raspberry));
         
+        GameRegistry.addRecipe(new ItemStack(ItemsHelper.robotModel, 1), new Object[]{
+            "WIW", "SCS", "ISI", 'S', BlocksHelper.siliconBlock, 'I', ItemsHelper.siliconIngot, 'W', ItemsHelper.siliconWafer, 'C', ItemsHelper.siliconChip
+       	});
 	}
 }
