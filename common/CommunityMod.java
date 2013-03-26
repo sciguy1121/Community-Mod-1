@@ -154,8 +154,8 @@ public class CommunityMod {
             "SSS", "S S", "XXX", 'S', Block.cobblestone, 'X', Item.ingotIron
        	});
         
-        GameRegistry.addShapelessRecipe(new ItemStack(ItemsHelper.rasberryPie, 1),
-                                        new ItemStack(Item.sugar), new ItemStack(Item.egg), new ItemStack(ItemsHelper.rasberry));
+        GameRegistry.addShapelessRecipe(new ItemStack(ItemsHelper.raspberryPie, 1),
+                                        new ItemStack(Item.sugar), new ItemStack(Item.egg), new ItemStack(ItemsHelper.raspberry));
         
 	}
 }
