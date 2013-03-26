@@ -67,6 +67,8 @@ GCEUs - Greater Community Energy Units
 
 Goloms or Gnomes - Do stuff for you (like in TC3) just you can make them do whatever (maybe program with silicon chips)?
 
+Robot/RobotAI - Craftable Robot that you place like a spawn egg to spawn a robot. The robot will then kill things for you :)
+
 ##Realized Ideas
 
 Lava Furnace(alias: Geothermal Oven) - implemented by smigolpol
