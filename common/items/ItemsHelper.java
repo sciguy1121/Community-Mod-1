@@ -9,7 +9,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 public class ItemsHelper{
-
+    
 	//Items
 	public static Item leadIngot;
 	public static Item titaniumIngot;
@@ -27,6 +27,7 @@ public class ItemsHelper{
 	public static Item siliconWafer;
 	public static Item siliconChip;
 	public static Item research;
+	public static Item robotModel;
 	
 	public static Item raspberry;
 	public static Item raspberryPie;
@@ -49,6 +50,7 @@ public class ItemsHelper{
 		siliconWafer = new ItemOther(IDsHelper.siliconWaferID, "SiliconWafer").setCreativeTab(CommunityMod.modTab);
 		siliconChip = new ItemOther(IDsHelper.siliconChipID, "SiliconChip").setCreativeTab(CommunityMod.modTab);
 		research = new ItemResearch(IDsHelper.researchID, "Research").setCreativeTab(CommunityMod.modTab);
+		robotModel = new ItemRobotModel(IDsHelper.robotModelID, "RobotModel").setCreativeTab(CommunityMod.modTab);
 		
 		raspberry = new ItemRaspberry(IDsHelper.RaspberryID, 4, 2.0F, false, "Raspberry").setCreativeTab(CommunityMod.modTab);
 		raspberryPie = new ItemRaspberryPie(IDsHelper.RaspberryPieID, 8, 6.0F, false, "RaspberryPie").setCreativeTab(CommunityMod.modTab);
@@ -75,12 +77,13 @@ public class ItemsHelper{
 		GameRegistry.registerItem(siliconWafer, "SiliconWafer");
 		GameRegistry.registerItem(siliconChip, "SiliconChip");
 		GameRegistry.registerItem(research, "Research");
+		GameRegistry.registerItem(robotModel, "RobotModel");
         
 		GameRegistry.registerItem(raspberry, "Raspberry");
 		GameRegistry.registerItem(raspberryPie, "Raspberry Pie");
 	}
 	
-
+    
 	private static void languageRegisters(){
 		//Item LanguageRegistry
 		LanguageRegistry.addName(leadIngot, "Lead Ingot");
@@ -99,9 +102,10 @@ public class ItemsHelper{
 		LanguageRegistry.addName(siliconWafer, "Silicon Wafer");
 		LanguageRegistry.addName(siliconChip, "Silicon Chip");
         LanguageRegistry.addName(research, "Research");
+        LanguageRegistry.addName(robotModel, "Robot Model");
 		
 		LanguageRegistry.addName(raspberry, "Raspberry");
 		LanguageRegistry.addName(raspberryPie, "Raspberry Pie");
 	}
-
+    
 }
