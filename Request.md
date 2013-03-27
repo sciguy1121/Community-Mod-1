@@ -16,6 +16,8 @@ Enchanter - Take 2 items in bottom 2 slots, 1 as fuel, 1 to enhance chance of hi
 
 Infuser - Will be used to infuse 2 items into one, eg making hybrid seeds etc. (infuser would be an end-game block so not important at the minute)
 
+Crusher - Works kind of like a macerator, sample: takes an iron ore and gives you crushed iron wich can then be smelted in a furnance.
+
 ####Accomplished request
 Lava Furnace - Block: done, Textures: done, GUI: done
 Researcher - Block: done, Textures: done, GUI: stil work in progress. Project leader(sciguy1121) works on it.
