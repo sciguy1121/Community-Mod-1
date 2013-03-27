@@ -71,7 +71,7 @@ public class WorldGenStructures implements IWorldGenerator{
 				
 				createBlock(world, xCoord - 1, yCoord - 1, zCoord + 2, titanium, 0);
 				
-				createBlock(world, xCoord + 7, yCoord, zCoord + 2, Block.enchantmentTable.blockID, 0);
+				createBlock(world, xCoord + 7, yCoord, zCoord + 2, BlocksHelper.researcher.blockID, 0);
 				
 				createBlock(world, xCoord + 7, yCoord + 1, zCoord + 2, torch, 0);
 				createBlock(world, xCoord + 5, yCoord + 1, zCoord, torch, 0);
@@ -96,7 +96,7 @@ public class WorldGenStructures implements IWorldGenerator{
 	
 	private void createBlock(World world, int xCoord, int yCoord, int zCoord, int blockID, int metadata)
 	{
-		world.setBlockAndMetadataWithNotify(xCoord, yCoord, zCoord, blockID, metadata, 2);
+		world.setBlock(xCoord, yCoord, zCoord, blockID, metadata, 2);
 	}
 	
 	private int getSurface(World world, int x, int z)
