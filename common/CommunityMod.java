@@ -161,5 +161,21 @@ public class CommunityMod {
         GameRegistry.addRecipe(new ItemStack(ItemsHelper.robotModel, 1), new Object[]{
             "WIW", "SCS", "ISI", 'S', BlocksHelper.siliconBlock, 'I', ItemsHelper.siliconIngot, 'W', ItemsHelper.siliconWafer, 'C', ItemsHelper.siliconChip
        	});
+        
+        GameRegistry.addRecipe(new ItemStack(ItemsHelper.siliconWafer, 8), new Object[]{
+        	"SAS", "ABA", "SAS", 'S', ItemsHelper.siliconIngot, 'A', Block.sand, 'B', Item.bucketWater
+        });
+        
+        GameRegistry.addRecipe(new ItemStack(ItemsHelper.siliconWafer, 8), new Object[]{
+        	"ASA", "SBS", "ASA", 'S', ItemsHelper.siliconIngot, 'A', Block.sand, 'B', Item.bucketWater
+        });
+        
+        GameRegistry.addRecipe(new ItemStack(ItemsHelper.siliconChip, 4), new Object[]{
+        	"SWS", "WSW", "SWS", 'S', ItemsHelper.siliconIngot, 'W', ItemsHelper.siliconWafer
+        });
+        
+        GameRegistry.addRecipe(new ItemStack(ItemsHelper.siliconChip, 4), new Object[]{
+        	"WSW", "SWS", "WSW", 'S', ItemsHelper.siliconIngot, 'W', ItemsHelper.siliconWafer
+        });
 	}
 }
