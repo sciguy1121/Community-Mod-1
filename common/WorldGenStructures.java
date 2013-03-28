@@ -1,12 +1,19 @@
 package mods.communityMod.common;
 
+import static net.minecraftforge.common.ChestGenHooks.STRONGHOLD_CORRIDOR;
+
 import java.util.Random;
 
 
 import mods.communityMod.common.blocks.BlocksHelper;
+import mods.communityMod.common.items.ItemsHelper;
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraftforge.common.ChestGenHooks;
 //import net.minecraft.world.gen.feature.WorldGenMinable;
 
 import cpw.mods.fml.common.IWorldGenerator;
@@ -25,7 +32,7 @@ public class WorldGenStructures implements IWorldGenerator{
 	private void generateSurface(World world, Random random, int x, int z){
 		
 		//Science Lab Generation Code:
-		if(random.nextInt(30) == 1)
+		if(random.nextInt(100) == 1)
 		{
 			for(int i = 0; i < 1; i++)
 			{		
@@ -89,7 +96,79 @@ public class WorldGenStructures implements IWorldGenerator{
 				createBlock(world, xCoord + 3, yCoord, zCoord + 4, Block.chest.blockID, 0);
 				createBlock(world, xCoord + 4, yCoord, zCoord + 4, Block.chest.blockID, 0);
 				
+				TileEntityChest tileEntityChest = new TileEntityChest();
+				world.setBlockTileEntity(xCoord + 3, yCoord, zCoord + 4, tileEntityChest);
 				
+				for(int slot = 0; slot < tileEntityChest.getSizeInventory(); slot++)
+				{
+					int item = random.nextInt(250);
+					
+					if(item == 1 || item == 2 || item == 3)
+					{
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.anthraciteCoal, random.nextInt(2)+1));
+					}
+					if(item == 4 || item == 5 || item == 6)
+					{
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.arsmiumIngot, random.nextInt(3)+1));
+					}
+					if(item == 7 || item == 8 || item == 9)
+					{
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.bituminousCoal, random.nextInt(2)));
+					}
+					if(item == 10 || item == 11 || item == 12)
+					{
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.copperIngot, random.nextInt(4)+1));
+					}
+					if(item == 13 || item == 14 || item == 15)
+					{
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.cosileadiumAlloy, random.nextInt(2)));
+					}
+					if(item == 16 || item == 17 || item == 18)
+					{
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.franciumIngot, random.nextInt(3)+1));
+					}
+					if(item == 19 || item == 20 || item == 21)
+					{
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.leadIngot, random.nextInt(3)+1));
+					}
+					if(item == 22 || item == 23 || item == 24)
+					{
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.ligniteCoal, random.nextInt(3)+1));
+					}
+					if(item == 25 || item == 26 || item == 27)
+					{
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.platinumIngot, random.nextInt(3)+1));
+					}
+					if(item == 28 || item == 28 || item == 30)
+					{
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.robotModel, random.nextInt(2)));
+					}
+					if(item == 31 || item == 31 || item == 33)
+					{
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.siliconChip, random.nextInt(3)));
+					}
+					if(item == 34 || item == 34 || item == 36)
+					{
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.siliconIngot, random.nextInt(3)+1));
+					}
+					if(item == 37 || item == 37 || item == 39)
+					{
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.siliconWafer, random.nextInt(2)+1));
+					}
+					if(item == 40 || item == 40 || item == 42)
+					{
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.titaniumIngot, random.nextInt(2)+1));
+					}
+					if(item == 43 || item == 43 || item == 45)
+					{
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.tungstenIngot, random.nextInt(3)+1));
+					}
+					if(item == 46 || item == 46 || item == 48)
+					{
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.urdiumIngot, random.nextInt(3)+1));
+					}
+					
+				}
 			}
 		}
 	}
