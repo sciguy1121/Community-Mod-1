@@ -8,6 +8,9 @@ LavaFurnace - Done
 
 Researcher - Done
 
+Uranium Ore - Pending
+
+Uranium Ingot - Pending
 
 
 
