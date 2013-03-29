@@ -28,6 +28,7 @@ public class ItemsHelper{
 	public static Item siliconChip;
 	public static Item research;
 	public static Item robotModel;
+	public static Item uraniumChunk;
 	
 	public static Item raspberry;
 	public static Item raspberryPie;
@@ -51,6 +52,7 @@ public class ItemsHelper{
 		siliconChip = new ItemOther(IDsHelper.siliconChipID, "SiliconChip").setCreativeTab(CommunityMod.modTab);
 		research = new ItemResearch(IDsHelper.researchID, "Research").setCreativeTab(CommunityMod.modTab);
 		robotModel = new ItemRobotModel(IDsHelper.robotModelID, "RobotModel").setCreativeTab(CommunityMod.modTab);
+		uraniumChunk = new ItemIngot(IDsHelper.uraniumChunkID, "UraniumChunk").setCreativeTab(CommunityMod.modTab);
 		
 		raspberry = new ItemRaspberry(IDsHelper.RaspberryID, 4, 2.0F, false, "Raspberry").setCreativeTab(CommunityMod.modTab);
 		raspberryPie = new ItemRaspberryPie(IDsHelper.RaspberryPieID, 8, 6.0F, false, "RaspberryPie").setCreativeTab(CommunityMod.modTab);
@@ -78,9 +80,10 @@ public class ItemsHelper{
 		GameRegistry.registerItem(siliconChip, "SiliconChip");
 		GameRegistry.registerItem(research, "Research");
 		GameRegistry.registerItem(robotModel, "RobotModel");
-        
+		GameRegistry.registerItem(uraniumChunk, "UraniumChunk");
+		
 		GameRegistry.registerItem(raspberry, "Raspberry");
-		GameRegistry.registerItem(raspberryPie, "Raspberry Pie");
+		GameRegistry.registerItem(raspberryPie, "RaspberryPie");
 	}
 	
     
@@ -103,7 +106,8 @@ public class ItemsHelper{
 		LanguageRegistry.addName(siliconChip, "Silicon Chip");
         LanguageRegistry.addName(research, "Research");
         LanguageRegistry.addName(robotModel, "Robot Model");
-		
+        LanguageRegistry.addName(uraniumChunk, "Uranium Chunk");
+        
 		LanguageRegistry.addName(raspberry, "Raspberry");
 		LanguageRegistry.addName(raspberryPie, "Raspberry Pie");
 	}
