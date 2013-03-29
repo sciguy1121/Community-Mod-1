@@ -31,6 +31,11 @@ Put Ideas for Machines Here:
             Energy Super Collector
             Collects ATP from surrounding living entities and blocks like Cows, Sheep, Pigs, Plants, Trees, etc... Not Hostile Mobs, or the player
             1 PE/Tick/#LivingEntites/Blocks
+
+        Tier 4:
+            Nuclear Reactor
+            Uses Refined uranium to create power, Dangerous macinery if not covered with water when working it will explode.
+            50 PE/Tick/Refined uranium
     
     Energy Storage:
         Make PE Levels For Each of The Tiers
