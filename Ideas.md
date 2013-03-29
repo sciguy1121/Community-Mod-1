@@ -69,6 +69,8 @@ Goloms or Gnomes - Do stuff for you (like in TC3) just you can make them do what
 
 Robot/RobotAI - Craftable Robot that you place like a spawn egg to spawn a robot. The robot will then kill things for you :)
 
+Make the concrete alloy furnace a multiblock made of concrete
+
 ##Realized Ideas
 
 Lava Furnace(alias: Geothermal Oven) - implemented by smigolpol
