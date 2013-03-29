@@ -58,7 +58,6 @@ public class BlocksHelper {
 		tungstenOre = new BlockOre(IDsHelper.tungstenOreID, "TungstenOre").setHardness(18F).setResistance(22F).setUnlocalizedName("TungstenOre").setCreativeTab(CommunityMod.modTab);
 		arsmiumOre = new BlockOre(IDsHelper.arsmiumOreID, "ArsmiumOre").setHardness(18F).setResistance(22F).setUnlocalizedName("ArsmiumOre").setCreativeTab(CommunityMod.modTab);
 		urdiumOre = new BlockOre(IDsHelper.urdiumOreID, "UrdiumOre").setHardness(18F).setResistance(22F).setUnlocalizedName("UrdiumOre").setCreativeTab(CommunityMod.modTab);
-		uraniumOre = new BlockOre(IDsHelper.uraniumOreID, "Uranium Ore").setHardness(12F).setResistance(18F).setUnlocalizedName("UraniumOre").setCreativeTab(CommunityMod.modTab);
 		franciumOre = new BlockOre(IDsHelper.franciumOreID, "FranciumOre").setHardness(18F).setResistance(22F).setUnlocalizedName("FranciumOre").setCreativeTab(CommunityMod.modTab);
 		franciumBlock = new BlockMetal(IDsHelper.franciumBlockID, "FranciumBlock").setHardness(18F).setResistance(22F).setUnlocalizedName("FranciumBlock").setCreativeTab(CommunityMod.modTab);
 		arsmiumBlock = new BlockMetal(IDsHelper.arsmiumBlockID, "ArsmiumBlock").setHardness(18F).setResistance(22F).setUnlocalizedName("ArsmiumBlock").setCreativeTab(CommunityMod.modTab);
@@ -78,7 +77,6 @@ public class BlocksHelper {
     
 	private static void gameRegisters() {
 		//Block Registry
-		GameRegistry.registerBlock(uraniumOre, "UraniumOre");
 		GameRegistry.registerBlock(siliconOre, "SiliconOre");
 		GameRegistry.registerBlock(leadOre, "LeadOre");
 		GameRegistry.registerBlock(titaniumOre, "TitaniumOre");
