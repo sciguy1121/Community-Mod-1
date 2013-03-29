@@ -11,7 +11,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class BlocksHelper {
-
+    
 	//Blocks
 	public static Block siliconOre;
 	public static Block leadOre;
@@ -38,12 +38,13 @@ public class BlocksHelper {
 	public static Block loggeractive;
 	public static Block arsmiumBlock;
 	public static Block urdiumBlock;
-
+	public static Block uraniumOre;
+    
 	public static void setupBlocks() {
 		//Normal Blocks
 		siliconOre = new BlockOre(IDsHelper.siliconOreID, "SiliconOre").setHardness(10F).setResistance(0.2F).setUnlocalizedName("SiliconOre").setCreativeTab(CommunityMod.modTab);
 		leadOre = new BlockOre(IDsHelper.leadOreID, "LeadOre").setHardness(10F).setResistance(0.2F).setUnlocalizedName("LeadOre").setCreativeTab(CommunityMod.modTab);
-		titaniumOre = new BlockOre(IDsHelper.titaniumOreID, "TitaniumOre").setHardness(10F).setResistance(0.2F).setUnlocalizedName("TitaniumOre").setCreativeTab(CommunityMod.modTab);				
+		titaniumOre = new BlockOre(IDsHelper.titaniumOreID, "TitaniumOre").setHardness(10F).setResistance(0.2F).setUnlocalizedName("TitaniumOre").setCreativeTab(CommunityMod.modTab);
 		leadBlock = new BlockMetal(IDsHelper.leadBlockID, "LeadBlock").setHardness(12F).setResistance(10F).setUnlocalizedName("LeadBlock").setCreativeTab(CommunityMod.modTab);
 		titaniumBlock = new BlockMetal(IDsHelper.titaniumBlockID, "TitaniumBlock").setHardness(12F).setResistance(10F).setUnlocalizedName("TitaniumBlock").setCreativeTab(CommunityMod.modTab);
 		copperOre = new BlockOre(IDsHelper.copperOreID, "CopperOre").setHardness(10F).setResistance(0.2F).setUnlocalizedName("CopperOre").setCreativeTab(CommunityMod.modTab);
@@ -57,6 +58,7 @@ public class BlocksHelper {
 		tungstenOre = new BlockOre(IDsHelper.tungstenOreID, "TungstenOre").setHardness(18F).setResistance(22F).setUnlocalizedName("TungstenOre").setCreativeTab(CommunityMod.modTab);
 		arsmiumOre = new BlockOre(IDsHelper.arsmiumOreID, "ArsmiumOre").setHardness(18F).setResistance(22F).setUnlocalizedName("ArsmiumOre").setCreativeTab(CommunityMod.modTab);
 		urdiumOre = new BlockOre(IDsHelper.urdiumOreID, "UrdiumOre").setHardness(18F).setResistance(22F).setUnlocalizedName("UrdiumOre").setCreativeTab(CommunityMod.modTab);
+		uraniumOre = new BlockOre(IDsHelper.uraniumOreID, "Uranium Ore").setHardness(12F).setResistance(18F).setUnlocalizedName("UraniumOre").setCreativeTab(CommunityMod.modTab);
 		franciumOre = new BlockOre(IDsHelper.franciumOreID, "FranciumOre").setHardness(18F).setResistance(22F).setUnlocalizedName("FranciumOre").setCreativeTab(CommunityMod.modTab);
 		franciumBlock = new BlockMetal(IDsHelper.franciumBlockID, "FranciumBlock").setHardness(18F).setResistance(22F).setUnlocalizedName("FranciumBlock").setCreativeTab(CommunityMod.modTab);
 		arsmiumBlock = new BlockMetal(IDsHelper.arsmiumBlockID, "ArsmiumBlock").setHardness(18F).setResistance(22F).setUnlocalizedName("ArsmiumBlock").setCreativeTab(CommunityMod.modTab);
@@ -72,9 +74,10 @@ public class BlocksHelper {
 		gameRegisters();
 		languageRegisters();
 	}
-
+    
 	private static void gameRegisters() {
 		//Block Registry
+		GameRegistry.registerBlock(uraniumOre, "UraniumOre");
 		GameRegistry.registerBlock(siliconOre, "SiliconOre");
 		GameRegistry.registerBlock(leadOre, "LeadOre");
 		GameRegistry.registerBlock(titaniumOre, "TitaniumOre");
@@ -97,8 +100,9 @@ public class BlocksHelper {
 		GameRegistry.registerBlock(geothermalOvenActive, "GeothermalOven1");
 		GameRegistry.registerBlock(researcher, "Researcher");
 		GameRegistry.registerBlock(logger, "Logger");
-        	GameRegistry.registerBlock(arsmiumBlock, "ArsmiumBlock");
-        	GameRegistry.registerBlock(urdiumBlock, "UrdiumBlock");
+        GameRegistry.registerBlock(arsmiumBlock, "ArsmiumBlock");
+        GameRegistry.registerBlock(urdiumBlock, "UrdiumBlock");
+        GameRegistry.registerBlock(uraniumOre, "UraniumOre");
 	}
 	
 	private static void languageRegisters() {
@@ -124,8 +128,9 @@ public class BlocksHelper {
 		LanguageRegistry.addName(geothermalOven, "Geothermal Oven");
 		LanguageRegistry.addName(researcher, "Researcher");
 		LanguageRegistry.addName(logger, "Logger");
-        	LanguageRegistry.addName(arsmiumBlock, "Arsmium Block");
-        	LanguageRegistry.addName(urdiumBlock, "Urdium Block");
+        LanguageRegistry.addName(arsmiumBlock, "Arsmium Block");
+        LanguageRegistry.addName(urdiumBlock, "Urdium Block");
+        LanguageRegistry.addName(uraniumOre, "Uranium Ore");
 	}
-
+    
 }
