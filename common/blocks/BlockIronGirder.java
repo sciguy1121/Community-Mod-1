@@ -33,4 +33,8 @@ public class BlockIronGirder extends Block{
     	return this.blockID;
     }
    
+    public void registerIcons(IconRegister reg){
+		this.blockIcon = reg.registerIcon("communityMod:" + this.getTextureName());
+	}
+    
 }
