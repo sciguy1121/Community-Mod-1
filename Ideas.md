@@ -71,6 +71,9 @@ Robot/RobotAI - Craftable Robot that you place like a spawn egg to spawn a robot
 
 Make the concrete alloy furnace a multiblock made of concrete
 
+Rubber tree - A tree that is common and when you take it down it will drop 1-5 rubber and 1 rubber wood. Rubber will be used for items such as insulated
+wires and/or processor.
+
 ##Realized Ideas
 
 Lava Furnace(alias: Geothermal Oven) - implemented by smigolpol
