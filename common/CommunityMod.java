@@ -27,6 +27,7 @@ import net.minecraft.src.ModLoader;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.Configuration;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
@@ -92,8 +93,8 @@ public class CommunityMod {
 		
 		EntityRegistry.registerModEntity(EntityRobot.class, "Robot", 1, this, 80, 3, true);
         
-		LanguageRegistry.instance().addStringLocalization("entity.Community_Mod.Robot.name", "Robot");
-        
+		LanguageRegistry.instance().addStringLocalization("entity.Robot.name", "en_US", "Robot");
+		
 		registerEntityEgg(EntityRobot.class, 0x4A4849, 0x000000);
 	}
     
