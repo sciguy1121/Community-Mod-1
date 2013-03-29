@@ -14,7 +14,7 @@ public class WorldGenOres implements IWorldGenerator{
     
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world,IChunkProvider chunkGenerator, IChunkProvider chunkProvider){
-
+        
 		//Make sure it's not generating in the end or nether
 		if(world.provider.dimensionId != 1 && world.provider.dimensionId != -1){
 			generateSurface(world, random, chunkX * 16, chunkZ * 16);
@@ -100,6 +100,12 @@ public class WorldGenOres implements IWorldGenerator{
 			int zCoord = chunkZ + random.nextInt(16);
 			(new WorldGenMinable(BlocksHelper.franciumOre.blockID, 3)).generate(world, random, xCoord, yCoord, zCoord);
 		}
+        for(int i = 0; i < 2; i++){
+			int xCoord = chunkX + random.nextInt(16);
+			int yCoord = random.nextInt(5);
+			int zCoord = chunkZ + random.nextInt(16);
+			(new WorldGenMinable(BlocksHelper.uraniumOre.blockID, 3)).generate(world, random, xCoord, yCoord, zCoord);
+		}
 	}
-
+    
 }

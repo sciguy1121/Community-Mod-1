@@ -32,6 +32,7 @@ public class IDsHelper {
 	public static int loggerID;
     public static int arsmiumBlockID;
     public static int urdiumBlockID;
+    public static int uraniumOreID;
     
 	//Item IDs
 	public static int leadIngotID;
@@ -51,6 +52,7 @@ public class IDsHelper {
 	public static int siliconChipID;
 	public static int researchID;
 	public static int robotModelID;
+	public static int uraniumChunkID;
 	
 	public static int RaspberryID;
 	public static int RaspberryPieID;
@@ -80,6 +82,7 @@ public class IDsHelper {
 		loggerID = config.get(blockids, "Logger ID", 804).getInt();
         arsmiumBlockID = config.get(blockids, "Arsmium Block ID", 806).getInt();
 		urdiumBlockID = config.get(blockids, "Urdium Block ID", 807).getInt();
+		uraniumOreID = config.get(blockids, "Uranium Ore ID", 808).getInt();
         
 		//Item IDs
 		leadIngotID = config.get(itemids, "Lead Ingot ID", 1000).getInt();
@@ -99,6 +102,7 @@ public class IDsHelper {
 		siliconChipID = config.get(itemids, "Silicon Chip ID", 1016).getInt();
 		researchID = config.get(itemids, "Research ID", 1017).getInt();
 		robotModelID = config.get(itemids, "Robot Model ID", 1018).getInt();
+		uraniumChunkID = config.get(itemids, "Uranium Chunk ID", 1019).getInt();
 		
 		RaspberryID = config.get(itemids, "Resberry ID", 1013).getInt();
 		RaspberryPieID = config.get(itemids, "Resberry Pie ID", 1014).getInt();

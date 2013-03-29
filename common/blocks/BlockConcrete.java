@@ -16,16 +16,23 @@ public class BlockConcrete extends Block{
     	super(id, mat);
     	this.setCreativeTab(CommunityMod.modTab);
     }
-   
+    
     public String getTextureFile(){
     	return TextureHandler.BLOCK_TEXTURE_A;
     }
-           
+    
     public int idDropped(int par1, Random rand, int par2){
     	return this.blockID;
     }
     
-    public void registerIcons(IconRegister reg){
-		this.blockIcon = reg.registerIcon("communityMod:" + this.getTextureName());
+    private String textureName;
+	
+	public BlockConcrete(int par1, String tex) {
+		super(par1, Material.iron);
+		this.textureName = tex;
+	}
+	
+	public String getTextureName(){
+		return this.textureName;
 	}
 }
