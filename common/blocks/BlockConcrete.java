@@ -23,5 +23,9 @@ public class BlockConcrete extends Block{
            
     public int idDropped(int par1, Random rand, int par2){
     	return this.blockID;
-    }      
+    }
+    
+    public void registerIcons(IconRegister reg){
+		this.blockIcon = reg.registerIcon("communityMod:" + this.getTextureName());
+	}
 }
