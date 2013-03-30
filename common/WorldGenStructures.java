@@ -6,6 +6,7 @@ import java.util.Random;
 
 
 import mods.communityMod.common.blocks.BlocksHelper;
+import mods.communityMod.common.debug.Debugger;
 import mods.communityMod.common.items.ItemsHelper;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -18,12 +19,23 @@ import net.minecraftforge.common.ChestGenHooks;
 
 import cpw.mods.fml.common.IWorldGenerator;
 
-public class WorldGenStructures implements IWorldGenerator{
+public class WorldGenStructures implements IWorldGenerator
+{
+	private int[] invalidSurface = 
+	new int[]
+	{
+		Block.waterMoving.blockID,
+		9,
+		Block.leaves.blockID,
+		Block.wood.blockID
+	};
+	
 	@Override
 	public void generate(Random random, int x, int z, World world,IChunkProvider chunkGenerator, IChunkProvider chunkProvider){
 
 		//Make sure it's not generating in the end or nether
-		if(world.provider.dimensionId != 1 && world.provider.dimensionId != -1){
+		if(world.provider.dimensionId != 1 && world.provider.dimensionId != -1)
+		{
 			generateSurface(world, random, x*16, z*16);
 		}
 		
@@ -34,11 +46,26 @@ public class WorldGenStructures implements IWorldGenerator{
 		//Science Lab Generation Code:
 		if(random.nextInt(100) == 1)
 		{
+			Debugger.sendDebugMessage("Generating structure...");
 			for(int i = 0; i < 1; i++)
 			{		
 				int xCoord = x + random.nextInt(16);
 				int zCoord = z + random.nextInt(16);
 				int yCoord = getSurface(world, xCoord, zCoord);
+				
+				boolean surfaceValid = isValidSurface(world, xCoord, yCoord - 1, zCoord);
+				
+				while(!surfaceValid)
+				{
+					xCoord += random.nextInt(5);
+					zCoord += random.nextInt(5);
+					yCoord = getSurface(world, xCoord, zCoord);
+					surfaceValid = isValidSurface(world, xCoord, yCoord - 1, zCoord);
+				}
+				
+				Debugger.sendDebugMessage("Structure generating at: x: " + xCoord + ", y: " + yCoord + ", z: " + zCoord);
+				Debugger.sendDebugMessage("Structure generating on: " + world.getBlockId(xCoord, yCoord - 1, zCoord));
+				
 				int titanium = BlocksHelper.titaniumBlock.blockID;
 				int torch = Block.torchWood.blockID;
 				
@@ -102,70 +129,103 @@ public class WorldGenStructures implements IWorldGenerator{
 				for(int slot = 0; slot < tileEntityChest.getSizeInventory(); slot++)
 				{
 					int item = random.nextInt(250);
+					int stackSize;
 					
 					if(item == 1 || item == 2 || item == 3)
 					{
-						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.anthraciteCoal, random.nextInt(2)+1));
+						stackSize = random.nextInt(2) + 1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.anthraciteCoal, stackSize));
 					}
 					if(item == 4 || item == 5 || item == 6)
 					{
-						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.arsmiumIngot, random.nextInt(3)+1));
+						stackSize = random.nextInt(3)+1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.arsmiumIngot, stackSize));
 					}
 					if(item == 7 || item == 8 || item == 9)
 					{
-						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.bituminousCoal, random.nextInt(2)));
+						stackSize = random.nextInt(2);
+						if(stackSize <= 0)
+						{
+							stackSize = 1;
+						}
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.bituminousCoal, stackSize));
 					}
 					if(item == 10 || item == 11 || item == 12)
 					{
-						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.copperIngot, random.nextInt(4)+1));
+						stackSize = random.nextInt(4) + 1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.copperIngot, stackSize));
 					}
 					if(item == 13 || item == 14 || item == 15)
 					{
-						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.cosileadiumAlloy, random.nextInt(2)));
+						stackSize = random.nextInt(2);
+						if(stackSize <= 0)
+						{
+							stackSize = 1;
+						}
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.cosileadiumAlloy, stackSize));
 					}
 					if(item == 16 || item == 17 || item == 18)
 					{
-						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.franciumIngot, random.nextInt(3)+1));
+						stackSize = random.nextInt(3)+1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.franciumIngot, stackSize));
 					}
 					if(item == 19 || item == 20 || item == 21)
 					{
-						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.leadIngot, random.nextInt(3)+1));
+						stackSize = random.nextInt(3)+1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.leadIngot, stackSize));
 					}
 					if(item == 22 || item == 23 || item == 24)
 					{
-						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.ligniteCoal, random.nextInt(3)+1));
+						stackSize = random.nextInt(3)+1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.ligniteCoal, stackSize));
 					}
 					if(item == 25 || item == 26 || item == 27)
 					{
-						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.platinumIngot, random.nextInt(3)+1));
+						stackSize = random.nextInt(3)+1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.platinumIngot, stackSize));
 					}
 					if(item == 28 || item == 28 || item == 30)
 					{
-						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.robotModel, random.nextInt(2)));
+						stackSize = random.nextInt(2);
+						if(stackSize <= 0)
+						{
+							stackSize = 1;
+						}
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.robotModel, stackSize));
 					}
 					if(item == 31 || item == 31 || item == 33)
 					{
-						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.siliconChip, random.nextInt(3)));
+						stackSize = random.nextInt(3);
+						if(stackSize <= 0)
+						{
+							stackSize = 1;
+						}
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.siliconChip, stackSize));
 					}
 					if(item == 34 || item == 34 || item == 36)
 					{
-						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.siliconIngot, random.nextInt(3)+1));
+						stackSize = random.nextInt(3)+1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.siliconIngot, stackSize));
 					}
 					if(item == 37 || item == 37 || item == 39)
 					{
-						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.siliconWafer, random.nextInt(2)+1));
+						stackSize = random.nextInt(2)+1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.siliconWafer, stackSize));
 					}
 					if(item == 40 || item == 40 || item == 42)
 					{
-						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.titaniumIngot, random.nextInt(2)+1));
+						stackSize = random.nextInt(2)+1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.titaniumIngot, stackSize));
 					}
 					if(item == 43 || item == 43 || item == 45)
 					{
-						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.tungstenIngot, random.nextInt(3)+1));
+						stackSize = random.nextInt(3)+1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.tungstenIngot, stackSize));
 					}
 					if(item == 46 || item == 46 || item == 48)
 					{
-						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.urdiumIngot, random.nextInt(3)+1));
+						stackSize = random.nextInt(3)+1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.urdiumIngot, stackSize));
 					}
 					
 				}
@@ -198,6 +258,24 @@ public class WorldGenStructures implements IWorldGenerator{
 		}
 		
 		return height + 1;
+	}
+	
+	private boolean isValidSurface(World world, int x, int y, int z)
+	{
+		int id = world.getBlockId(x, y, z);
+		
+		for(int i = 0; i < invalidSurface.length; i++)
+		{
+			Debugger.sendDebugMessage("Comparing: " + invalidSurface[i] + " : " + id);
+			if(invalidSurface[i] == id)
+			{
+				Debugger.sendDebugMessage("Result: possitive");
+				return false;
+			}
+			Debugger.sendDebugMessage("Result: negative");
+		}
+		
+		return true;
 	}
 
 }
