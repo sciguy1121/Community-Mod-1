@@ -59,6 +59,8 @@ public class CommunityMod {
     
 	public static CreativeTabs modTab = new CreativeTab(CreativeTabs.getNextID(),"CommunityMod");
 	
+	public static boolean debug = false;
+	
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event){
 		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
