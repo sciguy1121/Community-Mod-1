@@ -7,6 +7,7 @@ public class IDsHelper {
 	//Configuration categories
 	public static String blockids = "Block IDs";
 	public static String itemids = "Item IDs";
+	public static String liquidids = "Liquid IDs";
     
 	//Block IDs
 	public static int siliconOreID;
@@ -57,6 +58,10 @@ public class IDsHelper {
 	public static int RaspberryID;
 	public static int RaspberryPieID;
 	
+	//Liquid IDs
+	public static int liquidConcreteStillID;
+	public static int liquidConcreteFlowingID;
+	
 	public static void runConfiguration(Configuration config){
 		//Block IDs
 		siliconOreID = config.get(blockids, "Silicon Ore ID", 700).getInt();
@@ -82,7 +87,7 @@ public class IDsHelper {
 		loggerID = config.get(blockids, "Logger ID", 804).getInt();
         arsmiumBlockID = config.get(blockids, "Arsmium Block ID", 806).getInt();
 		urdiumBlockID = config.get(blockids, "Urdium Block ID", 807).getInt();
-		uraniumOreID = config.get(blockids, "Uranium Ore ID", 808).getInt();
+		uraniumOreID = config.get(blockids, "Uranium Ore ID", 810).getInt();
         
 		//Item IDs
 		leadIngotID = config.get(itemids, "Lead Ingot ID", 1000).getInt();
@@ -106,6 +111,10 @@ public class IDsHelper {
 		
 		RaspberryID = config.get(itemids, "Resberry ID", 1013).getInt();
 		RaspberryPieID = config.get(itemids, "Resberry Pie ID", 1014).getInt();
+		
+		//Liquid IDs
+		liquidConcreteStillID = config.get(liquidids, "Liquid Concrete Still ID", 2000).getInt();
+		liquidConcreteFlowingID = config.get(liquidids, "Liquid Concrete Flowing ID", 2001).getInt();
 	}
 	
 }
