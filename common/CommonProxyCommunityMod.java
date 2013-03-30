@@ -15,7 +15,7 @@ public class CommonProxyCommunityMod implements IGuiHandler{
 	}
 	
 	public void init(){
-		EntityRegistry.registerGlobalEntityID(EntityRobot.class, "Robot", EntityRegistry.findGlobalUniqueEntityId(), 23443223, 1312312312);
+		EntityRegistry.registerGlobalEntityID(EntityRobot.class, "Robot", EntityRegistry.findGlobalUniqueEntityId());
         registerRenderInformation();
 	}
     
