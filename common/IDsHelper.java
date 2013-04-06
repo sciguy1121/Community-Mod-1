@@ -7,6 +7,7 @@ public class IDsHelper {
 	//Configuration categories
 	public static String blockids = "Block IDs";
 	public static String itemids = "Item IDs";
+	public static String other = "Other Configuration";
     
 	//Block IDs
 	public static int siliconOreID;
@@ -106,6 +107,9 @@ public class IDsHelper {
 		
 		RaspberryID = config.get(itemids, "Resberry ID", 1013).getInt();
 		RaspberryPieID = config.get(itemids, "Resberry Pie ID", 1014).getInt();
+		
+		//Other config
+		CommunityMod.debug = config.get(other, "Debug active", false).getBoolean(false);
 	}
 	
 }
