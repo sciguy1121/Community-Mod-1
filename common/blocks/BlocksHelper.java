@@ -39,6 +39,8 @@ public class BlocksHelper {
 	public static Block arsmiumBlock;
 	public static Block urdiumBlock;
 	public static Block uraniumOre;
+	public static Block liquidConcreteStill;
+	public static Block liquidConcreteFlowing;
     
 	public static void setupBlocks() {
 		//Normal Blocks
@@ -71,6 +73,10 @@ public class BlocksHelper {
 		logger = new BlockLogger(IDsHelper.loggerID, "LoggerFront", "LoggerSide").setUnlocalizedName("logger").setHardness(1.2F).setStepSound(Block.soundWoodFootstep).setCreativeTab(CommunityMod.modTab);
 		loggeractive = new BlockLogger(IDsHelper.loggerID + 10, "LoggerFrontRunning", "LoggerSide").setUnlocalizedName("logger").setHardness(1.2F).setStepSound(Block.soundWoodFootstep);
 		
+		//Liquids
+		liquidConcreteStill = new BlockLiquidStill(IDsHelper.liquidConcreteStillID, "LiquidConcreteStill").setUnlocalizedName("LiquidConcrete");
+		liquidConcreteFlowing = new BlockLiquidFlowing(IDsHelper.liquidConcreteFlowingID, "LiquidConcreteFlowing").setUnlocalizedName("LiquidConcreteFlowing");
+		
 		gameRegisters();
 		languageRegisters();
 	}
@@ -102,6 +108,8 @@ public class BlocksHelper {
         GameRegistry.registerBlock(arsmiumBlock, "ArsmiumBlock");
         GameRegistry.registerBlock(urdiumBlock, "UrdiumBlock");
         GameRegistry.registerBlock(uraniumOre, "UraniumOre");
+        GameRegistry.registerBlock(liquidConcreteStill, "LiquidConcreteStill");
+        GameRegistry.registerBlock(liquidConcreteFlowing, "LiquidConcreteFlowing");
 	}
 	
 	private static void languageRegisters() {
@@ -130,6 +138,7 @@ public class BlocksHelper {
         LanguageRegistry.addName(arsmiumBlock, "Arsmium Block");
         LanguageRegistry.addName(urdiumBlock, "Urdium Block");
         LanguageRegistry.addName(uraniumOre, "Uranium Ore");
+        LanguageRegistry.addName(liquidConcreteFlowing, "Liquid Concrete");
 	}
     
 }
