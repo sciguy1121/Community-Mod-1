@@ -22,7 +22,8 @@ Code 	  - Sciguy1121,
 			TheNewmanator15,
 			cman8396,
 			smigolpol,
-			netherrod05
+			netherrod05,
+			LegioXV
 	   
 Textures  - KingCreeperEli,
 			Shachou,
