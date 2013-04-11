@@ -1,8 +1,5 @@
 package communityMod.common;
 
-import communityMod.common.blocks.BlocksHelper;
-import communityMod.common.items.ItemsHelper;
-
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
@@ -10,8 +7,11 @@ import net.minecraftforge.event.Event.Result;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.player.FillBucketEvent;
 
+import communityMod.common.blocks.BlocksHelper;
+import communityMod.common.items.ItemsHelper;
+
 public class ConcreteBucketHandler {
-	
+
 	@ForgeSubscribe
 	public void onBucketFill(FillBucketEvent event) {
 

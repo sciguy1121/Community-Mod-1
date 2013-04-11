@@ -1,7 +1,6 @@
 package communityMod.common.items;
 
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBucket;
 
 import communityMod.common.CommunityMod;
 import communityMod.common.IDsHelper;
@@ -35,7 +34,7 @@ public class ItemsHelper {
 
 	public static Item raspberry;
 	public static Item raspberryPie;
-	
+
 	public static Item bucketConcrete;
 
 	public static void setupItems() {
@@ -84,8 +83,10 @@ public class ItemsHelper {
 				"Raspberry").setCreativeTab(CommunityMod.modTab);
 		raspberryPie = new ItemRaspberryPie(IDsHelper.RaspberryPieID, 8, 6.0F,
 				false, "RaspberryPie").setCreativeTab(CommunityMod.modTab);
-		bucketConcrete = new ItemBucketConcrete(IDsHelper.bucketConcreteID, BlocksHelper.liquidConcreteFlowing.blockID)
-				.setCreativeTab(CommunityMod.modTab).setUnlocalizedName("bucketConcrete")
+		bucketConcrete = new ItemBucketConcrete(IDsHelper.bucketConcreteID,
+				BlocksHelper.liquidConcreteFlowing.blockID)
+				.setCreativeTab(CommunityMod.modTab)
+				.setUnlocalizedName("bucketConcrete")
 				.setContainerItem(Item.bucketEmpty);
 
 		gameRegisters();
@@ -95,28 +96,41 @@ public class ItemsHelper {
 	private static void gameRegisters() {
 		// Item Registry
 		GameRegistry.registerItem(leadIngot, "LeadIngot", Reference.modid);
-		GameRegistry.registerItem(titaniumIngot, "TitaniumIngot", Reference.modid);
+		GameRegistry.registerItem(titaniumIngot, "TitaniumIngot",
+				Reference.modid);
 		GameRegistry.registerItem(copperIngot, "CopperIngot", Reference.modid);
-		GameRegistry.registerItem(siliconIngot, "SiliconIngot", Reference.modid);
+		GameRegistry
+				.registerItem(siliconIngot, "SiliconIngot", Reference.modid);
 		GameRegistry.registerItem(ligniteCoal, "Lignite", Reference.modid);
-		GameRegistry.registerItem(bituminousCoal, "Bituminous Coal", Reference.modid);
-		GameRegistry.registerItem(anthraciteCoal, "Anthracite", Reference.modid);
-		GameRegistry.registerItem(platinumIngot, "PlatinumIngot", Reference.modid);
-		GameRegistry.registerItem(tungstenIngot, "tungstenIngot", Reference.modid);
-		GameRegistry.registerItem(arsmiumIngot, "ArsmiumShard", Reference.modid);
+		GameRegistry.registerItem(bituminousCoal, "Bituminous Coal",
+				Reference.modid);
+		GameRegistry
+				.registerItem(anthraciteCoal, "Anthracite", Reference.modid);
+		GameRegistry.registerItem(platinumIngot, "PlatinumIngot",
+				Reference.modid);
+		GameRegistry.registerItem(tungstenIngot, "tungstenIngot",
+				Reference.modid);
+		GameRegistry
+				.registerItem(arsmiumIngot, "ArsmiumShard", Reference.modid);
 		GameRegistry.registerItem(urdiumIngot, "UrdiumIngot", Reference.modid);
-		GameRegistry.registerItem(franciumIngot, "FranciumIngot", Reference.modid);
-		GameRegistry.registerItem(cosileadiumAlloy, "CosileadiumAlloy", Reference.modid);
-		GameRegistry.registerItem(siliconWafer, "SiliconWafer", Reference.modid);
+		GameRegistry.registerItem(franciumIngot, "FranciumIngot",
+				Reference.modid);
+		GameRegistry.registerItem(cosileadiumAlloy, "CosileadiumAlloy",
+				Reference.modid);
+		GameRegistry
+				.registerItem(siliconWafer, "SiliconWafer", Reference.modid);
 		GameRegistry.registerItem(siliconChip, "SiliconChip", Reference.modid);
 		GameRegistry.registerItem(research, "Research", Reference.modid);
 		GameRegistry.registerItem(robotModel, "RobotModel", Reference.modid);
-		GameRegistry.registerItem(uraniumChunk, "UraniumChunk", Reference.modid);
+		GameRegistry
+				.registerItem(uraniumChunk, "UraniumChunk", Reference.modid);
 
 		GameRegistry.registerItem(raspberry, "Raspberry", Reference.modid);
-		GameRegistry.registerItem(raspberryPie, "RaspberryPie", Reference.modid);
-		
-		GameRegistry.registerItem(bucketConcrete, "BucketConcrete", Reference.modid);
+		GameRegistry
+				.registerItem(raspberryPie, "RaspberryPie", Reference.modid);
+
+		GameRegistry.registerItem(bucketConcrete, "BucketConcrete",
+				Reference.modid);
 	}
 
 	private static void languageRegisters() {
@@ -142,7 +156,7 @@ public class ItemsHelper {
 
 		LanguageRegistry.addName(raspberry, "Raspberry");
 		LanguageRegistry.addName(raspberryPie, "Raspberry Pie");
-		
+
 		LanguageRegistry.addName(bucketConcrete, "Bucket of Concrete");
 	}
 

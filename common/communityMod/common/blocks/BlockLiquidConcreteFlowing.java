@@ -18,6 +18,7 @@ public class BlockLiquidConcreteFlowing extends BlockFlowing implements ILiquid 
 	private String SideTextureName;
 	private Icon side;
 	private Icon bottom;
+	private int freezeProgress = 0;
 
 	protected BlockLiquidConcreteFlowing(int par1, String textureName) {
 		super(par1, Material.water);
@@ -28,6 +29,24 @@ public class BlockLiquidConcreteFlowing extends BlockFlowing implements ILiquid 
 		TextureName = textureName;
 		SideTextureName = "LiquidConrete";
 	}
+
+	// @Override
+	// public void randomDisplayTick(World world, int x, int y, int z,
+	// Random random)
+	// {
+	//
+	// super.randomDisplayTick(world, x, y, z, random);
+	//
+	// if (random.nextInt(3) == 0) {
+	// if (freezeProgress < 600) {
+	// ++freezeProgress;
+	// } else {
+	// if (random.nextInt(2) == 0) {
+	// world.setBlock(x, y, z, BlocksHelper.concrete.blockID, 0, 2);
+	// }
+	// }
+	// }
+	// }
 
 	public String getTextureName() {
 		return this.TextureName;
@@ -53,10 +72,10 @@ public class BlockLiquidConcreteFlowing extends BlockFlowing implements ILiquid 
 			return blockIcon;
 		else if (side == 0)
 			return bottom;
-		
+
 		return this.side;
 	}
-	
+
 	@Override
 	public int stillLiquidId() {
 		return BlocksHelper.liquidConcreteStill.blockID;

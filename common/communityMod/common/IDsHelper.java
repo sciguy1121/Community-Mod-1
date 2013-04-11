@@ -61,7 +61,7 @@ public class IDsHelper {
 	// Liquid IDs
 	public static int liquidConcreteStillID;
 	public static int liquidConcreteFlowingID;
-	
+
 	public static int bucketConcreteID;
 
 	public static void runConfiguration(Configuration config) {
@@ -123,8 +123,9 @@ public class IDsHelper {
 
 		RaspberryID = config.get(itemids, "Resberry ID", 1013).getInt();
 		RaspberryPieID = config.get(itemids, "Resberry Pie ID", 1014).getInt();
-		
-		bucketConcreteID = config.get(itemids, "Bucket of Concrete ID", 1015).getInt();
+
+		bucketConcreteID = config.get(itemids, "Bucket of Concrete ID", 1015)
+				.getInt();
 
 		// Liquid IDs
 		liquidConcreteStillID = config.get(liquidids,

@@ -73,7 +73,7 @@ public class BlocksHelper {
 		ironGirder = new BlockIronGirder(IDsHelper.ironGirderID, Material.iron)
 				.setUnlocalizedName("Iron Girder").setHardness(2F)
 				.setStepSound(Block.soundMetalFootstep);
-		concrete = new BlockConcrete(IDsHelper.concreteID, Material.iron)
+		concrete = new BlockConcrete(IDsHelper.concreteID, "Concrete")
 				.setUnlocalizedName("Concrete").setHardness(2F)
 				.setResistance(17.5F).setStepSound(Block.soundStoneFootstep);
 		ligniteOre = new BlockOre(IDsHelper.ligniteOreID, "LigniteOre")

@@ -2,21 +2,23 @@ package communityMod.common.blocks;
 
 import java.util.Random;
 
-import mods.communityMod.textures.TextureHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
 
 import communityMod.common.CommunityMod;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
 public class BlockConcrete extends Block {
 
-	public BlockConcrete(int id, Material mat) {
-		super(id, mat);
-		this.setCreativeTab(CommunityMod.modTab);
-	}
+	private String textureName;
 
-	public String getTextureFile() {
-		return TextureHandler.BLOCK_TEXTURE_A;
+	public BlockConcrete(int par1, String tex) {
+		super(par1, Material.rock);
+		this.textureName = tex;
+		this.setCreativeTab(CommunityMod.modTab);
 	}
 
 	@Override
@@ -24,14 +26,12 @@ public class BlockConcrete extends Block {
 		return this.blockID;
 	}
 
-	private String textureName;
-
-	public BlockConcrete(int par1, String tex) {
-		super(par1, Material.iron);
-		this.textureName = tex;
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void registerIcons(IconRegister register) {
+		super.registerIcons(register);
+		this.blockIcon = register.registerIcon("communityMod:"
+				+ this.textureName);
 	}
 
-	public String getTextureName() {
-		return this.textureName;
-	}
 }

@@ -95,13 +95,17 @@ public class CommunityMod {
 				"en_US", "Robot");
 
 		registerEntityEgg(EntityRobot.class, 0x4A4849, 0x000000);
-		
+
 		MinecraftForge.EVENT_BUS.register(new ConcreteBucketHandler());
-		
-		LiquidDictionary.getOrCreateLiquid("Concrete", new LiquidStack(BlocksHelper.liquidConcreteFlowing, 1000));
-		
-		LiquidContainerRegistry.registerLiquid(new LiquidContainerData(LiquidDictionary.getLiquid("Concrete", LiquidContainerRegistry.BUCKET_VOLUME),
-				new ItemStack(ItemsHelper.bucketConcrete), new ItemStack(Item.bucketEmpty)));
+
+		LiquidDictionary.getOrCreateLiquid("Concrete", new LiquidStack(
+				BlocksHelper.liquidConcreteFlowing, 1000));
+
+		LiquidContainerRegistry.registerLiquid(new LiquidContainerData(
+				LiquidDictionary.getLiquid("Concrete",
+						LiquidContainerRegistry.BUCKET_VOLUME), new ItemStack(
+						ItemsHelper.bucketConcrete), new ItemStack(
+						Item.bucketEmpty)));
 	}
 
 	public static int getUniqueEntityId() {
