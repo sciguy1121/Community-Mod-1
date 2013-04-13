@@ -76,29 +76,29 @@ public class ItemsHelper {
 
     private static void gameRegisters() {
         // Item Registry
-        GameRegistry.registerItem(leadIngot, "LeadIngot", Reference.modTextureID);
-        GameRegistry.registerItem(titaniumIngot, "TitaniumIngot", Reference.modTextureID);
-        GameRegistry.registerItem(copperIngot, "CopperIngot", Reference.modTextureID);
-        GameRegistry.registerItem(siliconIngot, "SiliconIngot", Reference.modTextureID);
-        GameRegistry.registerItem(ligniteCoal, "Lignite", Reference.modTextureID);
-        GameRegistry.registerItem(bituminousCoal, "Bituminous Coal", Reference.modTextureID);
-        GameRegistry.registerItem(anthraciteCoal, "Anthracite", Reference.modTextureID);
-        GameRegistry.registerItem(platinumIngot, "PlatinumIngot", Reference.modTextureID);
-        GameRegistry.registerItem(tungstenIngot, "tungstenIngot", Reference.modTextureID);
-        GameRegistry.registerItem(arsmiumIngot, "ArsmiumShard", Reference.modTextureID);
-        GameRegistry.registerItem(urdiumIngot, "UrdiumIngot", Reference.modTextureID);
-        GameRegistry.registerItem(franciumIngot, "FranciumIngot", Reference.modTextureID);
-        GameRegistry.registerItem(cosileadiumAlloy, "CosileadiumAlloy", Reference.modTextureID);
-        GameRegistry.registerItem(siliconWafer, "SiliconWafer", Reference.modTextureID);
-        GameRegistry.registerItem(siliconChip, "SiliconChip", Reference.modTextureID);
-        GameRegistry.registerItem(research, "Research", Reference.modTextureID);
-        GameRegistry.registerItem(robotModel, "RobotModel", Reference.modTextureID);
-        GameRegistry.registerItem(uraniumChunk, "UraniumChunk", Reference.modTextureID);
+        GameRegistry.registerItem(leadIngot, "LeadIngot", Reference.modid);
+        GameRegistry.registerItem(titaniumIngot, "TitaniumIngot", Reference.modid);
+        GameRegistry.registerItem(copperIngot, "CopperIngot", Reference.modid);
+        GameRegistry.registerItem(siliconIngot, "SiliconIngot", Reference.modid);
+        GameRegistry.registerItem(ligniteCoal, "Lignite", Reference.modid);
+        GameRegistry.registerItem(bituminousCoal, "Bituminous Coal", Reference.modid);
+        GameRegistry.registerItem(anthraciteCoal, "Anthracite", Reference.modid);
+        GameRegistry.registerItem(platinumIngot, "PlatinumIngot", Reference.modid);
+        GameRegistry.registerItem(tungstenIngot, "tungstenIngot", Reference.modid);
+        GameRegistry.registerItem(arsmiumIngot, "ArsmiumShard", Reference.modid);
+        GameRegistry.registerItem(urdiumIngot, "UrdiumIngot", Reference.modid);
+        GameRegistry.registerItem(franciumIngot, "FranciumIngot", Reference.modid);
+        GameRegistry.registerItem(cosileadiumAlloy, "CosileadiumAlloy", Reference.modid);
+        GameRegistry.registerItem(siliconWafer, "SiliconWafer", Reference.modid);
+        GameRegistry.registerItem(siliconChip, "SiliconChip", Reference.modid);
+        GameRegistry.registerItem(research, "Research", Reference.modid);
+        GameRegistry.registerItem(robotModel, "RobotModel", Reference.modid);
+        GameRegistry.registerItem(uraniumChunk, "UraniumChunk", Reference.modid);
 
-        GameRegistry.registerItem(raspberry, "Raspberry", Reference.modTextureID);
-        GameRegistry.registerItem(raspberryPie, "RaspberryPie", Reference.modTextureID);
+        GameRegistry.registerItem(raspberry, "Raspberry", Reference.modid);
+        GameRegistry.registerItem(raspberryPie, "RaspberryPie", Reference.modid);
 
-        GameRegistry.registerItem(bucketConcrete, "BucketConcrete", Reference.modTextureID);
+        GameRegistry.registerItem(bucketConcrete, "BucketConcrete", Reference.modid);
     }
 
     private static void languageRegisters() {

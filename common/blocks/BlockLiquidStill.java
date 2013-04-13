@@ -1,45 +1,45 @@
 package blocks;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockStationary;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.Icon;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockLiquidStill extends BlockStationary {
 
-    private String TextureName;
-    private String SideTextureName;
+    private String textureName;
+    private String sideTextureName;
     private Icon side;
     private Icon bottom;
 
     BlockLiquidStill(int par1, String textureName) {
         super(par1, Material.water);
 
-        this.blockHardness = 100.0F;
+        blockHardness = 100.0F;
         this.setLightOpacity(2);
         this.disableStats();
-        TextureName = TextureName;
-        SideTextureName = SideTextureName;
+        this.textureName = textureName;
     }
 
     public String getTextureName() {
-        return this.TextureName;
+        return textureName;
     }
 
     private String getSideTextureName() {
-        return this.SideTextureName;
+        return sideTextureName;
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister reg) {
-        this.blockIcon = reg.registerIcon("communityMod:" + this.getTextureName());
-        this.side = reg.registerIcon("communityMod:" + this.getSideTextureName());
-        this.bottom = reg.registerIcon("liquidConcrete.png");
+        blockIcon = reg.registerIcon("communityMod:" + this.getTextureName());
+        //side = reg.registerIcon("communityMod:" + this.getSideTextureName());
+        bottom = reg.registerIcon("liquidConcrete.png");
     }
 
+    @Override
     public Icon getBlockTextureFromSideAndMetadata(int side, int metadata) {
         if (side == 1)
             return blockIcon;

@@ -1,46 +1,47 @@
 package blocks;
 
-import communityMod.common.CommunityMod;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockFlowing;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.Icon;
 
+import communityMod.common.CommunityMod;
+import communityMod.common.Reference;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
 public class BlockLiquidFlowing extends BlockFlowing {
 
-    private String TextureName;
-    private String SideTextureName;
+    private String textureName;
+    private String sideTextureName;
     private Icon side;
     private Icon bottom;
 
     protected BlockLiquidFlowing(int par1, String textureName) {
         super(par1, Material.water);
 
-        this.blockHardness = 100.0F;
+        blockHardness = 100.0F;
         this.setLightOpacity(2);
         this.setCreativeTab(CommunityMod.modTab);
-        TextureName = TextureName;
-        SideTextureName = SideTextureName;
+
+        this.textureName = textureName;
     }
 
     public String getTextureName() {
-        return this.TextureName;
+        return textureName;
     }
 
-    private String getSideTextureName() {
-        return this.SideTextureName;
-    }
-
+    @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister reg) {
-        this.blockIcon = reg.registerIcon("communityMod:" + this.getTextureName());
-        this.side = reg.registerIcon("communityMod:" + this.getSideTextureName());
-        this.bottom = reg.registerIcon("liquidConcreteFlowing.png");
+        blockIcon = reg.registerIcon(Reference.modTextureID + ":" + this.getTextureName());
+        // this.side = reg.registerIcon("communityMod:" +
+        // this.getSideTextureName());
+        bottom = reg.registerIcon("liquidConcreteFlowing");
     }
 
+    @Override
     public Icon getBlockTextureFromSideAndMetadata(int side, int metadata) {
         if (side == 1)
             return blockIcon;

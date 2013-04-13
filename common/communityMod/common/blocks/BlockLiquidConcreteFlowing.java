@@ -14,8 +14,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockLiquidConcreteFlowing extends BlockFlowing implements ILiquid {
 
-	private String TextureName;
-	private String SideTextureName;
+	private String textureName;
+	private String sideTextureName;
 	private Icon side;
 	private Icon bottom;
 	private int freezeProgress = 0;
@@ -26,8 +26,8 @@ public class BlockLiquidConcreteFlowing extends BlockFlowing implements ILiquid 
 		this.blockHardness = 100.0F;
 		this.setLightOpacity(2);
 		this.setCreativeTab(CommunityMod.modTab);
-		TextureName = textureName;
-		SideTextureName = "LiquidConrete";
+		this.textureName = textureName;
+		sideTextureName = "LiquidConcrete";
 	}
 
 	// @Override
@@ -49,11 +49,11 @@ public class BlockLiquidConcreteFlowing extends BlockFlowing implements ILiquid 
 	// }
 
 	public String getTextureName() {
-		return this.TextureName;
+		return this.textureName;
 	}
 
 	private String getSideTextureName() {
-		return this.SideTextureName;
+		return this.sideTextureName;
 	}
 
 	@Override
