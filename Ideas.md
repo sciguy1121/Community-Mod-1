@@ -18,8 +18,6 @@ Robots - Mobs like iron golems or goloms, or wither that you build with differen
 
 Lava Furnace - Allows players to smelt/cook with no fuel source. Lava block must be placed under LavaFurnace block (Idea implemented by smigolpol)
 
-Concrete Liquid - Flows like lava, eventually freezes into concrete
-
 Jackhammer - The quickest, yet most expensive way to break hardened concrete
 
 Block/Item Transport - Would Technicraft use a pipe based system or a mob/entity system like TC3.--Why not a new Idea?
@@ -67,8 +65,6 @@ GCEUs - Greater Community Energy Units
 
 Goloms or Gnomes - Do stuff for you (like in TC3) just you can make them do whatever (maybe program with silicon chips)?
 
-Robot/RobotAI - Craftable Robot that you place like a spawn egg to spawn a robot. The robot will then kill things for you :)
-
 Make the concrete alloy furnace a multiblock made of concrete
 
 Rubber tree - A tree that is common and when you take it down it will drop 1-5 rubber and 1 rubber wood. Rubber will be used for items such as insulated
@@ -77,3 +73,7 @@ wires and/or processor.
 ##Realized Ideas
 
 Lava Furnace(alias: Geothermal Oven) - implemented by smigolpol
+
+Robot/RobotAI - implemented by KingCreeperEli
+
+Concrete Liquid - implemented by KingCreeperEli
