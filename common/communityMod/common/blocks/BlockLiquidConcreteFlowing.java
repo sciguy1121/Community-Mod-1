@@ -1,5 +1,7 @@
 package communityMod.common.blocks;
 
+import java.util.Random;
+
 import net.minecraft.block.BlockFlowing;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -14,85 +16,82 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockLiquidConcreteFlowing extends BlockFlowing implements ILiquid {
 
-	private String textureName;
-	private String sideTextureName;
-	private Icon side;
-	private Icon bottom;
-	private int freezeProgress = 0;
+    private String textureName;
+    private String sideTextureName;
+    private Icon side;
+    private Icon bottom;
+    private int freezeProgress = 0;
 
-	protected BlockLiquidConcreteFlowing(int par1, String textureName) {
-		super(par1, Material.water);
+    protected BlockLiquidConcreteFlowing(int par1, String textureName) {
+        super(par1, Material.water);
 
-		this.blockHardness = 100.0F;
-		this.setLightOpacity(2);
-		this.setCreativeTab(CommunityMod.modTab);
-		this.textureName = textureName;
-		sideTextureName = "LiquidConcrete";
-	}
+        this.blockHardness = 100.0F;
+        this.setLightOpacity(2);
+        this.setCreativeTab(CommunityMod.modTab);
+        this.textureName = textureName;
+        sideTextureName = "LiquidConcrete";
+    }
 
-	// @Override
-	// public void randomDisplayTick(World world, int x, int y, int z,
-	// Random random)
-	// {
-	//
-	// super.randomDisplayTick(world, x, y, z, random);
-	//
-	// if (random.nextInt(3) == 0) {
-	// if (freezeProgress < 600) {
-	// ++freezeProgress;
-	// } else {
-	// if (random.nextInt(2) == 0) {
-	// world.setBlock(x, y, z, BlocksHelper.concrete.blockID, 0, 2);
-	// }
-	// }
-	// }
-	// }
+    @Override
+    public void updateTick(World world, int x, int y, int z, Random random) {
 
-	public String getTextureName() {
-		return this.textureName;
-	}
+        super.updateTick(world, x, y, z, random);
+        
+        if (random.nextInt(3) == 0) {
+            if (freezeProgress < 400) {
+                ++freezeProgress;
+            } else {
+                if (random.nextInt(2) == 0) {
+                    world.setBlock(x, y, z, 0);
+                    world.setBlock(x, y, z, BlocksHelper.concrete.blockID);
+                }
+            }
+        }
+    }
 
-	private String getSideTextureName() {
-		return this.sideTextureName;
-	}
+    public String getTextureName() {
+        return this.textureName;
+    }
 
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void registerIcons(IconRegister reg) {
-		this.blockIcon = reg.registerIcon("communityMod:"
-				+ this.getTextureName());
-		this.side = reg.registerIcon("communityMod:"
-				+ this.getSideTextureName());
-		this.bottom = reg.registerIcon("communityMod:liquidConcreteFlowing");
-	}
+    private String getSideTextureName() {
+        return this.sideTextureName;
+    }
 
-	@Override
-	public Icon getBlockTextureFromSideAndMetadata(int side, int metadata) {
-		if (side == 1)
-			return blockIcon;
-		else if (side == 0)
-			return bottom;
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void registerIcons(IconRegister reg) {
+        this.blockIcon = reg.registerIcon("communityMod:" + this.getTextureName());
+        this.side = reg.registerIcon("communityMod:" + this.getSideTextureName());
+        this.bottom = reg.registerIcon("communityMod:liquidConcreteFlowing");
+    }
 
-		return this.side;
-	}
+    @Override
+    public Icon getBlockTextureFromSideAndMetadata(int side, int metadata) {
+        if (side == 1)
+            return blockIcon;
+        else if (side == 0)
+            return bottom;
 
-	@Override
-	public int stillLiquidId() {
-		return BlocksHelper.liquidConcreteStill.blockID;
-	}
+        return this.side;
+    }
 
-	@Override
-	public boolean isMetaSensitive() {
-		return false;
-	}
+    @Override
+    public int stillLiquidId() {
+        return BlocksHelper.liquidConcreteStill.blockID;
+    }
 
-	@Override
-	public int stillLiquidMeta() {
-		return 0;
-	}
+    @Override
+    public boolean isMetaSensitive() {
+        return false;
+    }
 
-	@Override
-	public boolean isBlockReplaceable(World world, int i, int j, int k) {
-		return true;
-	}
+    @Override
+    public int stillLiquidMeta() {
+        return 0;
+    }
+
+    @Override
+    public boolean isBlockReplaceable(World world, int i, int j, int k) {
+        return true;
+    }
 }
