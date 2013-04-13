@@ -1,4 +1,4 @@
-package mods.communityMod.common.blocks;
+package blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

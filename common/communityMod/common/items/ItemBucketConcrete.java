@@ -12,8 +12,7 @@ public class ItemBucketConcrete extends ItemBucket {
 
 	@Override
 	public void updateIcons(IconRegister register) {
-		this.iconIndex = register
-				.registerIcon("communityMod:LiquidConcreteBucket");
+		this.iconIndex = register.registerIcon("communityMod:LiquidConcreteBucket");
 	}
 
 }

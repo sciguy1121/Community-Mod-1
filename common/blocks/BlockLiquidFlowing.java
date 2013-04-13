@@ -1,8 +1,9 @@
-package mods.communityMod.common.blocks;
+package blocks;
+
+import communityMod.common.CommunityMod;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import mods.communityMod.common.CommunityMod;
 import net.minecraft.block.BlockFlowing;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
