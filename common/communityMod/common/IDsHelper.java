@@ -118,8 +118,7 @@ public class IDsHelper {
 
         // Liquid IDs
         liquidConcreteStillID = config.get(liquidids, "Liquid Concrete Still ID", 2001).getInt();
-        liquidConcreteFlowingID = config.get(liquidids, "Liquid Concrete Flowing ID", 2000)
-                .getInt();
+        liquidConcreteFlowingID = config.get(liquidids, "Liquid Concrete Flowing ID", 2000).getInt();
     }
 
 }
