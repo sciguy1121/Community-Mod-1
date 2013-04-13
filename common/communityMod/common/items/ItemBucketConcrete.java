@@ -1,5 +1,7 @@
 package communityMod.common.items;
 
+import communityMod.common.Reference;
+
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.ItemBucket;
 
@@ -12,7 +14,7 @@ public class ItemBucketConcrete extends ItemBucket {
 
 	@Override
 	public void updateIcons(IconRegister register) {
-		this.iconIndex = register.registerIcon("communityMod:LiquidConcreteBucket");
+		this.iconIndex = register.registerIcon(Reference.modTextureID + ":" + "LiquidConcreteBucket");
 	}
 
 }
