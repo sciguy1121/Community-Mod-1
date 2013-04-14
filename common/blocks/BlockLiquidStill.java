@@ -27,15 +27,11 @@ public class BlockLiquidStill extends BlockStationary {
         return textureName;
     }
 
-    private String getSideTextureName() {
-        return sideTextureName;
-    }
-
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister reg) {
         blockIcon = reg.registerIcon("communityMod:" + this.getTextureName());
-        //side = reg.registerIcon("communityMod:" + this.getSideTextureName());
+        // side = reg.registerIcon("communityMod:" + this.getSideTextureName());
         bottom = reg.registerIcon("liquidConcrete.png");
     }
 

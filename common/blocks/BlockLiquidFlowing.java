@@ -14,7 +14,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockLiquidFlowing extends BlockFlowing {
 
     private String textureName;
-    private String sideTextureName;
     private Icon side;
     private Icon bottom;
 
