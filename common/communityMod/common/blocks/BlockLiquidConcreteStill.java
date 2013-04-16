@@ -1,5 +1,7 @@
 package communityMod.common.blocks;
 
+import communityMod.common.Reference;
+
 import net.minecraft.block.BlockStationary;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -59,21 +61,8 @@ public class BlockLiquidConcreteStill extends BlockStationary implements
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister reg) {
-		this.blockIcon = reg.registerIcon("communityMod:"
-				+ this.getTextureName());
-		this.side = reg.registerIcon("communityMod:"
-				+ this.getSideTextureName());
-		this.bottom = reg.registerIcon("communityMod:liquidConcreteFlowing");
-	}
-
-	@Override
-	public Icon getBlockTextureFromSideAndMetadata(int side, int metadata) {
-		if (side == 1)
-			return blockIcon;
-		else if (side == 0)
-			return bottom;
-
-		return this.side;
+		this.theIcon = new Icon[]{ reg.registerIcon("communityMod:LiquidConcreteStill"),
+				reg.registerIcon("communityMod:LiquidConcreteFlowing")};
 	}
 
 	@Override
