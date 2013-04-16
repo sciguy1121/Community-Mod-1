@@ -168,7 +168,7 @@ public class BlocksHelper {
         LanguageRegistry.addName(arsmiumBlock, "Arsmium Block");
         LanguageRegistry.addName(urdiumBlock, "Urdium Block");
         LanguageRegistry.addName(uraniumOre, "Uranium Ore");
-        LanguageRegistry.addName(liquidConcreteFlowing, "Liquid Concrete");
+        LanguageRegistry.addName(liquidConcreteFlowing, "Concrete");
     }
 
 }

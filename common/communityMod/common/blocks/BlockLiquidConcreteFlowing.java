@@ -60,19 +60,8 @@ public class BlockLiquidConcreteFlowing extends BlockFlowing implements ILiquid 
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister reg) {
-        this.blockIcon = reg.registerIcon("communityMod:" + this.getTextureName());
-        this.side = reg.registerIcon("communityMod:" + this.getSideTextureName());
-        this.bottom = reg.registerIcon("communityMod:liquidConcreteFlowing");
-    }
-
-    @Override
-    public Icon getBlockTextureFromSideAndMetadata(int side, int metadata) {
-        if (side == 1)
-            return blockIcon;
-        else if (side == 0)
-            return bottom;
-
-        return this.side;
+    	this.theIcon = new Icon[]{ reg.registerIcon("communityMod:LiquidConcreteStill"),
+				reg.registerIcon("communityMod:LiquidConcreteFlowing")};
     }
 
     @Override
