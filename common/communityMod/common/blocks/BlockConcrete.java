@@ -2,6 +2,7 @@ package communityMod.common.blocks;
 
 import java.util.Random;
 
+import communityMod.common.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -26,12 +27,15 @@ public class BlockConcrete extends Block {
 		return this.blockID;
 	}
 
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void registerIcons(IconRegister register) {
-		super.registerIcons(register);
-		this.blockIcon = register.registerIcon("communityMod:"
-				+ this.textureName);
-	}
+    public String getTextureName() {
+        return this.textureName;
+    }
+
+
+    @Override
+    public void registerIcons(IconRegister reg) {
+        this.blockIcon = reg.registerIcon(Reference.modTextureID + ":" + this.getTextureName());
+    }
+
 
 }

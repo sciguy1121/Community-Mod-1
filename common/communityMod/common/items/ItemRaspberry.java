@@ -17,9 +17,9 @@ public class ItemRaspberry extends ItemFood {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void updateIcons(IconRegister iconRegister) {
-		super.updateIcons(iconRegister);
-		this.iconIndex = iconRegister.registerIcon("communityMod:" + itemName);
+	public void registerIcons(IconRegister iconRegister) {
+		super.registerIcons(iconRegister);
+		this.itemIcon = iconRegister.registerIcon("communityMod:" + itemName);
 	}
 
 }
