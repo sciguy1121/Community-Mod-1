@@ -1,5 +1,6 @@
 package communityMod.common.items;
 
+import communityMod.common.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.EntityLiving;
@@ -24,12 +25,12 @@ public class ItemRobotModel extends Item {
 		this.setUnlocalizedName(name);
 	}
 
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void updateIcons(IconRegister iconRegister) {
-		super.updateIcons(iconRegister);
-		this.iconIndex = iconRegister.registerIcon("communityMod:" + itemName);
-	}
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void registerIcons(IconRegister iconRegister) {
+        super.registerIcons(iconRegister);
+        this.itemIcon = iconRegister.registerIcon(Reference.modTextureID + ":" + itemName);
+    }
 
 	@Override
 	public boolean onItemUse(ItemStack stack, EntityPlayer player, World world,

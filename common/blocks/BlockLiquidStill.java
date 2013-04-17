@@ -36,7 +36,7 @@ public class BlockLiquidStill extends BlockStationary {
     }
 
     @Override
-    public Icon getBlockTextureFromSideAndMetadata(int side, int metadata) {
+    public Icon getIcon(int side, int metadata) {
         if (side == 1)
             return blockIcon;
         else if (side == 0)

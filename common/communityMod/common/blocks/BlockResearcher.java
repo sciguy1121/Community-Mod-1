@@ -42,8 +42,8 @@ public class BlockResearcher extends BlockContainer {
         return this.SideTextureName;
     }
 
-    @Override
-    public Icon getBlockTextureFromSideAndMetadata(int side, int metadata) {
+
+    public Icon getIcon(int side, int metadata) {
         if (side == 1)
             return blockIcon;
         else if (side == 0)

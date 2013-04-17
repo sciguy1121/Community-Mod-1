@@ -16,8 +16,8 @@ public class ItemIngot extends Item {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void updateIcons(IconRegister iconRegister) {
-		this.iconIndex = iconRegister.registerIcon("communityMod:" + itemName);
+	public void registerIcons(IconRegister iconRegister) {
+		this.itemIcon = iconRegister.registerIcon("communityMod:" + itemName);
 	}
 
 }
