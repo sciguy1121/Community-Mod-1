@@ -1,24 +1,23 @@
 package communityMod.common.items;
 
+import communityMod.common.Reference;
+
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemCoal extends Item {
-	private String itemName;
 
-	public ItemCoal(int par1, String name) {
+	public ItemCoal(int par1) {
 		super(par1);
-		this.itemName = name;
-		this.setUnlocalizedName(name);
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister) {
 		super.registerIcons(iconRegister);
-		this.itemIcon = iconRegister.registerIcon("communityMod:" + itemName);
+		this.itemIcon = iconRegister.registerIcon(Reference.modTextureID + ":" + this.getUnlocalizedName().substring(5));
 	}
 
 }

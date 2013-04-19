@@ -57,7 +57,7 @@ public class BlocksHelper {
                 .setUnlocalizedName("CopperOre").setCreativeTab(CommunityMod.modTab);
         siliconBlock = new BlockMetal(IDsHelper.siliconBlockID).setHardness(12F).setResistance(10F)
                 .setUnlocalizedName("SiliconBlock").setCreativeTab(CommunityMod.modTab);
-        ironGirder = new BlockIronGirder(IDsHelper.ironGirderID, Material.iron).setUnlocalizedName("Iron Girder")
+        ironGirder = new BlockIronGirder(IDsHelper.ironGirderID, Material.iron).setUnlocalizedName("Girder")
                 .setHardness(2F).setStepSound(Block.soundMetalFootstep);
         concrete = new BlockConcrete(IDsHelper.concreteID).setUnlocalizedName("Concrete").setHardness(2F)
                 .setResistance(17.5F).setStepSound(Block.soundStoneFootstep);
@@ -87,18 +87,18 @@ public class BlocksHelper {
                 .setUnlocalizedName("UraniumOre").setCreativeTab(CommunityMod.modTab);
 
         // Machines
-        geothermalOven = new BlockLavaFurnace(IDsHelper.lavafurnaceID, false).setHardness(2.5F)
+        geothermalOven = new BlockLavaFurnace(IDsHelper.lavafurnaceID, true).setHardness(2.5F)
                 .setResistance(22F).setUnlocalizedName("geothermaloven").setStepSound(Block.soundStoneFootstep)
                 .setCreativeTab(CommunityMod.modTab);
-        geothermalOvenActive = new BlockLavaFurnace(IDsHelper.lavafurnaceID + 1, true)
+        geothermalOvenActive = new BlockLavaFurnace(IDsHelper.lavafurnaceID + 1, false)
                 .setHardness(2.5F).setResistance(22F).setUnlocalizedName("geothermaloven1").setStepSound(
                         Block.soundStoneFootstep).setLightValue(0.3F);
         researcher = new BlockResearcher(IDsHelper.researcherID).setUnlocalizedName(
                 "researcher").setHardness(2.5F).setResistance(10F).setCreativeTab(CommunityMod.modTab).setStepSound(
                 Block.soundMetalFootstep);
-        logger = new BlockLogger(IDsHelper.loggerID, false).setUnlocalizedName("logger")
+        logger = new BlockLogger(IDsHelper.loggerID, true).setUnlocalizedName("logger")
                 .setHardness(1.2F).setStepSound(Block.soundWoodFootstep).setCreativeTab(CommunityMod.modTab);
-        loggeractive = new BlockLogger(IDsHelper.loggerID + 10, true).setUnlocalizedName(
+        loggeractive = new BlockLogger(IDsHelper.loggerID + 10, false).setUnlocalizedName(
                 "logger").setHardness(1.2F).setStepSound(Block.soundWoodFootstep);
 
         // Liquids

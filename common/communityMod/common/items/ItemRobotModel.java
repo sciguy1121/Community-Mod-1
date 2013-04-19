@@ -17,11 +17,9 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemRobotModel extends Item {
-	private String itemName;
 
 	public ItemRobotModel(int id, String name) {
 		super(id);
-		this.itemName = name;
 		this.setUnlocalizedName(name);
 	}
 
@@ -29,7 +27,7 @@ public class ItemRobotModel extends Item {
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister iconRegister) {
         super.registerIcons(iconRegister);
-        this.itemIcon = iconRegister.registerIcon(Reference.modTextureID + ":" + itemName);
+        this.itemIcon = iconRegister.registerIcon(Reference.modTextureID + ":" + "RobotModel");
     }
 
 	@Override

@@ -16,13 +16,11 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemResearch extends Item {
     Research research;
-    private String itemName;
 
     public ItemResearch(int par1, String name) {
         super(par1);
         this.setHasSubtypes(true);
         this.setMaxDamage(0);
-        itemName = name;
         this.setUnlocalizedName(name);
     }
 
@@ -43,7 +41,7 @@ public class ItemResearch extends Item {
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister iconRegister) {
         super.registerIcons(iconRegister);
-        this.itemIcon = iconRegister.registerIcon(Reference.modTextureID + ":" + itemName);
+        this.itemIcon = iconRegister.registerIcon(Reference.modTextureID + ":" + "Research");
     }
 
 }

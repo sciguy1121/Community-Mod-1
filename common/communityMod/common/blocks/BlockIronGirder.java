@@ -29,5 +29,4 @@ public class BlockIronGirder extends Block {
         this.blockIcon = reg.registerIcon(Reference.modTextureID + ":" + this.getUnlocalizedName().substring(5));
     }
 
-
 }
