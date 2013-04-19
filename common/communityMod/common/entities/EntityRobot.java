@@ -19,7 +19,7 @@ import communityMod.common.blocks.BlocksHelper;
 import communityMod.common.items.ItemsHelper;
 
 public class EntityRobot extends EntityMob {
-
+    
 	public EntityRobot(World par1World) {
 		super(par1World);
 		this.texture = "/mods/communityMod/textures/mob/Robot.png";
@@ -27,66 +27,66 @@ public class EntityRobot extends EntityMob {
 		this.getNavigator().setAvoidsWater(true);
 		this.tasks.addTask(0, new EntityAIBreakDoor(this));
 		this.tasks.addTask(1, new EntityAIAttackOnCollide(this, this.moveSpeed,
-				true));
+                                                          true));
 		this.tasks.addTask(2, new EntityAIWatchClosest(this,
-				EntityPlayer.class, 6.0F));
+                                                       EntityPlayer.class, 6.0F));
 		this.tasks
-				.addTask(3, new EntityAIMoveTowardsTarget(this, 0.22F, 32.0F));
+        .addTask(3, new EntityAIMoveTowardsTarget(this, 0.22F, 32.0F));
 		this.tasks.addTask(4, new EntityAIWander(this, this.moveSpeed));
 		this.targetTasks.addTask(1, new EntityAINearestAttackableTarget(this,
-				EntityLiving.class, 16.0F, 0, true, false, IMob.mobSelector));
+                                                                        EntityLiving.class, 16.0F, 0, true, false, IMob.mobSelector));
 		this.targetTasks.addTask(2, new EntityAIHurtByTarget(this, false));
 	}
-
+    
 	@Override
 	protected String getLivingSound() {
 		return null;
 	}
-
+    
 	@Override
 	protected String getHurtSound() {
 		return null;
 	}
-
+    
 	@Override
 	protected String getDeathSound() {
 		return null;
 	}
-
+    
 	@Override
 	protected void playStepSound(int par1, int par2, int par3, int par4) {
 		this.worldObj.playSoundAtEntity(this, null, 0.15F, 1.0F);
 	}
-
+    
 	public int getTatalArmorValue() {
-		return 20;
+		return 50;
 	}
-
+    
 	@Override
 	protected boolean isAIEnabled() {
 		return true;
 	}
-
+    
 	@Override
 	public int getMaxHealth() {
-		return 100;
+		return 200;
 	}
-
+    
 	@Override
 	public int getAttackStrength(Entity par1Entity) {
-		return 10;
+		return 30;
 	}
-
+    
 	@Override
 	public EnumCreatureAttribute getCreatureAttribute() {
 		return EnumCreatureAttribute.UNDEFINED;
 	}
-
+    
 	@Override
 	protected int getDropItemId() {
 		return ItemsHelper.siliconChip.itemID;
 	}
-
+    
 	@Override
 	protected void dropRareDrop(int par1) {
 		switch (this.rand.nextInt(2)) {
@@ -96,5 +96,5 @@ public class EntityRobot extends EntityMob {
 				this.dropItem(ItemsHelper.siliconIngot.itemID, 10);
 		}
 	}
-
+    
 }

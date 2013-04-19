@@ -23,7 +23,7 @@ public class EntityScientist extends EntityMob {
     public EntityScientist(World par1World) {
         super(par1World);
         this.texture = "/mods/communityMod/textures/mob/Scientist.png";
-        this.moveSpeed = 0.5F;
+        this.moveSpeed = 0.35F;
         this.getNavigator().setAvoidsWater(false);
         this.tasks.addTask(1, new EntityAIAttackOnCollide(this, EntityPlayer.class, this.moveSpeed, false));
         this.tasks.addTask(2, new EntityAIWander(this, this.moveSpeed));
