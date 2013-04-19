@@ -171,7 +171,6 @@ public class TileEntityLogger extends TileEntity implements IInventory {
 	public void readFromNBT(NBTTagCompound compound) {
 		super.readFromNBT(compound);
 		NBTTagList var2 = compound.getTagList("Items");
-		NBTTagList research = compound.getTagList("Research");
 
 		this.progress = compound.getShort("Progress");
 
