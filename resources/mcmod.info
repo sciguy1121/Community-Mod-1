@@ -1,0 +1,19 @@
+[
+{
+  "modid": "Technicraft",
+  "name": "Technicraft",
+  "description": "Technicraft is a mod that incorporates advanced machinery with a brand new dimension to bring you a fantastic gameplay experience.",
+  "version": "1.0",
+  "credits": "Created by sciguy1121",
+  "logoFile": "",
+  "mcversion": "1.5.1",
+  "url": "",
+  "updateUrl": "",
+  "authors": [ "sciguy1121",
+  "Project contributors"
+  ],
+  "parent":"",
+  "screenshots": [],
+  "dependencies": [ "mod_MinecraftForge" ]
+}
+]

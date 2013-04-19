@@ -43,11 +43,11 @@ public class ItemsHelper {
         titaniumIngot = new ItemIngot(IDsHelper.titaniumIngotID, "TitaniumIngot").setCreativeTab(CommunityMod.modTab);
         copperIngot = new ItemIngot(IDsHelper.copperIngotID, "CopperIngot").setCreativeTab(CommunityMod.modTab);
         siliconIngot = new ItemIngot(IDsHelper.siliconIngotID, "SiliconIngot").setCreativeTab(CommunityMod.modTab);
-        ligniteCoal = new ItemCoal(IDsHelper.ligniteCoalID, "BituminousCoal").setCreativeTab(CommunityMod.modTab)
-                .setUnlocalizedName("Lignite");
-        bituminousCoal = new ItemCoal(IDsHelper.bituminousCoalID, "BituminousCoal").setCreativeTab(CommunityMod.modTab)
+        ligniteCoal = new ItemCoal(IDsHelper.ligniteCoalID).setCreativeTab(CommunityMod.modTab)
+                .setUnlocalizedName("LigniteCoal");
+        bituminousCoal = new ItemCoal(IDsHelper.bituminousCoalID).setCreativeTab(CommunityMod.modTab)
                 .setUnlocalizedName("BituminousCoal");
-        anthraciteCoal = new ItemCoal(IDsHelper.anthraciteCoalID, "Anthracite").setCreativeTab(CommunityMod.modTab)
+        anthraciteCoal = new ItemCoal(IDsHelper.anthraciteCoalID).setCreativeTab(CommunityMod.modTab)
                 .setUnlocalizedName("Anthracite");
         platinumIngot = new ItemIngot(IDsHelper.platinumIngotID, "PlatinumIngot").setCreativeTab(CommunityMod.modTab);
         tungstenIngot = new ItemIngot(IDsHelper.tungstenIngotID, "TungstenIngot").setCreativeTab(CommunityMod.modTab);

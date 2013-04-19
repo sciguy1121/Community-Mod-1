@@ -2,7 +2,6 @@ package communityMod.common.blocks;
 
 import java.util.Random;
 
-import mods.communityMod.textures.TextureHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -25,19 +24,16 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockLavaFurnace extends BlockContainer {
+	
 	private static boolean keepInventory = false;
-	private String TextureName;
+	private boolean active = false;
 	private Icon top;
 	private Icon sides;
 
-	public BlockLavaFurnace(int id, String textureName) {
+	public BlockLavaFurnace(int id, boolean active) {
 		super(id, Material.rock);
-		TextureName = textureName;
 		setTickRandomly(true);
-	}
-
-	public String getTextureName() {
-		return this.TextureName;
+		this.active = active;
 	}
 
 	@Override
@@ -81,8 +77,10 @@ public class BlockLavaFurnace extends BlockContainer {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister reg) {
-		this.blockIcon = reg.registerIcon("communityMod:"
-				+ this.getTextureName());
+		if(active)
+			this.blockIcon = reg.registerIcon("communityMod:LavaFurnaceFront");
+		else
+			this.blockIcon = reg.registerIcon("communityMod:LavaFurnaceFrontRunning");
 		this.top = reg.registerIcon("furnace_top");
 		this.sides = reg.registerIcon("furnace_side");
 	}
@@ -132,10 +130,6 @@ public class BlockLavaFurnace extends BlockContainer {
 				item.stackSize = 0;
 			}
 		}
-	}
-
-	public String getTextureFile() {
-		return TextureHandler.MACHINE_TEXTURE_A;
 	}
 
 	public boolean isHeatProvided(World world, int x, int y, int z) {
