@@ -1,7 +1,5 @@
 package communityMod.common.blocks;
 
-import communityMod.common.Reference;
-
 import net.minecraft.block.BlockStationary;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -14,20 +12,14 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockLiquidConcreteStill extends BlockStationary implements
 		ILiquid {
 
-	private String TextureName;
-	private String SideTextureName;
-	private Icon side;
-	private Icon bottom;
-	private int freezeProgress = 0;
+	//private int freezeProgress = 0;
 
-	BlockLiquidConcreteStill(int par1, String textureName) {
+	BlockLiquidConcreteStill(int par1) {
 		super(par1, Material.water);
 
 		this.blockHardness = 100.0F;
 		this.setLightOpacity(2);
 		this.disableStats();
-		TextureName = textureName;
-		SideTextureName = "LiquidConcrete";
 
 		this.setTickRandomly(true);
 	}
@@ -49,14 +41,6 @@ public class BlockLiquidConcreteStill extends BlockStationary implements
 	// }
 	// }
 	// }
-
-	public String getTextureName() {
-		return this.TextureName;
-	}
-
-	private String getSideTextureName() {
-		return this.SideTextureName;
-	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
