@@ -74,4 +74,4 @@ public class EntityScientist extends EntityMob {
     public EnumCreatureAttribute getCreatureAttribute() {
         return EnumCreatureAttribute.UNDEFINED;
     }
-    
+}
