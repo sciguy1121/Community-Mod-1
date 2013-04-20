@@ -14,11 +14,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockLiquidConcreteStill extends BlockStationary implements
 		ILiquid {
 
-	private String TextureName;
-	private String SideTextureName;
-	private Icon side;
-	private Icon bottom;
-	private int freezeProgress = 0;
+	//private int freezeProgress = 0;
 
 	BlockLiquidConcreteStill(int par1, String textureName) {
 		super(par1, Material.water);
@@ -26,8 +22,6 @@ public class BlockLiquidConcreteStill extends BlockStationary implements
 		this.blockHardness = 100.0F;
 		this.setLightOpacity(2);
 		this.disableStats();
-		TextureName = textureName;
-		SideTextureName = "LiquidConcrete";
 
 		this.setTickRandomly(true);
 	}
@@ -50,19 +44,11 @@ public class BlockLiquidConcreteStill extends BlockStationary implements
 	// }
 	// }
 
-	public String getTextureName() {
-		return this.TextureName;
-	}
-
-	private String getSideTextureName() {
-		return this.SideTextureName;
-	}
-
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister reg) {
-		this.theIcon = new Icon[]{ reg.registerIcon("communityMod:LiquidConcreteStill"),
-				reg.registerIcon("communityMod:LiquidConcreteFlowing")};
+		this.theIcon = new Icon[]{ reg.registerIcon(Reference.modTextureID + ":LiquidConcreteStill"),
+				reg.registerIcon(Reference.modTextureID + ":LiquidConcreteFlowing")};
 	}
 
 	@Override

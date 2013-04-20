@@ -23,25 +23,12 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockResearcher extends BlockContainer {
 
-    private String TextureName;
-    private String SideTextureName;
     private Icon side;
     private Icon bottom;
 
-    public BlockResearcher(int id, String textureName, String sideTextureName) {
+    public BlockResearcher(int id) {
         super(id, Material.iron);
-        TextureName = textureName;
-        SideTextureName = sideTextureName;
     }
-
-    public String getTextureName() {
-        return this.TextureName;
-    }
-
-    private String getSideTextureName() {
-        return this.SideTextureName;
-    }
-
 
     public Icon getIcon(int side, int metadata) {
         if (side == 1)
@@ -55,8 +42,8 @@ public class BlockResearcher extends BlockContainer {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister reg) {
-        this.blockIcon = reg.registerIcon(Reference.modTextureID + ":" + this.getTextureName());
-        this.side = reg.registerIcon(Reference.modTextureID + ":" + this.getSideTextureName());
+        this.blockIcon = reg.registerIcon(Reference.modTextureID + ":" + "ResearcherTop");
+        this.side = reg.registerIcon(Reference.modTextureID + ":" + "ResearcherSide");
         this.bottom = reg.registerIcon("furnace_top");
     }
 

@@ -59,12 +59,12 @@ public class ItemsHelper {
         siliconWafer = new ItemOther(IDsHelper.siliconWaferID, "SiliconWafer").setCreativeTab(CommunityMod.modTab);
         siliconChip = new ItemOther(IDsHelper.siliconChipID, "SiliconChip").setCreativeTab(CommunityMod.modTab);
         research = new ItemResearch(IDsHelper.researchID, "Research").setCreativeTab(CommunityMod.modTab);
-        robotModel = new ItemRobotModel(IDsHelper.robotModelID, "RobotModel").setCreativeTab(CommunityMod.modTab);
+        robotModel = new ItemRobotModel(IDsHelper.robotModelID).setCreativeTab(CommunityMod.modTab);
         uraniumChunk = new ItemIngot(IDsHelper.uraniumChunkID, "UraniumChunk").setCreativeTab(CommunityMod.modTab);
 
-        raspberry = new ItemRaspberry(IDsHelper.RaspberryID, 4, 2.0F, false, "Raspberry")
+        raspberry = new ItemRaspberry(IDsHelper.RaspberryID, 4, 2.0F, false)
                 .setCreativeTab(CommunityMod.modTab);
-        raspberryPie = new ItemRaspberryPie(IDsHelper.RaspberryPieID, 8, 6.0F, false, "RaspberryPie")
+        raspberryPie = new ItemRaspberryPie(IDsHelper.RaspberryPieID, 8, 6.0F, false)
                 .setCreativeTab(CommunityMod.modTab);
         bucketConcrete = new ItemBucketConcrete(IDsHelper.bucketConcreteID, BlocksHelper.liquidConcreteFlowing.blockID)
                 .setCreativeTab(CommunityMod.modTab).setUnlocalizedName("bucketConcrete").setContainerItem(
