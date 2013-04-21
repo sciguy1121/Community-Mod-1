@@ -98,30 +98,35 @@ public class TileEntityLogger extends TileEntity implements IInventory {
 	@Override
 	public void updateEntity() {
 		ItemStack log = getStackInSlot(0);
-		ItemStack output = getStackInSlot(1);
+		ItemStack outputSlot = getStackInSlot(1);
 
 		boolean powered = burning > 0;
+		boolean canProcess = log != null
+				&& (outputSlot == null || outputSlot.isItemEqual(new ItemStack(
+						Block.planks, 1, log.getItemDamage()))
+						&& outputSlot.stackSize < getInventoryStackLimit() - 4);
+		System.out.println(canProcess);
 
 		if (log != null && powered) {
-			if (progress != loggingTime) {
-				progress++;
-			} else {
-				if (output == null) {
+			if (canProcess && outputSlot == null) {
+				if (progress < loggingTime) {
+					progress++;
+				} else {
+					progress = 0;
 					decrStackSize(0, 1);
 					setInventorySlotContents(1, new ItemStack(Block.planks, 6,
 							log.getItemDamage()));
-					progress = 0;
-				} else {
-					if (output.isItemEqual(new ItemStack(Block.planks, 6, log
-							.getItemDamage()))
-							&& output.stackSize < getInventoryStackLimit()) {
-						decrStackSize(0, 1);
-						output.stackSize = output.stackSize + 6;
-						progress = 0;
-					} else {
-						progress = 0;
-					}
 				}
+			} else if (canProcess && outputSlot != null) {
+				if (progress < loggingTime) {
+					progress++;
+				} else {
+					decrStackSize(0, 1);
+					outputSlot.stackSize = outputSlot.stackSize + 6;
+					progress = 0;
+				}
+			} else {
+				progress = 0;
 			}
 		} else {
 			progress = 0;
@@ -133,7 +138,7 @@ public class TileEntityLogger extends TileEntity implements IInventory {
 
 		ItemStack fuel = getStackInSlot(2);
 
-		if (fuel != null) {
+		if (fuel != null && canProcess) {
 			if (TileEntityFurnace.getItemBurnTime(fuel) > 0) {
 				if (!powered) {
 					decrStackSize(2, 1);
@@ -171,7 +176,6 @@ public class TileEntityLogger extends TileEntity implements IInventory {
 	public void readFromNBT(NBTTagCompound compound) {
 		super.readFromNBT(compound);
 		NBTTagList var2 = compound.getTagList("Items");
-		NBTTagList research = compound.getTagList("Research");
 
 		this.progress = compound.getShort("Progress");
 

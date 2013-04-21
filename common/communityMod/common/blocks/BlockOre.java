@@ -2,7 +2,6 @@ package communityMod.common.blocks;
 
 import java.util.Random;
 
-import mods.communityMod.textures.TextureHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -13,20 +12,9 @@ import communityMod.common.items.ItemsHelper;
 
 public class BlockOre extends Block {
 
-    private String textureName;
-
-    public BlockOre(int id, String textureName) {
+    public BlockOre(int id) {
         super(id, Material.iron);
         this.setStepSound(Block.soundStoneFootstep);
-        this.textureName = textureName;
-    }
-
-    public String getTextureName() {
-        return this.textureName;
-    }
-
-    public String getTextureFile() {
-        return TextureHandler.BLOCK_TEXTURE_A;
     }
 
     @Override
@@ -44,7 +32,7 @@ public class BlockOre extends Block {
 
     @Override
     public void registerIcons(IconRegister reg) {
-        this.blockIcon = reg.registerIcon(Reference.modTextureID + ":" + this.getTextureName());
+        this.blockIcon = reg.registerIcon(Reference.modTextureID + ":" + this.getUnlocalizedName().substring(5));
     }
 
 }

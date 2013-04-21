@@ -15,6 +15,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Icon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import net.minecraftforge.common.ForgeDirection;
 
 import communityMod.common.CommunityMod;
 import communityMod.common.Reference;
@@ -24,24 +25,15 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockLogger extends BlockContainer {
+	
     private static boolean keepInventory = false;
-    private String TextureName;
-    private String SideTextureName;
+    private boolean active = false;
     private Icon sides;
     private Icon topBack;
 
-    public BlockLogger(int par1, String textureName, String sideTextureName) {
+    public BlockLogger(int par1, boolean active) {
         super(par1, Material.wood);
-        TextureName = textureName;
-        SideTextureName = sideTextureName;
-    }
-
-    public String getTextureName() {
-        return this.TextureName;
-    }
-
-    private String getSideTextureName() {
-        return this.SideTextureName;
+        this.active = active;
     }
 
     @Override
@@ -113,7 +105,7 @@ public class BlockLogger extends BlockContainer {
             return this.blockIcon;
         }
 
-        if (side == 1 || side == 0) {
+        if (side == 1 || side == 0 || side == ForgeDirection.OPPOSITES[metadata]) {
             return topBack;
         }
 
@@ -129,8 +121,11 @@ public class BlockLogger extends BlockContainer {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister reg) {
-        this.blockIcon = reg.registerIcon(Reference.modTextureID + ":" + this.getTextureName());
-        this.sides = reg.registerIcon(Reference.modTextureID + ":" + this.getSideTextureName());
+    	if(active)
+    		this.blockIcon = reg.registerIcon(Reference.modTextureID + ":" + "LoggerFrontRunning");
+    	else
+    		this.blockIcon = reg.registerIcon(Reference.modTextureID + ":" + "LoggerFront");
+        this.sides = reg.registerIcon(Reference.modTextureID + ":" + "LoggerSide");
         this.topBack = reg.registerIcon(Reference.modTextureID + ":" + "TitaniumBlock");
     }
 

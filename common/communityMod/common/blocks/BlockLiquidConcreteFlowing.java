@@ -10,26 +10,20 @@ import net.minecraft.world.World;
 import net.minecraftforge.liquids.ILiquid;
 
 import communityMod.common.CommunityMod;
+import communityMod.common.Reference;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockLiquidConcreteFlowing extends BlockFlowing implements ILiquid {
-
-    private String textureName;
-    private String sideTextureName;
-    private Icon side;
-    private Icon bottom;
     private int freezeProgress = 0;
 
-    protected BlockLiquidConcreteFlowing(int par1, String textureName) {
+    protected BlockLiquidConcreteFlowing(int par1) {
         super(par1, Material.water);
 
         this.blockHardness = 100.0F;
         this.setLightOpacity(2);
         this.setCreativeTab(CommunityMod.modTab);
-        this.textureName = textureName;
-        sideTextureName = "LiquidConcrete";
     }
 
     @Override
@@ -49,19 +43,11 @@ public class BlockLiquidConcreteFlowing extends BlockFlowing implements ILiquid 
         }
     }
 
-    public String getTextureName() {
-        return this.textureName;
-    }
-
-    private String getSideTextureName() {
-        return this.sideTextureName;
-    }
-
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister reg) {
-    	this.theIcon = new Icon[]{ reg.registerIcon("communityMod:LiquidConcreteStill"),
-				reg.registerIcon("communityMod:LiquidConcreteFlowing")};
+    	this.theIcon = new Icon[]{ reg.registerIcon(Reference.modTextureID + ":LiquidConcreteStill"),
+				reg.registerIcon(Reference.modTextureID + ":LiquidConcreteFlowing")};
     }
 
     @Override
@@ -83,4 +69,5 @@ public class BlockLiquidConcreteFlowing extends BlockFlowing implements ILiquid 
     public boolean isBlockReplaceable(World world, int i, int j, int k) {
         return true;
     }
+    
 }

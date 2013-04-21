@@ -38,7 +38,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(modid = Reference.modid, name = "Technicraft", version = "1.0")
-@NetworkMod(clientSideRequired = true, serverSideRequired = false, packetHandler = CommonPacketHandler.class, channels = { "CommunityMod" })
+@NetworkMod(clientSideRequired = true, serverSideRequired = false)
 
 public class CommunityMod {
     
@@ -112,7 +112,8 @@ public class CommunityMod {
         return startEntityId;
     }
     
-    public static void registerEntityEgg(Class<? extends Entity> entity, int primaryColor, int secondaryColor) {
+    @SuppressWarnings("unchecked")
+	public static void registerEntityEgg(Class<? extends Entity> entity, int primaryColor, int secondaryColor) {
         int id = getUniqueEntityId();
         EntityList.IDtoClassMapping.put(id, entity);
         EntityList.entityEggs.put(id, new EntityEggInfo(id, primaryColor, secondaryColor));

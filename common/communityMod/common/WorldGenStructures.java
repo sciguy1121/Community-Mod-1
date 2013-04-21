@@ -103,99 +103,86 @@ public class WorldGenStructures implements IWorldGenerator {
 
 				for (int slot = 0; slot < tileEntityChest.getSizeInventory(); slot++) {
 					int item = random.nextInt(250);
+					int stackSize;
 
 					if (item == 1 || item == 2 || item == 3) {
-						tileEntityChest.setInventorySlotContents(slot,
-								new ItemStack(ItemsHelper.anthraciteCoal,
-										random.nextInt(2) + 1));
+						stackSize = random.nextInt(2) + 1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.anthraciteCoal, stackSize));
 					}
 					if (item == 4 || item == 5 || item == 6) {
-						tileEntityChest.setInventorySlotContents(
-								slot,
-								new ItemStack(ItemsHelper.arsmiumIngot, random
-										.nextInt(3) + 1));
+						stackSize = random.nextInt(3) + 1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.arsmiumIngot, stackSize));
 					}
 					if (item == 7 || item == 8 || item == 9) {
-						tileEntityChest.setInventorySlotContents(slot,
-								new ItemStack(ItemsHelper.bituminousCoal,
-										random.nextInt(2)));
+						stackSize = random.nextInt(2);
+						if(stackSize == 0) { stackSize = 1; }
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.bituminousCoal,
+										stackSize));
 					}
 					if (item == 10 || item == 11 || item == 12) {
-						tileEntityChest.setInventorySlotContents(
-								slot,
-								new ItemStack(ItemsHelper.copperIngot, random
-										.nextInt(4) + 1));
+						stackSize = random.nextInt(4) + 1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.copperIngot, stackSize));
 					}
 					if (item == 13 || item == 14 || item == 15) {
-						tileEntityChest.setInventorySlotContents(slot,
-								new ItemStack(ItemsHelper.cosileadiumAlloy,
-										random.nextInt(2)));
+						stackSize = random.nextInt(2);
+						if(stackSize == 0) { stackSize = 1; }
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.cosileadiumAlloy,
+										stackSize));
 					}
 					if (item == 16 || item == 17 || item == 18) {
-						tileEntityChest.setInventorySlotContents(
-								slot,
-								new ItemStack(ItemsHelper.franciumIngot, random
-										.nextInt(3) + 1));
+						stackSize = random.nextInt(3) + 1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.franciumIngot,
+								stackSize));
 					}
 					if (item == 19 || item == 20 || item == 21) {
-						tileEntityChest.setInventorySlotContents(
-								slot,
-								new ItemStack(ItemsHelper.leadIngot, random
-										.nextInt(3) + 1));
+						stackSize = random.nextInt(3) + 1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.leadIngot,
+								stackSize));
 					}
 					if (item == 22 || item == 23 || item == 24) {
-						tileEntityChest.setInventorySlotContents(
-								slot,
-								new ItemStack(ItemsHelper.ligniteCoal, random
-										.nextInt(3) + 1));
+						stackSize = random.nextInt(3) + 1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.ligniteCoal,
+								stackSize));
 					}
 					if (item == 25 || item == 26 || item == 27) {
-						tileEntityChest.setInventorySlotContents(
-								slot,
-								new ItemStack(ItemsHelper.platinumIngot, random
-										.nextInt(3) + 1));
+						stackSize = random.nextInt(3) + 1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.platinumIngot,
+								stackSize));
 					}
 					if (item == 28 || item == 28 || item == 30) {
-						tileEntityChest.setInventorySlotContents(
-								slot,
-								new ItemStack(ItemsHelper.robotModel, random
-										.nextInt(2)));
+						stackSize = random.nextInt(2);
+						if(stackSize == 0) { stackSize = 1; }
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.robotModel, stackSize));
 					}
 					if (item == 31 || item == 31 || item == 33) {
-						tileEntityChest.setInventorySlotContents(
-								slot,
-								new ItemStack(ItemsHelper.siliconChip, random
-										.nextInt(3)));
+						stackSize = random.nextInt(3);
+						if(stackSize == 0) { stackSize = 1; }
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.siliconChip,
+										stackSize));
 					}
 					if (item == 34 || item == 34 || item == 36) {
-						tileEntityChest.setInventorySlotContents(
-								slot,
-								new ItemStack(ItemsHelper.siliconIngot, random
-										.nextInt(3) + 1));
+						stackSize = random.nextInt(3) + 1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.siliconIngot, stackSize));
 					}
 					if (item == 37 || item == 37 || item == 39) {
-						tileEntityChest.setInventorySlotContents(
-								slot,
-								new ItemStack(ItemsHelper.siliconWafer, random
-										.nextInt(2) + 1));
+						stackSize = random.nextInt(2) + 1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.siliconWafer,
+								stackSize));
 					}
 					if (item == 40 || item == 40 || item == 42) {
-						tileEntityChest.setInventorySlotContents(
-								slot,
-								new ItemStack(ItemsHelper.titaniumIngot, random
-										.nextInt(2) + 1));
+						stackSize = random.nextInt(2) + 1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.titaniumIngot,
+										stackSize));
 					}
 					if (item == 43 || item == 43 || item == 45) {
-						tileEntityChest.setInventorySlotContents(
-								slot,
-								new ItemStack(ItemsHelper.tungstenIngot, random
-										.nextInt(3) + 1));
+						stackSize = random.nextInt(3) + 1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.tungstenIngot, 
+										stackSize));
 					}
 					if (item == 46 || item == 46 || item == 48) {
-						tileEntityChest.setInventorySlotContents(
-								slot,
-								new ItemStack(ItemsHelper.urdiumIngot, random
-										.nextInt(3) + 1));
+						stackSize = random.nextInt(3) + 1;
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.urdiumIngot, 
+										stackSize));
 					}
 
 				}
