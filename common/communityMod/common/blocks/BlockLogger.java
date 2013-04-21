@@ -15,6 +15,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Icon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import net.minecraftforge.common.ForgeDirection;
 
 import communityMod.common.CommunityMod;
 import communityMod.common.Reference;
@@ -104,7 +105,7 @@ public class BlockLogger extends BlockContainer {
             return this.blockIcon;
         }
 
-        if (side == 1 || side == 0) {
+        if (side == 1 || side == 0 || side == ForgeDirection.OPPOSITES[metadata]) {
             return topBack;
         }
 
