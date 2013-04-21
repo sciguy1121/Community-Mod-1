@@ -27,12 +27,13 @@ public class ItemResearch extends Item {
     }
 
     @Override
-    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
+    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, @SuppressWarnings("rawtypes") List par3List, boolean par4) {
         // par3List.add(research.name);
     }
 
-    @Override
-    public void getSubItems(int itemID, CreativeTabs tab, List itemList) {
+    @SuppressWarnings("unchecked")
+	@Override
+    public void getSubItems(int itemID, CreativeTabs tab, @SuppressWarnings("rawtypes") List itemList) {
         for (int i = 0; i < 3; i++) {
             itemList.add(new ItemStack(itemID, 1, i));
         }
