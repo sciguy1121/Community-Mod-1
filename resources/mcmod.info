@@ -9,9 +9,9 @@
   "mcversion": "1.5.1",
   "url": "",
   "updateUrl": "",
-  "authors": [ "sciguy1121", "Contributors" ],
   "parent":"",
   "screenshots": [],
-  "dependencies": [ "mod_MinecraftForge" ]
+  "dependencies": [ "mod_MinecraftForge" ],
+  "credits": "Leaders: Project Leader - Sciguy1121, Texturing Leader - KingCreeperEli, Many Contributers were also involved",
 }
 ]
