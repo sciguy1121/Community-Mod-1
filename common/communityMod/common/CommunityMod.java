@@ -16,7 +16,7 @@ import net.minecraftforge.liquids.LiquidStack;
 
 import communityMod.common.blocks.BlocksHelper;
 import communityMod.common.entities.EntityRobot;
-import communityMod.common.entities.EntityScientist;
+//import communityMod.common.entities.EntityScientist;
 import communityMod.common.entities.tile.TileEntityLavaFurnace;
 import communityMod.common.entities.tile.TileEntityLogger;
 import communityMod.common.entities.tile.TileEntityResearcher;
@@ -87,13 +87,13 @@ public class CommunityMod {
         ResearchHandler.instance().initResearchHandler();
         
         EntityRegistry.registerModEntity(EntityRobot.class, "Robot", 1, this, 80, 3, true);
-        EntityRegistry.registerModEntity(EntityScientist.class, "Scientist", 2, this, 80, 3, true);
+        //EntityRegistry.registerModEntity(EntityScientist.class, "Scientist", 2, this, 80, 3, true);
         
         LanguageRegistry.instance().addStringLocalization("entity.Robot.name", "en_US", "Robot");
         LanguageRegistry.instance().addStringLocalization("entity.Scientist.name", "en_US", "Scientist");
         
         registerEntityEgg(EntityRobot.class, 0x4A4849, 0x000000);
-        registerEntityEgg(EntityScientist.class, 0xfff, 0x9c37bc);
+        //registerEntityEgg(EntityScientist.class, 0xfff, 0x9c37bc);
         
         MinecraftForge.EVENT_BUS.register(new ConcreteBucketHandler());
         
