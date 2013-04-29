@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties version="1.0">
+    <comment>English (en_US) locale file</comment>
+    <entry key="item.LeadIngot.name">Lead Ingot</entry>
+    
+    <entry key="tile.Concrete.name">Concrete</entry>
+</properties>

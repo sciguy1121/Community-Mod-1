@@ -82,9 +82,9 @@ public class WorldGenStructures implements IWorldGenerator {
 				createBlock(world, xCoord + 2, yCoord + 1, zCoord + 4, torch, 0);
 
 				createBlock(world, xCoord - 1, yCoord, zCoord + 2,
-						Block.doorSteel.blockID, 0);
+						Block.doorIron.blockID, 0);
 				createBlock(world, xCoord - 1, yCoord + 1, zCoord + 2,
-						Block.doorSteel.blockID, 8);
+						Block.doorIron.blockID, 8);
 
 				createBlock(world, xCoord - 2, yCoord + 1, zCoord + 1,
 						Block.stoneButton.blockID, 2);
@@ -176,12 +176,12 @@ public class WorldGenStructures implements IWorldGenerator {
 					}
 					if (item == 43 || item == 43 || item == 45) {
 						stackSize = random.nextInt(3) + 1;
-						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.tungstenIngot, 
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.tungstenIngot,
 										stackSize));
 					}
 					if (item == 46 || item == 46 || item == 48) {
 						stackSize = random.nextInt(3) + 1;
-						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.urdiumIngot, 
+						tileEntityChest.setInventorySlotContents(slot, new ItemStack(ItemsHelper.urdiumIngot,
 										stackSize));
 					}
 

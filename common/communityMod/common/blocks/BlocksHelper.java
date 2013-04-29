@@ -143,7 +143,7 @@ public class BlocksHelper {
 
     private static void languageRegisters() {
         // Blocks
-        LanguageRegistry.addName(siliconOre, "Silicon Ore");
+        /*LanguageRegistry.addName(siliconOre, "Silicon Ore");
         LanguageRegistry.addName(leadOre, "Lead Ore");
         LanguageRegistry.addName(titaniumOre, "Titanium Ore");
         LanguageRegistry.addName(leadBlock, "Lead Block");
@@ -167,7 +167,7 @@ public class BlocksHelper {
         LanguageRegistry.addName(arsmiumBlock, "Arsmium Block");
         LanguageRegistry.addName(urdiumBlock, "Urdium Block");
         LanguageRegistry.addName(uraniumOre, "Uranium Ore");
-        LanguageRegistry.addName(liquidConcreteFlowing, "Concrete");
+        LanguageRegistry.addName(liquidConcreteFlowing, "Concrete");*/
     }
 
 }
