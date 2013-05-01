@@ -100,9 +100,8 @@ public class CommunityMod {
 
         LiquidDictionary.getOrCreateLiquid("Concrete", new LiquidStack(BlocksHelper.liquidConcreteFlowing, 1000));
 
-        LiquidContainerRegistry.registerLiquid(new LiquidContainerData(LiquidDictionary.getLiquid("Concrete",
-                                                                                                  LiquidContainerRegistry.BUCKET_VOLUME), new ItemStack(ItemsHelper.bucketConcrete), new ItemStack(
-                                                                                                                                                                                                   Item.bucketEmpty)));
+        LiquidContainerRegistry.registerLiquid(new LiquidContainerData(LiquidDictionary.getLiquid("Concrete", LiquidContainerRegistry.BUCKET_VOLUME),
+        		new ItemStack(ItemsHelper.bucketConcrete), new ItemStack(Item.bucketEmpty)));
     }
 
     public static int getUniqueEntityId() {
