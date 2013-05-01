@@ -7,7 +7,6 @@ import communityMod.common.CommunityMod;
 import communityMod.common.IDsHelper;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class BlocksHelper {
 
@@ -57,7 +56,7 @@ public class BlocksHelper {
                 .setUnlocalizedName("CopperOre").setCreativeTab(CommunityMod.modTab);
         siliconBlock = new BlockMetal(IDsHelper.siliconBlockID).setHardness(12F).setResistance(10F)
                 .setUnlocalizedName("SiliconBlock").setCreativeTab(CommunityMod.modTab);
-        ironGirder = new BlockIronGirder(IDsHelper.ironGirderID, Material.iron).setUnlocalizedName("Iron Girder")
+        ironGirder = new BlockIronGirder(IDsHelper.ironGirderID, Material.iron).setUnlocalizedName("IronGirder")
                 .setHardness(2F).setStepSound(Block.soundMetalFootstep);
         concrete = new BlockConcrete(IDsHelper.concreteID).setUnlocalizedName("Concrete").setHardness(2F)
                 .setResistance(17.5F).setStepSound(Block.soundStoneFootstep);
@@ -107,7 +106,6 @@ public class BlocksHelper {
         liquidConcreteFlowing = new BlockLiquidConcreteFlowing(IDsHelper.liquidConcreteFlowingID).setUnlocalizedName("LiquidConcreteFlowing");
 
         gameRegisters();
-        languageRegisters();
     }
 
     private static void gameRegisters() {
@@ -139,35 +137,6 @@ public class BlocksHelper {
         GameRegistry.registerBlock(uraniumOre, "UraniumOre");
         GameRegistry.registerBlock(liquidConcreteStill, "LiquidConcrete");
         GameRegistry.registerBlock(liquidConcreteFlowing, "LiquidConcreteFlowing");
-    }
-
-    private static void languageRegisters() {
-        // Blocks
-        /*LanguageRegistry.addName(siliconOre, "Silicon Ore");
-        LanguageRegistry.addName(leadOre, "Lead Ore");
-        LanguageRegistry.addName(titaniumOre, "Titanium Ore");
-        LanguageRegistry.addName(leadBlock, "Lead Block");
-        LanguageRegistry.addName(titaniumBlock, "Titanium Block");
-        LanguageRegistry.addName(copperOre, "Copper Ore");
-        LanguageRegistry.addName(siliconBlock, "Silicon Block");
-        LanguageRegistry.addName(ironGirder, "Iron Girder");
-        LanguageRegistry.addName(concrete, "Concrete");
-        LanguageRegistry.addName(ligniteOre, "Lignite Ore");
-        LanguageRegistry.addName(bituminousOre, "Bituminous Coal Ore");
-        LanguageRegistry.addName(anthraciteOre, "Anthracite Ore");
-        LanguageRegistry.addName(platinumOre, "Platinum Ore");
-        LanguageRegistry.addName(tungstenOre, "Tungsten Ore");
-        LanguageRegistry.addName(arsmiumOre, "Arsmium Ore");
-        LanguageRegistry.addName(urdiumOre, "Urdium Ore");
-        LanguageRegistry.addName(franciumOre, "Francium Ore");
-        LanguageRegistry.addName(franciumBlock, "Francium Block");
-        LanguageRegistry.addName(geothermalOven, "Geothermal Oven");
-        LanguageRegistry.addName(researcher, "Researcher");
-        LanguageRegistry.addName(logger, "Logger");
-        LanguageRegistry.addName(arsmiumBlock, "Arsmium Block");
-        LanguageRegistry.addName(urdiumBlock, "Urdium Block");
-        LanguageRegistry.addName(uraniumOre, "Uranium Ore");
-        LanguageRegistry.addName(liquidConcreteFlowing, "Concrete");*/
     }
 
 }

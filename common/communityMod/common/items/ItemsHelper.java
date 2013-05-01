@@ -8,7 +8,6 @@ import communityMod.common.Reference;
 import communityMod.common.blocks.BlocksHelper;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class ItemsHelper {
 
@@ -43,12 +42,9 @@ public class ItemsHelper {
         titaniumIngot = new ItemIngot(IDsHelper.titaniumIngotID, "TitaniumIngot").setCreativeTab(CommunityMod.modTab);
         copperIngot = new ItemIngot(IDsHelper.copperIngotID, "CopperIngot").setCreativeTab(CommunityMod.modTab);
         siliconIngot = new ItemIngot(IDsHelper.siliconIngotID, "SiliconIngot").setCreativeTab(CommunityMod.modTab);
-        ligniteCoal = new ItemCoal(IDsHelper.ligniteCoalID, "BituminousCoal").setCreativeTab(CommunityMod.modTab)
-                .setUnlocalizedName("Lignite");
-        bituminousCoal = new ItemCoal(IDsHelper.bituminousCoalID, "BituminousCoal").setCreativeTab(CommunityMod.modTab)
-                .setUnlocalizedName("BituminousCoal");
-        anthraciteCoal = new ItemCoal(IDsHelper.anthraciteCoalID, "Anthracite").setCreativeTab(CommunityMod.modTab)
-                .setUnlocalizedName("Anthracite");
+        ligniteCoal = new ItemCoal(IDsHelper.ligniteCoalID, "Lignite").setCreativeTab(CommunityMod.modTab);
+        bituminousCoal = new ItemCoal(IDsHelper.bituminousCoalID, "BituminousCoal").setCreativeTab(CommunityMod.modTab);
+        anthraciteCoal = new ItemCoal(IDsHelper.anthraciteCoalID, "Anthracite").setCreativeTab(CommunityMod.modTab);
         platinumIngot = new ItemIngot(IDsHelper.platinumIngotID, "PlatinumIngot").setCreativeTab(CommunityMod.modTab);
         tungstenIngot = new ItemIngot(IDsHelper.tungstenIngotID, "TungstenIngot").setCreativeTab(CommunityMod.modTab);
         arsmiumIngot = new ItemIngot(IDsHelper.arsmiumIngotID, "ArsmiumIngot").setCreativeTab(CommunityMod.modTab);
@@ -71,7 +67,6 @@ public class ItemsHelper {
                         Item.bucketEmpty);
 
         gameRegisters();
-        languageRegisters();
     }
 
     private static void gameRegisters() {
@@ -99,33 +94,6 @@ public class ItemsHelper {
         GameRegistry.registerItem(raspberryPie, "RaspberryPie", Reference.modid);
 
         GameRegistry.registerItem(bucketConcrete, "BucketConcrete", Reference.modid);
-    }
-
-    private static void languageRegisters() {
-        // Item LanguageRegistry
-        /*LanguageRegistry.addName(leadIngot, "Lead Ingot");
-        LanguageRegistry.addName(titaniumIngot, "Titanium Ingot");
-        LanguageRegistry.addName(copperIngot, "Copper Ingot");
-        LanguageRegistry.addName(siliconIngot, "Silicon Ingot");
-        LanguageRegistry.addName(ligniteCoal, "Lignite");
-        LanguageRegistry.addName(bituminousCoal, "Bituminous Coal");
-        LanguageRegistry.addName(anthraciteCoal, "Anthracite");
-        LanguageRegistry.addName(platinumIngot, "Platinum Ingot");
-        LanguageRegistry.addName(tungstenIngot, "Tungsten Ingot");
-        LanguageRegistry.addName(arsmiumIngot, "Arsmium Ingot");
-        LanguageRegistry.addName(urdiumIngot, "Urdium Ingot");
-        LanguageRegistry.addName(franciumIngot, "Francium Ingot");
-        LanguageRegistry.addName(cosileadiumAlloy, "Cosileadium Alloy");
-        LanguageRegistry.addName(siliconWafer, "Silicon Wafer");
-        LanguageRegistry.addName(siliconChip, "Silicon Chip");
-        LanguageRegistry.addName(research, "Research");
-        LanguageRegistry.addName(robotModel, "Robot Model");
-        LanguageRegistry.addName(uraniumChunk, "Uranium Chunk");
-
-        LanguageRegistry.addName(raspberry, "Raspberry");
-        LanguageRegistry.addName(raspberryPie, "Raspberry Pie");
-
-        LanguageRegistry.addName(bucketConcrete, "Bucket of Concrete");*/
     }
 
 }

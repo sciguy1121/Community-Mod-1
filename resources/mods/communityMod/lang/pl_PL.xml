@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties version="1.0">
+    <comment>Polish(pl_PL) locale file</comment>
+	
+    <entry key="item.LeadIngot.name">Sztabka Ołowiu</entry>
+	<entry key="item.TitaniumIngot.name">Sztabka Tytanu</entry>
+	<entry key="item.CopperIngot.name">Sztabka Miedzi</entry>
+	<entry key="item.SiliconIngot.name">Sztabka Krzemu</entry>
+	<entry key="item.PlatinumIngot.name">Sztabka Platyny</entry>
+	<entry key="item.TungstenIngot.name">Sztabka Wolframu</entry>
+	<entry key="item.ArsmiumIngot.name">Sztabka Arsmium</entry>
+	<entry key="item.UrdiumIngot.name">Sztabka Urdium</entry>
+	<entry key="item.FranciumIngot.name">Sztabka Fransu</entry>
+	<entry key="item.CosileadiumAlloy.name">Stop Cosileadium</entry>
+	<entry key="item.Lignite.name">Węgiel Brunatny</entry>
+	<entry key="item.BituminousCoal.name">Węgiel Bitumiczny</entry>
+	<entry key="item.Anthracite.name">Antracyt</entry>
+	<entry key="item.SiliconWafer.name">Płyta Krzemowa</entry>
+	<entry key="item.SiliconChip.name">Chip</entry>
+	<entry key="item.Research.name">Odkrycie</entry>
+	<entry key="item.RobotModel.name">Model Robota</entry>
+	<entry key="item.UraniumChunk.name">Uran</entry>
+	<entry key="item.Raspberry.name">Malina</entry>
+	<entry key="item.RaspberryPie.name">Malinowe Ciasto</entry>
+	<entry key="item.bucketConcrete.name">Wiadro Betonu</entry>
+    
+    <entry key="tile.Concrete.name">Beton</entry>
+	<entry key="tile.SiliconOre.name">Ruda Krzemu</entry>
+	<entry key="tile.LeadOre.name">Runa Ołowiu</entry>
+	<entry key="tile.TitaniumOre.name">Ruda Tytanu</entry>
+	<entry key="tile.CopperOre.name">Ruda Miedzi</entry>
+	<entry key="tile.PlatinumOre.name">Ruda Platyny</entry>
+	<entry key="tile.TungstenOre.name">Ruda Wolframu</entry>
+	<entry key="tile.ArsmiumOre.name">Ruda Arsmium</entry>
+	<entry key="tile.UrdiumOre.name">Ruda Urdium</entry>
+	<entry key="tile.FranciumOre.name">Ruda Fransu</entry>
+	<entry key="tile.UraniumOre.name">Ruda Uranu</entry>
+	<entry key="tile.LigniteOre.name">Ruda Węgla Brunatnego</entry>
+	<entry key="tile.BituminousOre.name">Ruda Węgla Bitumicznego</entry>
+	<entry key="tile.AnthraciteOre.name">Ruda Antracytu</entry>
+	
+	<entry key="tile.SiliconBlock.name">Blok Krzemu</entry>
+	<entry key="tile.LeadBlock.name">Blok Ołowiu</entry>
+	<entry key="tile.TitaniumBlock.name">Block Tytanu</entry>
+	<entry key="tile.CopperBlock.name">Blok Miedzi</entry>
+	<entry key="tile.PlatinumBlock.name">Blok Platyny</entry>
+	<entry key="tile.TungstenBlock.name">Blok Wolframu</entry>
+	<entry key="tile.ArsmiumBlock.name">Blok Arsmium</entry>
+	<entry key="tile.UrdiumBlock.name">Blok Urdium</entry>
+	<entry key="tile.FranciumBlock.name">Blok Fransu</entry>
+	<entry key="tile.UraniumBlock.name">Blok Uranu</entry>
+	
+	<entry key="tile.IronGirder.name">Żelazny Dźwigar</entry>
+	
+	<entry key="tile.geothermaloven.name">Piec Geotermalny</entry>
+	<entry key="tile.logger.name">Tartak</entry>
+	<entry key="tile.researcher.name">Stół Badawczy</entry>
+	
+	<entry key="tile.LiquidConcreteFlowing.name">Płynny Beton</entry>
+	
+</properties>
