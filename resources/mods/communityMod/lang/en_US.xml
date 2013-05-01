@@ -2,7 +2,61 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties version="1.0">
     <comment>English (en_US) locale file</comment>
+	
     <entry key="item.LeadIngot.name">Lead Ingot</entry>
+	<entry key="item.TitaniumIngot.name">Titanium Ingot</entry>
+	<entry key="item.CopperIngot.name">Copper Ingot</entry>
+	<entry key="item.SiliconIngot.name">Silicon Ingot</entry>
+	<entry key="item.PlatinumIngot.name">Platinum Ingot</entry>
+	<entry key="item.TungstenIngot.name">Tungsten Ingot</entry>
+	<entry key="item.ArsmiumIngot.name">Arsmium Ingot</entry>
+	<entry key="item.UrdiumIngot.name">Urdium Ingot</entry>
+	<entry key="item.FranciumIngot.name">Francium Ingot</entry>
+	<entry key="item.CosileadiumAlloy.name">Cosileadium Alloy</entry>
+	<entry key="item.Lignite.name">Lignite</entry>
+	<entry key="item.BituminousCoal.name">Bituminous Coal</entry>
+	<entry key="item.Anthracite.name">Anthracite</entry>
+	<entry key="item.SiliconWafer.name">Silicon Wafer</entry>
+	<entry key="item.SiliconChip.name">Silicon Chip</entry>
+	<entry key="item.Research.name">Research</entry>
+	<entry key="item.RobotModel.name">Robot Model</entry>
+	<entry key="item.UraniumChunk.name">Uranium Chunk</entry>
+	<entry key="item.Raspberry.name">Raspberry</entry>
+	<entry key="item.RaspberryPie.name">Raspberry Pie</entry>
+	<entry key="item.bucketConcrete.name">Bucket of Concrete</entry>
     
     <entry key="tile.Concrete.name">Concrete</entry>
+	<entry key="tile.SiliconOre.name">Silicon Ore</entry>
+	<entry key="tile.LeadOre.name">Lead Ore</entry>
+	<entry key="tile.TitaniumOre.name">Titanium Ore</entry>
+	<entry key="tile.CopperOre.name">Copper Ore</entry>
+	<entry key="tile.PlatinumOre.name">Platinum Ore</entry>
+	<entry key="tile.TungstenOre.name">Tungsten Ore</entry>
+	<entry key="tile.ArsmiumOre.name">Arsmium Ore</entry>
+	<entry key="tile.UrdiumOre.name">Urdium Ore</entry>
+	<entry key="tile.FranciumOre.name">Francium Ore</entry>
+	<entry key="tile.UraniumOre.name">Uranium Ore</entry>
+	<entry key="tile.LigniteOre.name">Lignite Ore</entry>
+	<entry key="tile.BituminousOre.name">Bituminous Coal Ore</entry>
+	<entry key="tile.AnthraciteOre.name">Anthracite Ore</entry>
+	
+	<entry key="tile.SiliconBlock.name">Silicon Block</entry>
+	<entry key="tile.LeadBlock.name">Lead Block</entry>
+	<entry key="tile.TitaniumBlock.name">Titanium Block</entry>
+	<entry key="tile.CopperBlock.name">Copper Block</entry>
+	<entry key="tile.PlatinumBlock.name">Platinum Block</entry>
+	<entry key="tile.TungstenBlock.name">Tungsten Block</entry>
+	<entry key="tile.ArsmiumBlock.name">Arsmium Block</entry>
+	<entry key="tile.UrdiumBlock.name">Urdium Block</entry>
+	<entry key="tile.FranciumBlock.name">Francium Block</entry>
+	<entry key="tile.UraniumBlock.name">Uranium Block</entry>
+	
+	<entry key="tile.IronGirder.name">Iron Girder</entry>
+	
+	<entry key="tile.geothermaloven.name">Geothermal Oven</entry>
+	<entry key="tile.logger.name">Logger</entry>
+	<entry key="tile.researcher.name">Researcher</entry>
+	
+	<entry key="tile.LiquidConcreteStill.name">Liquid Concrete</entry>
+	
 </properties>

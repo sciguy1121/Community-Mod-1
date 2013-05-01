@@ -150,9 +150,9 @@ public class TileEntityResearcher extends TileEntity implements IInventory {
 
 	@Override
 	public void updateEntity() {
-		ItemStack fuel = getStackInSlot(0);
+		//ItemStack fuel = getStackInSlot(0);
 		ItemStack research = getStackInSlot(1);
-		ItemStack output = getStackInSlot(2);
+		//ItemStack output = getStackInSlot(2);
 		ItemStack result = ResearcherRecipes.instance().getResearchResult(
 				research);
 
