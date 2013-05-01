@@ -47,7 +47,7 @@ public class CommunityMod {
 
     static int startEntityId = 300;
 
-    @Instance
+    @Instance(Reference.modid)
     public static CommunityMod instance = new CommunityMod();
 
     public static GuiHandler guihandler = new GuiHandler();
