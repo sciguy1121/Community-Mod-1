@@ -85,6 +85,7 @@ public class BlockRaspberryBush extends BlockFlower implements IPlantable
 				{
 					--player.getCurrentEquippedItem().stackSize;
 					world.setBlockMetadataWithNotify(x, y, z, 1, 2);
+					growProgress = 0;
 					return true;
 				}
 			}
