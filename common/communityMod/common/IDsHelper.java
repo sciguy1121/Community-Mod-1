@@ -4,7 +4,7 @@ import net.minecraftforge.common.Configuration;
 
 public class IDsHelper {
 
-    // Configuration categories
+	// Configuration categories
     public static String blockids = "Block IDs";
     public static String itemids = "Item IDs";
     public static String liquidids = "Liquid IDs";
@@ -61,6 +61,8 @@ public class IDsHelper {
     // Liquid IDs
     public static int liquidConcreteStillID;
     public static int liquidConcreteFlowingID;
+    
+    public static int RaspberryBushID;
 
     public static int bucketConcreteID;
 
@@ -90,6 +92,7 @@ public class IDsHelper {
         arsmiumBlockID = config.get(blockids, "Arsmium Block ID", 806).getInt();
         urdiumBlockID = config.get(blockids, "Urdium Block ID", 807).getInt();
         uraniumOreID = config.get(blockids, "Uranium Ore ID", 810).getInt();
+        RaspberryBushID = config.get(blockids, "Raspberry Bush ID", 830).getInt();
 
         // Item IDs
         leadIngotID = config.get(itemids, "Lead Ingot ID", 1000).getInt();

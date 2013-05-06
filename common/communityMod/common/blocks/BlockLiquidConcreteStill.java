@@ -17,7 +17,7 @@ public class BlockLiquidConcreteStill extends BlockStationary implements
 
 	//private int freezeProgress = 0;
 
-	BlockLiquidConcreteStill(int par1, String textureName) {
+	public BlockLiquidConcreteStill(int par1) {
 		super(par1, Material.water);
 
 		this.blockHardness = 100.0F;

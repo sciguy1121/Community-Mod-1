@@ -39,6 +39,7 @@ public class BlocksHelper {
     public static Block uraniumOre;
     public static Block liquidConcreteStill;
     public static Block liquidConcreteFlowing;
+    public static Block raspberryBush;
 
     public static void setupBlocks() {
         // Normal Blocks
@@ -101,9 +102,13 @@ public class BlocksHelper {
                 "logger").setHardness(1.2F).setStepSound(Block.soundWoodFootstep);
 
         // Liquids
-        liquidConcreteStill = new BlockLiquidConcreteStill(IDsHelper.liquidConcreteStillID, "LiquidConcrete")
-                .setUnlocalizedName("LiquidConcreteStill");
+        liquidConcreteStill = new BlockLiquidConcreteStill(IDsHelper.liquidConcreteStillID)
+        .setUnlocalizedName("LiquidConcreteStill");
         liquidConcreteFlowing = new BlockLiquidConcreteFlowing(IDsHelper.liquidConcreteFlowingID).setUnlocalizedName("LiquidConcreteFlowing");
+        
+        //Other
+        raspberryBush = new BlockRaspberryBush(IDsHelper.RaspberryBushID).setUnlocalizedName("RaspberryBush");
+        
 
         gameRegisters();
     }
@@ -137,6 +142,7 @@ public class BlocksHelper {
         GameRegistry.registerBlock(uraniumOre, "UraniumOre");
         GameRegistry.registerBlock(liquidConcreteStill, "LiquidConcrete");
         GameRegistry.registerBlock(liquidConcreteFlowing, "LiquidConcreteFlowing");
+        GameRegistry.registerBlock(raspberryBush, "RaspberryBush");
     }
 
 }
