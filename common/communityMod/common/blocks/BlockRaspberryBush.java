@@ -83,7 +83,8 @@ public class BlockRaspberryBush extends BlockFlower implements IPlantable
 				if(selectedItem.itemID == Item.dyePowder.itemID
 						&& selectedItem.getItemDamage() == 15)
 				{
-					--player.getCurrentEquippedItem().stackSize;
+					if(!player.capabilities.isCreativeMode)
+						--player.getCurrentEquippedItem().stackSize;
 					world.setBlockMetadataWithNotify(x, y, z, 1, 2);
 					growProgress = 0;
 					return true;

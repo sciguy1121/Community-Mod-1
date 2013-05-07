@@ -105,7 +105,6 @@ public class TileEntityLogger extends TileEntity implements IInventory {
 				&& (outputSlot == null || outputSlot.isItemEqual(new ItemStack(
 						Block.planks, 1, log.getItemDamage()))
 						&& outputSlot.stackSize < getInventoryStackLimit() - 4);
-		System.out.println(canProcess);
 
 		if (log != null && powered) {
 			if (canProcess && outputSlot == null) {
