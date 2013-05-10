@@ -1,6 +1,7 @@
 package communityMod.common.items;
 
 import net.minecraft.item.Item;
+import net.minecraftforge.oredict.OreDictionary;
 
 import communityMod.common.CommunityMod;
 import communityMod.common.IDsHelper;
@@ -67,6 +68,7 @@ public class ItemsHelper {
                         Item.bucketEmpty);
 
         gameRegisters();
+        oreDictionary();
     }
 
     private static void gameRegisters() {
@@ -94,6 +96,19 @@ public class ItemsHelper {
         GameRegistry.registerItem(raspberryPie, "RaspberryPie", Reference.modid);
 
         GameRegistry.registerItem(bucketConcrete, "BucketConcrete", Reference.modid);
+    }
+    
+    private static void oreDictionary()
+    {
+    	OreDictionary.registerOre("ingotLead", leadIngot);
+    	OreDictionary.registerOre("ingotTitanium", titaniumIngot);
+    	OreDictionary.registerOre("ingotCopper", copperIngot);
+    	OreDictionary.registerOre("ingotSilicon", siliconIngot);
+    	OreDictionary.registerOre("ingotPlatinum", platinumIngot);
+    	OreDictionary.registerOre("ingotTungsten", tungstenIngot);
+    	OreDictionary.registerOre("ingotArsmium", arsmiumIngot);
+    	OreDictionary.registerOre("ingotUrdium", urdiumIngot);
+    	OreDictionary.registerOre("ingotFrancium", franciumIngot);
     }
 
 }

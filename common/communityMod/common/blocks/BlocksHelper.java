@@ -2,6 +2,7 @@ package communityMod.common.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraftforge.oredict.OreDictionary;
 
 import communityMod.common.CommunityMod;
 import communityMod.common.IDsHelper;
@@ -109,8 +110,8 @@ public class BlocksHelper {
         //Other
         raspberryBush = new BlockRaspberryBush(IDsHelper.RaspberryBushID).setUnlocalizedName("RaspberryBush");
         
-
         gameRegisters();
+        oreDictionary();
     }
 
     private static void gameRegisters() {
@@ -143,6 +144,19 @@ public class BlocksHelper {
         GameRegistry.registerBlock(liquidConcreteStill, "LiquidConcrete");
         GameRegistry.registerBlock(liquidConcreteFlowing, "LiquidConcreteFlowing");
         GameRegistry.registerBlock(raspberryBush, "RaspberryBush");
+    }
+    
+    private static void oreDictionary() {
+    	OreDictionary.registerOre("oreSilicon", siliconOre);
+    	OreDictionary.registerOre("oreLead", leadOre);
+    	OreDictionary.registerOre("oreTitatium", titaniumOre);
+    	OreDictionary.registerOre("oreCopper", copperOre);
+    	OreDictionary.registerOre("orePlatinum", platinumOre);
+    	OreDictionary.registerOre("oreTungsten", tungstenOre);
+    	OreDictionary.registerOre("oreArsmium", arsmiumOre);
+    	OreDictionary.registerOre("oreUrdium", urdiumOre);
+    	OreDictionary.registerOre("oreFrancium", franciumOre);
+    	OreDictionary.registerOre("oreFrancium", uraniumOre);
     }
 
 }
