@@ -1,16 +1,22 @@
 package communityMod.common.entities.tile;
 
 import net.minecraft.block.Block;
+import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
 
+import communityMod.common.container.ContainerResearcher;
+import communityMod.common.gui.GuiResearcher;
+import communityMod.common.gui.IGuiTile;
 import communityMod.common.recipes.ResearcherRecipes;
 
-public class TileEntityResearcher extends TileEntity implements IInventory {
+public class TileEntityResearcher extends TileEntity implements IInventory, IGuiTile {
 
 	private ItemStack[] inventory;
 
@@ -199,6 +205,30 @@ public class TileEntityResearcher extends TileEntity implements IInventory {
 	@Override
 	public boolean isStackValidForSlot(int i, ItemStack itemstack) {
 		return true;
+	}
+	
+	@Override
+	public Container getContainer(World world, int x, int y, int z,
+			EntityPlayer player) {
+		TileEntity tile = world.getBlockTileEntity(x, y, z);
+		
+		if (tile instanceof TileEntityResearcher) {
+			return new ContainerResearcher((TileEntityResearcher) tile,
+					player.inventory);
+		}
+		return null;
+	}
+
+	@Override
+	public GuiContainer getGuiContainer(World world, int x, int y, int z,
+			EntityPlayer player) {
+		TileEntity tile = world.getBlockTileEntity(x, y, z);
+		
+		if (tile instanceof TileEntityResearcher) {
+			return new GuiResearcher((TileEntityResearcher) tile,
+					player.inventory);
+		}
+		return null;
 	}
 
 }

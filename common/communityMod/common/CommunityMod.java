@@ -16,7 +16,6 @@ import net.minecraftforge.liquids.LiquidStack;
 
 import communityMod.common.blocks.BlocksHelper;
 import communityMod.common.entities.EntityRobot;
-//import communityMod.common.entities.EntityScientist;
 import communityMod.common.entities.tile.TileEntityLavaFurnace;
 import communityMod.common.entities.tile.TileEntityLogger;
 import communityMod.common.entities.tile.TileEntityResearcher;
@@ -36,6 +35,7 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
+//import communityMod.common.entities.EntityScientist;
 
 @Mod(modid = Reference.modid, name = "Technicraft", version = "1.0")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
@@ -47,12 +47,14 @@ public class CommunityMod {
 
     static int startEntityId = 300;
 
-    @Instance
+    @Instance(Reference.modid)
     public static CommunityMod instance = new CommunityMod();
 
     public static GuiHandler guihandler = new GuiHandler();
 
-    public static CreativeTabs modTab = new CreativeTab(CreativeTabs.getNextID(), "CommunityMod");
+    public static CreativeTabs modTab = new CreativeTab(CreativeTabs.getNextID(), "Technicraft");
+    
+    public static LiquidStack concreteLiquid;
 
     @PreInit
     public void preInit(FMLPreInitializationEvent event) {
@@ -97,11 +99,13 @@ public class CommunityMod {
         //registerEntityEgg(EntityScientist.class, 0xfff, 0x9c37bc);
 
         MinecraftForge.EVENT_BUS.register(new ConcreteBucketHandler());
-
-        LiquidDictionary.getOrCreateLiquid("Concrete", new LiquidStack(BlocksHelper.liquidConcreteFlowing, 1000));
+        
+        concreteLiquid = LiquidDictionary.getOrCreateLiquid("Concrete",  new LiquidStack(BlocksHelper.liquidConcreteStill,
+        		LiquidContainerRegistry.BUCKET_VOLUME));
 
         LiquidContainerRegistry.registerLiquid(new LiquidContainerData(LiquidDictionary.getLiquid("Concrete", LiquidContainerRegistry.BUCKET_VOLUME),
         		new ItemStack(ItemsHelper.bucketConcrete), new ItemStack(Item.bucketEmpty)));
+        
     }
 
     public static int getUniqueEntityId() {

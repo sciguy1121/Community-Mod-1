@@ -57,6 +57,8 @@
 	<entry key="tile.logger.name">Logger</entry>
 	<entry key="tile.researcher.name">Researcher</entry>
 	
-	<entry key="tile.LiquidConcreteStill.name">Liquid Concrete</entry>
+	<entry key="tile.RaspberryBush.name">Raspberry Bush</entry>
+	
+	<entry key="tile.LiquidConcreteFlowing.name">Liquid Concrete</entry>
 	
 </properties>
