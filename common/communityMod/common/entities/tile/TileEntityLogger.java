@@ -1,17 +1,23 @@
 package communityMod.common.entities.tile;
 
 import net.minecraft.block.Block;
+import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityFurnace;
+import net.minecraft.world.World;
 
 import communityMod.common.blocks.BlockLogger;
+import communityMod.common.container.ContainerLogger;
+import communityMod.common.gui.GuiLogger;
+import communityMod.common.gui.IGuiTile;
 
-public class TileEntityLogger extends TileEntity implements IInventory {
+public class TileEntityLogger extends TileEntity implements IInventory, IGuiTile {
 	private ItemStack[] inventory;
 	public int progress = 0;
 	private int loggingTime = 60;
@@ -105,7 +111,6 @@ public class TileEntityLogger extends TileEntity implements IInventory {
 				&& (outputSlot == null || outputSlot.isItemEqual(new ItemStack(
 						Block.planks, 1, log.getItemDamage()))
 						&& outputSlot.stackSize < getInventoryStackLimit() - 4);
-		System.out.println(canProcess);
 
 		if (log != null && powered) {
 			if (canProcess && outputSlot == null) {
@@ -199,5 +204,29 @@ public class TileEntityLogger extends TileEntity implements IInventory {
 	@Override
 	public boolean isStackValidForSlot(int i, ItemStack itemstack) {
 		return true;
+	}
+	
+	@Override
+	public Container getContainer(World world, int x, int y, int z,
+			EntityPlayer player) {
+		TileEntity tile = world.getBlockTileEntity(x, y, z);
+		
+		if (tile instanceof TileEntityLogger) {
+			return new ContainerLogger((TileEntityLogger) tile,
+					player.inventory);
+		}
+		return null;
+	}
+
+	@Override
+	public GuiContainer getGuiContainer(World world, int x, int y, int z,
+			EntityPlayer player) {
+		TileEntity tile = world.getBlockTileEntity(x, y, z);
+		
+		if (tile instanceof TileEntityLogger) {
+			return new GuiLogger((TileEntityLogger) tile,
+					player.inventory);
+		}
+		return null;
 	}
 }

@@ -1,17 +1,23 @@
 package communityMod.common.entities.tile;
 
 import net.minecraft.block.Block;
+import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
 
 import communityMod.common.blocks.BlockLavaFurnace;
+import communityMod.common.container.ContainerLavaFurnace;
+import communityMod.common.gui.GuiLavaFurnace;
+import communityMod.common.gui.IGuiTile;
 
-public class TileEntityLavaFurnace extends TileEntity implements IInventory {
+public class TileEntityLavaFurnace extends TileEntity implements IInventory, IGuiTile {
 	private ItemStack[] inventory;
 
 	public int furnaceBurnTime = 0;
@@ -219,5 +225,29 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory {
 	@Override
 	public boolean isStackValidForSlot(int i, ItemStack itemstack) {
 		return true;
+	}
+
+	@Override
+	public Container getContainer(World world, int x, int y, int z,
+			EntityPlayer player) {
+		TileEntity tile = world.getBlockTileEntity(x, y, z);
+		
+		if (tile instanceof TileEntityLavaFurnace) {
+			return new ContainerLavaFurnace((TileEntityLavaFurnace) tile,
+					player.inventory);
+		}
+		return null;
+	}
+
+	@Override
+	public GuiContainer getGuiContainer(World world, int x, int y, int z,
+			EntityPlayer player) {
+		TileEntity tile = world.getBlockTileEntity(x, y, z);
+		
+		if (tile instanceof TileEntityLavaFurnace) {
+			return new GuiLavaFurnace((TileEntityLavaFurnace) tile,
+					player.inventory);
+		}
+		return null;
 	}
 }
