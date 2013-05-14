@@ -43,6 +43,8 @@ Technicraft is a community mod for Minecraft v1.5 that incorporates advanced mac
 
 Technicraft was originally started by Sciguy1121. It's aim is to bring the modding community together to make one big mod with dozens of contributors.
 
+####How to Help
+Technicraft is all about community interaction, so if you want to help, go for it! To get started, you will need to learn how to use GitHub for your operating system, which can be done from [here](https://github.com/). You will need to then set up your development environment. Technicraft uses a special development configuration, and you can learn how to set that up in [this video](https://www.youtube.com/watch?v=KsNr6ifC2aM). After you do that, you can work on whatever you want to!
 
 ####License
 Technicraft uses these licenses:
