@@ -202,7 +202,15 @@ public class WorldGenStructures implements IWorldGenerator {
 
 		while (continueQ) {
 			if (world.isAirBlock(x, height, z)) {
-				height = height - 1;
+			    if (Block.grass.blockID != world.getBlockId(x, height, z)) {
+			        if (Block.snow.blockID != world.getBlockId(x, height, z)) {
+	                    height = height - 1;
+	                } else {
+	                    continueQ = false;
+	                }
+			    } else {
+	                continueQ = false;
+			    }
 			} else {
 				continueQ = false;
 			}
