@@ -21,7 +21,6 @@ Code 	  - Sciguy1121,
 			SuitedSlime,
 			TheNewmanator15,
 			cman8396,
-			smigolpol,
 			netherrod05
 	   
 Textures  - KingCreeperEli,
