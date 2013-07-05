@@ -7,6 +7,9 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import communityMod.common.CommunityMod;
 import communityMod.common.Reference;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
 public class BlockConcrete extends Block {
 
 	public BlockConcrete(int par1) {
@@ -15,6 +18,7 @@ public class BlockConcrete extends Block {
 	}
 
     @Override
+    @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister reg) {
         this.blockIcon = reg.registerIcon(Reference.modTextureID + ":" + "Concrete");
     }

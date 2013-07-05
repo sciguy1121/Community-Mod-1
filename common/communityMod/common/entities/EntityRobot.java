@@ -20,9 +20,12 @@ import communityMod.common.items.ItemsHelper;
 
 public class EntityRobot extends EntityMob {
     
-	public EntityRobot(World par1World) {
+	private String texture;
+    private float moveSpeed;
+
+    public EntityRobot(World par1World) {
 		super(par1World);
-		this.texture = "/mods/communityMod/textures/mob/Robot.png";
+		this.texture = "/assets/communityMod/textures/mob/Robot.png";
 		this.moveSpeed = 0.35F;
 		this.getNavigator().setAvoidsWater(true);
 		this.tasks.addTask(0, new EntityAIBreakDoor(this));
@@ -34,7 +37,7 @@ public class EntityRobot extends EntityMob {
         .addTask(3, new EntityAIMoveTowardsTarget(this, 0.22F, 32.0F));
 		this.tasks.addTask(4, new EntityAIWander(this, this.moveSpeed));
 		this.targetTasks.addTask(1, new EntityAINearestAttackableTarget(this,
-                                                                        EntityLiving.class, 16.0F, 0, true, false, IMob.mobSelector));
+                                                                        EntityLiving.class, 0, true, false, IMob.mobSelector));
 		this.targetTasks.addTask(2, new EntityAIHurtByTarget(this, false));
 	}
     
@@ -67,7 +70,7 @@ public class EntityRobot extends EntityMob {
 		return true;
 	}
     
-	@Override
+	/*@Override
 	public int getMaxHealth() {
 		return 200;
 	}
@@ -75,7 +78,7 @@ public class EntityRobot extends EntityMob {
 	@Override
 	public int getAttackStrength(Entity par1Entity) {
 		return 30;
-	}
+	}*/
     
 	@Override
 	public EnumCreatureAttribute getCreatureAttribute() {

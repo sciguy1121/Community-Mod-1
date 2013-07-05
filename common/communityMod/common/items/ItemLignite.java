@@ -1,6 +1,6 @@
 package communityMod.common.items;
 
-import mods.communityMod.textures.TextureHandler;
+import assets.communityMod.textures.TextureHandler;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
