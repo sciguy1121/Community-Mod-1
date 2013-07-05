@@ -33,12 +33,15 @@ Ideas	- LionBoyTheGamer,
 			cman8396,
 			MrTransman99, 
 			Jeffrey Aldrich
+			
 
+No longer contributing*	  - smigolpol
+			
 
-
+*People who contributed to this project, but decided to quit contributing to it.
 ### Details
 ####About
-Technicraft is a community mod for Minecraft v1.5 that incorporates advanced machinery with a brand new dimension to bring you a fantastic gameplay experience.
+Technicraft is a community mod for Minecraft v1.6.1 that incorporates advanced machinery with a brand new dimension to bring you a fantastic gameplay experience.
 
 Technicraft was originally started by Sciguy1121. It's aim is to bring the modding community together to make one big mod with dozens of contributors.
 
