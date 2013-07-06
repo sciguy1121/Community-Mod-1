@@ -1,6 +1,7 @@
 package communityMod.client;
 
 import net.minecraft.client.renderer.entity.RenderLiving;
+import net.minecraft.client.resources.ResourceLocation;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 
@@ -36,5 +37,10 @@ public class RenderRobot extends RenderLiving {
 			double par6, float par8, float par9) {
 		this.renderRobot((EntityRobot) par1Entity, par2, par4, par6, par8, par9);
 	}
+
+    @Override
+    protected ResourceLocation func_110775_a(Entity entity) {
+        return null;
+    }
 
 }

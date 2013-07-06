@@ -11,16 +11,16 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 
 public class EntityScientist extends EntityMob {
-    
+
     public EntityScientist(World par1World) {
         super(par1World);
-        this.texture = "/mods/communityMod/textures/mob/Scientist.png";
-        this.moveSpeed = 0.35F;
+        //this.texture = "/mods/communityMod/textures/mob/Scientist.png";
+        this.moveForward = 0.35F;
         this.getNavigator().setAvoidsWater(false);
-        this.tasks.addTask(1, new EntityAIAttackOnCollide(this, EntityPlayer.class, this.moveSpeed, false));
-        this.tasks.addTask(2, new EntityAIWander(this, this.moveSpeed));
+        this.tasks.addTask(1, new EntityAIAttackOnCollide(this, EntityPlayer.class, this.moveForward, false));
+        this.tasks.addTask(2, new EntityAIWander(this, this.moveForward));
         this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
-        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 16.0F, 0, true));
+        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
     }
     
     @Override
@@ -52,7 +52,7 @@ public class EntityScientist extends EntityMob {
         return true;
     }
     
-    @Override
+    /*@Override
     public int getMaxHealth() {
         return 100;
     }
@@ -60,7 +60,7 @@ public class EntityScientist extends EntityMob {
     @Override
     public int getAttackStrength(Entity par1Entity) {
         return 15;
-    }
+    }*/
     
     @Override
     public EnumCreatureAttribute getCreatureAttribute() {

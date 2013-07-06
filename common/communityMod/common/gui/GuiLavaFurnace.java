@@ -1,11 +1,13 @@
 package communityMod.common.gui;
 
-import mods.communityMod.textures.TextureHandler;
 import net.minecraft.client.gui.inventory.GuiContainer;
+import net.minecraft.client.resources.ResourceLocation;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.StatCollector;
 
 import org.lwjgl.opengl.GL11;
+
+import assets.communitymod.textures.TextureHandler;
 
 import communityMod.common.container.ContainerLavaFurnace;
 import communityMod.common.entities.tile.TileEntityLavaFurnace;
@@ -24,7 +26,7 @@ public class GuiLavaFurnace extends GuiContainer {
 	protected void drawGuiContainerBackgroundLayer(float var1, int var2,
 			int var3) {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-		this.mc.renderEngine.bindTexture(TextureHandler.LAVAFURNACE_GUI);
+		this.mc.renderEngine.func_110577_a(new ResourceLocation(TextureHandler.LAVAFURNACE_GUI));
 		int x = (this.width - this.xSize) / 2;
 		int y = (this.height - this.ySize) / 2;
 		this.drawTexturedModalRect(x, y, 0, 0, this.xSize, this.ySize);

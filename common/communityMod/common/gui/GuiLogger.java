@@ -1,11 +1,13 @@
 package communityMod.common.gui;
 
-import mods.communityMod.textures.TextureHandler;
 import net.minecraft.client.gui.inventory.GuiContainer;
+import net.minecraft.client.resources.ResourceLocation;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.StatCollector;
 
 import org.lwjgl.opengl.GL11;
+
+import assets.communitymod.textures.TextureHandler;
 
 import communityMod.common.container.ContainerLogger;
 import communityMod.common.entities.tile.TileEntityLogger;
@@ -23,7 +25,7 @@ public class GuiLogger extends GuiContainer {
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float var1, int var2,
 			int var3) {
-		this.mc.renderEngine.bindTexture(TextureHandler.LOGGER_GUI);
+		this.mc.renderEngine.func_110577_a(new ResourceLocation(TextureHandler.LOGGER_GUI));
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		int x = (this.width - this.xSize) / 2;
 		int y = (this.height - this.ySize) / 2;
