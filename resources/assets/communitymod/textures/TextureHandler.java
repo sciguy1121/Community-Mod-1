@@ -1,4 +1,4 @@
-package assets.communityMod.textures;
+package assets.communitymod.textures;
 
 public class TextureHandler {
 

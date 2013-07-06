@@ -12,7 +12,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class RenderScientist extends RenderLiving {
-    
+
     protected ModelScientist model;
     
     public RenderScientist(ModelScientist par1ModelBase, float par2) {

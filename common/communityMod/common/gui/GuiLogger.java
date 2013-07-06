@@ -7,7 +7,7 @@ import net.minecraft.util.StatCollector;
 
 import org.lwjgl.opengl.GL11;
 
-import assets.communityMod.textures.TextureHandler;
+import assets.communitymod.textures.TextureHandler;
 
 import communityMod.common.container.ContainerLogger;
 import communityMod.common.entities.tile.TileEntityLogger;

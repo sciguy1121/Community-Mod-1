@@ -2,7 +2,7 @@ package communityMod.common.blocks;
 
 import java.util.Random;
 
-import assets.communityMod.textures.TextureHandler;
+import assets.communitymod.textures.TextureHandler;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
