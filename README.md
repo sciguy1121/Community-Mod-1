@@ -23,6 +23,7 @@ Code 	  - Sciguy1121,
 			cman8396,
 			smigolpol (HIATUS),
 			netherrod05
+			DeathSeeker512
 	   
 Textures  - KingCreeperEli,
 			Shachou,
@@ -34,6 +35,7 @@ Ideas	- LionBoyTheGamer,
 			cman8396,
 			MrTransman99, 
 			Jeffrey Aldrich
+			DeathSeeker512
 
 
 
