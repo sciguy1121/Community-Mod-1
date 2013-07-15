@@ -101,7 +101,12 @@ public class TileEntityLogger extends TileEntity implements IInventory, IGuiTile
 	public void closeChest() {
 	}
 
-	@Override
+    @Override
+    public boolean isItemValidForSlot(int i, ItemStack itemstack) {
+        return true;
+    }
+
+    @Override
 	public void updateEntity() {
 		ItemStack log = getStackInSlot(0);
 		ItemStack outputSlot = getStackInSlot(1);
@@ -199,11 +204,6 @@ public class TileEntityLogger extends TileEntity implements IInventory, IGuiTile
 	@Override
 	public boolean isInvNameLocalized() {
 		return false;
-	}
-
-	@Override
-	public boolean isStackValidForSlot(int i, ItemStack itemstack) {
-		return true;
 	}
 	
 	@Override

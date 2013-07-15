@@ -51,7 +51,7 @@ public class ItemRobotModel extends Item {
 
 			if (robot != null) {
 				if (robot instanceof EntityLiving && stack.hasDisplayName()) {
-					((EntityLiving) robot).func_94058_c(stack.getDisplayName());
+					((EntityLiving) robot).setCustomNameTag(stack.getDisplayName());
 				}
 
 				if (!player.capabilities.isCreativeMode) {

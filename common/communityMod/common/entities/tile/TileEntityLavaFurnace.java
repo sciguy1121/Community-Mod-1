@@ -108,7 +108,12 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory, IGu
 	public void closeChest() {
 	}
 
-	@Override
+    @Override
+    public boolean isItemValidForSlot(int i, ItemStack itemstack) {
+        return true;
+    }
+
+    @Override
 	public void updateEntity() {
 		boolean powered = worldObj.getBlockId(xCoord, yCoord - 1, zCoord) == Block.lavaStill.blockID
 				|| worldObj.getBlockId(xCoord, yCoord - 1, zCoord) == Block.lavaMoving.blockID;
@@ -220,11 +225,6 @@ public class TileEntityLavaFurnace extends TileEntity implements IInventory, IGu
 	@Override
 	public boolean isInvNameLocalized() {
 		return false;
-	}
-
-	@Override
-	public boolean isStackValidForSlot(int i, ItemStack itemstack) {
-		return true;
 	}
 
 	@Override

@@ -106,7 +106,12 @@ public class TileEntityResearcher extends TileEntity implements IInventory, IGui
 
 	}
 
-	@Override
+    @Override
+    public boolean isItemValidForSlot(int i, ItemStack itemstack) {
+        return true;
+    }
+
+    @Override
 	public void writeToNBT(NBTTagCompound compound) {
 		super.writeToNBT(compound);
 		NBTTagList var2 = new NBTTagList();
@@ -200,11 +205,6 @@ public class TileEntityResearcher extends TileEntity implements IInventory, IGui
 	@Override
 	public boolean isInvNameLocalized() {
 		return false;
-	}
-
-	@Override
-	public boolean isStackValidForSlot(int i, ItemStack itemstack) {
-		return true;
 	}
 	
 	@Override
