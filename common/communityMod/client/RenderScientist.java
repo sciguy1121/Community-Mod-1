@@ -1,7 +1,7 @@
 package communityMod.client;
 
 import net.minecraft.client.renderer.entity.RenderLiving;
-import net.minecraft.client.resources.ResourceLocation;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 
@@ -14,6 +14,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class RenderScientist extends RenderLiving {
 
     protected ModelScientist model;
+
+    private static final ResourceLocation Texture = new ResourceLocation("communitymod:textures/mob/Scientist.png");
     
     public RenderScientist(ModelScientist par1ModelBase, float par2) {
         super (par1ModelBase, par2);
@@ -40,7 +42,7 @@ public class RenderScientist extends RenderLiving {
 
     @Override
     protected ResourceLocation func_110775_a(Entity entity) {
-        return null;
+        return Texture;
     }
     
 }

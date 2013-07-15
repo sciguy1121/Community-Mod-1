@@ -1,7 +1,7 @@
 package communityMod.client;
 
 import net.minecraft.client.renderer.entity.RenderLiving;
-import net.minecraft.client.resources.ResourceLocation;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 
@@ -14,6 +14,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class RenderRobot extends RenderLiving {
 
 	protected ModelRobot model;
+
+    private static final ResourceLocation Texture = new ResourceLocation("communitymod:textures/mob/Robot.png");
 
 	public RenderRobot(ModelRobot par1ModelBase, float par2) {
 		super(par1ModelBase, par2);
@@ -40,7 +42,6 @@ public class RenderRobot extends RenderLiving {
 
     @Override
     protected ResourceLocation func_110775_a(Entity entity) {
-        return null;
+        return Texture;
     }
-
 }
