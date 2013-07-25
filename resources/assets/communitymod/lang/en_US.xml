@@ -60,5 +60,7 @@
 	<entry key="tile.RaspberryBush.name">Raspberry Bush</entry>
 	
 	<entry key="tile.LiquidConcreteFlowing.name">Liquid Concrete</entry>
-	
+	<entry key="entity.Robot.name">Robot</entry>
+	<entry key="entity.communitymod.Scientist.name">Scientist</entry>
+
 </properties>

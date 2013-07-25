@@ -14,13 +14,13 @@ import net.minecraftforge.liquids.LiquidContainerRegistry;
 import net.minecraftforge.liquids.LiquidDictionary;
 import net.minecraftforge.liquids.LiquidStack;
 
+import communityMod.client.gui.GuiHandler;
 import communityMod.common.blocks.BlocksHelper;
 import communityMod.common.entities.EntityRobot;
 import communityMod.common.entities.EntityScientist;
 import communityMod.common.entities.tile.TileEntityLavaFurnace;
 import communityMod.common.entities.tile.TileEntityLogger;
 import communityMod.common.entities.tile.TileEntityResearcher;
-import communityMod.common.gui.GuiHandler;
 import communityMod.common.items.ItemsHelper;
 import communityMod.common.research.ResearchHandler;
 
@@ -64,6 +64,7 @@ public class CommunityMod {
         IDsHelper.runConfiguration(config);
 
         config.save();
+        TextureAnimationConverter.convertTxtToPngMCMeta();
         BlocksHelper.setupBlocks();
         ItemsHelper.setupItems();
         proxy.init();
@@ -75,7 +76,7 @@ public class CommunityMod {
         GameRegistry.registerWorldGenerator(new WorldGenStructures());
         GameRegistry.registerWorldGenerator(new WorldGenOres());
         GameRegistry.registerFuelHandler(new FuelHandler());
-
+        
         NetworkRegistry.instance().registerGuiHandler(instance, guihandler);
 
         GameRegistry.registerTileEntity(TileEntityLavaFurnace.class, "GeothermalOven");
@@ -86,13 +87,10 @@ public class CommunityMod {
         ResearchHandler.instance().initResearchHandler();
 
         EntityRegistry.registerModEntity(EntityRobot.class, "Robot", 1, this, 80, 3, true);
-        //EntityRegistry.registerModEntity(EntityScientist.class, "Scientist", 2, this, 80, 3, true);
-
-        LanguageRegistry.instance().addStringLocalization("entity.Robot.name", "en_US", "Robot");
-        LanguageRegistry.instance().addStringLocalization("entity.Scientist.name", "en_US", "Scientist");
+        EntityRegistry.registerModEntity(EntityScientist.class, "Scientist", 2, this, 80, 3, true);
 
         registerEntityEgg(EntityRobot.class, 0x4A4849, 0x000000);
-        //registerEntityEgg(EntityScientist.class, 0xfff, 0x9c37bc);
+        registerEntityEgg(EntityScientist.class, 0xfff, 0x9c37bc);
 
         MinecraftForge.EVENT_BUS.register(new ConcreteBucketHandler());
         

@@ -11,9 +11,9 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
+import communityMod.client.gui.GuiResearcher;
+import communityMod.client.gui.IGuiTile;
 import communityMod.common.container.ContainerResearcher;
-import communityMod.common.gui.GuiResearcher;
-import communityMod.common.gui.IGuiTile;
 import communityMod.common.recipes.ResearcherRecipes;
 
 public class TileEntityResearcher extends TileEntity implements IInventory, IGuiTile {
