@@ -1,4 +1,4 @@
-package communityMod.common.gui;
+package communityMod.client.gui;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -12,10 +12,10 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.world.World;
 
+import communityMod.client.gui.GuiLogger;
+import communityMod.client.gui.IGuiTile;
 import communityMod.common.blocks.BlockLogger;
 import communityMod.common.container.ContainerLogger;
-import communityMod.common.gui.GuiLogger;
-import communityMod.common.gui.IGuiTile;
 
 public class TileEntityLogger extends TileEntity implements IInventory, IGuiTile {
 	private ItemStack[] inventory;
