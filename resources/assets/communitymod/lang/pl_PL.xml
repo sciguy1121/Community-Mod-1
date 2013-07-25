@@ -56,7 +56,10 @@
 	<entry key="tile.geothermaloven.name">Piec Geotermalny</entry>
 	<entry key="tile.logger.name">Tartak</entry>
 	<entry key="tile.researcher.name">Stół Badawczy</entry>
-	
+	<entry key="tile.RaspberryBush.name">Krzak Malin</entry>
+
 	<entry key="tile.LiquidConcreteFlowing.name">Płynny Beton</entry>
-	
+	<entry key="entity.Robot.name">Robot</entry>
+	<entry key="entity.communitymod.Scientist.name">Naukowiec</entry>
+
 </properties>

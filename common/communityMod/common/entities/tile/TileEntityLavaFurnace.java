@@ -12,10 +12,10 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
+import communityMod.client.gui.GuiLavaFurnace;
+import communityMod.client.gui.IGuiTile;
 import communityMod.common.blocks.BlockLavaFurnace;
 import communityMod.common.container.ContainerLavaFurnace;
-import communityMod.common.gui.GuiLavaFurnace;
-import communityMod.common.gui.IGuiTile;
 
 public class TileEntityLavaFurnace extends TileEntity implements IInventory, IGuiTile {
 	private ItemStack[] inventory;
