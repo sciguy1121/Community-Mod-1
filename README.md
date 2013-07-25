@@ -21,7 +21,7 @@ Code 	  - Sciguy1121,
 			SuitedSlime,
 			TheNewmanator15,
 			cman8396,
-			smigolpol (HIATUS),
+			smigolpol,
 			netherrod05,
 			DeathSeeker512,
 			LegioXV
