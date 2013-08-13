@@ -56,7 +56,7 @@ public class ItemsHelper {
         siliconWafer = new ItemOther(IDsHelper.siliconWaferID, "SiliconWafer").setCreativeTab(CommunityMod.modTab);
         siliconChip = new ItemOther(IDsHelper.siliconChipID, "SiliconChip").setCreativeTab(CommunityMod.modTab);
         research = new ItemResearch(IDsHelper.researchID, "Research").setCreativeTab(CommunityMod.modTab);
-        robotModel = new ItemRobotModel(IDsHelper.robotModelID).setCreativeTab(CommunityMod.modTab);
+        robotModel = new ItemRobotModel(IDsHelper.robotModelID).setCreativeTab(CommunityMod.modTab).setFull3D();
         uraniumChunk = new ItemIngot(IDsHelper.uraniumChunkID, "UraniumChunk").setCreativeTab(CommunityMod.modTab);
 
         raspberry = new ItemRaspberry(IDsHelper.RaspberryID, 4, 2.0F, false)
