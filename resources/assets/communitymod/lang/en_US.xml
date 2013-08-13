@@ -61,6 +61,6 @@
 	
 	<entry key="tile.LiquidConcreteFlowing.name">Liquid Concrete</entry>
 	<entry key="entity.Robot.name">Robot</entry>
-	<entry key="entity.communitymod.Scientist.name">Scientist</entry>
+	<entry key="entity.Scientist.name">Scientist</entry>
 
 </properties>
