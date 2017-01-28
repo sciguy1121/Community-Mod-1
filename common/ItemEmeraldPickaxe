@@ -1,0 +1,17 @@
+package communtiyMod.common;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.EnumToolMaterial;
+import net.minecraft.item.ItemPickaxe;
+
+public class ItemEmeraldPickaxe extends ItemPickaxe{
+
+  public ItemEmeraldPickaxe(int par1, EnumToolMaterial par2EnumToolMaterial) {
+  	super(par1, par2EnumToolMaterial);
+  	this.setCreativeTab(CreativeTabs.tabTools);
+  }
+  public String getTextureFile(){
+  	return TextureHandler.TOOL_TEXTURE_A;
+  }
+
+}
